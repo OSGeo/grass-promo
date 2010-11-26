@@ -1,0 +1,700 @@
+% Template GRASS newsletter - Article
+% Language: Latex
+%
+
+% Head
+
+\title{Evapotranspiration mapping with Landsat 5TM in GRASS GIS}
+\subtitle{Manual}
+\author{Pakparvar M. and GRASS Development Team}
+
+\maketitle
+
+\section{Introduction}
+
+This manual aims at explaining step-by-step how to prepare and process Landsat 5 TM imagery data after downloading it from GLOVIS (http://glovis.usgs.gov/) for a location in Iran, where a water harvesting project is being set up. The WRS-2 path=162 and row=040. The site is located south-central East border of the image, within an irrigation system. Fig.~\ref{fig:gipe000}\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe000.png}
+   %caption of the figure
+   \caption{Study Area in p162r040 of Landsat 5TM}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe000}
+\end{figure}
+
+\section{Downloading the image}
+Scenes from the Landsat archive are available at no charge, processed to Standard Terrain Correction (Level 1T). While some scenes do not have the ground-control or elevation data necessary to perform L1T correction, the best level of correction is applied. More details at Landsat Product Information.\newline
+
+The USGS Global Visualization Viewer is a quick and easy online search and order tool for selected satellite and aerial data. When the USGS Global Visualization Viewer is open, the Global View is seen.\newline
+
+There is option to add the known latitude and longitude or select the desired region by curser tool.\newline
+
+A new windows is appeared to search and request the imagery. This stage needs to install the last version of Java program and needs to permit the pop up to run by the windows firewall.
+In new window go to Collection > Landsat Archive > to have access to updated landsat images or Collection > Landsat Legacy Collections for old images.\newline
+
+After clicking on desired  category of  images it is possible to see the scenes on the screen. There are options in bottom left to determine the year and month of interest or pushing on "next scene" , "previous scene". In case of availability of desired scene for downloading, a red alarm is appeared top of screen mentioning "Downloadable".  Click on Add button to add the image in request list.\newline
+
+In case of the image to be downloadable push the Download button otherwise the Submit button.\newline  
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe001.png}
+   %caption of the figure
+   \caption{Glovis Main Page}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe001}
+\end{figure}
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.35]{gipe002.png}
+   %caption of the figure
+   \caption{Search within Glovis}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe002}
+\end{figure}
+
+For submitting the request it is needed to register to the USGS site. After a while a massage will be sent to the email of subscriber giving a link to give access for downloading the image.\newline
+
+There is an easier way to request the images of successive time series. The USGS website has prepared a new envaironment of searching tool for the image requaest is called earth explorer. The link (http://edcsns17.cr.usgs.gov/NewEarthExplorer) give the access to the search window that looks like the google earth. There are 4 label at the top to determine the the images. In Search criteria, start and end date of the time series, exact lat. Long. and/or name of the location can be determined. In Data set it is possible to select the type of image. In Additional criteria there are options to  start and end path and row of the interest and some other criteria. In Result label, all of the scenes of interest will be shown, downloaded or requested. Subscription to the Earth Explorer is also needed for the request. There is  a limitation of 100 scenes per subscriber.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.3]{gipe003.png}
+   %caption of the figure
+   \caption{Search Criteria within Glovis}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe003}
+\end{figure}
+
+In case of downloadable, a green downward arrow is appeared on the resulted sample image otherwise the sign of add to shop (like the shopping cart) is seen and has to be pushed changing it to green color.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.5]{gipe004.png}
+   %caption of the figure
+   \caption{Shopping Cart Items}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe004}
+\end{figure}
+
+In case of submit and request a new menu is shown and needs a name for this request and some other criteria such as start and end time for the request. This timing is duration of the request and not the acquisition  time of the images. \newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe005.png}
+   %caption of the figure
+   \caption{Save as Standing Request}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe005}
+\end{figure}
+
+Afterward a message will be sent to the subscriber email to give access to downloading the images.\newline
+
+All of the images are in the Zip format and should be collected in a unique folder.\newline
+
+While most Landsat scenes are processed as Level 1T (precision and terrain corrected), certain scenes do not have ground-control or elevation data necessary for precision or terrain correction. In these cases the best level of correction is applied (Level 1G-systematic or Level 1Gt-systematic terrain). Additionally, the majority of all archived Landsat 1-5 MSS scenes, as well as a select number of Landsat 4-5 TM scenes are processed only as Level 1G (systematic) due to processing constraints. However, improvements to production capabilities are being investigated, which will allow more scenes to be processed at a higher level with a shorter processing time. The processing level of a downloaded scene is found in the metadata (MTL.txt) or processing history (WO.txt) files which are delivered with the data band files and other ancillary data.\newline
+
+More details can be found at \href{http://landsat.usgs.gov/products\_productinformation.php}{landsat.usgs.gov} \newline
+
+
+\section{Implementation environment}
+GRASS GIS (Geographic resources Analysis Support System) is an open source, Free GIS software that operates on various platforms. Therefore binaries can be downloaded and installed on Unix, Linux, MS-Windows or MAC OS X workstation.\newline
+
+The currently last version GRASS 7.0 is downloadable at www.grass.osgeo.org. It has a windows version in which the windows users can easily work in its environment.\newline
+
+The new modules are all incorporated in the GRASS Image Processing Environment (GIPE) folder. The modules are accessible from the following link: http://trac.osge.org/grass/browser/grass-addons/gipe .\newline
+
+After downloading and installing the software, an specific work area should be determined for first time of opening. All of the files imported and newly generated in GRASS are located in the determined path such as "C:/GRASSDATA/Landsat5/PERMANENT". \newline
+
+Naming of the folders is optional except for the "PERMANENT" that is GRASS default name for administrator specific working environment that is called MAPSET. Every user has a username and password and have access to their own folders which is determined by admin. \newline
+
+Image container folder is not the same as working folder. GRASS generated files are in the binary format and can not easily read by normal windows programs. Therefore, Copy and pasting as well as the exporting of these files must perform inside the GRASS. \newline
+
+Linux users have easier and simpler access to script writing for automation of a repeatable task for faster and (man-made) error free results. But it doesn't mean the Windows users can not use it properly.\newline
+
+Starting the GRASS in Windows is performed by klicking on the exe file. In Linux it should be written "grass70" (70 means version 7.0) in Terminal area and push the enter key.\newline
+ 
+After the first time opening of the GRASS, the following menu is appeared to select the working area. There are possibilities to make a new location for the project and new name for mapset. Renaming the older mapsets can only be done in this menu and must not perform in the other programs (such as windows explorer). Followings are some examples of naming:\newline
+
+Main working folder for GRASS data: GRASSDATA;\newline
+Name of the specific project: L5;\newline
+Name of the mapset: PERMANENT.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe006.png}
+   %caption of the figure
+   \caption{GRASS GIS Welcome Interface}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe006}
+\end{figure}
+
+Starting the GRASS shows three new windows:\newline
+GRASS Layer management: for main data analysis;\newline
+GRASS Map Display for viewing the resulted layers;\newline
+CLI (Command Line Interface): for scripting.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.3]{gipe007.png}
+   %caption of the figure
+   \caption{GRASS GIS Manager and Map Display}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe007}
+\end{figure}	
+
+After opening the GRASS It is also possible to change the working directory. In GRASS Layer Management go to Settings/GRASS working Environment/Change Location and mapset. Then it is possible change the working area.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe008.png}
+   %caption of the figure
+   \caption{Change Location and Mapset}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe008}
+\end{figure}	
+
+Scripting in GRASS helps the user to do the tasks fast. Scripts are in the format of C programing language. For writing and executing a script, first the location should be checked (where we are in hard disk?). To do this:\newline
+Type pwd and press Enter\newline
+\begin{smallverbatim}
+>pwd
+>/home/GRASSDATA/L5
+\end{smallverbatim}
+
+"pwd" means Path to Working Directory and will show the path that you are in now.\newline
+For changing to desired path\newline
+Type cd and space Folder/Sub folder and Enter\newline 
+\begin{smallverbatim}
+>cd home/RSDATA/Landsat5
+>/home/RSDATA/Landsaat5
+\end{smallverbatim}
+
+Scripts now work in the correct directory.\newline 
+
+\section{Preparation and import in GRASS GIS}
+GLOVIS is giving access to download a Landsat 5TM dataset in the form of a tarball (.tar.gz), which is a compressed format. This format compresses the files much more than the normal zip format. Decompressing the tarball for each available image in the directory can be done by the common Windows unzipping softwares one by one.\newline\linebreak
+In Linux it is possible to decompress the files by using the script mentioned in \ref{appendixA}-1.\newline
+Once this is done, start GRASS GIS and create a new location from the New Location wizard, name it as the Path and Row of the images (i.e. p162r040), and use any of the landsat5.TIF images available as a reference image to get the projection system and other information from.\newline
+There is a need to import and rename the images inside the GRASS with the extensions in number format because the preprocessing module "i.landsat.toar" which imports DN and convert them into either radiance or reflectance is using a base name with numbered extensions.  For instance:\newline\linebreak
+Landsat 5 TM:\newline
+L5162040\_04020090705\_B10.TIF => L5162040\_04020090705.1\newline
+The same for the other bands till band 7.0\newline
+L5162040\_04020090705\_B70.TIF => L5162040\_04020090705.7\newline\linebreak
+Landsat 7 ETM+:\newline
+L71161040\_04020100607\_B10.TIF => L7\_161040\_04020100607.1\newline
+The same for the other bands till band 7.0 except for the bands 6.1 and 6.2\newline
+L71161040\_04020100607\_B61.TIF => L7\_161040\_04020100607.61\newline
+L72161040\_04020100607\_B62.TIF => L7\_161040\_04020100607.62\newline\linebreak
+It is possible to do one by one in GRASS Import menu. For every band that is selected from the image container folder, an output file should be written as the new file naming system mentioned above.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe009.png}
+   %caption of the figure
+   \caption{Accessing Raster Import}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe009}
+\end{figure}
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe010.png}
+   %caption of the figure
+   \caption{Raster Import Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe010}
+\end{figure}
+
+It is possible also to import and rename the images by using the command line. Once inside the p162r040 location, access the Command Line Interface (CLI) and "cd" to the directory where all of your newly decompressed images are located. In that directory, launch the script mentioned in \ref{appendixA}-2.\newline
+
+Imported images are now in the working environment of the GRASS (i.e. /home/GRASSDATA/L5/PERMANENT). So, it is impossible for common programs to access to and open the imported images except after the exporting.\newline
+
+\section{Preprocessing}
+\subsection{Determination of the region}
+In GRASS it is possible to set the region of interest as a pre determined part of the image(s) whereby all of the processes will be done based on the data of  this region. Unlike the other softwares, it doesn't mean a separate sub image file to be produced. This activity reduces the time and increases the speed of processing  intensely.\newline
+
+In GRASS Layer Manager push on the "Add various raster" button and select Add RGB Mapp Layer. In new window select desired band for every Red, Green or Blue band and press OK.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe011.png}
+   %caption of the figure
+   \caption{Raster RGB Display}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe011}
+\end{figure}
+
+The selected composition (is called false color composite) is shown In GRASS Map Display. Once in this window zoom to interested area by zoom tool. To determine this region as the interested part of images to be processed, push the icone "zoom options" and select set the computational region from the map. It is possible also to save specifications of the region from the map.
+Selected region in Map display will be the only part of image that attends to the further processes.\newline
+
+\subsection{Georeferencing} 
+According to the GLOVIS, as mentioned before, most Landsat scenes are processed as Level 1T (precision and terrain corrected), certain scenes do not have ground-control or elevation data necessary for precision or terrain correction. In these cases the best level of correction is applied (Level 1G-systematic or Level 1Gt-systematic terrain). So there is no need to perform geometric correction for newly downloaded landsat 5 TM or landsat 7 ETM images.\newline
+
+In case of need, it is possible to do georeferencing in the GRASS that is called rectification.  This module rectifies an image by computing a coordinate transformation for each pixel in the image based on the control points. The procedure and steps is mentioned in detail in: "r.rectify" manual that is accessible in Grass Layer Management/Imagery/Rectify Image or Raster.\newline
+
+\subsection{Change DN to radiance and reflectance at top of atmosphere}
+Radiance and reflectance are the major basic input layer in ET calculation. DN can be converted to radiance by using the Lmax and Lmin of the spectral bands that is mentioned in the met or mtl files.\newline
+
+Lmax and Lmin are the extreme values of actual radiance is sensed by the satellite sensor for each band. QCALmax and QCALmin are the extreme values of the DNs in each band and commonly is between 0-255 or 1 -255. The radiance value for each pixel is calculated by Gain and Bios data.\newline
+
+\begin{smallverbatim}
+Gain = (Lmax - Lmin) / (QCALmax - QCALmin) 
+Bias = Lmin - gain * QCALmin 
+Radiance = gain * DN + bias 
+\end{smallverbatim}
+
+The top of atmosphere reflectance (toar) is calculated by dividing the actual radiance at sensor with the potential radiance (sun incoming irradiance) at the top of atmosphere, which is calculated by using the sun elevation and astronomical equations.\newline
+Then, to calculate at-sensor reflectance the equations are: \newline
+\begin{smallverbatim}
+sun_radiance = [Esun * sin(e)] / (PI * d^2) 
+reflectance = radiance / sun_radiance 
+\end{smallverbatim}
+
+where, d is the earth-sun distance in astronomical units, e is the solar elevation angle, and Esun is the mean solar exo-atmospheric irradiance in W/(m2 * µm). \newline
+Once the images are all imported in GRASS, go to Imagery/satellite image tools/Landsat DN to radiance-reflectance and run the i.landsat.toar module. \newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe012.png}
+   %caption of the figure
+   \caption{i.landsat.toar Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe012}
+\end{figure}
+
+Fill in the input file name and choose a new name for output file reminding the TOAR conversion has been applied to new file.\newline
+
+The name of input file must not be included of the extension values. Assigning the main part of the image itself let the software.\newline 
+
+By default, all of the necessary input data is read from the "*.met" file that is present in the working directory. If the "*.mtl" is present rather than "*.met", it must be mentioned in Metadata section. Check the square for "Landsat TM5 has a .mtl instead of .met file.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe013.png}
+   %caption of the figure
+   \caption{i.landsat.toar Module, L5TM with MTL}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe013}
+\end{figure}
+
+The output file is the reflectance by default. In the case of need to make the output radiance, it should mention in the Settings section.  Check the square for "output at-sensor radiance for all bands".\newline
+Default reflectance output is more favorite because it will speed up the atmospheric correction in next step. But in some other steps there is a need for output radiance. So it is better to produce both radiance and reflectance by twice application of i.landsat.toar with checking and unchecking the  option of the radiance output file. \newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe014.png}
+   %caption of the figure
+   \caption{i.landsat.toar Module, output in Radiance}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe014}
+\end{figure}
+
+\subsection{Atmospheric correction} 
+Natural light emitted from the Sun is not polarized. Before it enters the Earth's atmosphere, its intensity remains mostly unchanged and unaffected by the retardation of electric and magnetic components. However after interacting with atmospheric molecules and particles, the unpolarized light may become partially polarized. The degree of polarization depends on the type of scattering event. In the actual case, the signal is perturbed by the atmosphere. Only a fraction of the photons coming from the target reaches the satellite sensor, typically 80\%  at 0.45 μm and 50\% at 0.45  μm, so that the target seems less reflecting. The missing photons have been lost through two processes: absorption and scattering. Atmospheric correction minimizes the errors arise from both two sources.\newline
+Through the atmospheric correction, radiance at top of the atmosphere is converted to radiance at the earth surface.\newline
+There are two main tools for Atmospheric correction inside the GRASS.\newline
+
+\subsubsection{Dark Object Subtraction (DOS)}
+Dark Object Subtraction is one of the simplified methods that is implemented in i.landsat.toar module. It assumes a value called Path-radiance to subtract from all of the pixell's radiance value. \newline
+
+Path-radiance is computed  by subtraction of the Sun\_ radiance from the dark object radiance. So, the equations are:\newline
+
+\begin{smallverbatim}
+Surface_radiance = \
+ (at-sensor_radiance - radiance_path)
+
+Radiance_path = \
+ (dark_radiance - percent* Sun_radiance)   
+
+Sun_radiance = \
+ TAUv * [Esun * sin(e) * TAUz + Esky] / (PI * d^2) 
+\end{smallverbatim}
+
+Where, percent is a value between 0.0 and 1.0 (usually 0.01), Esky is the diffuse sky irradiance, TAUz is the atmospheric transmittance along the path from the sun to the ground surface, and TAUv is the atmospheric transmittance along the path from the ground surface to the sensor. radiance\_dark is the at-sensor radiance calculated from the darkest object, i.e. DN with a least 'dark\_parameter' (usually 1000) pixels for the entire image. There are four methods of DOS inside the GRASS assuming different values:\newline
+
+\begin{smallverbatim}
+DOS1: TAUv = 1.0, TAUz = 1.0 and Esky = 0.0 
+
+DOS2: TAUv = 1.0, Esky = 0.0, \
+ and TAUz = sin(e) for all bands with \
+ maximum wave length less than 1. \
+ (i.e. bands 4-6 MSS, 1-4 TM, and 1-4 ETM+) \
+ other bands TAUz = 1.0
+ 
+DOS2b: 
+
+DOS3: TAUv = exp[-t/cos(sat_zenith)], \
+ TAUz = exp[-t/sin(e)], Esky = rayleigh
+ 
+DOS4: TAUv = exp[-t/cos(sat_zenith)], \
+ TAUz = exp[-t/sin(e)], Esky = PI * radiance_dark  
+\end{smallverbatim}
+
+In case of using DOS methods while in i.landsat.toar go to Metadata section and select one of the desired DOS methods of atmospheric correction and the kind of sensor (i.e TM5) and continue  to  convert DN to radiance and reflectance. \newline
+
+In this case, the output file is reflectance or radiance that is atmospherically corrected (by DOS method) and must not be inserted to landsat atmospheric correction module "i.atcorr". \newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe015.png}
+   %caption of the figure
+   \caption{i.landsat.toar Module, DOS1 model enabled}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe015}
+\end{figure}
+
+The best method of atmospheric correction by the DOS concept can be verified by doing the comparison between the check points of final ET maps (based on each DOS method) with the ground truth data.\newline
+
+\subsubsection{The 6S atmospheric correction model}
+
+The module i.atcorr applies the 6S method to correct the atmospheric errors which is supposed to be the most accurate but input demanding procedure.  \newline
+6S (Second Simulation of a Satellite Signal in the Solar Spectrum) is an advanced radiative transfer system designed to simulate the reflection of solar radiation by a coupled atmosphere-surface system for a wide range of atmospheric, spectral and geometrical conditions. \newline
+
+At this point, if a "Dark Object Subtraction" atmospheric correction has not been computed in "i.landsat.toar", then an atmospheric correction must be applied to the TOAR radiance/reflectance values coming from "i.landsat.toar". This is done using "i.atcorr" module. This module is a port of 6S atmospheric correction model.\newline
+
+Atmospheric correction in GRASS can be done in Imagery/Satellite image tools/Atmospheric correction that applies the i.atcorr module.\newline
+
+The script mentioned in \ref{appendixA}-4 can be used for automated approach of atmospheric correction for a set of  landsat images.\newline
+
+\begin{smallverbatim}
+i.atcorr -r -o -f \
+ input=L5162040_04020090705.toar.1 \
+ elevation=dem90 \
+ parameters=/home/icwater/param_L5.txt \
+ output=L5162040_04020090705atcorr.1 \
+ range=0,1 rescale=0,1 --overwrite
+\end{smallverbatim}
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe016.png}
+   %caption of the figure
+   \caption{i.atcorr Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe016}
+\end{figure}
+
+\section{Basic products creation}
+
+Necessary images for energy balance calculation are NDVI, Albedo, Emissivity. These initial products have dedicated GRASS GIS modules.\newline
+
+NDVI is calculated using "i.vi", following the example below:\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe017.png}
+   %caption of the figure
+   \caption{i.vi Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe017}
+\end{figure}
+
+Albedo is caculated from the "i.albedo" module:\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe018.png}
+   %caption of the figure
+   \caption{i.albedo Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe018}
+\end{figure}
+
+Emissivity is computed using the generic module "i.emissivity":\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe019.png}
+   %caption of the figure
+   \caption{i.emissivity Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe019}
+\end{figure}
+
+
+\section{Energy balance terms}
+
+Net radiation at satellite overpass (instantaneous) and integrated over the day (think sunshine hours) are computed from a generic GRASS GIS raster module "r.sun".\newline
+
+In mode 1, instantaneous net radiation is computed, in mode 2 the day integrated net radiation is computed. Both are necessary for the energy balance computation. Mode 1 for sensible heat flux computation and mode 2 for the Day ET potential.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe020.png}
+   %caption of the figure
+   \caption{r.sun Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe020}
+\end{figure}
+
+Note that the following raster inputs are recommended: aspect, slope, albedo, latitude and longitude.\newline
+
+Slope and Aspect can be computed with "r.slope.aspect", albedo with "i.albedo", latitude and longitude with "i.latlong".\newline
+
+Soil heat flux can be computed with "i.eb.g0".\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe021.png}
+   %caption of the figure
+   \caption{i.eb.soilheatflux Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe021}
+\end{figure}
+
+Note that some additional input should be created, including a ".time" raster.\newline
+
+Sensible heat flux can be calculated with "i.eb.h\_SEBAL01".\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe022.png}
+   %caption of the figure
+   \caption{i.eb.h\_SEBAL01 Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe022}
+\end{figure}
+
+Note that additional images should be created about surface roughness length (z0m), altitude corrected temperature (t0dem), the height independent wind speed (U*), along with coordinates of the "wet" and "dry" pixels (SEBAL method is geographically dependent on extrema energy balance points). \newline
+
+Evaporative fraction can be calculated by "i.eb.evapfr":\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe023.png}
+   %caption of the figure
+   \caption{i.eb.evapfr Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe023}
+\end{figure}
+
+Evapotranspiration can be computed from "i.eb.eta":\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe024.png}
+   %caption of the figure
+   \caption{i.eb.eta Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe024}
+\end{figure}
+
+\newpage
+
+
+\section{Appendix A: GRASS SCRIPTS}
+\label{appendixA}
+
+\subsection{Unzipping the tarball compressed files}
+
+For Linux users in Terminal and for Windows users in Dos prompt window should be written:\newline
+
+\begin{smallverbatim}
+for file in *.tar.gz
+do
+tar -xvzf \$file
+done
+\end{smallverbatim}
+
+Control should be given to run the script in the same directory as the images are in.\newline
+
+\subsection{Renaming and importing}
+In GRASS Command Line Interface (CLI) write the script:
+
+\begin{smallverbatim}
+echo "RUN from the MTL.txt directory and within the GRASS environment"
+
+for file in L5*0.TIF
+do
+	out=\$(echo \$file | sed 's/\\(.*\)\_\\(.*\)\_B\\(.*\)0.TIF/\1\\_\2\.\3/g')
+	echo \$out
+	r.in.gdal input=\$file output=\$out
+done
+\end{smallverbatim}
+
+For more information about this script, refer to "sed" program manual in Unix/Linux and to the "r.in.gdal" help in GRASS GIS.
+ 
+\subsection{Conversion of DN to radiance}
+Conversion of DN to reflectance at top of atmosphere (TOAR) is done with the script:
+
+\begin{smallverbatim}
+echo "RUN from the MTL.txt directory and within \
+ the GRASS environment"
+
+path=162
+row=040
+
+for L5_MTL_file in L5\$path\$row*_MTL.txt
+do
+	L5_prefix=\$(echo \$L5_MTL_file \| \
+	  sed 's/\\(.*\)_MTL.txt/\\1/')
+
+	i.landsat.toar -t \
+	  input_prefix=\$L5_prefix\. \
+	  output_prefix=\$L5_prefix.toar.  \
+	  metfile=/home/user1/\$L5\_MTL\_file \
+	  sensor=tm5
+done
+\end{smallverbatim}
+
+
+This script requires to change the path and row of the target images you are processing.\newline
+
+\subsection{Atmospheric correction with i.atcorr}
+Script for atmospheric correction by 6S method for landsat 5 TM.\newline
+
+\begin{smallverbatim}
+#!/bin/bash
+# Basic script for i.atcorr for L 5 TM
+
+#Geometrical conditions (L5TM)
+geom=7
+#Sensor height (satellite is -1000)
+sens_height=-1000
+
+#Here we suppose you have altitude (DEM) and \
+ Visibility (VIS) maps ready
+#--------------------------------------------- 
+#Visibility dummy value (overwritten by VIS \
+ raster input)
+vis=9
+r.mapcalc expression="visibility=\$vis" \
+ --overwrite
+
+#Altitude dummy value (in Km should be negative\
+ in this param file)
+#(overwritten by DEM raster input)
+alt=-1.200
+
+#---------------------------
+# Please change as you need
+#---------------------------
+# L5 basename as stored in GRASS GIS and used \
+ by i.landsat.toar
+L5basename=L5162040\_04020090705
+
+# Location of parameter file
+root=/home/icwater/
+
+#datetime of satellite overpass (month, day, \
+ GMT decimal hour)
+mdh="7 5 6.30"
+
+# Central Lat/Long
+Long=51.410
+Lat=24.234
+
+#Atmospheric mode
+atm\_mode=6 #us standard 62 (for lack of more\
+ precise model)
+
+#Aerosol model
+aerosol\_mode=1 #continental
+
+#satellite band number (L5TM [25,26,27,28,29,30])
+satbandno=25 #Band 1 of L5TM is first to undergo\
+ atmospheric correction
+
+for bandno in 1 2 3 4 5 7
+do # Generate the parameterization file
+	echo "\$geom                            \
+         - geometrical conditions=Landsat 5 TM" \
+         > \$root/param\_L5.txt
+	echo "\$mdh \$Long \$Lat   \
+         - month day hh.ddd longitude latitude \
+         ("hh.ddd" is in decimal hours GMT)" >>\
+         \$root/param\_L5.txt
+	echo "\$atm\_mode                       \
+         - atmospheric mode=tropical" >> \
+         \$root/param\_L5.txt
+	echo "\$aerosol\_mode                   \
+         - aerosols model=continental" >>\
+         \$root/param\_L5.txt
+	echo "\$vis                           \
+         - visibility [km] (aerosol model \
+         concentration), not used as there is \
+         raster input" >> \$root/param\_L5.txt
+	echo "\$alt                       \
+         - mean target elevation above sea level\
+         [km] (here 600m asl), not used as there \
+         is raster input" >> \$root/param\_L5.txt
+	echo "\$sens\_height                     \
+         - sensor height (here, sensor on board a\
+         satellite)" >> \$root/param\_L5.txt
+	echo "\$satbandno                        \
+         - 'i'th band of TM Landsat 5" >>\
+         \$root/param\_L5.txt
+	# Process band-wise atmospheric correction with 6s
+	i.atcorr -r -o -f \
+         input=\$L5basename.toar.\$bandno\
+         elevation=dem90 visibility=vis \
+         parameters=\$root/param\_L5.txt \
+         output=\$L5basename.surf.\$bandno \
+         range=0,1 rescale=0,1 --overwrite
+	# Increment satellite band number 
+	satbandno=\$((satbandno+1))
+done  
+\end{smallverbatim}
+
+
+\address{GRASS Development Team\\
+  \url{http://grass.osgeo.org}\\
+  \email{tmitchell@osgeo.org}}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: main\_document.tex
+%%% End: 
+

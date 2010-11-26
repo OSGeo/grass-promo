@@ -1,0 +1,43 @@
+% Main document GRASS Tutorials
+% Language: Latex
+%
+% DON'T EDIT THIS FILE!
+
+\documentclass[a4paper]{report}
+
+% for boot
+\usepackage{amssymb,amsmath}
+% Note: we currently need to include amsmath before GRASSnews, because the
+% latter redefines the equation environment ...
+\usepackage{GRASSnews}
+\usepackage[round]{natbib}
+% for Sweave
+\usepackage{listings}
+% for tcltk-update
+\usepackage{shortvrb}
+%\usepackage{chapterbib}
+
+
+\sloppy{}
+
+
+\begin{document}
+ 
+\volume{1}
+\volnumber{1}
+\date{December 2010}
+\titlepage
+
+
+
+\begin{article}
+   \input{article_GIPE}
+\end{article}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: main_document.tex
+%%% End: 
