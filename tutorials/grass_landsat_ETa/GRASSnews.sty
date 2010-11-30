@@ -37,7 +37,7 @@
 \newenvironment{article}{%
   \author{}\title{}\subtitle{}}{\end{multicols}}
 \renewcommand{\maketitle}{
-  \begin{multicols}{0}[\chapter{\GRASSnews@title}\refstepcounter{chapter}][3cm]
+  \begin{multicols}{2}[\chapter{\GRASSnews@title}\refstepcounter{chapter}][3cm]
     \ifx\empty\Rnews@subtitle\else\noindent\textbf{\GRASSnews@subtitle}
     \par\nobreak\addvspace{\baselineskip}\fi
     \ifx\empty\GRASSnews@author\else\noindent\textit{\GRASSnews@author}
@@ -58,16 +58,6 @@
   \noindent
   \begin{minipage}{\columnwidth}}{%
   \end{minipage}\par\addvspace{\baselineskip}}
-\renewcommand{\theequation}{\@arabic\c@equation}
-\def\equation{%
-  \let\refstepcounter\H@refstepcounter
-  \H@equation
-  \def\newname{\arabic{chapter}.\theequation}%
-  \let\theHequation\newname%
-  \hyper@makecurrent{equation}%
-  \Hy@raisedlink{\hyper@anchorstart{\@currentHref}}%
-  \let\refstepcounter\new@refstepcounter}%
-\def\endequation{\Hy@raisedlink{\hyper@anchorend}\H@endequation}
 \renewcommand{\thefigure}{\@arabic\c@figure}
 \renewcommand{\thetable}{\@arabic\c@table}
 \renewcommand{\contentsname}{Contents of this volume:}
@@ -100,7 +90,6 @@
   \fancyhf{}
   \fancyhead[L]{GRASS-Tutorials}
   \fancyhead[R]{Ver.~\GRASSnews@volume, \GRASSnews@date}
-  \fancyfoot[L]{ISSN unknown}
   \fancyfoot[R]{\thepage}
   \thispagestyle{empty}
   \begin{bottombox}
@@ -116,7 +105,7 @@
 \setlength{\oddsidemargin}{-6mm}
 \setlength{\columnseprule}{.1pt}
 \setlength{\columnsep}{20pt}
-\RequirePackage{ae,mathpple}
+\RequirePackage{ae}
 \RequirePackage[T1]{fontenc}
 \renewcommand{\rmdefault}{ppl}
 \renewcommand{\sfdefault}{aess}

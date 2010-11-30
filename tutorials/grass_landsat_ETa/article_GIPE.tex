@@ -12,7 +12,7 @@
 
 \section{Introduction}
 
-This manual aims at explaining step-by-step how to prepare and process Landsat 5 TM imagery data after downloading it from GLOVIS (http://glovis.usgs.gov/) for a location in Iran, where a water harvesting project is being set up. The WRS-2 path=162 and row=040. The site is located south-central East border of the image, within an irrigation system. Fig.~\ref{fig:gipe000}\newline
+This manual aims at explaining step-by-step how to prepare and process Landsat 5 TM imagery data after downloading it from GLOVIS (http://glovis.usgs.gov) The location of study area is a water harvesting (floodwater spreading) project is being set up in South central Iran (Kowsar research station, Gareh Bygone, fars Province). Time series of Et maps is needed for integration and calculation the hydrologic balance. The WRS-2 path=164 and row=040. The site is located south-central East border of the image. Fig.~\ref{fig:gipe000}\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -26,16 +26,16 @@ This manual aims at explaining step-by-step how to prepare and process Landsat 5
 \end{figure}
 
 \section{Downloading the image}
-Scenes from the Landsat archive are available at no charge, processed to Standard Terrain Correction (Level 1T). While some scenes do not have the ground-control or elevation data necessary to perform L1T correction, the best level of correction is applied. More details at Landsat Product Information.\newline
+Scenes from the Landsat archive are available at no charge, processed to Standard Terrain Correction (Level 1T). While some scenes do not have the ground-control or elevation data necessary to perform L1T correction, the best level of correction is applied. More details at \href{http://landsat.usgs.gov/products_productinformation.php}{Landsat Product Information}.\newline
 
-The USGS Global Visualization Viewer is a quick and easy online search and order tool for selected satellite and aerial data. When the USGS Global Visualization Viewer is open, the Global View is seen.\newline
+The \href{http://glovis.usgs.gov/BrowseBrowser.shtml}{USGS Global Visualization Viewer} is a quick and easy online search and order tool for selected satellite and aerial data. When the USGS Global Visualization Viewer is open, the Global View is seen.\newline
 
-There is option to add the known latitude and longitude or select the desired region by curser tool.\newline
+There is option to add the known latitude and longitude or select the desired region by cursor tool.\newline
 
 A new windows is appeared to search and request the imagery. This stage needs to install the last version of Java program and needs to permit the pop up to run by the windows firewall.
 In new window go to Collection > Landsat Archive > to have access to updated landsat images or Collection > Landsat Legacy Collections for old images.\newline
 
-After clicking on desired  category of  images it is possible to see the scenes on the screen. There are options in bottom left to determine the year and month of interest or pushing on "next scene" , "previous scene". In case of availability of desired scene for downloading, a red alarm is appeared top of screen mentioning "Downloadable".  Click on Add button to add the image in request list.\newline
+After klicking on desired  category of  images it is possible to see the scenes on the screen. There are options in bottom left to determine the year and month of interest or pushing on "nest scene" , "previous scene". In case of availability of desired scene for downloading, a red alarm is appeared top of screen mentioning "Downloadable".  Klick on Add button to add the image in request list.\newline
 
 In case of the image to be downloadable push the Download button otherwise the Submit button.\newline  
 
@@ -63,7 +63,7 @@ In case of the image to be downloadable push the Download button otherwise the S
 
 For submitting the request it is needed to register to the USGS site. After a while a massage will be sent to the email of subscriber giving a link to give access for downloading the image.\newline
 
-There is an easier way to request the images of successive time series. The USGS website has prepared a new envaironment of searching tool for the image requaest is called earth explorer. The link (http://edcsns17.cr.usgs.gov/NewEarthExplorer) give the access to the search window that looks like the google earth. There are 4 label at the top to determine the the images. In Search criteria, start and end date of the time series, exact lat. Long. and/or name of the location can be determined. In Data set it is possible to select the type of image. In Additional criteria there are options to  start and end path and row of the interest and some other criteria. In Result label, all of the scenes of interest will be shown, downloaded or requested. Subscription to the Earth Explorer is also needed for the request. There is  a limitation of 100 scenes per subscriber.\newline
+There is an easier way to request the images of successive time series. The USGS website has prepared a new envaironment of searching tool for the image requaest is called earth explorer. The link \href{http://edcsns17.cr.usgs.gov/NewEarthExplorer}{NewEarthExplorer} gives the access to the search window that looks like the google earth. There are 4 label at the top to determine the the images. In Search criteria, start and end date of the time series, exact lat. Long. and/or name of the location can be determined. In Data set it is possible to select the type of image. In Additional criteria there are options to  start and end path and row of the interest and some other criteria. In Result label, all of the scenes of interest will be shown, downloaded or requested. Subscription to the Earth Explorer is also needed for the request. There is  a limitation of 100 scenes per subscriber.\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -83,7 +83,7 @@ In case of downloadable, a green downward arrow is appeared on the resulted samp
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.5]{gipe004.png}
-   %caption of the figure
+   %caption of the figure	
    \caption{Shopping Cart Items}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:gipe004}
@@ -116,7 +116,7 @@ GRASS GIS (Geographic resources Analysis Support System) is an open source, Free
 
 The currently last version GRASS 7.0 is downloadable at www.grass.osgeo.org. It has a windows version in which the windows users can easily work in its environment.\newline
 
-The new modules are all incorporated in the GRASS Image Processing Environment (GIPE) folder. The modules are accessible from the following link: http://trac.osge.org/grass/browser/grass-addons/gipe .\newline
+The new modules are all incorporated in the GRASS Image Processing Environment (GIPE) folder. The modules are accessible from the \href{http://trac.osgeo.org/grass/browser/grass-addons/gipe}{trac.osgeo.org} website.\newline
 
 After downloading and installing the software, an specific work area should be determined for first time of opening. All of the files imported and newly generated in GRASS are located in the determined path such as "C:/GRASSDATA/Landsat5/PERMANENT". \newline
 
@@ -381,23 +381,34 @@ The best method of atmospheric correction by the DOS concept can be verified by 
 
 \subsubsection{The 6S atmospheric correction model}
 
-The module i.atcorr applies the 6S method to correct the atmospheric errors which is supposed to be the most accurate but input demanding procedure.  \newline
-6S (Second Simulation of a Satellite Signal in the Solar Spectrum) is an advanced radiative transfer system designed to simulate the reflection of solar radiation by a coupled atmosphere-surface system for a wide range of atmospheric, spectral and geometrical conditions. \newline
+The module i.atcorr applies the 6S method to correct the atmospheric errors which is supposed to be the most accurate but input demanding procedure.\newline
+6S (Second Simulation of a Satellite Signal in the Solar Spectrum) is an advanced radiative transfer system designed to simulate the reflection of solar radiation by a coupled atmosphere-surface system for a wide range of atmospheric, spectral and geometrical conditions.\newline 
+At this point, if a "Dark Object Subtraction" atmospheric correction has not been computed in "i.landsat.toar", then an atmospheric correction must be applied to the TOAR radiance/reflectance values coming from "i.landsat.toar". This is done using "i.atcorr" module. This module is a port of 6S atmospheric correction model.
+Atmospheric correction in GRASS can be done in Imageray/Satellite image tools/Atmospheric correction that applies the i.atcorr module.\newline
+Parameterization of the i.atcorr is being done inside a text file including the below information (called parameter file).\newline 
 
-At this point, if a "Dark Object Subtraction" atmospheric correction has not been computed in "i.landsat.toar", then an atmospheric correction must be applied to the TOAR radiance/reflectance values coming from "i.landsat.toar". This is done using "i.atcorr" module. This module is a port of 6S atmospheric correction model.\newline
+7                        - geometrical conditions=Landsat 5 TM\newline
+7 5 6.30 51.410 24.234   - month day hh.ddd longitude latitude ("hh.ddd" is in decimal hours GMT)\newline
+6                        - atmospheric mode=us standard 62\newline
+1                        - aerosols model=continental\newline
+9                        - visibility [km] (aerosol model concentration), not used as there is raster input\newline
+-1.200                   - mean target elevation above sea level [km] (here 1200m asl), not used as there is raster input\newline
+-1000                    - sensor height (here, sensor on board a satellite)\newline
+30                       - 'i'th band of TM Landsat 5\newline
 
-Atmospheric correction in GRASS can be done in Imagery/Satellite image tools/Atmospheric correction that applies the i.atcorr module.\newline
+The figures at the left side are the parameters and the texts in the right side are the defenitions. The text file must be prepared before and browse inside the i.atcorr. The needed information are mentioned in the manual of i.atcorr. Some explanations are as follow.\newline
 
-The script mentioned in \ref{appendixA}-4 can be used for automated approach of atmospheric correction for a set of  landsat images.\newline
+Line 1 is included of geometric conditions and the correct number can be found in the section A of i.atcorr manual. For landsat 5 tm the number is 7.\newline
+Line 2 is mentioning the specifications of the image that is mentioned in mtl file. Latitude and longitudes are the geographic location of the center of region. If the position is not available in longitude-latitude (WGS84), the m.proj conversion module can be used to reproject from a different projection. It also can be accessed in  GRASS/Raster/Develop raster map/Reproject  raster map.\newline
+After reprojection the location of the center of the region can be determined by g.region module.\newline
+In line 3 the atmospheric model must be entered. The possible models are being mentioned in i.atcorr manual section B. In case of access to the radio sound weather data of the region, it is possible to include the user owned data. In this case it should be mentioned 7 (for user defined model) instead of 6 (us standard 62). Then write the requested weather parameters.\newline
+In line 4 the aerosole model is requested. The desired model should be found in section C of the i.atcorr. It is again possible to enter the user's model.\newline
+Line 5 is the value of visibility. The estimation is found in weather data. If you an estimate of aerosol optical depth is accessible, enter v=0 for the visibility and enter the aerosol optical depth at 550nm (iaer means 'i' for input and 'aer' for aerosol).\newline
+In line 6  the the elevation of the target pixel is described. It expresses the altitude of the target (e.g., mean elevation) in [km], given as negative value. If there is a DEM file input the line 7 is not used.
+In Line 7 the sensor height is described. The figure -1000 means that the sensor is on board a satellite.
+Line 8 is mentioning the sensor band. It is determined in he section F of the i.atcorr manual.\newline
 
-\begin{smallverbatim}
-i.atcorr -r -o -f \
- input=L5162040_04020090705.toar.1 \
- elevation=dem90 \
- parameters=/home/icwater/param_L5.txt \
- output=L5162040_04020090705atcorr.1 \
- range=0,1 rescale=0,1 --overwrite
-\end{smallverbatim}
+Once inside the i.atcorr, type a name for the input file. This file must be the reflectance at top of atmosphere file (generated in i.landsat.toar). Every band needs its own parameter text file to be browsed or directly enter the parameters values in the text box.\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -410,11 +421,9 @@ i.atcorr -r -o -f \
    \label{fig:gipe016}
 \end{figure}
 
-\section{Basic products creation}
+For selection the DEM and visibility bands as input, while inside the i.atcorr go to input label and select the desired files. Visibility map has no more extra benefit when the value of visibility is written in parameter file. But DEM file can help to get better results of i.atcorr.\newline
+Unlike the i.landsat.toar, the i.atcorr must be applied for every band individually for every given image.\newline
 
-Necessary images for energy balance calculation are NDVI, Albedo, Emissivity. These initial products have dedicated GRASS GIS modules.\newline
-
-NDVI is calculated using "i.vi", following the example below:\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -422,12 +431,23 @@ NDVI is calculated using "i.vi", following the example below:\newline
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.4]{gipe017.png}
    %caption of the figure
-   \caption{i.vi Module}
+   \caption{i.atcorr Module Input Tab}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:gipe017}
 \end{figure}
 
-Albedo is caculated from the "i.albedo" module:\newline
+
+The script mentioned in \ref{appendixA}-4 can be used for automated approach of atmospheric correction for a set of  landsat images.\newline
+
+The produced maps are reflectance at the surface for each band. The values range is between 0 and 1 showing the ratio of outgoing radiance to the incoming radiance at Earth Skin Surface.  
+In order to test the reality of the generated values look to the NDVI values that can be produced by the red and near infrared band through map r.mapcalc module. The values related to green vegetation  area must be the highest. 
+
+\section{Basic products creation}
+
+Necessary images for energy balance calculation are NDVI, Albedo, Emissivity. These initial products have dedicated GRASS GIS modules.\newline
+
+\subsection{NDVI production}
+Vegetion index NDVI is a necessary basic product for some other higher level outputs such as Soil heat flux, Surface roughness (Z0m). It can be  calculated using "i.vi". Go to Imagery/Evapotranspiration calculation/vegetation indices, following the example below:\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -435,12 +455,12 @@ Albedo is caculated from the "i.albedo" module:\newline
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.4]{gipe018.png}
    %caption of the figure
-   \caption{i.albedo Module}
+   \caption{i.vi Module}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:gipe018}
 \end{figure}
 
-Emissivity is computed using the generic module "i.emissivity":\newline
+There are 13 vegetation indices (VI) possibility in i.vi module. After selecting the desired name of red band, enter the name of VI (such as NDVI, EVI, DVI,...). Then go to Optional label and select the near infrared band for NDVI and the other bands is needed in case of the other VIs. \newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -448,17 +468,21 @@ Emissivity is computed using the generic module "i.emissivity":\newline
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.4]{gipe019.png}
    %caption of the figure
-   \caption{i.emissivity Module}
+   \caption{i.vi Module}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:gipe019}
 \end{figure}
 
-
-\section{Energy balance terms}
-
-Net radiation at satellite overpass (instantaneous) and integrated over the day (think sunshine hours) are computed from a generic GRASS GIS raster module "r.sun".\newline
-
-In mode 1, instantaneous net radiation is computed, in mode 2 the day integrated net radiation is computed. Both are necessary for the energy balance computation. Mode 1 for sensible heat flux computation and mode 2 for the Day ET potential.\newline
+\subsection{Albedo production}
+Albedo is shortwave surface reflectance in range of 0.3 to 3.0 micro meters (figures are dimensionless).\newline 
+Albedo is in fact an integration of the surface reflectance of all of the shortwave bands assuming a fraction for every band. The fractions for the bands are published by the landsat website and are as follow.
+\begin{smallverbatim}
+ Albedo = (0.293 * channel1 + 0.274 * channel2 \
+        + 0.233 * channel3 + 0.156 * channel4 + \
+        0.033 * channel5 + 0.011 * channel7)
+\end{smallverbatim}
+Albedo is calculated from the "i.albedo" module. It  computes broad band albedo from surface reflectance. This is an precursor to Soil heat flux, r.sun and Energy-Balance processing.\newline
+Inside the GRASS windows, go to Imagery/Evapotranspiration calculation/Albedo, and select the the bands 1 to 5 and 7 of atmospherically corrected surface reflectance.\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -466,16 +490,14 @@ In mode 1, instantaneous net radiation is computed, in mode 2 the day integrated
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.4]{gipe020.png}
    %caption of the figure
-   \caption{r.sun Module}
+   \caption{i.albedo Module}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:gipe020}
 \end{figure}
 
-Note that the following raster inputs are recommended: aspect, slope, albedo, latitude and longitude.\newline
-
-Slope and Aspect can be computed with "r.slope.aspect", albedo with "i.albedo", latitude and longitude with "i.latlong".\newline
-
-Soil heat flux can be computed with "i.eb.g0".\newline
+\subsection{Emissivity Production}
+Surface emisivity is the ratio of the thermal energy radiated by the surface to the thermal energy  radiated by black body at the same temprature (is dimensionless).\newline 
+The module r.emissivity calculates the emissivity in the longwave radiation spectrum, according to the semi-empirical equation related to NDVI by Caselles et al. (1997), valid in the NDVI range of 0.16 to 0.74. Estimation in the 8-14 micrometers range for sparse canopy.\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -483,9 +505,87 @@ Soil heat flux can be computed with "i.eb.g0".\newline
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.4]{gipe021.png}
    %caption of the figure
-   \caption{i.eb.soilheatflux Module}
+   \caption{i.emissivity Module}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:gipe021}
+\end{figure}
+
+
+\section{Energy balance terms}
+
+Net radiation at satellite overpass (instantaneous) and integrated over the day are computed from a generic GRASS GIS raster module "r.sun". In mode 1, instantaneous net radiation is computed, in mode 2 the day integrated net radiation is computed. Both are necessary for the energy balance computation. Mode 1 for sensible heat flux computation and mode 2 for the Day ET potential.\newline
+
+Note that the following raster inputs are recommended: aspect, slope, albedo, latitude and longitude.
+Slope and Aspect can be computed with "r.slope.aspect" using the DEM raster file, albedo with "i.albedo", latitude and longitude with "i.latlong".\newline
+
+To run the r.sun while inside the GRASS go to Raster/Solar radiance and shadows/solar irradiance and irradiation. Input the name of DEM raster file and the Julian day of the year (image acquisition day).\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe022.png}
+   %caption of the figure
+   \caption{r.sun Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe022}
+\end{figure}
+
+To determine the other input file go to the input\_options label and input the slop, aspect, albedo, langitude and latitude files. The Linke atmospheric turbidity should be found for the region of study. The default is 3.0.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe023.png}
+   %caption of the figure
+   \caption{r.sun Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe023}
+\end{figure}
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe024.png}
+   %caption of the figure
+   \caption{r.sun Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe024}
+\end{figure}
+
+In Optional label, push to the "Incorporate the shadowing effect of the terrain" and local (not GMT) time  of image acquisition.\newline
+In Out\_option label write the name of desired output names. It is possible only to generate the output files for one of the Modes 1 and 2 in the same time.  So, add the desired names for 1,2,4,5 and 6 rows. Global or total irradiance output file is a product of the three base outputs Beam irradiance, Diffuse irradiance and reflected irradiance.\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe025.png}
+   %caption of the figure
+   \caption{r.sun Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe025}
+\end{figure}
+
+To generate the output insolation time for Mode 2, the r.sun must be run again. And put all of the input files. In Output\_options the only output file in row 3 should be written.\newline
+
+r.sun -s --overwrite elevin=dem90 aspin=\_aspect slopein=\_slop albedo=L5162040\_04020090518.1Albedo latin=latitude longin=Longitude incidout=L5162040\_4020090518.2InAnMod1 beam\_rad=L5162040\_4020090518.2BeIr insol\_time=L5162040\_04020090518.2InTiMod2 diff\_rad=L5162040\_04020090518.2DiIrMod1 refl\_rad=L5162040\_04020090518.2GReIrMod1 glob\_rad=L5162040\_04020090518.2TIrMod1 day=138 time=10\newline
+
+
+\subsection{soil heat flux production}
+Soil heat flux can be computed with "i.eb.g0".\newline
+
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.4]{gipe026.png}
+   %caption of the figure
+   \caption{i.eb.soilheatflux Module}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe026}
 \end{figure}
 
 Note that some additional input should be created, including a ".time" raster.\newline
@@ -496,11 +596,11 @@ Sensible heat flux can be calculated with "i.eb.h\_SEBAL01".\newline
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.4]{gipe022.png}
+   \includegraphics[scale=0.4]{gipe027.png}
    %caption of the figure
    \caption{i.eb.h\_SEBAL01 Module}
    %label of the figure, which has to correspond to \ref{}:
-   \label{fig:gipe022}
+   \label{fig:gipe027}
 \end{figure}
 
 Note that additional images should be created about surface roughness length (z0m), altitude corrected temperature (t0dem), the height independent wind speed (U*), along with coordinates of the "wet" and "dry" pixels (SEBAL method is geographically dependent on extrema energy balance points). \newline
@@ -511,11 +611,11 @@ Evaporative fraction can be calculated by "i.eb.evapfr":\newline
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.4]{gipe023.png}
+   \includegraphics[scale=0.4]{gipe028.png}
    %caption of the figure
    \caption{i.eb.evapfr Module}
    %label of the figure, which has to correspond to \ref{}:
-   \label{fig:gipe023}
+   \label{fig:gipe028}
 \end{figure}
 
 Evapotranspiration can be computed from "i.eb.eta":\newline
@@ -524,11 +624,11 @@ Evapotranspiration can be computed from "i.eb.eta":\newline
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.4]{gipe024.png}
+   \includegraphics[scale=0.4]{gipe029.png}
    %caption of the figure
    \caption{i.eb.eta Module}
    %label of the figure, which has to correspond to \ref{}:
-   \label{fig:gipe024}
+   \label{fig:gipe029}
 \end{figure}
 
 \newpage
@@ -554,11 +654,13 @@ Control should be given to run the script in the same directory as the images ar
 In GRASS Command Line Interface (CLI) write the script:
 
 \begin{smallverbatim}
-echo "RUN from the MTL.txt directory and within the GRASS environment"
+echo "RUN from the MTL.txt directory and \
+ within the GRASS environment"
 
 for file in L5*0.TIF
 do
-	out=\$(echo \$file | sed 's/\\(.*\)\_\\(.*\)\_B\\(.*\)0.TIF/\1\\_\2\.\3/g')
+	out=\$(echo \$file | sed 's/\\(.*\) 
+        \_\\(.*\)\_B\\(.*\)0.TIF/\1\\_\2\.\3/g')
 	echo \$out
 	r.in.gdal input=\$file output=\$out
 done
