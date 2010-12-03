@@ -197,14 +197,19 @@ In Linux it is possible to decompress the files by using the script mentioned in
 Once this is done, start GRASS GIS and create a new location from the New Location wizard, name it as the Path and Row of the images (i.e. p162r040), and use any of the landsat5.TIF images available as a reference image to get the projection system and other information from.\newline
 There is a need to import and rename the images inside the GRASS with the extensions in number format because the preprocessing module "i.landsat.toar" which imports DN and convert them into either radiance or reflectance is using a base name with numbered extensions.  For instance:\newline\linebreak
 Landsat 5 TM:\newline
-L5162040\_04020090705\_B10.TIF => L5162040\_04020090705.1\newline
+L5162040\_04020090705\_B10.TIF \newline
+=> L5162040\_04020090705.1\newline
 The same for the other bands till band 7.0\newline
-L5162040\_04020090705\_B70.TIF => L5162040\_04020090705.7\newline\linebreak
+L5162040\_04020090705\_B70.TIF \newline
+=> L5162040\_04020090705.7\newline\linebreak
 Landsat 7 ETM+:\newline
-L71161040\_04020100607\_B10.TIF => L7\_161040\_04020100607.1\newline
+L71161040\_04020100607\_B10.TIF \newline
+=> L7\_161040\_04020100607.1\newline
 The same for the other bands till band 7.0 except for the bands 6.1 and 6.2\newline
-L71161040\_04020100607\_B61.TIF => L7\_161040\_04020100607.61\newline
-L72161040\_04020100607\_B62.TIF => L7\_161040\_04020100607.62\newline\linebreak
+L71161040\_04020100607\_B61.TIF \newline
+=> L7\_161040\_04020100607.61\newline
+L72161040\_04020100607\_B62.TIF \newline
+=> L7\_161040\_04020100607.62\newline\linebreak
 It is possible to do one by one in GRASS Import menu. For every band that is selected from the image container folder, an output file should be written as the new file naming system mentioned above.\newline
 
 %\setkeys{Gin}{width=1\textwidth}
@@ -385,8 +390,7 @@ The module i.atcorr applies the 6S method to correct the atmospheric errors whic
 6S (Second Simulation of a Satellite Signal in the Solar Spectrum) is an advanced radiative transfer system designed to simulate the reflection of solar radiation by a coupled atmosphere-surface system for a wide range of atmospheric, spectral and geometrical conditions.\newline 
 At this point, if a "Dark Object Subtraction" atmospheric correction has not been computed in "i.landsat.toar", then an atmospheric correction must be applied to the TOAR radiance/reflectance values coming from "i.landsat.toar". This is done using "i.atcorr" module. This module is a port of 6S atmospheric correction model.
 Atmospheric correction in GRASS can be done in Imageray/Satellite image tools/Atmospheric correction that applies the i.atcorr module.\newline
-Parameterization of the i.atcorr is being done inside a text file including the below information (called parameter file).\newline 
-
+Parameterization of the i.atcorr is being done inside a text file including the below information (called parameter file).\newline\linebreak 
 7                        - geometrical conditions=Landsat 5 TM\newline
 7 5 6.30 51.410 24.234   - month day hh.ddd longitude latitude ("hh.ddd" is in decimal hours GMT)\newline
 6                        - atmospheric mode=us standard 62\newline
@@ -569,11 +573,18 @@ In Out\_option label write the name of desired output names. It is possible only
    \label{fig:gipe025}
 \end{figure}
 
-To generate the output insolation time for Mode 2, the r.sun must be run again. And put all of the input files. In Output\_options the only output file in row 3 should be written.\newline
-
-r.sun -s --overwrite elevin=dem90 aspin=\_aspect slopein=\_slop albedo=L5162040\_04020090518.1Albedo latin=latitude longin=Longitude incidout=L5162040\_4020090518.2InAnMod1 beam\_rad=L5162040\_4020090518.2BeIr insol\_time=L5162040\_04020090518.2InTiMod2 diff\_rad=L5162040\_04020090518.2DiIrMod1 refl\_rad=L5162040\_04020090518.2GReIrMod1 glob\_rad=L5162040\_04020090518.2TIrMod1 day=138 time=10\newline
-
-
+To generate the output insolation time for Mode 2, the r.sun must be run again. And put all of the input files. In Output\_options the only output file in row 3 should be written.\newline\linebreak
+r.sun -s --overwrite elevin=dem90\newline
+aspin=\_aspect slopein=\_slop\newline
+albedo=L5162040\_04020090518.1Albedo\newline
+latin=latitude longin=Longitude\newline
+incidout=L5162040\_4020090518.2InAnMod1\newline
+beam\_rad=L5162040\_4020090518.2BeIr\newline
+insol\_time=L5162040\_04020090518.2InTiMod2\newline
+diff\_rad=L5162040\_04020090518.2DiIrMod1\newline
+refl\_rad=L5162040\_04020090518.2GReIrMod1\newline
+glob\_rad=L5162040\_04020090518.2TIrMod1\newline
+day=138 time=10
 \subsection{soil heat flux production}
 Soil heat flux can be computed with "i.eb.g0".\newline
 
