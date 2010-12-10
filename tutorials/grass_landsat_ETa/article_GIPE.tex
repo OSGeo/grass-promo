@@ -9,7 +9,6 @@
 \author{Pakparvar M. and GRASS Development Team}
 
 \maketitle
-
 \section{Introduction}
 
 This manual aims at explaining step-by-step how to prepare and process Landsat 5 TM imagery data after downloading it from GLOVIS (http://glovis.usgs.gov) The location of study area is a water harvesting (floodwater spreading) project is being set up in South central Iran (Kowsar research station, Gareh Bygone, fars Province). Time series of Et maps is needed for integration and calculation the hydrologic balance. The WRS-2 path=164 and row=040. The site is located south-central East border of the image. Fig.~\ref{fig:gipe000}\newline
@@ -501,7 +500,7 @@ Inside the GRASS windows, go to Imagery/Evapotranspiration calculation/Albedo, a
 
 \subsection{Emissivity Production}
 Surface emisivity is the ratio of the thermal energy radiated by the surface to the thermal energy  radiated by black body at the same temprature (is dimensionless).\newline 
-The module r.emissivity calculates the emissivity in the longwave radiation spectrum, according to the semi-empirical equation related to NDVI by Caselles et al. (1997), valid in the NDVI range of 0.16 to 0.74. Estimation in the 8-14 micrometers range for sparse canopy.\newline
+The module i.emissivity calculates the emissivity in the longwave radiation spectrum, according to the semi-empirical equation related to NDVI by Caselles et al. (1997), valid in the NDVI range of 0.16 to 0.74. Estimation in the 8-14 micrometers range for sparse canopy.\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -516,13 +515,17 @@ The module r.emissivity calculates the emissivity in the longwave radiation spec
 
 
 \section{Energy balance terms}
+\subsection{Net Radiation}
+Net radiation at satellite overpass (instantaneous) and integrated over the day are computed from a generic GRASS GIS raster module "r.sun". 
+The r.sun program works in two modes. In the first mode it calculates for the image acquisition local time a solar incidence angle [degrees] and solar irradiance values [W.m-2]. In the second mode daily sums of solar radiation [Wh.m-2.day-1] are computed within a day.\newline
 
-Net radiation at satellite overpass (instantaneous) and integrated over the day are computed from a generic GRASS GIS raster module "r.sun". In mode 1, instantaneous net radiation is computed, in mode 2 the day integrated net radiation is computed. Both are necessary for the energy balance computation. Mode 1 for sensible heat flux computation and mode 2 for the Day ET potential.\newline
+In the other hand, in mode 1, instantaneous net radiation, and in mode 2 the day integrated net radiation is computed. Both are necessary for the energy balance computation. Mode 1 for sensible heat flux computation and mode 2 for the Day ET potential.\newline
 
-Note that the following raster inputs are recommended: aspect, slope, albedo, latitude and longitude.
-Slope and Aspect can be computed with "r.slope.aspect" using the DEM raster file, albedo with "i.albedo", latitude and longitude with "i.latlong".\newline
+The model computes all three components of total radiation (beam, diffused and reflected) for the clear sky conditions, i.e. not taking into consideration the spatial and temporal variation of clouds. \newline
 
-To run the r.sun while inside the GRASS go to Raster/Solar radiance and shadows/solar irradiance and irradiation. Input the name of DEM raster file and the Julian day of the year (image acquisition day).\newline
+Note that the following raster inputs are recommended: aspect, slope, albedo, latitude and longitude. Slope and Aspect can be computed with "r.slope.aspect" using the DEM raster file, albedo with "i.albedo", latitude and longitude with "i.latlong".\newline
+
+Run r.sun while inside the GRASS: go to Raster/Solar radiance and shadows/solar irradiance and irradiation. Input the name of DEM raster file and the Julian day of the year (image acquisition day). \newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -535,7 +538,7 @@ To run the r.sun while inside the GRASS go to Raster/Solar radiance and shadows/
    \label{fig:gipe022}
 \end{figure}
 
-To determine the other input file go to the input\_options label and input the slop, aspect, albedo, langitude and latitude files. The Linke atmospheric turbidity should be found for the region of study. The default is 3.0.\newline
+To determine the other input file go to the input\_options label and input the slop, aspect, albedo, longitude and latitude files. The Linke atmospheric turbidity should be found in reference literature for the study area. The default is 3.0. Average monthly values of the Linke turbidity coefficient for a mild climate in the northern hemisphere is presented in \href{tab:001}.\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -547,6 +550,27 @@ To determine the other input file go to the input\_options label and input the s
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:gipe023}
 \end{figure}
+
+\begin{center}
+\begin{tabular}{lllll}
+Landscapes & Mountains & Rural & City & Industrial\\
+January & 1.5 & 2.1 & 3.1 & 4.1\\
+February & 1.6 & 2.2 & 3.2 & 4.3\\
+March & 1.8 & 2.5 & 3.5 & 4.7\\
+April & 1.9 & 2.9 & 4 & 5.3\\
+May & 2 & 3.2 & 4.2 & 5.5\\
+June & 2.3 & 3.4 & 4.3 & 5.7\\
+July & 2.3 & 3.5 & 4.4 & 5.8\\
+August & 2.3 & 3.3 & 4.3 & 5.7\\
+September & 2.1 & 2.9 & 4 & 5.3\\
+October & 1.8 & 2.6 & 3.6 & 4.9\\
+November & 1.6 & 2.3 & 3.3 & 4.5\\
+December & 1.5 & 2.2 & 3.1 & 4.2\\
+Annual & 1.9 & 2.75 & 3.75 & 5
+\end{tabular}
+\linebreak
+Table 1: Linke Turbidity Coefficient
+\end{center}
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -561,31 +585,63 @@ To determine the other input file go to the input\_options label and input the s
 
 In Optional label, push to the "Incorporate the shadowing effect of the terrain" and local (not GMT) time  of image acquisition.\newline
 In Out\_option label write the name of desired output names. It is possible only to generate the output files for one of the Modes 1 and 2 in the same time.  So, add the desired names for 1,2,4,5 and 6 rows. Global or total irradiance output file is a product of the three base outputs Beam irradiance, Diffuse irradiance and reflected irradiance.\newline
+To generate the output files for Mode 2, the r.sun must be run again and put all of the input files. In Output\_options the output files related to mode 2 or mod 1 and 2 must be filled (boxes 2 to 6) and the box 1 must be kept empty. In Optional label delete the local time which was mentioned for Mode 1 outputs in before.\newline
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.4]{gipe025.png}
+   \includegraphics[scale=0.3]{gipe025.png}
    %caption of the figure
-   \caption{r.sun Module}
+   \caption{r.sun Mode 1}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:gipe025}
 \end{figure}
 
-To generate the output insolation time for Mode 2, the r.sun must be run again. And put all of the input files. In Output\_options the only output file in row 3 should be written.\newline\linebreak
-r.sun -s --overwrite elevin=dem90\newline
-aspin=\_aspect slopein=\_slop\newline
-albedo=L5162040\_04020090518.1Albedo\newline
-latin=latitude longin=Longitude\newline
-incidout=L5162040\_4020090518.2InAnMod1\newline
-beam\_rad=L5162040\_4020090518.2BeIr\newline
-insol\_time=L5162040\_04020090518.2InTiMod2\newline
-diff\_rad=L5162040\_04020090518.2DiIrMod1\newline
-refl\_rad=L5162040\_04020090518.2GReIrMod1\newline
-glob\_rad=L5162040\_04020090518.2TIrMod1\newline
-day=138 time=10
-\subsection{soil heat flux production}
+%\setkeys{Gin}{width=1\textwidth}
+\begin{figure}[htbp]
+   \centering
+   %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
+   \includegraphics[scale=0.3]{gipe025a.png}
+   %caption of the figure
+   \caption{r.sun Mode 2}
+   %label of the figure, which has to correspond to \ref{}:
+   \label{fig:gipe025a}
+\end{figure}
+
+Incident angle raster map is computed using DEM, aspect, slope maps for the given julian day and local time. The figures ranges between 0 and 90.\newline
+Global or total irradiance output file is a product of the three basal outputs beam irradiance, diffuse irradiance and reflected irradiance. \newline
+The range of values of the products is dependent of many factors but some guidelines can be given as followings:\newline\linebreak
+The range of figures for Beam irradiance are normaly between 500 to 1000, diffuse irradiance between 70 to 150, and ground reflected irradiance between less than 1 to 100 all in (W/m2).\newline
+The summation of those basal products figures (global irradiance) for a given pixel must be less than actual instantaneous radiation at the atmosphere which ranged between 1361 to 1386 (W/M2).\newline\linebreak
+The net radiation (W/M2/day) value for each pixel can be computed by dividing the global irradiation mode 2 (Wh/M2/day) by the actual sunshine hours. It may be called Rnet.day product.\newline
+Sunshine hours is a weather station parameter and alternatively is possible to generate as a raster file by using the i.sunhours module.\newline\linebreak
+The r.sun command line for mode 1 and mode 2 are as followings and can be used for automated scripting.\newline\linebreak
+
+Mode 1
+\begin{smallverbatim}
+ r.sun elevin=dem90
+  aspin=_aspect slopein=_slop lin=3.2
+  albedo=L5162040_04020090518.1Albedo
+  latin=latitude longin=Longitude
+  incidout=_InAnM1 beam_rad=_BiIrM1
+  diff_rad=_DifIrM1 refl_rad=_GrRefIrM1
+  glob_rad=_GlIrrM1 day=138 time=10
+\end{smallverbatim}
+
+Mode 2
+\begin{smallverbatim}
+ r.sun elevin=dem90
+  aspin=_aspect slopein=_slop lin=3.2
+  albedo=L5162040_04020090518.1Albedo
+  latin=latitude longin=Longitude
+  beam_rad=_BiIrM2 insol_time=_InsTiM2
+  diff_rad=_DifIrM2 refl_rad=_GrRefIrM2
+  glob_rad=_GlIrrM2 day=138
+\end{smallverbatim}
+
+
+\subsection{soil heat flux}
 Soil heat flux can be computed with "i.eb.g0".\newline
 
 %\setkeys{Gin}{width=1\textwidth}
@@ -601,6 +657,7 @@ Soil heat flux can be computed with "i.eb.g0".\newline
 
 Note that some additional input should be created, including a ".time" raster.\newline
 
+\subsection{Sensible Heat Flux}
 Sensible heat flux can be calculated with "i.eb.h\_SEBAL01".\newline
 
 %\setkeys{Gin}{width=1\textwidth}
@@ -616,6 +673,7 @@ Sensible heat flux can be calculated with "i.eb.h\_SEBAL01".\newline
 
 Note that additional images should be created about surface roughness length (z0m), altitude corrected temperature (t0dem), the height independent wind speed (U*), along with coordinates of the "wet" and "dry" pixels (SEBAL method is geographically dependent on extrema energy balance points). \newline
 
+\subsection{Evaporative Fraction}
 Evaporative fraction can be calculated by "i.eb.evapfr":\newline
 
 %\setkeys{Gin}{width=1\textwidth}
@@ -629,6 +687,7 @@ Evaporative fraction can be calculated by "i.eb.evapfr":\newline
    \label{fig:gipe028}
 \end{figure}
 
+\subsection{Evapotranspiration}
 Evapotranspiration can be computed from "i.eb.eta":\newline
 
 %\setkeys{Gin}{width=1\textwidth}
