@@ -36,6 +36,11 @@ done
 \end{smallverbatim}
 Another tool, gdalwarp (\href{http://www.gdal.org/gdalwarp.html}{www.gdal.org/gdalwarp.html}) is dedicated to extract part of images and geolocate them properly. It would reproject the image data, it is useful to note that it also change the file format if you request it to do so. The script below does that with a target projection \textit{EPSG:4326} which actually means the following proj4 crs: \textit{+proj=longlat +ellps=WGS84 +datum=WGS84 +no\_defs}.
 \begin{smallverbatim}
+#This Unix Shell script automatically 
+# extracts and reprojects MODIS 
+# subdatasets into processed/ 
+# subdirectory as GeoTiff (*.tif) files
+#--------------------------------------
 for file in *.hdf
 do SDS_list=$(gdalinfo $file \
         | grep "SUBDATASET_.*_NAME.*")
@@ -51,9 +56,14 @@ done
 \end{smallverbatim}
 
 \section{Renaming}
-Most of the time you will want to reduce the size of the MODIS file names. As an example for MOD13Q1 NDVI layer remaning when converting from HDF to TIF, write the following script at the GRASS Command Line Interface:
+Most of the time you will want to reduce the size of the MODIS file names. As an example for MOD13Q1 NDVI layer renaming when converting from HDF to TIF, write the following script at the GRASS Command Line Interface:
 
 \begin{smallverbatim}
+#This Unix Shell script automatically 
+# extracts MODIS NDVI subdatasets into 
+# GeoTiff (*.tif) files with a sed 
+# renaming scheme.
+#-------------------------------------
 root=~/MOD13Q1/2_PreProcessed
 rootNDVI=$root/NDVI/
 for file in MOD13Q1.A2010*.hdf
@@ -61,7 +71,7 @@ do
 	SDS_list_NDVI=$(gdalinfo $file \
 		| grep "SUBDATASET_1_NAME")
 	echo $file
-	gdal_translate -of GTiff -quiet "${SDS_list_NDVI#*=}" \
+	gdal_translate -of GTiff "${SDS_list_NDVI#*=}" \
 	   $rootNDVI/$(echo ${SDS_list_NDVI#*=} \
 	   | sed 's/\(.*\):\(.*\):"\(.*\).A\(.*\)\.\h \
 	   \(.*\)\.\(.*\)\.\(.*\).hdf":\(.*\): \
@@ -69,10 +79,15 @@ do
 done
 \end{smallverbatim}
 
+If the later part of the code above is confusing, it may be a good idea to read about \href{http://www.gnu.org/software/sed/manual/sed.html}{sed} syntax.
+
 \section{Importing in GRASS}
 Once your files are prepared, they can be imported in GRASS.
 
 \begin{smallverbatim}
+#Import all NDVI files in a directory
+# into GRASS GIS
+#--------------------------------
 cd $rootNDVI
 for file in $rootNDVI
 do
@@ -82,6 +97,9 @@ done
 
 To access blindly an NDVI set of files, create a variable list from g.mlist:
 \begin{smallverbatim}
+#Create a list of NDVI files available
+# in the current GRASS GIS Mapset
+#-------------------------------------
 listNDVI=$(g.mlist type=rast pattern=*NDVI*)
 echo $listNDVI
 \end{smallverbatim}
