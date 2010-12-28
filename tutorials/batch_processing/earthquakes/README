@@ -1,0 +1,11 @@
+Example of a cron job running on a server to fetch earthquake data from the USGS
+for the last week and plot it up.
+
+Based on Markus's PHP earthquake demo (copied here for completeness)
+
+
+This is just a (working) example. You'll have to adjust the paths, etc. to match your needs.
+
+
+HB Dec2010
+
