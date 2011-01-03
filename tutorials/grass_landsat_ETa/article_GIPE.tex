@@ -6,7 +6,7 @@
 
 \title{Evapotranspiration mapping with Landsat 5TM in GRASS GIS}
 \subtitle{Manual}
-\author{Pakparvar M. and GRASS Development Team}
+\author{Pakparvar M. (U. Ghent, Belgium) and GRASS Development Team}
 
 \maketitle
 \section{Introduction}
@@ -642,6 +642,11 @@ Mode 2
 
 
 \subsection{soil heat flux}
+The generic module "i.eb.soilheatflux" calculates the soil heat flux approximation (g0). It takes input of Albedo, NDVI, Surface Skin temperature, Net Radiation (see r.sun), and time of satellite overpass.\newline
+Surface temperature (LST) is directly relative to thermal radiation recorded in thermal band . So the the thermal band that has been converted to radiation (by i.landsat.toar) can be used as the input file for surface temperature raster map.\newline 
+Net radiation is the global radiation product of mode1 of r.sun module.\newline
+Time raster map can be created by map calculation knowing the local time of satellite overpass.\newline
+
 Soil heat flux can be computed with "i.eb.g0".\newline
 
 %\setkeys{Gin}{width=1\textwidth}
@@ -655,9 +660,47 @@ Soil heat flux can be computed with "i.eb.g0".\newline
    \label{fig:gipe026}
 \end{figure}
 
-Note that some additional input should be created, including a ".time" raster.\newline
+The i.eb.soilheatflux command line is as followings and can be used for automated scripting.
+\begin{smallverbatim}
+i.eb.soilheatflux \
+    albedo="L5162040_04020090518.1Albedo" \
+    ndvi="L5162040_04020090518.1NDVI" \
+    tempk="L5162040_04020090518.toar.6" \
+    rnet="_GlIrrM1" time="time" output="_G0" 
+\end{smallverbatim}
 
 \subsection{Sensible Heat Flux}
+The Sensible heat flux (H) is calculated by "i.eb.h\_SEBAL01", given both maps of Net Radiation and soil Heat flux (Rn, G) at instantaneous time, the surface roughness (z0m), a map of the altitude corrected temperature (t0dem), a point data of the frictional velocity (u*), a value of actual vapour pressure (ea[KPa]) and the (x,y) pairs for wet and dry pixels.\newline
+Surface roughness (Z0m) is an dependent variable of vegetation hight. Generation of an accurate map of the vegetation inside the study area in the date of image acquisition will lead to increase the accuracy of H calculation.\newline
+\begin{smallverbatim}
+    Z0m=hveg * 0.136 
+\end{smallverbatim}
+hveg is the hight of vegetation (m).\newline
+Altitude corrected temperature map can be computed by using the toar thermal band and the DEM.\newline
+\begin{smallverbatim}
+    T0DEM=LST-(0.00627*DEM)
+\end{smallverbatim}
+The factor 0.00627 is the gradient of decreasing the temprature in relation to the decrease in hight (6.27 degree in each 1000 meter).\newline
+
+The U* (Called U star) is the friction velocity is computed by:\newline
+\begin{smallverbatim}
+    U*= 0.41*um/(ln(hu/Z0m) 
+\end{smallverbatim}
+um is wind speed in the time of satellite overpass (m/s), hu is the hight of wind measurement which is normally described as 5 (m). Z0m here is not the same as that is used in  U* calculation. The  hveg in this case is defined as the hight of vegetation around the weather station.\newline
+
+The value of actuale vapor pressure ea is calculated using the e0 for max and min tempreture.\newline
+\begin{smallverbatim}
+    e0=0.618*exp(17.27*T/(T+273.3))  
+\end{smallverbatim}
+e0 is the saturation vapor pressure at the air temperature. It must be calculated for Max and Min absolute tempreture.\newline
+ea is calculated using:\newline
+\begin{smallverbatim}
+    ea=RH*(e0Max=e0Min)/2))/100  
+\end{smallverbatim}
+RH is the measured relative humidity at the time of satellite overpass.\newline
+The location (row and column) of the wet (cold) and dry (hot) pixel must be found by the user. For wet pixel a place inside a water body and for dry pixel a place inside a bare and dry soil surface is recommended (SEBAL method is geographically dependent on extrem energy balance points).\newline
+
+
 Sensible heat flux can be calculated with "i.eb.h\_SEBAL01".\newline
 
 %\setkeys{Gin}{width=1\textwidth}
