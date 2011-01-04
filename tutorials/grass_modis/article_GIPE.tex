@@ -139,6 +139,25 @@ for QC in mandatory_qa_11A1 data_quality_flag_11A1 \
 done
 \end{smallverbatim}
 
+When Dealing with BRDF-Corrected Albedo product (i.e. MCD43B3), a complement quality product should be downloaded, MCD43B2. This product has two Sub-Datasets (SDS) that are not bit-packed, therefore can be read directly but r.mapcalc. These SDS are \textit{BRDF\_Albedo\_Quality} and \textit{Snow\_BRDF\_Albedo}.
+
+\begin{smallverbatim}
+BRDF_Albedo_Quality
+-------------------
+ Value 0: Processed, good quality \
+    (full BRDF inversion) 
+ Value 1: Processed, see other QA \
+    (magnitude BRDF inversions)
+ Value 255: Fill Value
+\end{smallverbatim}
+
+\begin{smallverbatim}
+Snow_BRDF_Albedo
+----------------
+ Value 0: Snow-free albedo retrieved  
+ Value 1: Snow albedo retrieved 
+ Value 255: Fill Value
+\end{smallverbatim}
 
 \address{GRASS Development Team\\
   \url{http://grass.osgeo.org}\\
