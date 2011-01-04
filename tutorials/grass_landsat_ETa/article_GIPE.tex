@@ -515,6 +515,11 @@ The module i.emissivity calculates the emissivity in the longwave radiation spec
 
 
 \section{Energy balance terms}
+The energy-balance models use visible, infrared and thermal remotely sensed data for solving the main equation:\newline
+\begin{center}
+Rn-G-H-$\lambda$ET=0 \newline
+\end{center}
+Where the Rn is the net radiation, H is the sensible heat flux, G is the soil heat flux, and $\lambda$ET is the latent heat flux.\newline
 \subsection{Net Radiation}
 Net radiation at satellite overpass (instantaneous) and integrated over the day are computed from a generic GRASS GIS raster module "r.sun". 
 The r.sun program works in two modes. In the first mode it calculates for the image acquisition local time a solar incidence angle [degrees] and solar irradiance values [W.m-2]. In the second mode daily sums of solar radiation [Wh.m-2.day-1] are computed within a day.\newline
