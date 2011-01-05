@@ -159,6 +159,19 @@ Snow_BRDF_Albedo
  Value 255: Fill Value
 \end{smallverbatim}
 
+In the case of BRDF\_Albedo\_Quality SDS (SDS\_BRDF), we may create an all BRDF levels inclusive mask with:
+
+\begin{smallverbatim}
+ r.mapcalc BRDFmask1=if(SDS_BRDF>1,null(),1)
+\end{smallverbatim}
+ 
+A more conservative version will be including only successful Full BRDF inversions:
+
+\begin{smallverbatim}
+ r.mapcalc BRDFmask2=if(SDS_BRDF>0,null(),1)
+\end{smallverbatim}
+
+
 \address{GRASS Development Team\\
   \url{http://grass.osgeo.org}\\
   \email{tmitchell@osgeo.org}}
