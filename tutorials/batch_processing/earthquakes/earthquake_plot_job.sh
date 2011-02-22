@@ -25,10 +25,18 @@
 
 GRASS_BASEDIR="/usr/local/grass"
 
+# Need to specify addon path before starting GRASS
+GRASS_ADDON_PATH="$GRASS_BASEDIR/addons"
+export GRASS_ADDON_PATH
 
 # avoid a needless search
 GRASS_HTML_BROWSER=false
 export GRASS_HTML_BROWSER
+
+# avoid interactive pauses
+GRASS_PAGER=cat
+export GRASS_PAGER
+
 
 #### Run the job to make and install the latest earthquake plots
 
