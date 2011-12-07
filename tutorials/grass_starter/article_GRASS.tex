@@ -12,15 +12,14 @@
 
 \section{Introduction}
 
-This screenshot is GRASS GIS running natively on Windows
-(http://geni.ath.cx/grass.html).Fig.~\ref{fig:grass000}
+This screenshot is GRASS GIS running on Ubuntu, it does seamlessly in MacOSX and Windows too.Fig.~\ref{fig:grass000}
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.15]{grass000.png}
+   \includegraphics[scale=0.125]{grass000.png}
    %caption of the figure
-   \caption{Windows Native GRASS}
+   \caption{GRASS on Ubuntu}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:grass000}
 \end{figure}
@@ -32,7 +31,7 @@ Starting GRASS GIS: Select Spearfish60 Location by a click on
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.3]{grass001.png}
+   \includegraphics[scale=0.4]{grass001.png}
    %caption of the figure
    \caption{Welcome Screen}
    %label of the figure, which has to correspond to \ref{}:
@@ -55,7 +54,7 @@ At this point it should (somewhat) look this way: Fig.~\ref{fig:grass002}
 Some more GRASS GUI information is found in Appendix A \ref{appendixA}.
 
 Load the elevation.10m layer by clicking on the raster display button
-(second button from left):Fig.~\ref{fig:grass003}
+(fifth button from left):Fig.~\ref{fig:grass003}
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -69,13 +68,13 @@ Load the elevation.10m layer by clicking on the raster display button
 \end{figure}
 
 Once selected, the main GRASS GUI will have a new layer like one of
-these:Fig.~\ref{fig:grass004}
+these in Fig.~\ref{fig:grass004}
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.35]{grass004.png}
+   \includegraphics[scale=0.5]{grass004.png}
    %caption of the figure
    \caption{}
    %label of the figure, which has to correspond to \ref{}:
@@ -95,7 +94,7 @@ By selecting the new layer, you will be given a contextual menu below:Fig.~\ref{
    \label{fig:grass005}
 \end{figure}
 
-Then add a vector using the 8th icon from the left. Fig.~\ref{fig:grass006}
+Then add a vector using the 7th icon from the left. Fig.~\ref{fig:grass006}
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -136,7 +135,7 @@ Result should look like this (somehow):Fig.~\ref{fig:grass008}
 \end{figure}
 
 \section{DEM MANIPULATIONS}
-Display a dem:Fig.~\ref{fig:grass009}
+Remove the vector layers from the display, and the annotations too. Display only an elevation map as in Fig.~\ref{fig:grass009}
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -163,8 +162,8 @@ Raster/Terrain Analysis/Slope and Aspect. Fig.~\ref{fig:grass010}
    \label{fig:grass010}
 \end{figure}
 
-Compute a shaded relief map ( in Raster/Terrain Analysis/Shaded Relief Map).
-The Shaded Relief map should be like this when a elevation.10m map is overlaid to it with 0.75 opacity: Fig.~\ref{fig:grass011}
+Compute a shaded relief map ( in Raster/Terrain Analysis/Shaded Relief).
+The Shaded Relief map should be like this when a elevation.10m map is overlaid to it with 0.5 opacity (right-click on elevation.10m layer and change opacity level): Fig.~\ref{fig:grass011}
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -179,7 +178,7 @@ The Shaded Relief map should be like this when a elevation.10m map is overlaid t
 
 \subsection{Watershed Basin Analysis Program}
 Raster/Hydrologic modeling/Watershed Analysis.
-Fill in the Elevation input map with ``elevation.10m''. The minimum size of an exterior watershed basin should be 5000 cells. Fill up output names for all the output maps available (i.e. ``\_cells\_nbr'', ``\_drain\_dir'', ``\_drain\_dir'', ``\_basins'', ``\_streams'', ``\_half\_basins'', ``\_visual'', ``\_LS'', ``\_S'').
+Fill in the Elevation input map with ``elevation.10m''. The minimum size of an exterior watershed basin should be 5000 cells. Fill up output names for all the output maps available (i.e. ``\_cells\_nbr'', ``\_drain\_dir'', ``\_basins'', ``\_streams'', ``\_half\_basins'', ``\_visual'', ``\_LS'', ``\_S'').
 
 Output should state the following:
 
@@ -187,7 +186,7 @@ SECTION 1a (of 6): Initiating Memory.
 
 SECTION 1b (of 6): Determining Offmap Flow.
 
-SECTION 2: A * Search. 
+SECTION 2: A * Search.
 
 SECTION 3: Accumulating Surface Flow.
 
@@ -227,10 +226,10 @@ the vector map ``streams''.
 
 Relaunch with various values instead of 5000 cells, i.e. 2000 and 10000.
 Compare by vectorizing the streams generated. Vectorization follows
-these steps:
-1-Raster/Neighborhood Analysis/Thin Linear Features
-2-File/Map Type Conversion/Raster to Vector Map
-3-Vector/Develop Map/Create-Rebuild Topology (optional)
+these steps:\newline
+1-Raster/Transform Features/Thin\newline
+2-File/Map Type Conversion/Raster to Vector Map\newline
+3-Vector/Develop Vector Map/Create or Rebuild Topology (optional)\newline
 
 \subsection{Stream Pollution Monitoring Station site identification}
 Assuming a Wood Processing Factory is requesting permit to setup a new processing plant in the country side. It is remote from major mapped streams (598713.35(E) 4920069.15(N)), the local council gave you a notice to assess the path of some minor effluents that may be draining to the major stream from the future factory, and especially their meeting point coordinates where the council will establish an automatic monitoring station.
@@ -256,9 +255,9 @@ station?
 
 http://www.udel.edu/johnmack/frec682/682proj2.html
 
-This course is available online under the course name ``FREC 682 Spatial Analysis''. This material is a modified version to accommodate with GRASS 6.3+.
+This course is available online under the course name ``FREC 682 Spatial Analysis''. This material is a modified version to accommodate with GRASS 6.4.1+.
 
-In this session, the features needed are the following essentially (look in RASTER from the main interface): 
+In this session, the features needed are the following essentially (look in RASTER from the main interface):
 The BUFFERING Module:   Raster/Create buffers Fig.~\ref{fig:grass015}
 The MAP CALCULATOR Module:   Raster/Map Calculator Fig.~\ref{fig:grass016}
 
@@ -286,7 +285,7 @@ The MAP CALCULATOR Module:   Raster/Map Calculator Fig.~\ref{fig:grass016}
 
 Additional modules for the later part of the lab
 
-Query map with mouse:   
+Query map with mouse:
 In the Map display window, look for:   Fig.~\ref{fig:grass017}
 
 %\setkeys{Gin}{width=1\textwidth}
@@ -300,19 +299,13 @@ In the Map display window, look for:   Fig.~\ref{fig:grass017}
    \label{fig:grass017}
 \end{figure}
 
-NULL values: Raster/Develop Map/Manage Null values
-
-CLUMP: Raster/Transform features/Clump small Areas
-
-STATISTICS: Raster/Reports \& Statistics = General statistics
-
-R2V: File/Map type Conversions/Raster to vector
-
-Vector Build: Vector/Develop Map/Create/Rebuild Topology
-
-Vector Export: File/Export/Vector map/Various format using OGR (SHAPE, etc)
-
-Start New Display Window:
+\textbf{NULL values:}\newline Raster/Develop raster Map/Manage Null values\newline
+\textbf{CLUMP:}\newline Raster/Transform features/Clump\newline
+\textbf{STATISTICS:}\newline Raster/Reports \& Statistics/General statistics\newline
+\textbf{R2V:}\newline File/Map type Conversions/Raster to vector\newline
+\textbf{Vector Build:}\newline Vector/Develop Map/Create or Rebuild Topology\newline
+\textbf{Vector Export:}\newline File/Export/Vector map/Common export formats\newline
+\textbf{Start New Display Window:}\newline
 In the main GRASS GUI look for:    Fig.~\ref{fig:grass018}
 
 %\setkeys{Gin}{width=1\textwidth}
@@ -417,15 +410,20 @@ r.buffer input=streams output=streams500
 
 r.null map=streams500 null=0
 
-r.mapcalc score1="if(streams500==1,if(
+r.mapcalc score1="if(streams500>=1,if(
  slope<=5,2,5),0)"
 \end{smallverbatim}
 
 \textbf{
 2) within 500 meters of a road: -5 points}
 \begin{smallverbatim}
+r.buffer input=roads output=_broads500
+ distances=500 units=meters --overwrite
+
+r.null map=_broads500 null=0
+
 r.mapcalc score2="float(if(
- _broads500==2,-5.0,0))"
+ _broads500>=1,-5.0,0))"
 \end{smallverbatim}
 
 \textbf{
@@ -450,8 +448,10 @@ r.mapcalc score5="if(aspect<=135.0 && aspect>=45.0
 \textbf{
 6) western or eastern exposure (SW to NW or SE to NE): +1 point}
 \begin{smallverbatim}
-r.mapcalc score61="if(aspect<45.0 || aspect>314.0,1,0)"
-r.mapcalc score62="if(aspect<225.0 && aspect>135.0,1,0)"
+r.mapcalc score61="if(aspect<45.0 ||
+ aspect>314.0,1,0)"
+r.mapcalc score62="if(aspect<225.0 &&
+ aspect>135.0,1,0)"
 \end{smallverbatim}
 
 \textbf{
@@ -486,9 +486,9 @@ r.mapcalc score_temp="float(score1+score2+score3+
  score4+score5+score61+score62+score7+
 score8+score9)"
 
-r.mapcalc score_final="if(add>9,1,null())"
+r.mapcalc score_final="if(score_temp>9,1,null())"
 
-r.mapcalc score_final_clean="if(clas==1&&_br100==0,1,null())"
+r.mapcalc score_final_clean="if(score_final==1&&_br100==0,1,null())"
 \end{smallverbatim}
 
 %\setkeys{Gin}{width=1\textwidth}
@@ -497,7 +497,7 @@ r.mapcalc score_final_clean="if(clas==1&&_br100==0,1,null())"
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.35]{grass021.png}
    %caption of the figure
-   \caption{Scoring Map}
+   \caption{Scoring Map before masking (ref as score\_temp above)}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:grass021}
 \end{figure}
@@ -508,11 +508,12 @@ WARNING: This part of the Laboratory involves the use of the command line (comma
 What is ``clumping''?
 Recategorizes data in a raster map layer by grouping cells that form physically discrete areas into unique categories.
 
-Now find the discrete areas (clumps) of aggregated habitat scores. 
+Now find the discrete areas (clumps) of aggregated habitat scores.
 Run \textit{r.clump (..=>Clump Small Areas) }on the ``\textit{class}'' map to give each clump its own category number. You may call the output ``\textit{class\_clumped}''.
 
 \begin{smallverbatim}
-r.clump input=score_final output=score_clumped 
+r.clump input=score_final_clean
+ output=score_clumped
 \end{smallverbatim}
 
 Display your newly clumped map ``\textit{score\_clumped}''. It should somewhat look like this one:Fig.~\ref{fig:grass022}
@@ -532,8 +533,8 @@ Display your newly clumped map ``\textit{score\_clumped}''. It should somewhat l
 Since this species is most viable in larger clumps, extract the clumps greater than 50 hectares to a separate map. You may use the command line for reclassification by area threshold to select area superior to 50 hectares:
 
 \begin{smallverbatim}
-r.reclass.area input = score_final greater=50 
- output=habitat_area
+r.reclass.area input=score_clumped
+ output=habitat_area greater=50
 \end{smallverbatim}
 
 Output ``habitat\_area'' at this level should be similar to this one:Fig.~\ref{fig:grass023}
@@ -552,7 +553,12 @@ Output ``habitat\_area'' at this level should be similar to this one:Fig.~\ref{f
 \subsection{Export Shapefile}
 Since the users work in vector GIS, we are going to convert the results in vector format and export them from GRASS GIS to shapefile.
 
-Vectorize the clumped map you just produced (\textbf{File/Map type conversion/raster to vector}) and check that you have effectively created a polygon vector map by displaying your vector using random colors.Fig.~\ref{fig:grass024}
+\begin{smallverbatim}
+r.to.vect -s --overwrite input=habitat_area
+ output=habitat_area feature=area
+\end{smallverbatim}
+
+Vectorize the habitat\_area map you just produced (\textbf{File/Map type conversion/raster to vector}) and check that you have effectively created a polygon vector map by displaying your vector using random colors.Fig.~\ref{fig:grass024}
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -568,7 +574,7 @@ Vectorize the clumped map you just produced (\textbf{File/Map type conversion/ra
 Export this selected habitat vector file along with the ``\textit{roads}'' and ``\textit{streams}'' vector files into shapefile. Please be sure that you export the same type of vectors (areas for ``\textit{habitat\_area}'' and lines for ``\textit{roads}'' and ``\textit{streams}''). Display and query them using Quantum GIS.
 
 \begin{smallverbatim}
-v.out.ogr input=selected_habitat_area type=area
+v.out.ogr -c input=habitat_area type=area
  dsn=QGISDATA layer=1 format=ESRI_Shapefile
 
 v.out.ogr input=roads type=line dsn=QGISDATA
@@ -587,8 +593,8 @@ Now run \textit{r.volume }on this buffer-weighted habitat score map to obtain th
 Use \textit{awk} to create reclass rules files, then use \textit{r.reclass} to map the largest clumps by sum and average habitat scores.
 Which clump has the highest weighted total habitat score? Which has the highest weighted average habitat score?
 Use \textit{r.grow} to create a map of clump edges only (subtracting the input map from the output map).
-Use the edge map to index the perimeter of each of the major clumps. 
-Calculate the compactness (area divided by perimeter squared) of each clump. 
+Use the edge map to index the perimeter of each of the major clumps.
+Calculate the compactness (area divided by perimeter squared) of each clump.
 Map the largest clumps by compactness. Create a jazzy display script to demonstrate your procedures and explain your findings.
 (See \href{http://www.udel.edu/johnmack/frec682/script_ideas.html})
 
@@ -601,8 +607,24 @@ A script for some parts of the Lab is in \textbf{Appendix B} \ref{appendixB}.
 \subsection{Import}
 \label{Import}
 
-Download from GLCF website a satellite image of Landsat 7 ETM+ covering your country, or area of interest.
-Unzip the .tif.gz images, start GRASS GIS. On opening, click on ``georeferenced file`` button.
+Download from GLCF website a satellite image of Landsat 7 ETM+ covering your country, or area of interest. In this case it is p092r084 from year 2010 and Julian day 26, it is in the South-East Australia. We took a small geographical sample by this gdal shell script:
+
+\begin{smallverbatim}
+ #Uncompress the tarball
+ tar xvf LE70920842010026ASN00.tar.gz
+ cd LE70920842010026ASN00/
+
+ #subset all Landsat 7 bands
+ for file in *.TIF
+   do gdalwarp -te 452274 -3855746 476447
+      -3839082 $file new$file
+   #remove quietly the $file
+   rm -f $file
+ done
+\end{smallverbatim}
+
+
+Start GRASS GIS. On opening, click on ``Location Wizard'', set your Location name, press ``Next'', then click on the third option ``Read projection and datum terms for a georeferenced data file'' button and select one of the Landsat TIF files. Then agree to all until completion.
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -615,7 +637,7 @@ Unzip the .tif.gz images, start GRASS GIS. On opening, click on ``georeferenced 
    \label{fig:grass_rs000}
 \end{figure}
 
-On launching the module, type in ''landsat`` and load your landsat image into it.
+On launching the module, type in ``landsat'' or whatever name you created and load your landsat images into it.
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -632,7 +654,7 @@ Once setup from georeferenced file, launch GRASS GIS from this new Location call
 
 Identify with band number corresponding to which spectrum band, especially Red and Near-InfraRed spectra.
 
-Once loaded, import in GRASS GIS using r.in.gdal (File / import raster / multiple formats using GDAL).
+Once GRASS is loaded, import in GRASS GIS using r.in.gdal (File / import raster data / Common import formats).
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -645,7 +667,7 @@ Once loaded, import in GRASS GIS using r.in.gdal (File / import raster / multipl
    \label{fig:grass_rs002}
 \end{figure}
 
-Change the coloring of the bands according to this.
+Change the coloring of the bands R=3, G=2 and B=1 according to r.landsat.rgb:
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -653,25 +675,25 @@ Change the coloring of the bands according to this.
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.35]{grass_rs003.png}
    %caption of the figure
-   \caption{Change Look-up Table (histogram stretched)}
+   \caption{Change RGB color table for Landsat}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:grass_rs003}
 \end{figure}
 
-Load a RGB combination of band 4,3,2.
+Load a RGB combination of band 4,3,2 by clicking the 8th button from the left near to th raster loading button, select there the RGB map.
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.35]{grass_rs004.png}
+   \includegraphics[scale=0.45]{grass_rs004.png}
    %caption of the figure
    \caption{Load a RGB band combination}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:grass_rs004}
 \end{figure}
 
-Display the map (histogram stretched False Color Composite)
+Display the map (real color composite)
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -679,12 +701,12 @@ Display the map (histogram stretched False Color Composite)
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.35]{grass_rs005.png}
    %caption of the figure
-   \caption{Display the RGB FCC}
+   \caption{Display the RGB real colour composite}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:grass_rs005}
 \end{figure}
 
-Change the coloring of the bands according to this.
+Change the coloring of the bands according to this (False Colour Composite).
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -692,12 +714,12 @@ Change the coloring of the bands according to this.
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.35]{grass_rs006.png}
    %caption of the figure
-   \caption{Change Look-up Table (non-stretched)}
+   \caption{Load NIR-R-B colour combination)}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:grass_rs006}
 \end{figure}
 
-Display the map (histogram stretched False Color Composite)
+Display the map of the false color composite
 
 %\setkeys{Gin}{width=1\textwidth}
 \begin{figure}[htbp]
@@ -705,7 +727,7 @@ Display the map (histogram stretched False Color Composite)
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
    \includegraphics[scale=0.35]{grass_rs007.png}
    %caption of the figure
-   \caption{Display the RGB FCC (no stretching)}
+   \caption{Display the RGB FCC}
    %label of the figure, which has to correspond to \ref{}:
    \label{fig:grass_rs007}
 \end{figure}
@@ -719,7 +741,7 @@ Create a group and subgroup with band 1-5.
 \begin{figure}[htbp]
    \centering
    %name of your graphic, without the path AND in PNG (screnshots etc)/PDF (drawings) format:
-   \includegraphics[scale=0.35]{grass_rs008.png}
+   \includegraphics[scale=0.45]{grass_rs008.png}
    %caption of the figure
    \caption{Create image group and subgroup}
    %label of the figure, which has to correspond to \ref{}:
@@ -1170,8 +1192,8 @@ d.mon stop=x0
   \url{http://grass.itc.it}\\
   \email{weblist@grass.itc.it}}
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: main_document.tex
-%%% End: 
+%%% End:
 
