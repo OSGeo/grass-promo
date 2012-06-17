@@ -16,13 +16,19 @@
 #  of Colorado at Boulder.
 #
 # Earthquake data is downloaded from the USGS
-#  http://neic.usgs.gov/neis/gis/bulletin.asc
+#  http://neic.usgs.gov/neis/gis/bulletin.asc (defunct)
+#  new1:  http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt
+#  new2:  http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week
 #
 
 if  [ -z "$GISBASE" ] ; then
     echo "You must be in GRASS GIS to run this program." >&2
     exit 1
 fi
+
+
+PROJ_SHORT_NAME=world_wintri
+WEB_DIR=/var/www/grass/earthquakes
 
 #GRASS_PNGFILE=earthquakes.png
 GRASS_PNGFILE=earthquakes.ppm
@@ -34,19 +40,18 @@ GRASS_VERBOSE=0
 export GRASS_WIDTH GRASS_HEIGHT GRASS_TRUECOLOR GRASS_PNG_COMPRESSION \
    GRASS_VERBOSE GRASS_PNGFILE
 
-TMPDIR="/var/local/grass/tmp"
+TMPDIR="/var/tmp/grass"
 if [ ! -d "$TMPDIR" ] ; then
    mkdir -p "$TMPDIR"
 fi
 cd "$TMPDIR"
 
-# remove old stuff
-g.remove vect=recent_earthquakes --quiet
-
 
 ### download and import
 
-wget -nv -O "$TMPDIR/bulletin.tmp" http://neic.usgs.gov/neis/gis/bulletin.asc 2>&1
+wget -nv -O "$TMPDIR/bulletin.tmp" \
+   "http://neic.usgs.gov/neis/gis/bulletin.asc" 2>&1
+
 if [ $? -ne 0 ] ; then
    echo "Failed to download data from the USGS." >&2
    exit 1
@@ -101,13 +106,18 @@ v.db.addcol recent_earthquakes column="magn_energy DOUBLE PRECISION"
 # how to do POW(x,n) in SQLite?
 #v.db.update recent_earthquakes column=magn_energy value="POW(magnitude,10) * 1e-7" --verbose
 
-v.db.select recent_earthquakes column=cat,magnitude | awk -F'|' \
-  '{printf("UPDATE recent_earthquakes SET magn_energy=%f WHERE cat=%d;\n", ($2^10)*1e-7, $1)}' | db.execute
+v.db.select -c recent_earthquakes column=cat,magnitude | awk -F'|' \
+  '{printf("UPDATE recent_earthquakes SET magn_energy=%f WHERE cat=%d;\n", ($2^10)*1e-7, $1)}' \
+  > "${PROJ_SHORT_NAME}_$$.sql"
 
+db.execute input="${PROJ_SHORT_NAME}_$$.sql"
+\rm "${PROJ_SHORT_NAME}_$$.sql"
 
 
 # get the timestamp
-YMD=20`tail -n 1 "$INPUT"  | cut -f1 -d,`
+#YMD=20`tail -n 1 "$INPUT"  | cut -f1 -d,`
+YMD=20`cut -f1 -d, "$INPUT" | uniq | grep -v Date | sort | tail -n 1`
+
 if [ `echo "$YMD" | wc -c` -ne 11 ] ; then
     echo "Bad timestamp ($YMD). Using system date instead." >&2
     YMD=`date +%Y/%m/%d`
@@ -115,9 +125,8 @@ fi
 
 
 ### draw
-# LatLon:
+
 #g.region n=90N s=90S w=25W e=25W res=0:24  # -p
-# Winkel Tripel:
 g.region n=10035000 s=-10035000 w=-20070000 e=20070000 res=44600  # rows=450 cols=900
 
 
@@ -126,13 +135,11 @@ d.mon start=PNG
 MAP=color_etopo1_ice_900
 d.rgb r=$MAP.red@etopo1 g=$MAP.green@etopo1 b=$MAP.blue@etopo1
 
+
 # d.rast -o usgs_logo
 # d.rast -o grass_logo
 
 d.font Vera
-echo "Earthquakes for the week ending $YMD" | \
-   d.text at=1,2 color=60:60:60 size=3
-
 
 echo "
 .C red
@@ -174,11 +181,16 @@ d.vect recent_earthquakes icon=extra/ring fcolor=none size_col=magn_energy \
 # magn^2.72
 # wscale=0.01
 
+
+echo "Earthquakes for the week ending $YMD" | \
+   d.text at=1,2 color=60:60:60 size=3
+
+
 sync
 d.mon stop=PNG
 sync
 
-IMG=/usr/local/grass/earthquakes/graphics/earthquakes_logo_overlay
+IMG=graphics/earthquakes_logo_overlay
 #pngtopnm $IMG.png > $IMG.pnm
 #pngtopnm -alpha $IMG.png > $IMG.pgm
 pnmcomp -alpha $IMG.pgm $IMG.pnm earthquakes.ppm | \
@@ -193,13 +205,13 @@ fi
 #convert -geometry 75% -quality 85 earthquakes.png earthquakes_small.jpg
 #convert -geometry 40% -quality 85 earthquakes.png earthquakes_tiny.jpg
 
+cp -f earthquakes.png "$WEB_DIR/earthquakes_wintri.png"
+
 
 ### cleanup and closeup
-#g.remove vect=recent_earthquakes --quiet
+g.remove vect=recent_earthquakes --quiet
 rm -f "$INPUT"*
 
-#cp -f earthquakes.png earthquakes*.jpg /var/www/grass/
-cp earthquakes.png /var/www/grass/alternate_projections/earthquakes_wintri.png
 
 # all done.
 exit 0

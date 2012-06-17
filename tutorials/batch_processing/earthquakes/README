@@ -7,5 +7,9 @@ Based on Markus's PHP earthquake demo (copied here for completeness)
 This is just a (working) example. You'll have to adjust the paths, etc. to match your needs.
 
 
+Currently running on the OSGeo Adhoc VM:
+   http://adhoc.osgeo.osuosl.org/grass/
+
+
 HB Dec2010
 
