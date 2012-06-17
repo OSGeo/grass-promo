@@ -15,13 +15,19 @@
 #  of Colorado at Boulder.
 #
 # Earthquake data is downloaded from the USGS
-#  http://neic.usgs.gov/neis/gis/bulletin.asc
+#  http://neic.usgs.gov/neis/gis/bulletin.asc (defunct)
+#  new1:  http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt
+#  new2:  http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week
 #
 
 if  [ -z "$GISBASE" ] ; then
     echo "You must be in GRASS GIS to run this program." >&2
     exit 1
 fi
+
+
+PROJ_SHORT_NAME=world_ll
+WEB_DIR=/var/www/grass/earthquakes
 
 #GRASS_PNGFILE=earthquakes.png
 GRASS_PNGFILE=earthquakes.ppm
@@ -33,7 +39,7 @@ GRASS_VERBOSE=0
 export GRASS_WIDTH GRASS_HEIGHT GRASS_TRUECOLOR GRASS_PNG_COMPRESSION \
    GRASS_VERBOSE GRASS_PNGFILE
 
-TMPDIR="/var/local/grass/tmp"
+TMPDIR="/var/tmp/grass"
 if [ ! -d "$TMPDIR" ] ; then
    mkdir -p "$TMPDIR"
 fi
@@ -42,7 +48,9 @@ cd "$TMPDIR"
 
 ### download and import
 
-wget -nv -O "$TMPDIR/bulletin.tmp" http://neic.usgs.gov/neis/gis/bulletin.asc 2>&1
+wget -nv -O "$TMPDIR/bulletin.tmp" \
+   "http://neic.usgs.gov/neis/gis/bulletin.asc" 2>&1
+
 if [ $? -ne 0 ] ; then
    echo "Failed to download data from the USGS." >&2
    exit 1
@@ -86,13 +94,18 @@ v.db.addcol recent_earthquakes column="magn_energy DOUBLE PRECISION"
 # how to do POW(x,n) in SQLite?
 #v.db.update recent_earthquakes column=magn_energy value="POW(magnitude,10) * 1e-7" --verbose
 
-v.db.select recent_earthquakes column=cat,magnitude | awk -F'|' \
-  '{printf("UPDATE recent_earthquakes SET magn_energy=%f WHERE cat=%d;\n", ($2^10)*1e-7, $1)}' | db.execute
+v.db.select -c recent_earthquakes column=cat,magnitude | awk -F'|' \
+  '{printf("UPDATE recent_earthquakes SET magn_energy=%f WHERE cat=%d;\n", ($2^10)*1e-7, $1)}' \
+  > "${PROJ_SHORT_NAME}_$$.sql"
 
+db.execute input="${PROJ_SHORT_NAME}_$$.sql"
+\rm "${PROJ_SHORT_NAME}_$$.sql"
 
 
 # get the timestamp
-YMD=20`tail -n 1 "$INPUT"  | cut -f1 -d,`
+#YMD=20`tail -n 1 "$INPUT"  | cut -f1 -d,`
+YMD=20`cut -f1 -d, "$INPUT" | uniq | grep -v Date | sort | tail -n 1`
+
 if [ `echo "$YMD" | wc -c` -ne 11 ] ; then
     echo "Bad timestamp ($YMD). Using system date instead." >&2
     YMD=`date +%Y/%m/%d`
@@ -108,12 +121,11 @@ d.mon start=PNG
 d.rgb r=color_etopo1_ice_900.red@etopo1 g=color_etopo1_ice_900.green@etopo1 \
     b=color_etopo1_ice_900.blue@etopo1
 
+
 # d.rast -o usgs_logo
 # d.rast -o grass_logo
 
 d.font Vera
-echo "Earthquakes for the week ending $YMD" | \
-   d.text at=1,2 color=60:60:60 size=3
 
 #echo "
 #.G 250:250:250
@@ -155,11 +167,16 @@ d.vect recent_earthquakes icon=extra/ring fcolor=none size_col=magn_energy \
 # magn^2.72
 # wscale=0.01
 
+
+echo "Earthquakes for the week ending $YMD" | \
+   d.text at=1,2 color=60:60:60 size=3
+
+
 sync
 d.mon stop=PNG
 sync
 
-IMG=/usr/local/grass/earthquakes/graphics/earthquakes_logo_overlay
+IMG=graphics/earthquakes_logo_overlay
 #pngtopnm $IMG.png > $IMG.pnm
 #pngtopnm -alpha $IMG.png > $IMG.pgm
 pnmcomp -alpha $IMG.pgm $IMG.pnm earthquakes.ppm | \
@@ -174,12 +191,20 @@ pngtopnm earthquakes.png | pnmtojpeg -quality=85 > earthquakes.jpg
 convert -geometry 75% -quality 85 earthquakes.png earthquakes_small.jpg
 convert -geometry 40% -quality 85 earthquakes.png earthquakes_tiny.jpg
 
+cp -f earthquakes.png earthquakes*.jpg "$WEBDIR/"
+
+# Output KML file.
+# Possible todo: make fancy with Peter Loewe's more advanced v.out.kml addon script
+v.out.ogr in=recent_earthquakes dsn=recent_earthquakes.kml \
+    format=KML type=point
+zip -q recent_earthquakes.zip recent_earthquakes.kml
+cp -f recent_earthquakes.zip "$WEB_DIR/recent_earthquakes_USGS.kmz"
+
 
 ### cleanup and closeup
 g.remove vect=recent_earthquakes --quiet
 rm -f "$TMPDIR/bulletin.tmp"
 
-cp -f earthquakes.png earthquakes*.jpg /var/www/grass/
 
 # all done.
 exit 0
