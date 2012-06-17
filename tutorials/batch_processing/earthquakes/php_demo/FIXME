@@ -1,0 +1,20 @@
+In June 2012 the USGS stopped shipping the csv file we were
+parsing (bulletin.asc). As a replacement there are some XML and
+JSON versions, or these two same-but-different .csv files:
+
+Mag >= 2.5 for the last week:
+  http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt
+
+  # empty version & number of reporting stations (NST) fields, but better
+  #  location description
+  http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week
+
+("all" earthquakes >= M0 are avail for download too, but the files get
+big and the relevance gets small)
+
+column headings:
+   Src,EqId,Version,Datetime,Lat,Lon,Magnitude,Depth,NST,Region
+
+
+--
+HB 17 June 2012
