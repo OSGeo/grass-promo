@@ -2,7 +2,7 @@
 ############################################################################
 #
 # MODULE:       earthquake_plot_job.sh
-# AUTHOR:       M. Hamish Bowman, Depts.of Marine Science and Geology,
+# AUTHOR:       M. Hamish Bowman, Depts. of Marine Science and Geology,
 #                 Otago Univeristy, New Zealand
 # PURPOSE:      Wrapper script to launch GRASS batch job
 #                 (perhaps called by cron)
@@ -14,7 +14,7 @@
 #
 #############################################################################
 # Inspired by Markus Neteler's PHP demo, which in turn was seeded from the ideas
-#    of [...] and Glynn Clements
+#    of Sharyn Namnath and Glynn Clements
 # Adjust paths etc. to suit.
 
 ## sample crontab:
