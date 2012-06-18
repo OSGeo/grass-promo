@@ -48,22 +48,31 @@ cd "$TMPDIR"
 
 ### download and import
 
-wget -nv -O "$TMPDIR/bulletin.tmp" \
-   "http://neic.usgs.gov/neis/gis/bulletin.asc" 2>&1
+wget -nv -O "eqs7day-M2.5.csv" \
+   "http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt" 2>&1
 
 if [ $? -ne 0 ] ; then
    echo "Failed to download data from the USGS." >&2
    exit 1
 fi
 
-# bulletin.asc format:
-#Date,TimeUTC,Latitude,Longitude,Magnitude,Depth
-# date is yy/mm/dd so not SQL Date type!
+#convert commas+quoting to pipe delims:
+csv_dequote.pl eqs7day-M2.5.csv
 
-COL_DEF="e_date varchar(8), e_time varchar(10), latitude double precision, \
-  longitude double precision, magnitude double precision, depth double precision"
+# add a '#' at the start of the first line and remove spurious whitespace
+sed -i -e '0,/^/s//#/' \
+       -e 's+| \([0-9]\)|+|\1|+' eqs7day-M2.5.psv
 
-INPUT="$TMPDIR/bulletin.tmp"
+# eqs7day-M2.5.txt format:
+#Src,EqId,Version,Datetime,Lat,Lon,Magnitude,Depth,NST,Region
+
+COL_DEF="data_source varchar(4), eq_id varchar(10), version varchar(3),
+   eq_time varchar(50), latitude double precision, longitude double precision, \
+   magnitude double precision, depth double precision, num_stations_obs integer,
+   region varchar(255)"
+
+INPUT="$TMPDIR/eqs7day-M2.5.psv"
+ 
 
 db.connect -c
 DBDRIVER=`db.connect -p | grep '^driver:' | cut -f2 -d:`
@@ -74,7 +83,7 @@ if [ "$DBDRIVER" != 'sqlite' ] ; then
 fi
 
 v.in.ascii in="$INPUT" out=recent_earthquakes skip=1 \
-    fs=',' y=3 x=4 z=6 column="$COL_DEF" --overwrite
+    fs='|' y=5 x=6 z=8 column="$COL_DEF" --overwrite
 
 
 ### unlog & scale magnitude
@@ -103,10 +112,8 @@ db.execute input="${PROJ_SHORT_NAME}_$$.sql"
 
 
 # get the timestamp
-#YMD=20`tail -n 1 "$INPUT"  | cut -f1 -d,`
-YMD=20`cut -f1 -d, "$INPUT" | uniq | grep -v Date | sort | tail -n 1`
-
-if [ `echo "$YMD" | wc -c` -ne 11 ] ; then
+YMD=`head -n 2 "$INPUT" | tail -n 1 | cut -f4 -d'|' | cut -f2-4 -d' '`
+if [ `echo "$YMD" | wc -c` -lt 11 ] ; then
     echo "Bad timestamp ($YMD). Using system date instead." >&2
     YMD=`date +%Y/%m/%d`
 fi
@@ -203,7 +210,7 @@ cp -f recent_earthquakes.zip "$WEB_DIR/recent_earthquakes_USGS.kmz"
 
 ### cleanup and closeup
 g.remove vect=recent_earthquakes --quiet
-rm -f "$TMPDIR/bulletin.tmp"
+rm -f "$TMPDIR/eqs7day-M2.5.psv"
 
 
 # all done.

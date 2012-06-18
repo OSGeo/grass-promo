@@ -49,33 +49,40 @@ cd "$TMPDIR"
 
 ### download and import
 
-wget -nv -O "$TMPDIR/bulletin.tmp" \
-   "http://neic.usgs.gov/neis/gis/bulletin.asc" 2>&1
+wget -nv -O "eqs7day-M2.5.csv" \
+   "http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt" 2>&1
 
 if [ $? -ne 0 ] ; then
    echo "Failed to download data from the USGS." >&2
    exit 1
 fi
 
-# bulletin.asc format:
-#Date,TimeUTC,Latitude,Longitude,Magnitude,Depth
-# date is yy/mm/dd so not SQL Date type!
+#convert commas+quoting to pipe delims:
+csv_dequote.pl eqs7day-M2.5.csv
 
-INPUT="$TMPDIR/bulletin.tmp"
+INPUT="$TMPDIR/eqs7day-M2.5.psv"
 
-sed -i -e 's/^Date/#Date/' "$INPUT"
+# add a '#' at the start of the first line and remove spurious whitespace
+sed -i -e '0,/^/s//#/' \
+       -e 's+| \([0-9]\)|+|\1|+' "$INPUT"
 
-cut -f3,4 -d, "$INPUT" | awk -F, '{print $2 "\t" $1}' | \
-   m.proj -ig fs=, | cut -f1,2 -d, | \
-   awk '{if (NR!=1) {print} else {print "easting,northing"}}' \
-  > "$INPUT.wintri.coord"
+# eqs7day-M2.5.txt format:
+#Src,EqId,Version,Datetime,Lat,Lon,Magnitude,Depth,NST,Region
+ 
+COL_DEF="data_source varchar(4), eq_id varchar(10), version varchar(3),
+   eq_time varchar(50), latitude double precision, longitude double precision, \
+   magnitude double precision, depth double precision, num_stations_obs integer,
+   region varchar(255)"
 
-paste -d, "$INPUT" "$INPUT.wintri.coord" > "$INPUT.wintri"
+cut -f5,6 -d'|' "$INPUT" | awk -F'|' '{print $2 "\t" $1}' | \
+   m.proj -ig fs='|' | cut -f1,2 -d'|' | \
+   awk '{if (NR!=1) {print} else {print "easting|northing"}}' \
+   > "$INPUT.wintri.coord"
 
+paste -d'|' "$INPUT" "$INPUT.wintri.coord" > "$INPUT.wintri"
 
-COL_DEF="e_date varchar(8), e_time varchar(10), latitude double precision, \
-  longitude double precision, magnitude double precision, depth double precision, \
-  easting double precision, northing double precision"
+COL_DEF="$COL_DEF, easting double precision, northing double precision"
+
 
 db.connect -c
 DBDRIVER=`db.connect -p | grep '^driver:' | cut -f2 -d:`
@@ -86,7 +93,7 @@ if [ "$DBDRIVER" != 'sqlite' ] ; then
 fi
 
 v.in.ascii in="$INPUT.wintri" out=recent_earthquakes skip=1 \
-    fs=',' x=7 y=8 z=6 column="$COL_DEF" --overwrite
+    fs='|' x=11 y=12 z=8 column="$COL_DEF" --overwrite
 
 
 ### unlog & scale magnitude
@@ -116,9 +123,8 @@ db.execute input="${PROJ_SHORT_NAME}_$$.sql"
 
 # get the timestamp
 #YMD=20`tail -n 1 "$INPUT"  | cut -f1 -d,`
-YMD=20`cut -f1 -d, "$INPUT" | uniq | grep -v Date | sort | tail -n 1`
-
-if [ `echo "$YMD" | wc -c` -ne 11 ] ; then
+YMD=`head -n 2 "$INPUT" | tail -n 1 | cut -f4 -d'|' | cut -f2-4 -d' '`
+if [ `echo "$YMD" | wc -c` -lt 11 ] ; then
     echo "Bad timestamp ($YMD). Using system date instead." >&2
     YMD=`date +%Y/%m/%d`
 fi
