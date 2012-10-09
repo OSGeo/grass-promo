@@ -123,7 +123,7 @@ db.execute input="${PROJ_SHORT_NAME}_$$.sql"
 
 # get the timestamp
 #YMD=20`tail -n 1 "$INPUT"  | cut -f1 -d,`
-YMD=`head -n 2 "$INPUT" | tail -n 1 | cut -f4 -d'|' | cut -f2-4 -d' '`
+YMD=`head -n 2 "$INPUT" | tail -n 1 | cut -f4 -d'|' | awk '{print $2,$3,$4}'`
 if [ `echo "$YMD" | wc -c` -lt 11 ] ; then
     echo "Bad timestamp ($YMD). Using system date instead." >&2
     YMD=`date +%Y/%m/%d`
