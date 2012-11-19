@@ -2,8 +2,9 @@
 
 # Script to fetch NZ earthquakes from GNS's geonet SOAP interface
 #  H. Bowman 20 Jan 2011, released to the public domain
+#            updated to use new WFS method 20 Nov 2012
 #
-#  http://www.geonet.org.nz/resources/earthquake/quake-web-services.html
+#  http://info.geonet.org.nz/display/appdata/Earthquake+Web+Feature+Service
 #  "GeoNet is a collaboration between the Earthquake Commission and GNS Science."
 #  "The Website: The GeoNet website provides public access to hazards information,
 #   including earthquake reports and Volcanic Alert Bulletins. It also allows the
@@ -21,31 +22,26 @@ else
 fi
 XMLNAME="$OUTFILE.tmp_$$"
 
-URL="http://magma.geonet.org.nz/services/quake/quakeml/1.0.1/query?"
-#startDate and endDate (mandatory): format is yyyy-mm-ddThh:MM:ss and times are in UTC (GMT)
-#latLower, latUpper, longLower and longUpper (optional, but if present, all must be specified): values should be in decimal degrees
+
+URL="http://wfs-beta.geonet.org.nz/geoserver/geonet/ows?"
+REQUEST="service=WFS&version=1.1.0&request=GetFeature&typeName=geonet:quake&outputFormat=text/xml; subtype=gml/3.2"
+
+START_DATE=`date --utc --date="last week" +%F`
+#START_DATE=`date --utc --date="2 weeks ago" +%F`
+#START_DATE=`date --utc --date="last month" +%F`
+#START_DATE=`date --utc --date="6 months ago" +%F`
+#START_DATE=`date --utc --date="last year" +%F`
 
 
-END_DATE=`date --utc +%FT%T`
-START_DATE=`date --utc --date="last week" +%FT%T`
-#START_DATE=`date --utc --date="2 weeks ago" +%FT%T`
-#START_DATE=`date --utc --date="last month" +%FT%T`
-#START_DATE=`date --utc --date="6 months ago" +%FT%T`
-#START_DATE=`date --utc --date="last year" +%FT%T`
+wget -nv -O "$XMLNAME" "${URL}${REQUEST}&cql_filter=origintime>='$START_DATE'"
 
-DATE_STR="startDate=$START_DATE&endDate=$END_DATE"
- 
-
-wget -nv -O "$XMLNAME" "${URL}startDate=$START_DATE&endDate=$END_DATE"
-
-
-BASE="quakeml/eventParameters/event"
+BASE="wfs:FeatureCollection/wfs:member/geonet:quake"
 FIELDS="
-origin/time/value
-origin/longitude/value
-origin/latitude/value
-magnitude/mag/value
-origin/depth/value
+geonet:origintime
+geonet:longitude
+geonet:latitude
+geonet:magnitude
+geonet:depth
 "
 
 echo "#date_utc|time_utc|longitude|latitude|magnitude|depth_km" \
