@@ -114,7 +114,7 @@ db.execute input="${PROJ_SHORT_NAME}_$$.sql"
 
 
 # get the timestamp
-YMD=`tail -n 1 "$DATAFILE"  | cut -f1 -d'|'`
+YMD=`head -n 2 "$DATAFILE" | tail -n 1 | cut -f1 -d'|'`
 if [ `echo "$YMD" | wc -c` -ne 11 ] ; then
     echo "Bad timestamp ($YMD). Using system date instead." >&2
     YMD=`date +%Y/%m/%d`
