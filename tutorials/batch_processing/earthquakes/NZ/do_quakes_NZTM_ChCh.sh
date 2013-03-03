@@ -48,8 +48,10 @@ fi
 cd "$TMPDIR"
 
 # remove old stuff
-g.remove vect=recent_earthquakes --quiet
-
+eval `g.findfile elem=vector file=recent_earthquakes`
+if [ -n "$file" ] ; then
+   g.remove vect=recent_earthquakes --quiet
+fi
 
 ### download and import
 DATAFILE="$TMPDIR/latest_gns_quakes.csv"
