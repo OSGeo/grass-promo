@@ -1,8 +1,4 @@
 FILE=poster
-DIADIR = diagram
-
-DIAFILES = $(shell ls $(DIADIR)/*.tex)
-DIAPDF = $(patsubst %.tex, %.pdf, $(DIAFILES))
 
 all: $(FILE).pdf
 
@@ -22,7 +18,6 @@ $(SVGPDF): %.tex: %.pdf
 
 clean:
 	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib
-	rm -f $(DIAPDF)
 
 distclean:
 	make clean
