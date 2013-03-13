@@ -1,4 +1,8 @@
 FILE=poster
+SVGDIR = svg_images
+
+SVGFILES = $(shell ls $(SVGDIR)/*.svg)
+SVGPDF = $(patsubst %.svg, %.pdf, $(SVGFILES))
 
 all: $(FILE).pdf
 
@@ -9,15 +13,17 @@ $(FILE).pdf: *.tex Makefile
 		make pdf; \
 	done
 
-pdf:
+pdf: fig
 	pdflatex $(FILE).tex
 
-$(SVGPDF): %.tex: %.pdf
-	pdflatex $<
-	pdfcrop $@
+fig: $(SVGPDF)
+
+$(SVGPDF): %.pdf: %.svg
+	inkscape -z --export-pdf=$@ --export-area-drawing --export-dpi=300 $<
 
 clean:
 	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib
+	rm -f $(SVGPDF)
 
 distclean:
 	make clean
