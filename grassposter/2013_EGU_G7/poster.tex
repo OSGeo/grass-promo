@@ -40,6 +40,7 @@ International Water Management Institute}
 \addlogo[north west]{(2,-1)}{9cm}{./svg_images/Grass_GIS.pdf}
 \addlogo[north east]{(-2,-2.5)}{11cm}{./svg_images/IWMI_logo.pdf}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Abstract}{
 \small GRASS 7 started its development by the branching out of GRASS 6.x from the main trunk of code (rev 31142).
 This was done on 27th of April 2008, and a large amount of changes took place since that date, more 
@@ -55,6 +56,7 @@ are still underway.
 GRASS GIS capacity in remote sensing has also been under great changes and additions for version 7.
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Linear features extraction}{
 \small
 An edge is considered as a change in image digital values.
@@ -77,6 +79,7 @@ The level of details of the output image is easily customizable.
 \end{center}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Object recognition}{
 \small The module i.segment is a region growing image segmentation algorithm [2].
 It produces a raster map with segments (objects), and optionally other maps with segments statistics 
@@ -90,8 +93,8 @@ It produces a raster map with segments (objects), and optionally other maps with
 \end{center}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Satellite imagery products}{
-\innerblockplain[colortwo!80!]{
 \small
 \begin{itemize}
  \item {\bf i.vi} 15 vegetation indices available
@@ -126,15 +129,12 @@ It produces a raster map with segments (objects), and optionally other maps with
  Figure 3: Actual evapotranspiration (i.eb.*) for water monitoring and management [3]
 \end{center}
 }
-\vspace*{-25pt}
-}
 
 
 \startsecondcolumn
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Interactive supervised classification}{
-\innerblockplain[colortwo!80!]{
 \small 
 This interactive tool [4], aims at greatly simplifying quantitative surpervised class training areas creation.
 It calculates the spectral signatures based on the cells within the specified areas. 
@@ -153,12 +153,10 @@ helps to estimate how much of the image is likely to be classified as a particul
  Figure 4: Interactive image classification with coincidence plots (left side) \& histograms (right side)
 \end{center}
 }
-\hspace*{-25pt}
-}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Lidar}{
 \medskip
-\innerblockplain[colortwo!80!]{
 \small The Lidar library ({\url {www.liblas.org}}) included in GRASS GIS permits the import of Lidar (.las)
 data in raster (r.in.lidar using statistics of choice) or in vector format (v.in.lidar). 
 Author Markus Metz tested r.in.lidar with a 705Gb .las file. \newline
@@ -173,11 +171,10 @@ lidar-based bathymetric survey and multi-source remote sensing water area regula
  Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [5]
 \end{center}
 }
-\vspace*{-25pt}
-}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Other Improvements \& Additions}{
 \medskip
-\innerblockplain[colortwo!80!]{
 \small 
 
 {\bf Remanufacturing, performance improvement}
@@ -213,9 +210,8 @@ find their way in the t.* modules.
  \item {\bf i.lmf} Local maximum fitting of temporal data
 \end{itemize}
 }
-\vspace*{-25pt}
-}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \initializesizeandshifts
 \getcurrentrow{box}
 \coordinate (funkcionalita) at (box.south west);
