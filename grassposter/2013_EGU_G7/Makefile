@@ -13,13 +13,8 @@ $(FILE).pdf: *.tex Makefile
 		make pdf; \
 	done
 
-pdf: fig
-	pdflatex --shell-escape $(FILE).tex
-
-fig:
-	pdflatex diagram/diagram.tex -output-directory=diagram
-	pdfcrop diagram.pdf diagram/diagramcrop.pdf
-
+pdf:
+	pdflatex $(FILE).tex
 
 $(SVGPDF): %.tex: %.pdf
 	pdflatex $<
