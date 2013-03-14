@@ -1,4 +1,4 @@
-\documentclass{a0poster}
+\documentclass[landscape,a0,final]{a0poster}
 \usepackage[dvipsnames,svgnames]{xcolor}
 \usepackage{tikzposter} % here most of the things are defined
 % change parameters only after this line You can also start a new column with an arbitrary 
@@ -8,7 +8,7 @@
 \usepackage{wrapfig}
 \usepackage{url}
 
-\usepackage[margin=\margin cm, paperwidth=84.1cm, paperheight=118.9cm]{geometry}
+\usepackage[margin=\margin cm, paperwidth=197cm, paperheight=100cm]{geometry}
 
 % \setbackgrounddarkcolor{ForestGreen!70!black}
 % \setbackgroundlightcolor{YellowGreen!90!}
@@ -96,6 +96,8 @@ and optionally other maps with segments statistics (mean/variance/range/etc.).
 \end{center}
 }
 
+\startsecondcolumn
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Satellite imagery products}{
 \small
@@ -125,9 +127,6 @@ and optionally other maps with segments statistics (mean/variance/range/etc.).
 \end{center}
 }
 
-
-\startsecondcolumn
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Interactive supervised classification}{
 \small 
@@ -148,6 +147,9 @@ helps to estimate how much of the image is likely to be classified as a particul
  Figure 4: Interactive image classification with coincidence plots (left side) \& histograms (right side)
 \end{center}
 }
+
+
+\startthirdcolumn
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Lidar}{

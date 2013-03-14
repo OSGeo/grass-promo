@@ -22,7 +22,7 @@ $(SVGPDF): %.pdf: %.svg
 	inkscape -z --export-pdf=$@ --export-area-drawing --export-dpi=300 $<
 
 clean:
-	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib
+	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib *.ps
 	rm -f $(SVGPDF)
 
 distclean:
