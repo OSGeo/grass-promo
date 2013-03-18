@@ -29,16 +29,16 @@
 
 %%%%% -------- Parameters that change the layout of the poster --------- %%%%%
 %% margin for the geometry package
-\newcommand{\margin}{4}
+\newcommand{\margin}{1}
 
 %% the space between the blocks
-\newcommand{\blockspacing}{2}
+\newcommand{\blockspacing}{3}
 
 %% the height of the title stripe in block nodes, decrease it to save space
 \newcommand{\blocktitleheight}{3}
 
 %% the number of columns in the poster
-\newcommand{\colnumber}{3}
+\newcommand{\colnumber}{4}
 
 %% the space between two groups of authors from different institution
 \newcommand{\instituteshift}{10}
@@ -563,15 +563,35 @@
     ($1/\colnumber*(\paperwidth,0) - 2/\colnumber*(\margin,0) -
     1/\colnumber*(\blockspacing,0) - (0.3,0)$);
   }{
-    % \ifthenelse{\equal{\colnumber}{3}}{%
+    \ifthenelse{\equal{\colnumber}{3}}{%
     \coordinate (xshift) at 
     ($1/\colnumber*(\paperwidth,0) - 2/\colnumber*(\margin,0) -
-    2/\colnumber*(\blockspacing,0) + (\blockspacing,0) $); 
+    2/\colnumber*(\blockspacing,0) + 0.5*(\blockspacing,0) $); 
     
     \coordinate (autowidth) at
     ($1/\colnumber*(\paperwidth,0) - 2/\colnumber*(\margin,0) -
     2/\colnumber*(\blockspacing,0) - (0.3,0)$); 
-    % }{}
+  }{
+    \ifthenelse{\equal{\colnumber}{4}}{%
+    \coordinate (xshift) at 
+    ($1.5/\colnumber*(\paperwidth,0) - 4/\colnumber*(\margin,0) -
+    4/\colnumber*(\blockspacing,0) + 0.5/\colnumber*(\blockspacing,0) $); 
+     
+    \coordinate (autowidth) at
+    ($1/\colnumber*(\paperwidth,0) - 4/\colnumber*(4*\margin,0) -
+    4/\colnumber*(\blockspacing,0) - (0.3,0)$); 
+  }{
+    \ifthenelse{\equal{\colnumber}{5}}{%
+    \coordinate (xshift) at 
+    ($2/\colnumber*(\paperwidth,0) - 4/\colnumber*(\margin,0) -
+    4/\colnumber*(\blockspacing,0) + 0.5*(\blockspacing,0) $); 
+     
+    \coordinate (autowidth) at
+    ($1/\colnumber*(\paperwidth,0) - 2/\colnumber*(4*\margin,0) -
+    4/\colnumber*(\blockspacing,0) - (0.3,0)$); 
+    }{}
+  }
+  }
   }
 
   
@@ -600,18 +620,25 @@
   \ifthenelse{\equal{\colnumber}{2}}{
     \coordinate (currenty) at ($(firstrow)+(xshift)-(yshift)$);
   }{
-    % \ifthenelse{\equal{\colnumber}{3}}{
-    \coordinate (currenty) at ($(firstrow)-(yshift)$);
-    % }{}
+    \coordinate (currenty) at ($(firstrow)-1.35/\colnumber*(xshift)-(yshift)$);
   }
 }
 
 \newcommand{\startthirdcolumn}{
   \ifthenelse{\equal{\colnumber}{3}}{
     \coordinate (currenty) at ($(firstrow)+(xshift)-(yshift)$);
-  }{}
+  }{
+    \coordinate (currenty) at ($(firstrow)+1.35/\colnumber*(xshift)-(yshift)$);
+  }
 }
 
+\newcommand{\startfourthcolumn}{
+  \ifthenelse{\equal{\colnumber}{4}}{
+    \coordinate (currenty) at ($(firstrow)+(xshift)-(yshift)$);
+  }{
+    \coordinate (currenty) at ($(firstrow)+2/\colnumber*(xshift)-(yshift)$);
+   }
+}
 
 \newcommand{\getcurrentrow}[1]{
       \path let \p1=(#1.south) in coordinate (currentrow) at (0,\y1);

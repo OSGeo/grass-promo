@@ -99,35 +99,6 @@ and optionally other maps with segments statistics (mean/variance/range/etc.).
 \startsecondcolumn
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Satellite imagery products}{
-\small
-\begin{itemize}
- \item {\bf i.vi} 15 vegetation indices available
- \item {\bf i.albedo} Broadband Albedo (snow \~= 0.6-0.8, water=0.05)
- \item {\bf i.emissivity} Emissivity approximation from vegetation index
- \item {\bf i.biomass} biomass growth for crop yield
-\end{itemize}
-
-{\bf Reference/Potential ET: i.evapo.* modules}
-
-\begin{itemize}
- \item {\bf i.evapo.mh} ETo Hargreaves, modified-Hargreaves \& Hargreaves-Samani 
- \item {\bf i.evapo.pm} ETo Penman-Monteith
- \item {\bf i.evapo.pt} ETpot Priestley-Taylor
-\end{itemize}
-
-{\bf Actual ET: i.eb.* modules using thermodynamic heat flux modeling}
-
-\begin{center}
- \includegraphics[width=0.315\textwidth]{./images/slet2005}
- \hspace{20mm}
- \includegraphics[width=0.315\textwidth]{./images/slet2010}
- \newline
- Figure 3: Actual evapotranspiration (i.eb.*) for water monitoring and management [6]
-\end{center}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Interactive supervised classification}{
 \small 
 This interactive tool [7], aims at greatly simplifying quantitative surpervised class training areas creation.
@@ -148,9 +119,36 @@ helps to estimate how much of the image is likely to be classified as a particul
 \end{center}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Satellite imagery products}{
+\small
+\begin{itemize}
+ \item {\bf i.vi} 15 vegetation indices available
+ \item {\bf i.albedo} Broadband Albedo (snow \~= 0.6-0.8, water=0.05)
+ \item {\bf i.emissivity} Emissivity approximation from vegetation index
+ \item {\bf i.biomass} biomass growth for crop yield
+\end{itemize}
+
+{\bf Reference/Potential ET: i.evapo.* modules}
+
+\begin{itemize}
+ \item {\bf i.evapo.mh} ETo Hargreaves, modified-Hargreaves \& Hargreaves-Samani 
+ \item {\bf i.evapo.pm} ETo Penman-Monteith
+ \item {\bf i.evapo.pt} ETpot Priestley-Taylor
+\end{itemize}
+
+{\bf Actual ET: i.eb.* modules using thermodynamic heat flux modeling}
+
+\begin{center}
+ \includegraphics[width=0.4\textwidth]{./images/slet2005}
+ \hspace{20mm}
+ \includegraphics[width=0.4\textwidth]{./images/slet2010}
+ \newline
+ Figure 3: Actual evapotranspiration (i.eb.*) for water monitoring and management [6]
+\end{center}
+}
 
 \startthirdcolumn
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Lidar}{
 \medskip
@@ -168,6 +166,7 @@ of water availability with lidar-based bathymetric survey and multi-source remot
 \end{center}
 }
 
+\startfourthcolumn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Other Improvements \& Additions}{
 \smallskip
@@ -211,11 +210,13 @@ of water availability with lidar-based bathymetric survey and multi-source remot
 \end{itemize}
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \getcurrentrow{box}
 \coordinate (funkcionalita) at (box.south west);
 \coordinate (funkcionalitaeast) at (box.east);
 \coordinate (screenshot) at (box.north west);
+
 \blocknodew[($(funkcionalita)+(20,-1)$)]{35}{References}{
 \scriptsize
 \begin{center}
