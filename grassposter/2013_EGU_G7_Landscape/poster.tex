@@ -96,139 +96,6 @@ and optionally other maps with segments statistics (mean/variance/range/etc.).
 \end{center}
 }
 
-\startsecondcolumn
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Interactive supervised classification}{
-\small 
-This interactive tool [7], aims at greatly simplifying quantitative surpervised class training areas creation.
-It calculates the spectral signatures based on the cells within the specified areas. 
-The resulting signature file can be used by a maximum likelihood classification module (i.maxlik). 
-During the process the user is shown a histogram of the area cell values for each image band, 
-and coincident plot which shows the separability of classes.\newline
-Another way the user can inspect the suitability of the created training areas 
-is by displaying the cells of the image bands which fall within a user-specified 
-number of standard deviations from the means in the spectral signature. This
-helps to estimate how much of the image is likely to be classified as a particular class.\newline
-\begin{center}
- \includegraphics[width=0.47\textwidth]{./images/wxiclass1.png}
- \hspace{10mm}
- \includegraphics[width=0.47\textwidth]{./images/wxiclass2.png}
- \newline
- Figure 3: Interactive image classification with coincidence plots (left side) \& histograms (right side)
-\end{center}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Satellite imagery products}{
-\small
-\begin{itemize}
- \item {\bf i.vi} 15 vegetation indices available
- \item {\bf i.albedo} Broadband Albedo (snow \~= 0.6-0.8, water=0.05)
- \item {\bf i.emissivity} Emissivity approximation from vegetation index
- \item {\bf i.biomass} biomass growth for crop yield
-\end{itemize}
-
-{\bf Reference/Potential ET: i.evapo.* modules}
-
-\begin{itemize}
- \item {\bf i.evapo.mh} ETo Hargreaves, modified-Hargreaves \& Hargreaves-Samani 
- \item {\bf i.evapo.pm} ETo Penman-Monteith
- \item {\bf i.evapo.pt} ETpot Priestley-Taylor
-\end{itemize}
-
-{\bf Actual ET: i.eb.* modules using thermodynamic heat flux modeling}
-
-\begin{center}
- \includegraphics[width=0.4\textwidth]{./images/slet2005}
- \hspace{20mm}
- \includegraphics[width=0.4\textwidth]{./images/slet2010}
- \newline
- Figure 4: Actual evapotranspiration (i.eb.*) for water monitoring and management [6]
-\end{center}
-}
-
-\startthirdcolumn
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Lidar}{
-\medskip
-\small The Lidar library ({\url {www.liblas.org}}) included in GRASS GIS permits the import of Lidar (.las)
-data in raster (r.in.lidar using statistics of choice) or in vector format (v.in.lidar). 
-Author Markus Metz tested r.in.lidar with a 705Gb .las file. \newline
-On-farm water storage study with lidar data in NSW (Australia) developed a full remote sensing monitoring methodology
-of water availability with lidar-based bathymetric survey and multi-source remote sensing survey [8].\newline
-\begin{center}
- \includegraphics[width=0.4\textwidth]{./images/ofs1}
- \hspace{10mm}
- \includegraphics[width=0.275\textwidth]{./images/ofs2}
- \newline
- Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [8]
-\end{center}
-}
-
-\blocknode{Temporal signature cleaning}{
-\medskip
-\begin{itemize}
- \item r.hants produces a harmonic analysis through incomplete returned Fourier inversion.
- \item i.lmf computes a temporal Local Maximum Fitting with Akaike Information Content.
-\end{itemize}
-
-\begin{center}
- \includegraphics[width=0.8\textwidth]{./images/lmf0}\newline
- \vspace{10mm}
- \includegraphics[width=0.8\textwidth]{./images/lmf1}
- \newline
- Figure 6: pre and post LMF temporal filter
-\end{center}
-}
-
-
-
-\startfourthcolumn
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Other Improvements \& Additions}{
-\smallskip
-\small 
-
-{\bf Remanufacturing, performance improvement}
-
-\begin{itemize}
- \item {\bf i.ortho.rectify} new rewritten \& optimized version of i.ortho.photo
- \item {\bf i.atcorr} atmospheric correction, more satellite sensors configured, faster
- \item {\bf i.pca} backward modeling implemented 
-\end{itemize}
-
-{\bf Preparing Landsat, Aster and MODIS datasets}
-
-\begin{itemize}
- \item {\bf i.landsat.toar} TOA reflectance correction for Landsat satellite series
- \item {\bf i.aster.toar} TOA reflectance correction for Terra-ASTER
- \item {\bf i.modis.qc} Quality flag interpretation for Terra/Aqua MODIS
-\end{itemize}
-
-{\bf Geographical and astronomic functions}
-
-\begin{itemize}
- \item {\bf i.latlong} maps latitude or longitude (dd.ddd)
- \item {\bf i.sunhours} maps potential hours of sunshine in a day at a given location (hh.hhh)
- \item {\bf r.sun.angle} maps the sun elevation and sun azimuth angles for the given time of day
-\end{itemize}
-
-{\bf Temporal cleaning and smoothing}
-
-\begin{itemize}
- \item {\bf r.hants} Fourier temporal smoothing
- \item {\bf i.lmf} Local maximum fitting of temporal data
-\end{itemize}
-
-{\bf Multi- and hyperspectral data analysis}
-
-\begin{itemize}
- \item {\bf i.spec.unmix} Spectral Unmixing
-\end{itemize}
-}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \getcurrentrow{box}
 \coordinate (funkcionalita) at (box.south west);
@@ -248,7 +115,10 @@ Rem., Salvador, Brasil, INPE, 677-680.\\{}
 Functions, 407-422.\\{}
 [6] & Chemin, 2012. Chapter 19, DOI: 10.5772/23571 ({\url {http://bit.ly/16qJOep}})\\{}
 [7] & Kratochvílová \& Petráš, 2013. OSGeoREL, FCE CTU, Prague.\\{}
-[8] & Chemin \& Rabbani, 2011. International Journal of Geoinformatics,  7(3):1-6.
+[8] & Chemin \& Rabbani, 2011. International Journal of Geoinformatics,  7(3):1-6.\\{}
+[9] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. 
+International Journal of Geoinformatics, 1(1): 51-61.\\{}
+[10] & Chemin \& Phuphak \& Asilo \& Hijmans, 2012. International Journal of GeoInformatics. 8(1):1-12.
 \end{tabular}
 \end{center}
 \smallskip
@@ -283,6 +153,151 @@ Functions, 407-422.\\{}
 \noindent
 \includegraphics[width=\logowidth]{./svg_images/public_domain_logo.pdf}
 \raisebox{0.7\height}{\logospace 2013 GRASS Development Team}
+\end{center}
+}
+
+\startsecondcolumn
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Interactive supervised classification}{
+This interactive tool [7], aims at greatly simplifying quantitative surpervised class training areas creation.
+It calculates the spectral signatures based on the cells within the specified areas. 
+The resulting signature file can be used by a maximum likelihood classification module (i.maxlik). 
+During the process the user is shown a histogram of the area cell values for each image band, 
+and coincident plot which shows the separability of classes.\newline\linebreak
+Another way the user can inspect the suitability of the created training areas 
+is by displaying the cells of the image bands which fall within a user-specified 
+number of standard deviations from the means in the spectral signature. This
+helps to estimate how much of the image is likely to be classified as a particular class.\newline
+\begin{center}
+ \includegraphics[width=0.47\textwidth]{./images/wxiclass1.png}
+ \hspace{10mm}
+ \includegraphics[width=0.47\textwidth]{./images/wxiclass2.png}
+ \newline
+ Figure 3: Interactive image classification with coincidence plots (left side) \& histograms (right side)
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Satellite imagery products}{
+\begin{itemize}
+ \item {\bf i.vi} 15 vegetation indices available
+ \item {\bf i.albedo} Broadband Albedo (snow \~= 0.6-0.8, water=0.05)
+ \item {\bf i.emissivity} Emissivity approximation from vegetation index
+ \item {\bf i.biomass} biomass growth for crop yield
+\end{itemize}
+
+{\bf Reference/Potential ET: i.evapo.* modules}
+
+\begin{itemize}
+ \item {\bf i.evapo.mh} ETo Hargreaves, modified-Hargreaves \& Hargreaves-Samani 
+ \item {\bf i.evapo.pm} ETo Penman-Monteith
+ \item {\bf i.evapo.pt} ETpot Priestley-Taylor
+\end{itemize}
+
+{\bf Actual ET: i.eb.* modules using thermodynamic heat flux modeling}
+
+\begin{center}
+ \includegraphics[width=0.45\textwidth]{./images/slet2005}
+ \hspace{20mm}
+ \includegraphics[width=0.45\textwidth]{./images/slet2010}
+ \newline
+ Figure 4: Actual evapotranspiration (i.eb.*) for water monitoring and management [6]
+\end{center}
+}
+
+\startthirdcolumn
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Lidar}{
+\smallskip
+The Lidar library ({\url {www.liblas.org}}) included in GRASS GIS permits the import of Lidar (.las)
+data in raster (r.in.lidar using statistics of choice) or in vector format (v.in.lidar). 
+Author Markus Metz tested r.in.lidar with a 705Gb .las file. \newline
+On-farm water storage study with lidar data in NSW (Australia) developed a full remote sensing monitoring methodology
+of water availability with lidar-based bathymetric survey and multi-source remote sensing survey [8].\newline
+\begin{center}
+ \includegraphics[width=0.4\textwidth]{./images/ofs1}
+ \hspace{10mm}
+ \includegraphics[width=0.275\textwidth]{./images/ofs2}
+ \newline
+ Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [8]
+\end{center}
+}
+
+\blocknode{Temporal signature cleaning}{
+\smallskip
+\begin{itemize}
+ \item r.hants produces a harmonic analysis through incomplete returned Fourier inversion.
+ \item i.lmf computes a temporal Local Maximum Fitting with Akaike Information Content.
+\end{itemize}
+
+\begin{center}
+ \includegraphics[width=0.8\textwidth]{./images/lmf0}\newline
+ \vspace{10mm}
+ \includegraphics[width=0.8\textwidth]{./images/lmf1}
+ \newline
+ Figure 6: pre and post LMF temporal filter
+\end{center}
+}
+
+\blocknode{Other Improvements \& Additions}{
+\smallskip
+
+{\bf Remanufacturing, performance improvement}
+
+\begin{itemize}
+ \item {\bf i.ortho.rectify} new rewritten \& optimized version of i.ortho.photo
+ \item {\bf i.atcorr} atmospheric correction, more satellite sensors configured, faster
+ \item {\bf i.pca} backward modeling implemented 
+\end{itemize}
+
+{\bf Preparing Landsat, Aster and MODIS datasets}
+
+\begin{itemize}
+ \item {\bf i.landsat.toar} TOA reflectance correction for Landsat satellite series
+ \item {\bf i.aster.toar} TOA reflectance correction for Terra-ASTER
+ \item {\bf i.modis.qc} Quality flag interpretation for Terra/Aqua MODIS
+\end{itemize}
+
+{\bf Geographical and astronomic functions}
+
+\begin{itemize}
+ \item {\bf i.latlong} maps latitude or longitude (dd.ddd)
+ \item {\bf i.sunhours} maps potential hours of sunshine in a day at a given location (hh.hhh)
+ \item {\bf r.sun.angle} maps the sun elevation and sun azimuth angles for the given time of day
+\end{itemize}
+}
+
+\startfourthcolumn
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Multi- and hyperspectral data analysis}{
+\smallskip
+{\bf Unmixing mixed pixels (i.spec.unmix [9]) is based upon identifying orignal spectral signatures
+that ideally come from a land cover that is covering at least one full pixel in the image
+studied.}
+
+\begin{center}
+ \includegraphics[width=0.4\textwidth]{./images/unmix1.png}
+ \hspace{10mm}
+ \includegraphics[width=0.5\textwidth]{./images/unmix.png}
+\end{center}
+\begin{center}
+ \includegraphics[width=0.5\textwidth]{./images/unmix2.png}
+ \newline
+ Figure 7: Unmixing principle (left), end-members selection (right), error space (below)
+\end{center}
+}
+
+
+\blocknode{Spatio-temporal Analysis}{
+\smallskip
+Repetitive daily open water mapping (i.wi), provides with the probability 
+of flood destruction on rice crop area in Thailand [10].\newline
+
+\begin{center}
+ \includegraphics[width=0.75\textwidth]{./images/floodrisk}
+ \newline
+ Figure 8: Flood risk on Eastern Thailand analysed with ~9 years daily MODIS data
 \end{center}
 }
 
