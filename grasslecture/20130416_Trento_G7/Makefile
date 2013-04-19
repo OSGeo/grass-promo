@@ -3,8 +3,8 @@
 
 FILE=crowdsourceET
 
-SVGFILES = $(shell ls *.svg)
-SVGPDF = $(patsubst %.svg, %.pdf, $(SVGFILES))
+#SVGFILES = $(shell ls *.svg)
+#SVGPDF = $(patsubst %.svg, %.pdf, $(SVGFILES))
 
 all: $(FILE).pdf
 

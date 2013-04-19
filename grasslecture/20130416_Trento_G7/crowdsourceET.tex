@@ -279,6 +279,58 @@ Chain processing has a fundamental impact on remote sensing work:\\
 \end{block}
 
 \end{frame}
+
+\subsection{Blueprint}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Blueprint}
+
+\begin{center}
+ \includegraphics[width=8cm]{chain0}
+\end{center}
+
+\begin{itemize}
+ \item GDAL+[C+OpenMP]
+ \item GRASSGIS+pyGRASS+[C+OpenMP]
+\end{itemize}
+
+\end{frame}
+
+\subsection{GDAL}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{HPC GDAL framework}
+
+\begin{columns}[l]
+\column[t]{0.6\textwidth}
+\begin{center}
+ GDAL+[C+OpenMP]
+ \includegraphics[width=7.5cm]{chain2}
+\end{center}
+\column[t]{0.4\textwidth}
+\begin{center}
+ OpenMP distribution
+ \includegraphics[width=5cm]{chain1}
+\end{center}
+\end{columns}
+\end{frame}
+
+
+\subsection{GRASS GIS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{GRASS GIS framework}
+
+\begin{center}
+ \includegraphics[width=7.5cm]{architecture_implementation}
+\end{center}
+
+\begin{block}{metaModule concept}
+{\bf pyGRASS:} vertical integration of GRASS GIS modules\\
+{\bf GRASS GIS modules:} [C+OpenMP] any multi-core PC \\
+{\bf GRASS GIS modules:} [C+MPIch?] in FEM - GISCluster \\
+{\bf GRASS GIS modules:} [C+CUDA/GPGPU?] in FEM - Tesla
+\end{block}
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Chain processing}
 
@@ -288,6 +340,25 @@ META Modules arise from vertical integration.
 \begin{center}
  \includegraphics[width=7.5cm]{chain0}
 \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Initial results of ET Models comparison}
+
+\begin{center}
+ Average ET for Sri Lanka, Daily 2000-2012 (mm/d, daily, 12.3 years)
+ \includegraphics[width=12cm]{sltemporaletb}
+\end{center}
+
+\begin{block}{Comparison}
+\begin{itemize}
+ \item ETo \& ETpot (rad) are similar, expected.
+ \item ETa models are not so similar, expected.
+ \item ETo \& ETpot (rad) are higher than ETa models, expected.
+\end{itemize}
+
+\end{block}
 
 \end{frame}
 
@@ -334,7 +405,6 @@ Local parameterization of ET models is necessary\newline\linebreak
 
 \end{frame}
 
-\subsection{Year 1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{set up for year 1: Kick the geek}
 
@@ -355,7 +425,6 @@ Scientists on all continents
 
 \end{frame}
 
-\subsection{Year 2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{set up for year 2: Bring the bee}
 
@@ -377,7 +446,6 @@ Any interested person on all continents
 
 \end{frame}
 
-\subsection{Year 3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{set up for year 3: Ubergeek upgrade}
 
