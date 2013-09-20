@@ -35,6 +35,13 @@ START_DATE=`date --utc --date="last week" +%F`
 
 wget -nv -O "$XMLNAME" "${URL}${REQUEST}&cql_filter=origintime>='$START_DATE'"
 
+if [ $? -ne 0 ] ; then
+   echo "Failed to download data from GNS." >&2
+   rm "$XMLNAME"
+   exit 1
+fi
+
+
 BASE="wfs:FeatureCollection/wfs:member/geonet:quake"
 FIELDS="
 geonet:origintime
@@ -52,5 +59,5 @@ xml2 < "$XMLNAME" | \
    sed -e 's/T/|/' | grep -v '||' >> "$OUTFILE"
 
 #todo: avoid the tmp file, just pipe from wget -O - | xml2 | 2csv | sed
-\rm "$XMLNAME"
+rm "$XMLNAME"
 
