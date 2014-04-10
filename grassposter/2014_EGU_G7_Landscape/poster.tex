@@ -17,9 +17,9 @@
 % \setsecondcolor{gray!80!}
 % \setthirdcolor{red!80!black}
 
-\title{GRASS GIS Vector state of the art\\ Gearing towards GRASS GIS 7}
-\author{Markus Neteler, ...\\
-GRASS GIS Development Team}
+\title{\bigskip GRASS GIS Vector State of the Art  -  Gearing towards GRASS GIS 7 \bigskip}
+\author{Markus Metz$^1$, Martin Landa$^2$, Anna Petrasova$^3$, Vaclav Petras$^3$, Yann Chemin$^4$, Markus Neteler$^1$ and The GRASS GIS Development Team\\ \bigskip
+$^1$ CRI, FEM, Italy, $^2$ CTU, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri Lanka}
 
 \usetemplate{1}
 \setinstituteshift{1}
@@ -34,11 +34,15 @@ GRASS GIS Development Team}
 \tikzstyle{every picture}+=[remember picture]
 \begin{tikzpicture}
 \initializesizeandshifts
-\titleblock{73.8}{1}
+\titleblock{123.8}{1}
 % \setblocktitleheight{1}
 
 \addlogo[north west]{(2,-1)}{9cm}{./svg_images/Grass_GIS.pdf}
-\addlogo[north east]{(-2,-2.5)}{11cm}{./svg_images/IWMI_logo.pdf}
+%Please insert your institution logo here
+\addlogo[north east]{(-2,-2.5)}{4cm}{./svg_images/IWMI_logo.pdf}
+\addlogo[north east]{(-2,-6.5)}{4cm}{./svg_images/IWMI_logo.pdf}
+\addlogo[north east]{(-8,-2.5)}{4cm}{./svg_images/IWMI_logo.pdf}
+\addlogo[north east]{(-8,-6.5)}{4cm}{./svg_images/IWMI_logo.pdf}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Abstract}{
@@ -62,39 +66,16 @@ GRASS GIS' capacity in remote sensing has also been greatly improved with additi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Linear features extraction}{
 \small
-An edge is considered as a change in image digital values.
-Edge detection \& extraction in i.canny is done by a Canny edge detector [2]. 
-The Canny edge detector encompasses Gaussian smoothing, 
-gradient computation \& non-maximum suppression. \newline
-This creates thin edges and thresholding with hysteresis which
-preserves only important edges. Thus, no pre- or post-processing is required.
-The produced binary image shows boundaries of areas in the input image
-which is usually a gray scale image e.g., intensity channel or the
-result of PCA.\newline
-The i.edge module is suitable as a first step in building or road detection.
-The level of details of the output image is easily customizable.
+blabla
 \begin{center}
- \includegraphics[width=0.48\textwidth]{./images/imagery_spot_original}
- \hspace{10mm}
- \includegraphics[width=0.48\textwidth]{./images/imagery_spot_edge_1}
- \newline
+ %\includegraphics[width=0.48\textwidth]{./images/imagery_spot_original}
+ %\hspace{10mm}
+ %\includegraphics[width=0.48\textwidth]{./images/imagery_spot_edge_1}
+ %\newline
  Figure 1: Canny edge detector on a road network [2]
 \end{center}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Object recognition}{
-\small The module i.segment [3] is using a region growing algorithm [4], some ideas 
-have also been implemented from [5]. It produces a raster map with segments (objects), 
-and optionally other maps with segments statistics (mean/variance/range/etc.). 
-\begin{center}
- \includegraphics[width=0.48\textwidth]{./images/sltsu.png}
- \hspace{10mm}
- \includegraphics[width=0.48\textwidth]{./images/sltsu_seg.png}
- \newline
- Figure 2: Image segmentation (2.4x2.4m) of the 2004 tsunami wave, West Coast Sri Lanka
-\end{center}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \getcurrentrow{box}
@@ -108,17 +89,9 @@ and optionally other maps with segments statistics (mean/variance/range/etc.).
 \begin{tabular}{rp{0.9\textwidth}}
 [1] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
 [2] & Petráš, 2012. M.Sc. Thesis, OSGeoREL, FCE CTU, Prague.\\{}
-[3] & Momsen \& Metz, 2012. i.segment module. GRASS GIS Software, Version 7.\\{}
-[4] & Sant'Anna Bins \& Fonseca \& Erthal \& Misuo, 1996. Anais VIII Simpósio Brasileiro de Sensoria.
-Rem., Salvador, Brasil, INPE, 677-680.\\{}
-[5] & Athelogou \& Schmidt \& Schäpe \& Baatz \& Binnig, 2007. Imaging Cellular \& Molecular Biological
-Functions, 407-422.\\{}
-[6] & Chemin, 2012. Chapter 19, DOI: 10.5772/23571 ({\url {http://bit.ly/16qJOep}})\\{}
-[7] & Kratochvílová \& Petráš, 2013. OSGeoREL, FCE CTU, Prague.\\{}
-[8] & Chemin \& Rabbani, 2011. International Journal of Geoinformatics,  7(3):1-6.\\{}
-[9] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. 
-International Journal of Geoinformatics, 1(1): 51-61.\\{}
-[10] & Chemin \& Phuphak \& Asilo \& Hijmans, 2012. International Journal of GeoInformatics. 8(1):1-12.
+[3] & Kratochvílová \& Petráš, 2013. OSGeoREL, FCE CTU, Prague.\\{}
+[4] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. 
+International Journal of Geoinformatics, 1(1): 51-61.
 \end{tabular}
 \end{center}
 \smallskip
@@ -152,7 +125,7 @@ International Journal of Geoinformatics, 1(1): 51-61.\\{}
 \newcommand{\logospace}{\hspace{0.1em}}
 \noindent
 \includegraphics[width=\logowidth]{./svg_images/public_domain_logo.pdf}
-\raisebox{0.7\height}{\logospace 2013 GRASS Development Team}
+\raisebox{0.7\height}{\logospace 2014 GRASS Development Team}
 \end{center}
 }
 
@@ -160,50 +133,17 @@ International Journal of Geoinformatics, 1(1): 51-61.\\{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Interactive supervised classification}{
-This interactive tool [7], aims at greatly simplifying quantitative surpervised class training areas creation.
-It calculates the spectral signatures based on the cells within the specified areas. 
-The resulting signature file can be used by a maximum likelihood classification module (i.maxlik). 
-During the process the user is shown a histogram of the area cell values for each image band, 
-and coincident plot which shows the separability of classes.\newline\linebreak
-Another way the user can inspect the suitability of the created training areas 
-is by displaying the cells of the image bands which fall within a user-specified 
-number of standard deviations from the means in the spectral signature. This
-helps to estimate how much of the image is likely to be classified as a particular class.\newline
+This
 \begin{center}
- \includegraphics[width=0.47\textwidth]{./images/wxiclass1.png}
- \hspace{10mm}
- \includegraphics[width=0.47\textwidth]{./images/wxiclass2.png}
- \newline
+ %\includegraphics[width=0.47\textwidth]{./images/wxiclass1.png}
+ %\newline
  Figure 3: Interactive image classification with coincidence plots (left side) \& histograms (right side)
 \end{center}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Satellite imagery products}{
-\begin{itemize}
- \item {\bf i.vi} 15 vegetation indices available
- \item {\bf i.albedo} Broadband Albedo (snow \~= 0.6-0.8, water=0.05)
- \item {\bf i.emissivity} Emissivity approximation from vegetation index
- \item {\bf i.biomass} biomass growth for crop yield
-\end{itemize}
-
-{\bf Reference/Potential ET: i.evapo.* modules}
-
-\begin{itemize}
- \item {\bf i.evapo.mh} ETo Hargreaves, modified-Hargreaves \& Hargreaves-Samani 
- \item {\bf i.evapo.pm} ETo Penman-Monteith
- \item {\bf i.evapo.pt} ETpot Priestley-Taylor
-\end{itemize}
-
-{\bf Actual ET: i.eb.* modules using thermodynamic heat flux modeling}
-
-\begin{center}
- \includegraphics[width=0.45\textwidth]{./images/slet2005}
- \hspace{20mm}
- \includegraphics[width=0.45\textwidth]{./images/slet2010}
- \newline
- Figure 4: Actual evapotranspiration (i.eb.*) for water monitoring and management [6]
-\end{center}
+blabla
 }
 
 \startthirdcolumn
@@ -216,27 +156,9 @@ Author Markus Metz tested r.in.lidar with a 705Gb .las file. \newline
 On-farm water storage study with lidar data in NSW (Australia) developed a full remote sensing monitoring methodology
 of water availability with lidar-based bathymetric survey and multi-source remote sensing survey [8].\newline
 \begin{center}
- \includegraphics[width=0.4\textwidth]{./images/ofs1}
- \hspace{10mm}
- \includegraphics[width=0.275\textwidth]{./images/ofs2}
- \newline
+ %\includegraphics[width=0.4\textwidth]{./images/ofs1}
+ %\newline
  Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [8]
-\end{center}
-}
-
-\blocknode{Temporal signature cleaning}{
-\smallskip
-\begin{itemize}
- \item r.hants produces a harmonic analysis through incomplete returned Fourier inversion.
- \item i.lmf computes a temporal Local Maximum Fitting with Akaike Information Content.
-\end{itemize}
-
-\begin{center}
- \includegraphics[width=0.8\textwidth]{./images/lmf0}\newline
- \vspace{10mm}
- \includegraphics[width=0.8\textwidth]{./images/lmf1}
- \newline
- Figure 6: pre and post LMF temporal filter
 \end{center}
 }
 
@@ -245,26 +167,15 @@ of water availability with lidar-based bathymetric survey and multi-source remot
 
 {\bf Remanufacturing, performance improvement}
 
-\begin{itemize}
- \item {\bf i.ortho.rectify} new rewritten \& optimized version of i.ortho.photo
- \item {\bf i.atcorr} atmospheric correction, more satellite sensors configured, faster
- \item {\bf i.pca} backward modeling implemented 
-\end{itemize}
 
-{\bf Preparing Landsat, Aster and MODIS datasets}
+{\bf Other functions}
 
 \begin{itemize}
- \item {\bf i.landsat.toar} TOA reflectance correction for Landsat satellite series
- \item {\bf i.aster.toar} TOA reflectance correction for Terra-ASTER
- \item {\bf i.modis.qc} Quality flag interpretation for Terra/Aqua MODIS
-\end{itemize}
-
-{\bf Geographical and astronomic functions}
-
-\begin{itemize}
- \item {\bf i.latlong} maps latitude or longitude (dd.ddd)
- \item {\bf i.sunhours} maps potential hours of sunshine in a day at a given location (hh.hhh)
- \item {\bf r.sun.angle} maps the sun elevation and sun azimuth angles for the given time of day
+ \item {\bf v.} blabla
+ \item {\bf v.} blabla
+ \item {\bf v.} blabla
+ \item {\bf v.} blabla
+ \item {\bf v.} blabla
 \end{itemize}
 }
 
@@ -272,32 +183,12 @@ of water availability with lidar-based bathymetric survey and multi-source remot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Multi- and hyperspectral data analysis}{
 \smallskip
-Unmixing of mixed pixels (i.spec.unmix [9]) is based on the identification of original
-spectral signatures that are ideally derived from land covers that cover at least one
-full pixel in the image (pure endmembers).
+Unmixing 
 
 \begin{center}
- \includegraphics[width=0.4\textwidth]{./images/unmix_pixels_spectrum.pdf}
- \hspace{10mm}
- \includegraphics[width=0.5\textwidth]{./images/unmix_xgobi_supersession.pdf}
-\end{center}
-\begin{center}
- \includegraphics[width=0.5\textwidth]{./images/unmix_errorfunction.pdf}
- \newline
+ %\includegraphics[width=0.4\textwidth]{./images/unmix_pixels_spectrum.pdf}
+ %\newline
  Figure 7: Unmixing principle (left), end-members selection (right), error space (below)
-\end{center}
-}
-
-
-\blocknode{Spatio-temporal Analysis}{
-\smallskip
-Repetitive daily open water mapping (i.wi), provides with the probability 
-of flood destruction on rice crop area in Thailand [10].\newline
-
-\begin{center}
- \includegraphics[width=0.7\textwidth]{./images/floodrisk}
- \newline
- Figure 8: Flood risk on Eastern Thailand analysed with ~9 years daily MODIS data
 \end{center}
 }
 
