@@ -1,5 +1,6 @@
 \documentclass[landscape,a0,final]{a0poster}
 \usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{minted} %code highlighting, not working yet
 \usepackage{tikzposter} % here most of the things are defined
 % change parameters only after this line You can also start a new column with an arbitrary 
 % x-coordinate by specifying explicitly the coordinate of the new block node as follows:
@@ -132,7 +133,11 @@ The accumulated transpiration (t.rast.aggregate) is subjected to Landscape analy
  	\end{tabular}\newline
 \end{center}
 
-
+%Minted version Not working (+ compile needs -shell-escape)
+%\begin{minted}[frame=single,linenos,mathescape,fontsize=\small]{sh}
+%	i.group group=pca_group input=$(g.mlist type=rast pattern=*h28v07*EVI)
+%	i.pca input=pca_group output_prefix=pca_ percent=99 --o
+%\end{minted}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

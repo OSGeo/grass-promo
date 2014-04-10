@@ -7,14 +7,14 @@ SVGPDF = $(patsubst %.svg, %.pdf, $(SVGFILES))
 all: $(FILE).pdf
 
 $(FILE).pdf: *.tex Makefile
-	make pdf
-	make pdf
+	make pdf 
+	make pdf 
 	@while grep Rerun $(FILE).log >/dev/null 2>&1 ; do \
 		make pdf; \
 	done
 
 pdf: fig
-	pdflatex $(FILE).tex
+	pdflatex -shell-escape $(FILE).tex 
 
 fig: $(SVGPDF)
 
