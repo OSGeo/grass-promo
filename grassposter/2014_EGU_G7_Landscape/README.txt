@@ -1,7 +1,7 @@
 This poster requires pdflatex been installed.
 
 Fedora:
-  yum install texlive texlive-a0poster texlive-wrapfig
+  yum install texlive-a0poster texlive-minted texlive-wrapfig texlive-babel-czech
 
 Debian:
   apt-get install ...
