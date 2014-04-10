@@ -46,21 +46,13 @@ $^1$ CRI, FEM, Italy, $^2$ CTU, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri L
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Abstract}{
-\small GRASS GIS, commonly referred to as GRASS (Geographic Resources Analysis Support System),
-is a free Geographic Information System (GIS) software used for geospatial data management and analysis,
-image processing, graphics/maps production, spatial modeling, and visualization [1].
-
-GRASS GIS 7 started its development by the branching out of GRASS GIS 6.x from the main trunk of code (rev 31142).
-This was done on 27th of April 2008, and a large amount of changes took place since that date, more 
-are still underway.
-\begin{itemize}
- \item Raster library in GRASS 7 (ongoing)
- \item Vector library in GRASS 7 (ongoing)
- \item Raster3D (volume) library and modules in GRASS 7 (finished)
- \item Temporal extension for GRASS 7 (finished) 
-\end{itemize}
-
-GRASS GIS' capacity in remote sensing has also been greatly improved with additions for version 7.
+\small The upcoming GRASS GIS 7 release improves not only raster processing and general design but the vector processing in the first place. GRASS GIS, as a topological GIS, recognizes that the topology plays the key role in the vector processing and analysis.\newline
+Topology ensures that adjacent geographic components in a single vector map are related. In contrast to non-topological GIS, a border common to two areas exists only once and is shared between the two areas. Topological representation of vector data helps to produce and maintain vector maps with clean geometry as well as enables the user to perform certain analyses that can not be conducted with non-topological or spaghetti data. Non-topological vector data are automatically converted to a topological representation upon import. Further more, various cleaning tools exist to remove non-trivial topological errors.\newline
+In the upcoming GRASS GIS 7 release the vector library was particularly improved to make it faster and more efficient with an improved internal vector file format. This new topological format reduces memory and disk space requirements, leading to a generally faster processing. Opening an existing vector requires less memory providing additionally support for large files. The new spatial index performs queries faster (compared to GRASS GIS 6 more than 10 times for large vectors). As a new option the user can select a file-based version of the spatial index for large vector data. All topological cleaning tools have been optimized with regard to processing speed, robustness, and system requirements.\newline
+The topological engine comes with a new prototype for direct read/write support of Simple Features API/OGR. \newline
+Additionally vector data can be directly exchanged with topological PostGIS 2 databases.\newline
+Considering the wide spread usage of ESRI Shapefile, a non-topological format for vector data exchange, it is particularly advantageous that GRASS GIS 7 offers advanced cleaning tools.\newline
+For power users and programmers, the new Python interface allows to directly access functions provided by the underlying C library; this combines the ease of writing Python scripts with the power of optimized C functionality in the library backend.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
