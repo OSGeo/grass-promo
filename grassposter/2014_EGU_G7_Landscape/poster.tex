@@ -47,7 +47,8 @@ $^1$ CRI, FEM, Italy, $^2$ CTU, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri L
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Abstract}{
-\small The upcoming GRASS GIS 7 release improves not only raster processing and general design but the vector processing in the first place. GRASS GIS, as a topological GIS, recognizes that the topology plays the key role in the vector processing and analysis.\newline
+% \small <<- too small for a poster!
+The upcoming GRASS GIS 7 release improves not only raster processing and general design but the vector processing in the first place. GRASS GIS, as a topological GIS, recognizes that the topology plays the key role in the vector processing and analysis.\newline
 Topology ensures that adjacent geographic components in a single vector map are related. In contrast to non-topological GIS, a border common to two areas exists only once and is shared between the two areas. Topological representation of vector data helps to produce and maintain vector maps with clean geometry as well as enables the user to perform certain analyses that can not be conducted with non-topological or spaghetti data. Non-topological vector data are automatically converted to a topological representation upon import. Further more, various cleaning tools exist to remove non-trivial topological errors.\newline
 In the upcoming GRASS GIS 7 release the vector library was particularly improved to make it faster and more efficient with an improved internal vector file format. This new topological format reduces memory and disk space requirements, leading to a generally faster processing. Opening an existing vector requires less memory providing additionally support for large files. The new spatial index performs queries faster (compared to GRASS GIS 6 more than 10 times for large vectors). As a new option the user can select a file-based version of the spatial index for large vector data. All topological cleaning tools have been optimized with regard to processing speed, robustness, and system requirements.\newline
 The topological engine comes with a new prototype for direct read/write support of Simple Features API/OGR. \newline
@@ -76,7 +77,7 @@ blabla
 \coordinate (screenshot) at (box.north west);
 
 \blocknodew[($(funkcionalita)+(20,-1)$)]{35}{References}{
-\scriptsize
+% \scriptsize <<- too small for a poster!
 \begin{center}
 \begin{tabular}{rp{0.9\textwidth}}
 [1] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
@@ -156,7 +157,11 @@ of water availability with lidar-based bathymetric survey and multi-source remot
 \begin{center}
  %\includegraphics[width=0.4\textwidth]{./images/ofs1}
  %\newline
- Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [8]
+ %Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [8]
+ 
+ \includegraphics[width=0.4\textwidth]{./images/grass7_las_support}
+ %\newline
+ Figure 5: Example for LAS support in GRASS GIS 7: rapid LAS data assessment through binning
 \end{center}
 }
 
@@ -181,7 +186,7 @@ of water availability with lidar-based bathymetric survey and multi-source remot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{3D}{
 \smallskip
-Unmixing 
+Faces
 
 \begin{center}
  \includegraphics[width=0.4\textwidth]{./images/grass7-3d}
