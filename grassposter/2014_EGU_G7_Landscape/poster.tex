@@ -38,12 +38,12 @@ $^1$ CRI, FEM, Italy, $^2$ CTU, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri L
 \titleblock{123.8}{1}
 % \setblocktitleheight{1}
 
-\addlogo[north west]{(2,-1)}{9cm}{./svg_images/Grass_GIS.pdf}
+\addlogo[north west]{(2,-1)}{9cm}{svg_images/Grass_GIS.pdf}
 %Please insert your institution logo here
-\addlogo[north east]{(-2,-2.5)}{4cm}{./svg_images/logo_FEM_CRI.pdf}
-\addlogo[north east]{(-2,-6.5)}{4cm}{./svg_images/NC_State_Seal.pdf}
-\addlogo[north east]{(-8,-2.5)}{4cm}{./images/Logo_cvut.jpg}
-\addlogo[north east]{(-8,-6.5)}{4cm}{./svg_images/IWMI_logo.pdf}
+\addlogo[north east]{(-2,-2.5)}{4cm}{svg_images/logo_FEM_CRI.pdf}
+\addlogo[north east]{(-2,-6.5)}{4cm}{svg_images/NC_State_Seal.pdf}
+\addlogo[north east]{(-8,-2.5)}{4cm}{images/Logo_cvut.jpg}
+\addlogo[north east]{(-8,-6.5)}{4cm}{svg_images/IWMI_logo.pdf}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Abstract}{
@@ -51,7 +51,7 @@ $^1$ CRI, FEM, Italy, $^2$ CTU, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri L
 The upcoming GRASS GIS 7 release improves not only raster processing and general design but the vector processing in the first place. GRASS GIS, as a topological GIS, recognizes that the topology plays the key role in the vector processing and analysis.\newline
 Topology ensures that adjacent geographic components in a single vector map are related. In contrast to non-topological GIS, a border common to two areas exists only once and is shared between the two areas. Topological representation of vector data helps to produce and maintain vector maps with clean geometry as well as enables the user to perform certain analyses that can not be conducted with non-topological or spaghetti data. Non-topological vector data are automatically converted to a topological representation upon import. Further more, various cleaning tools exist to remove non-trivial topological errors.\newline
 In the upcoming GRASS GIS 7 release the vector library was particularly improved to make it faster and more efficient with an improved internal vector file format. This new topological format reduces memory and disk space requirements, leading to a generally faster processing. Opening an existing vector requires less memory providing additionally support for large files. The new spatial index performs queries faster (compared to GRASS GIS 6 more than 10 times for large vectors). As a new option the user can select a file-based version of the spatial index for large vector data. All topological cleaning tools have been optimized with regard to processing speed, robustness, and system requirements.\newline
-The topological engine comes with a new prototype for direct read/write support of Simple Features API/OGR. \newline
+The topological engine comes with a new prototype for direct read/write support of Simple Features API/OGR.\newline
 Additionally vector data can be directly exchanged with topological PostGIS 2 databases.\newline
 Considering the wide spread usage of ESRI Shapefile, a non-topological format for vector data exchange, it is particularly advantageous that GRASS GIS 7 offers advanced cleaning tools.\newline
 For power users and programmers, the new Python interface allows to directly access functions provided by the underlying C library; this combines the ease of writing Python scripts with the power of optimized C functionality in the library backend.
@@ -60,13 +60,31 @@ For power users and programmers, the new Python interface allows to directly acc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Topology support}{
 \small
-blabla
+The GRASS GIS native vector format stores objects in a topology format. The OGC Simple Features can be imported into and exported from the GRASS GIS format through topological vector conversion. For attribute management several database management system (DBMS) with SQL support are supported including SQLite (default DB backend), PostgreSQL + PostGIS, MySQL, ODBC.
+
+The following \textbf{basic geometry types} can be edited directly: point, centroid, line, and boundary. A GRASS vector map can contain a combination of several different types.
+From these basic geometry types the following \textbf{derived geometry types} can be generated: area (closed ring of boundaries + centroid), isle (closed ring of boundaries, no centroid), and node (at both ends of lines/boundaries). Isles and Nodes are not visible to the user.
+
+% TODO: point to http://grass.osgeo.org/programming7/
+
+% TODO: 2. explain topology changes <<- needed?
+
+
+% TODO: show the internal format change or rather the actual model?
 \begin{center}
- \includegraphics[width=0.48\textwidth]{./svg_images/grass6-topo}
+ \includegraphics[width=0.48\textwidth]{odp_slides/grass7_basic_vector_types_digitizer}
  \hspace{10mm}
- \includegraphics[width=0.48\textwidth]{./svg_images/grass7-topo}
+ \includegraphics[width=0.48\textwidth]{odp_slides/grass7_derived_vector_types}
  \newline
- Figure 1: Topology changes from version 6 to 7 after [5]
+ Figure 1a: Basic and derived vector geometry types in GRASS GIS 7
+\end{center}
+
+\begin{center}
+ \includegraphics[width=0.48\textwidth]{svg_images/grass6-topo}
+ \hspace{10mm}
+ \includegraphics[width=0.48\textwidth]{svg_images/grass7-topo}
+ \newline
+ Figure 1b: Topology changes from version 6 to 7 after [5]
 \end{center}
 }
 
@@ -83,9 +101,8 @@ blabla
 [1] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
 [2] & Petráš, 2012. M.Sc. Thesis, OSGeoREL, FCE CTU, Prague.\\{}
 [3] & Kratochvílová \& Petráš, 2013. OSGeoREL, FCE CTU, Prague.\\{}
-[4] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005.\\{}
+[4] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. International Journal of Geoinformatics, 1(1): 51-61.\\{}
 [5] & Landa, 2013. PhD thesis, CTU, Czech Republic.
-International Journal of Geoinformatics, 1(1): 51-61.
 \end{tabular}
 \end{center}
 \smallskip
@@ -95,7 +112,7 @@ International Journal of Geoinformatics, 1(1): 51-61.
 \begin{center}
 \begin{tabular}{cp{0.9\textwidth}}
 \begin{minipage}{0.15\textwidth}
-\includegraphics[width=0.7in]{./images/iwmi_qr.pdf}
+\includegraphics[width=0.7in]{images/iwmi_qr.pdf}
 \end{minipage}
 
 \begin{minipage}{0.3\textwidth}
@@ -103,7 +120,7 @@ International Journal of Geoinformatics, 1(1): 51-61.
 \end{minipage}
 
 \begin{minipage}{0.15\textwidth}
-\includegraphics[width=0.7in]{./images/grass_qr.pdf}
+\includegraphics[width=0.7in]{images/grass_qr.pdf}
 \end{minipage}
 
 \begin{minipage}{0.3\textwidth}
@@ -118,7 +135,7 @@ International Journal of Geoinformatics, 1(1): 51-61.
 \newcommand{\logowidth}{5em}
 \newcommand{\logospace}{\hspace{0.1em}}
 \noindent
-\includegraphics[width=\logowidth]{./svg_images/public_domain_logo.pdf}
+\includegraphics[width=\logowidth]{svg_images/public_domain_logo.pdf}
 \raisebox{0.7\height}{\logospace 2014 GRASS Development Team}
 \end{center}
 }
@@ -129,7 +146,7 @@ International Journal of Geoinformatics, 1(1): 51-61.
 \blocknode{Data Sources}{
 This
 \begin{center}
- \includegraphics[width=0.47\textwidth]{./images/grass-data-sources}
+ \includegraphics[width=0.47\textwidth]{images/grass-data-sources}
   \newline
  Figure 3: Data sources
 \end{center}
@@ -139,7 +156,7 @@ This
 \blocknode{Topology structure}{
 
 \begin{center}
- \includegraphics[width=0.47\textwidth]{./images/topo-geo-grass}
+ \includegraphics[width=0.47\textwidth]{images/topo-geo-grass}
   \newline
  Figure 3: Topology structure
 \end{center}
@@ -155,11 +172,11 @@ Author Markus Metz tested r.in.lidar with a 705Gb .las file. \newline
 On-farm water storage study with lidar data in NSW (Australia) developed a full remote sensing monitoring methodology
 of water availability with lidar-based bathymetric survey and multi-source remote sensing survey [8].\newline
 \begin{center}
- %\includegraphics[width=0.4\textwidth]{./images/ofs1}
+ %\includegraphics[width=0.4\textwidth]{images/ofs1}
  %\newline
  %Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [8]
  
- \includegraphics[width=0.4\textwidth]{./images/grass7_las_support}
+ \includegraphics[width=0.4\textwidth]{images/grass7_las_support}
  %\newline
  Figure 5: Example for LAS support in GRASS GIS 7: rapid LAS data assessment through binning
 \end{center}
@@ -189,7 +206,7 @@ of water availability with lidar-based bathymetric survey and multi-source remot
 Faces
 
 \begin{center}
- \includegraphics[width=0.4\textwidth]{./images/grass7-3d}
+ \includegraphics[width=0.4\textwidth]{images/grass7-3d}
  \newline
  Figure 7: 3D handling
 \end{center}
