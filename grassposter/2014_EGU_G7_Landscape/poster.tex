@@ -51,7 +51,7 @@ $^1$ CRI, FEM, Italy, $^2$ CTU, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri L
 The upcoming GRASS GIS 7 release improves not only raster processing and general design but the vector processing in the first place. GRASS GIS, as a topological GIS, recognizes that the topology plays the key role in the vector processing and analysis.\newline
 Topology ensures that adjacent geographic components in a single vector map are related. In contrast to non-topological GIS, a border common to two areas exists only once and is shared between the two areas. Topological representation of vector data helps to produce and maintain vector maps with clean geometry as well as enables the user to perform certain analyses that can not be conducted with non-topological or spaghetti data. Non-topological vector data are automatically converted to a topological representation upon import. Further more, various cleaning tools exist to remove non-trivial topological errors.\newline
 In the upcoming GRASS GIS 7 release the vector library was particularly improved to make it faster and more efficient with an improved internal vector file format. This new topological format reduces memory and disk space requirements, leading to a generally faster processing. Opening an existing vector requires less memory providing additionally support for large files. The new spatial index performs queries faster (compared to GRASS GIS 6 more than 10 times for large vectors). As a new option the user can select a file-based version of the spatial index for large vector data. All topological cleaning tools have been optimized with regard to processing speed, robustness, and system requirements.\newline
-The topological engine comes with a new prototype for direct read/write support of Simple Features API/OGR.\newline
+The topological engine comes with a new prototype for direct read/write support of OGR Simple Features API.\newline
 Additionally vector data can be directly exchanged with topological PostGIS 2 databases.\newline
 Considering the wide spread usage of ESRI Shapefile, a non-topological format for vector data exchange, it is particularly advantageous that GRASS GIS 7 offers advanced cleaning tools.\newline
 For power users and programmers, the new Python interface allows to directly access functions provided by the underlying C library; this combines the ease of writing Python scripts with the power of optimized C functionality in the library backend.
@@ -63,7 +63,7 @@ For power users and programmers, the new Python interface allows to directly acc
 The GRASS GIS native vector format stores objects in a topology format. The OGC Simple Features can be imported into and exported from the GRASS GIS format through topological vector conversion. For attribute management several database management system (DBMS) with SQL support are supported including SQLite (default DB backend), PostgreSQL + PostGIS, MySQL, ODBC.
 
 The following \textbf{basic geometry types} can be edited directly: point, centroid, line, and boundary. A GRASS vector map can contain a combination of several different types.
-From these basic geometry types the following \textbf{derived geometry types} can be generated: area (closed ring of boundaries + centroid), isle (closed ring of boundaries, no centroid), and node (at both ends of lines/boundaries). Isles and Nodes are not visible to the user.
+From these basic geometry types the following \textbf{derived geometry types} can be generated: area (closed ring of boundaries + centroid), isle (closed ring of boundaries, no centroid), and node (at both ends of lines/boundaries). Isles and Nodes are not visible to the user. Furthermore face, kernel (3D centroid) and volume (3D area) as defined in the format.
 
 % TODO: point to http://grass.osgeo.org/programming7/
 
@@ -88,57 +88,7 @@ From these basic geometry types the following \textbf{derived geometry types} ca
 \end{center}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\getcurrentrow{box}
-\coordinate (funkcionalita) at (box.south west);
-\coordinate (funkcionalitaeast) at (box.east);
-\coordinate (screenshot) at (box.north west);
-
-\blocknodew[($(funkcionalita)+(20,-1)$)]{35}{References}{
-% \scriptsize <<- too small for a poster!
-\begin{center}
-\begin{tabular}{rp{0.9\textwidth}}
-[1] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
-[2] & Petráš, 2012. M.Sc. Thesis, OSGeoREL, FCE CTU, Prague.\\{}
-[3] & Kratochvílová \& Petráš, 2013. OSGeoREL, FCE CTU, Prague.\\{}
-[4] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. International Journal of Geoinformatics, 1(1): 51-61.\\{}
-[5] & Landa, 2013. PhD thesis, CTU, Czech Republic.
-\end{tabular}
-\end{center}
-\smallskip
-\hrulefill
-\vspace{-5pt}
-
-\begin{center}
-\begin{tabular}{cp{0.9\textwidth}}
-\begin{minipage}{0.15\textwidth}
-\includegraphics[width=0.7in]{images/iwmi_qr.pdf}
-\end{minipage}
-
-\begin{minipage}{0.3\textwidth}
-\small {\url{www.iwmi.org}}
-\end{minipage}
-
-\begin{minipage}{0.15\textwidth}
-\includegraphics[width=0.7in]{images/grass_qr.pdf}
-\end{minipage}
-
-\begin{minipage}{0.3\textwidth}
-\small {\url{grass.osgeo.org}}
-\end{minipage}
-\end{tabular}
-\end{center}
-
-\hrulefill
-\vspace{14pt}
-\begin{center}
-\newcommand{\logowidth}{5em}
-\newcommand{\logospace}{\hspace{0.1em}}
-\noindent
-\includegraphics[width=\logowidth]{svg_images/public_domain_logo.pdf}
-\raisebox{0.7\height}{\logospace 2014 GRASS Development Team}
-\end{center}
-}
+% ref was here, moved to last column
 
 \startsecondcolumn
 
@@ -164,6 +114,39 @@ This
 
 \startthirdcolumn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{GRASS GIS-PostGIS data provider: PostGIS 2 support}{
+\smallskip
+
+% TODO: finalize
+The native GRASS-PostGIS data provider supports 
+
+PostGIS 2 Topology. It allows the GRASS vector library to read and write PostGIS data directly without any external library. The GRASS-PostGIS data provider has been implemented using \textit{libpq} library.
+
+%See also \url{http://trac.osgeo.org/grass/wiki/Grass7/VectorLib/PostGISInterface}
+
+% http://grasswiki.osgeo.org/wiki/PostGIS_Topology
+The support of PostGIS 2 Topology in GRASS GIS 7 is as follows:
+\begin{itemize}
+\item Points are stored as isolated nodes (\textit{containing\_face} is null),
+\item Centroids are stored as isolated nodes (\textit{containing\_face} is not null),
+\item Lines are stored as edges (\textit{left\_face} and \textit{right\_face} is 0),
+\item Boundaries are stored as edges,
+\item Areas are stored as faces (with id > 0),
+\item Isles are stored as faces (with id <= 0) (including universal face defined by PostGIS Topology).
+\end{itemize}
+
+Additional topological data related to nodes, lines, areas, and isles are stored in separated tables.
+
+{\bf Dedicated modules}
+
+\begin{itemize}
+ \item {\bf v.out.postgis:} Exports a vector map layer to PostGIS feature table.
+ \item {\bf v.} blabla
+\end{itemize}
+}
+
+
+
 \blocknode{Lidar}{
 \smallskip
 The Lidar library ({\url {www.liblas.org}}) included in GRASS GIS permits the import of Lidar (.las)
@@ -209,6 +192,61 @@ Faces
  \includegraphics[width=0.4\textwidth]{images/grass7-3d}
  \newline
  Figure 7: 3D handling
+\end{center}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\getcurrentrow{box}
+\coordinate (funkcionalita) at (box.south west);
+\coordinate (funkcionalitaeast) at (box.east);
+\coordinate (screenshot) at (box.north west);
+
+\blocknodew[($(funkcionalita)+(20,-1)$)]{35}{References}{
+% \scriptsize <<- too small for a poster!
+\begin{center}
+\begin{tabular}{rp{0.9\textwidth}}
+[1] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
+[2] & Petráš, 2012. M.Sc. Thesis, OSGeoREL, FCE CTU, Prague.\\{}
+[3] & Kratochvílová \& Petráš, 2013. OSGeoREL, FCE CTU, Prague.\\{}
+[4] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. International Journal of Geoinformatics, 1(1): 51-61.\\{}
+[5] & Landa, 2013. PhD thesis, CTU, Czech Republic.
+\end{tabular}
+\end{center}
+\smallskip
+\hrulefill
+\vspace{-5pt}
+
+\begin{center}
+\begin{tabular}{cp{1.9\textwidth}}
+\begin{minipage}{0.25\textwidth}
+\includegraphics[width=2in]{svg_images/OSGeo_project.pdf}
+\end{minipage}
+
+\begin{minipage}{0.3\textwidth}
+%\small{\url{www.osgeo.org}}
+\url{www.osgeo.org}
+\end{minipage}
+
+\begin{minipage}{0.15\textwidth}
+\includegraphics[width=1.2in]{images/grass_qr.pdf}
+\end{minipage}
+
+\begin{minipage}{0.3\textwidth}
+%\small {\url{grass.osgeo.org}}
+\url{grass.osgeo.org}
+\end{minipage}
+\end{tabular}
+\end{center}
+
+\hrulefill
+\vspace{14pt}
+\begin{center}
+\newcommand{\logowidth}{5em}
+\newcommand{\logospace}{\hspace{0.1em}}
+\noindent
+\includegraphics[width=\logowidth]{svg_images/public_domain_logo.pdf}
+\raisebox{0.7\height}{\logospace 2014 GRASS Development Team}
 \end{center}
 }
 
