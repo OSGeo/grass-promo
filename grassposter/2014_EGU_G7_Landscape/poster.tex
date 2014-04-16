@@ -18,7 +18,7 @@
 % \setsecondcolor{gray!80!}
 % \setthirdcolor{red!80!black}
 
-\title{\bigskip GRASS GIS Vector State of the Art  -  Gearing towards GRASS GIS 7 \bigskip}
+\title{\bigskip GRASS GIS Vector State of the Art  --  Gearing towards GRASS GIS 7 \bigskip}
 \author{Markus Metz$^1$, Martin Landa$^2$, Anna Petrášova$^3$, Vaclav Petráš$^3$, Yann Chemin$^4$, Markus Neteler$^1$ and The GRASS GIS Development Team\\ \bigskip
 $^1$ CRI, FEM, Italy, $^2$ CTU, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri Lanka}
 
@@ -111,6 +111,35 @@ This
  Figure 3: Topology structure
 \end{center}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{PyGRASS: fast Python API}{
+[Zambelli 2013]
+
+
+>>> from grass.pygrass.vector.geometry import Point, Line
+
+>>> point = Point()
+>>> point.x = 150.65
+>>> point.y = 368.50
+>>> point
+>>> Point(150.650000, 368.500000)
+>>> point.distance(Point(160.2, 372.6))
+10.39290623454286
+%%%%>>> point.get_wkt()
+'POINT(150.650000 368.500000)'
+
+>>> line = Line([(5, 12), (6, 13), (4, 19)])
+>>> line.bbox()
+Bbox(19.0, 12.0, 6.0, 4.0)
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{TGRASS: temporal framework}{
+[Gebbert 2014]
+}
+
 
 \startthirdcolumn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -209,12 +238,12 @@ Faces
 \blocknode{References}{
 % \scriptsize <<- too small for a poster!
 \begin{center}
-\begin{tabular}{rp{0.9\textwidth}}
-[1] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
-[2] & Gebbert \& Pebesma, 2014. TGRASS: A temporal GIS for field based environmental modeling, Environmental Modelling \& Software 53:1–12.\\{}
-[3] & Zambelli \& Gebbert \& Ciolli, 2013. PyGRASS: An Object Oriented Python API for GRASS GIS. ISPRS International Journal of Geo-Information 2.1:201-219.\\{}
-[4] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. International Journal of Geoinformatics, 1(1):51-61.\\{}
-[5] & Landa, 2013. Vektorová architektura systému GRASS GIS [GRASS GIS Vector Architecture]. PhD thesis, CTU, Czech Republic.
+\begin{tabular}{rp{0.8\textwidth}}
+[Neteler 2012] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
+[Gebbert 2014] & Gebbert \& Pebesma, 2014. TGRASS: A temporal GIS for field based environmental modeling, Environmental Modelling \& Software 53:1–12.\\{}
+[Zambelli 2013] & Zambelli \& Gebbert \& Ciolli, 2013. PyGRASS: An Object Oriented Python API for GRASS GIS. ISPRS International Journal of Geo-Information 2.1:201-219.\\{}
+[Neteler 2005] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. International Journal of Geoinformatics, 1(1):51-61.\\{}
+[Landa 2013] & Landa, 2013. Vektorová architektura systému GRASS GIS [GRASS GIS Vector Architecture]. PhD thesis, CTU, Czech Republic.
 \end{tabular}
 \end{center}
 \smallskip
