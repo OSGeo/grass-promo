@@ -62,8 +62,16 @@ The methodology will be complemented by time series analysis spanning 14 years u
 The accumulated transpiration (t.rast.aggregate) is subjected to Landscape analysis (r.li.*) for search of patchiness and diversity indices [4]. Further analysis of transpiration is also done with the object oriented classifier (i.segment) for spatiotemporal objects within the transpiration original dataset, the accumulated one and the Landscape indices, respectively.\newline
  	\end{tabular}\newline
 \end{center}
-
+\begin{center}
+	\begin{tabular}{cc}
+ 	\includegraphics[width=0.45\textwidth]{./images/RGB321_PCA_Ta_2000}
+ 	& 
+ 	\includegraphics[width=0.45\textwidth]{./images/SEG_PCA_Ta_2000}
+	\end{tabular}
+\end{center}
+Using the 50 first PCA components of the Transpiration data for year 2000, the object types that can be extracted by object-based classification were analysed. It turns out that the recession cropping around Tonle Sap and the rainfed cropping systems of Eastern Thailand are clearly extracted. However, the recession cropping in Tonle Sap only has one main class, which is different when using 2000-2014 EVI PCA classification (central part of the poster). It is thought that both the 500x500m resolution and the yearly changes in flooding height in Tonle Sap are driving the separation of the recession cropping area, thus not seen here with one year (2000) and 1x1km pixel size.\newline
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \getcurrentrow{box}
@@ -79,7 +87,8 @@ The accumulated transpiration (t.rast.aggregate) is subjected to Landscape analy
 [2] & GDAL, 2014. {\url {http://gdal.osgeo.org}}\\{}
 [3] & Chemin, 2012. Chapter 19, DOI: 10.5772/23571 ({\url {http://bit.ly/16qJOep}})\\{}
 [4] & McGarigal \& Marks, 1995. FRAGSTATS. USDA For. Serv. Gen. Tech. Rep. PNW-351.\\{}
-[5] & Momsen \& Metz, 2012. GSoC project: Segmentation algorithm.
+[5] & Momsen \& Metz, 2012. GSoC project: Segmentation algorithm.\\{}
+[6] & Eastman \& Fulk, 1993. Photogramm. Eng. Remote Sens. 59(8), 1307-1312.
 \end{tabular}
 \end{center}
 \smallskip
@@ -127,11 +136,13 @@ The accumulated transpiration (t.rast.aggregate) is subjected to Landscape analy
 	\begin{tabular}{c p{0.5\textwidth}}
 	\raisebox{-0.9\totalheight}{\includegraphics[width=0.45\textwidth]{./images/Martin_flowchart}}
 	&
-	A summary of the code needed to reach this point of analysis is here.\newline
-	{\footnotesize \fontfamily{pcr}\selectfont i.group \textcolor{blue}{group}=pca\_group \textcolor{blue}{input}=\$(g.mlist \textcolor{blue}{type}=rast \textcolor{blue}{pattern}=*h28v07*EVI)\newline
-	i.pca \textcolor{blue}{input}=pca\_group \textcolor{blue}{output\_prefix}=pca\_ \textcolor{blue}{percent}=99 --o\newline}
+	Long sequence time series PCA provides a comprehensive indicator of change events in time series of spatial environmental data (Eastman \& Fulk 1993)1. Principal Components Analysis undertakes linear transformation of a set of image bands to create a new set of images that are uncorrelated. This set of principal component images can be considered equivalent to bands of a multi-spectral image. Each image represents a different portion of spectral variability in the original image data set. The clusters yielded by subjecting the PCA component images to iterative self-organising cluster routine each express a particular signature, corresponding to a unique combination of characteristics in terms of the environmental variable under study.\newline
  	\end{tabular}\newline
 \end{center}
+The methodology involves the following steps: 1) a time series of EVI composites is subjected to PCA; 2) the Principal Component images explaining most (ca. 95\%) of spatio-temporal variation in the time series, are used as input layers or ‘bands’ in the iterative self-organising cluster routine; 3) for each spatial cluster in the image output a Boolean mask is created and 4) overlaid (multiplied) with the original time series, which results in 5) a VI time series for each cluster in the output. Analysis of the temporal signature for each cluster reveals seasonal or long-term trends in VI that occur within the system.
+%A summary of the code needed to reach this point of analysis is here.\newline
+%{\footnotesize \fontfamily{pcr}\selectfont i.group \textcolor{blue}{group}=pca\_group \textcolor{blue}{input}=\$(g.mlist \textcolor{blue}{type}=rast \textcolor{blue}{pattern}=*h28v07*EVI)\newline
+%i.pca \textcolor{blue}{input}=pca\_group \textcolor{blue}{output\_prefix}=pca\_ \textcolor{blue}{percent}=99 --o\newline}
 
 %Minted version Not working (+ compile needs -shell-escape)
 %\begin{minted}[frame=single,linenos,mathescape,fontsize=\small]{sh}
@@ -142,8 +153,6 @@ The accumulated transpiration (t.rast.aggregate) is subjected to Landscape analy
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Temporal PCA-based classification}{
-Balaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\newline
 \begin{center}
 	\begin{tabular}{cc}
  	\raisebox{-0.5\totalheight}{\includegraphics[width=0.45\textwidth]{./images/MSUBAS_MD}}
@@ -152,10 +161,10 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\newline
  	\includegraphics[width=0.45\textwidth]{./images/cl2_DoY}\\
  	\includegraphics[width=0.45\textwidth]{./images/cl12_DoY}
 	\end{tabular}
-	\end{tabular}\newline
-	Figure 2: Temporal 
+	\end{tabular}
 \end{center}
-
+This application employs a time series of MODIS EVI 16-day composites at 500 m resolution (MOD13A1) running over 14 years (2000 to near real-time). The h28v07 tile covers large part of the Mekong River Basin in Southeast Asia. We analyse a subset covering the Vietnamese Mekong Delta (VMD) and the Tonle Sap in Cambodia (TSC). \newline
+The results discern large areas in VMD dominated by irrigated triple crop rice agro-ecosystems, followed by seasonal flooding near the end of each year, as well as long-term change from double cropping to triple cropping in adjacent areas from 2008 onward.\newline
 }
 
 \startthirdcolumn
@@ -165,11 +174,11 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\newline
 
 \begin{center}
 	\begin{tabular}{cc}
-	\raisebox{-0.7\totalheight}{\includegraphics[width=0.45\textwidth]{./images/MSUBAS_TS}}
+	\raisebox{-0.5\totalheight}{\includegraphics[width=0.45\textwidth]{./images/MSUBAS_TS}}
 	&
-	\begin{tabular}{c}
+	\begin{tabular}{p{0.5\textwidth}}
  	\includegraphics[width=0.45\textwidth]{./svg_images/EVI_distance_from_tonle_sap}\\
-	bllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	The results for TSC show that the range between $EVI_{min}$ and $EVI_{max}$ in floodplains surrounding the Tonle Sap Lake decreases spatially with distance from dry season margins of the lake. This pattern is indicative of flood recession cropping systems and seasonally flooded natural vegetation around the lake, which expands dramatically in size during the wet season each year, inundating large areas of floodplain, which drain towards the dry season.  We used the blue band of MOD13 to provide an additional indicator of flooding, handling the assumption of seasonal flood occurrence if ‘Blue’ approaches or exceeds ‘EVI’. The results in TSC do not discern any long-term trends in land cover and land use.\newline
 	\end{tabular}
  	\end{tabular}\newline
 \end{center}
@@ -201,11 +210,20 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\newline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Euclidian Distance plotting}{
 \smallskip
-
+The Euclidian distance plot depicts graphically the resemblance between spatio-temporal signatures of the systems under study. Similar landscape groups can be distinguished at Euclidean distance of 2.1 or less.  Euclidean distance of 1.1 or less assumes that dissimilarity between systems is not statistically significant at that level. \newline
 \begin{center}
 	\includegraphics[width=0.75\textwidth]{./images/msubas65}
 \end{center}
 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Biotic Zoning}{
+\smallskip
+Object based classification (\textit{i.segment}) of the sum transpiration for each year has been done and merged, resulting areas were clumped (\textit{r.clump}) and averaged statistics of yearly transpiration extracted (\textit{r.stats.zonal}).\newline
+\begin{center}
+	\includegraphics[width=0.45\textwidth]{./images/seg_ta_years_clump_reclass_ta_avg}
+\end{center}
+This perspective proposes that irrigated areas along the Mekong may not be transpiring as much as the recession cropping areas around Tonle Sap. Whether the transpiration in recession zones is actually used by crops all the time depends on the opportunity of farming intensification and risk avoidance.\newline
 }
 
 \end{tikzpicture}
