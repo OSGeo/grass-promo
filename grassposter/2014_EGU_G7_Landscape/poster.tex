@@ -11,6 +11,8 @@
 
 \usepackage[margin=\margin cm, paperwidth=197cm, paperheight=100cm]{geometry}
 
+\usepackage{listings}
+
 % \setbackgrounddarkcolor{ForestGreen!70!black}
 % \setbackgroundlightcolor{YellowGreen!90!}
 
@@ -84,7 +86,7 @@ From these basic geometry types the following \textbf{derived geometry types} ca
  \hspace{10mm}
  \includegraphics[width=0.48\textwidth]{svg_images/grass7-topo}
  \newline
- Figure 1b: Topology changes from version 6 to 7 after [5]
+ Figure 1b: Topology changes from version 6 to 7 after [Landa 2013]
 \end{center}
 }
 
@@ -114,24 +116,10 @@ This
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{PyGRASS: fast Python API}{
-[Zambelli 2013]
+PyGRASS [Zambelli 2013] is an object-oriented Python API which allows efficient manipulation with vectors.
+It is easy-to-use but its performance is comparable to C code since it calls GRASS C API behind the scenes.
 
-
->>> from grass.pygrass.vector.geometry import Point, Line
-
->>> point = Point()
->>> point.x = 150.65
->>> point.y = 368.50
->>> point
->>> Point(150.650000, 368.500000)
->>> point.distance(Point(160.2, 372.6))
-10.39290623454286
-%%%%>>> point.get_wkt()
-'POINT(150.650000 368.500000)'
-
->>> line = Line([(5, 12), (6, 13), (4, 19)])
->>> line.bbox()
-Bbox(19.0, 12.0, 6.0, 4.0)
+\includegraphics[width=0.9\textwidth]{texpdfs/pygrass_code}
 
 }
 
