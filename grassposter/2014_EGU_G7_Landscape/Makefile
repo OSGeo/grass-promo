@@ -31,11 +31,11 @@ $(ODPPDF): %.pdf: %.odp
 	libreoffice --headless --convert-to pdf --outdir $(ODPDIR) $<
 
 $(TEXPDF): %.pdf: %.tex
-	pdflatex -output-directory=$(TEXDIR) $< 
+	pdflatex -shell-escape -output-directory=$(TEXDIR) $< 
 
 clean:
 	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib *.ps
-	rm -f $(SVGPDF) $(ODPPDF) $(`PDF)
+	rm -f $(SVGPDF) $(ODPPDF) $(TEXPDF)
 
 distclean:
 	make clean
