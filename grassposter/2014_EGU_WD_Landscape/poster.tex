@@ -1,7 +1,7 @@
 \documentclass[landscape,a0,final]{a0poster}
 \usepackage[dvipsnames,svgnames]{xcolor}
-\usepackage{minted} %code highlighting, not working yet
 \usepackage{tikzposter} % here most of the things are defined
+\usepackage{minted} %code highlighting, not working yet
 % change parameters only after this line You can also start a new column with an arbitrary 
 % x-coordinate by specifying explicitly the coordinate of the new block node as follows:
 \usepackage[czech]{babel}
@@ -88,7 +88,8 @@ Using the 50 first PCA components of the Transpiration data for year 2000, the o
 [3] & Chemin, 2012. Chapter 19, DOI: 10.5772/23571 ({\url {http://bit.ly/16qJOep}})\\{}
 [4] & McGarigal \& Marks, 1995. FRAGSTATS. USDA For. Serv. Gen. Tech. Rep. PNW-351.\\{}
 [5] & Momsen \& Metz, 2012. GSoC project: Segmentation algorithm.\\{}
-[6] & Eastman \& Fulk, 1993. Photogramm. Eng. Remote Sens. 59(8), 1307-1312.
+[6] & Eastman \& Fulk, 1993. Photogramm. Eng. Remote Sens. 59(8), 1307-1312.\\{}
+[7] & Clarke, 1993. Aust. J. Ecol. 18, 117-143.
 \end{tabular}
 \end{center}
 \smallskip
@@ -162,7 +163,7 @@ The results discern large areas in VMD dominated by irrigated triple crop rice a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Acknowledgements}{
 \smallskip
-The authors would like to acknowledge the WLE  (\url{wle.cgiar.org}) Seed funding for innovative research.\newline
+The authors would like to acknowledge the CGIAR Research Program on Water, Land and Ecosystems (WLE ; \url{wle.cgiar.org}) Innovation Fund.\newline
 }
 
 
@@ -217,8 +218,14 @@ i.segment \textcolor{blue}{group}=ta\_group \textcolor{blue}{output}=seg\_ta \te
 
 %Minted version Not working (+ compile needs -shell-escape)
 %\begin{minted}[frame=single,linenos,mathescape,fontsize=\small]{sh}
+%	#Select MODIS EVI archive
 %	i.group group=pca_group input=$(g.mlist type=rast pattern=*h28v07*EVI)
+%	#Run the PCA on the EVI archive
 %	i.pca input=pca_group output_prefix=pca_ percent=99 --o
+%	#As an example, you can select the 1$^{st}$ to the 9$^{th}$ PCA members
+%	i.group group=ta_group input=\$(g.mlist type=rast pattern=pca.[123456789] sep=,)
+%	#and run an object-based classification analysis on them
+%	i.segment group=ta_group output=seg_ta threshold=0.9 memory=5000 iterations=50 --o \&
 %\end{minted}
 }
 
@@ -226,13 +233,12 @@ i.segment \textcolor{blue}{group}=ta\_group \textcolor{blue}{output}=seg\_ta \te
 \startfourthcolumn
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Euclidian Distance plotting}{
+\blocknode{Non-metric multidimensional scaling}{
 \smallskip
-The Euclidian distance plot depicts graphically the resemblance between spatio-temporal signatures of the systems under study. Similar landscape groups can be distinguished at Euclidean distance of 2.1 or less.  Euclidean distance of 1.1 or less assumes that dissimilarity between systems is not statistically significant at that level. \newline
 \begin{center}
 	\includegraphics[width=0.75\textwidth]{./images/msubas65}
 \end{center}
-
+We employ a non-parametric multivariate method to display the relative dissimilarity between these a priori defined clusters [7]. This non-metric multidimensional scaling (MDS) configuration depicts graphically the dissimilarity between spatio-temporal signatures of the systems under study, from which distinct clusters of landscapes emerge. Similar landscape groups can be distinguished at Euclidean distance of 2.1 or less.   \newline
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Biotic Zoning}{
