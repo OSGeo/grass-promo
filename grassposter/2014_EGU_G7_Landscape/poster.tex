@@ -8,6 +8,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{wrapfig}
 \usepackage{url}
+\usepackage{alltt}
+\usepackage{textcomp}
 
 \usepackage[margin=\margin cm, paperwidth=197cm, paperheight=100cm]{geometry}
 
@@ -124,9 +126,6 @@ It is easy-to-use but its performance is comparable to C code since it calls GRA
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{TGRASS: temporal framework}{
-[Gebbert 2014]
-}
 
 
 \startthirdcolumn
@@ -215,7 +214,30 @@ Faces
 \end{center}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\blocknode{TGRASS: temporal framework}{
+TGRASS [Gebbert 2014] provides support for large spatio-temporal data handling and analysis, and is fully integrated into GRASS GIS 7.
+It introduces the concept of space-time dataset as a series of vector, raster, or 3D raster data with temporal metadata.
+In the simple example below, we computed a series of vector data representing particles in a water flow simulation,
+created a space-time dataset and registered the vectors to this dataset based on time stamps assigned during the vector creation.
+The result can be then quickly visualized using GRASS GIS Animation Tool.
+
+{\small
+\begin{alltt}
+r.sim.water -t elevation=elev\_lid792\_1m dx=dx dy=dy depth=depth outwalk=walker outiter=1 
+
+\textcolor{DarkGreen}{t.create} output=particles type=stvds temporaltype=relative semantictype=mean title="Particles"~desc="Particles"
+
+\textcolor{DarkGreen}{t.register} input=particles maps=\textasciigrave g.mlist --q type=vect pattern=walker* separator=,\textasciigrave{} type=vect
+
+g.gui.animation stvds=particles
+\end{alltt}}
+
+\begin{center}
+\includegraphics[width=\textwidth]{images/particles}
+\end{center}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \getcurrentrow{box}
 \coordinate (funkcionalita) at (box.south west);
