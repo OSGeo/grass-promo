@@ -59,7 +59,7 @@ The methodology will be complemented by time series analysis spanning 14 years u
 	 \raisebox{-0.9\totalheight}{\includegraphics[width=0.45\textwidth]{./images/Yann_flowchart}}
 	&
 	The transpiration data is created from energy balance modelling [3] modules (i.eb.*, i.evapo.*) within GRASS GIS version 7, by partitioning the net radiation (r.sun) into soil heat flux (i.eb.soilheatflux), sensible heat flux (i.eb.h\_*) and the residual being the energy needed to evaporate water (i.eb.evapfr, i.eb.eta). This information is then fractionated into biotic (transpiration) and abiotic (evaporation) parts using vegetation fraction.\newline\linebreak
-The accumulated transpiration (t.rast.aggregate) is subjected to Landscape analysis (r.li.*) for search of patchiness and diversity indices [4]. Further analysis of transpiration is also done with the object oriented classifier (i.segment) for spatiotemporal objects within the transpiration original dataset, the accumulated one and the Landscape indices, respectively.\newline
+The accumulated transpiration (t.rast.aggregate) is subjected to Landscape analysis (r.li.*, inspired from [4]) for search of patchiness and diversity indices (not shown). Further analysis of transpiration is also done with the object oriented classifier (i.segment) for spatiotemporal objects within the transpiration original dataset, the accumulated one and the Landscape indices, respectively.\newline
  	\end{tabular}\newline
 \end{center}
 \begin{center}
@@ -140,15 +140,7 @@ Using the 50 first PCA components of the Transpiration data for year 2000, the o
  	\end{tabular}\newline
 \end{center}
 The methodology involves the following steps: 1) a time series of EVI composites is subjected to PCA; 2) the Principal Component images explaining most (ca. 95\%) of spatio-temporal variation in the time series, are used as input layers or ‘bands’ in the iterative self-organising cluster routine; 3) for each spatial cluster in the image output a Boolean mask is created and 4) overlaid (multiplied) with the original time series, which results in 5) a VI time series for each cluster in the output. Analysis of the temporal signature for each cluster reveals seasonal or long-term trends in VI that occur within the system.
-%A summary of the code needed to reach this point of analysis is here.\newline
-%{\footnotesize \fontfamily{pcr}\selectfont i.group \textcolor{blue}{group}=pca\_group \textcolor{blue}{input}=\$(g.mlist \textcolor{blue}{type}=rast \textcolor{blue}{pattern}=*h28v07*EVI)\newline
-%i.pca \textcolor{blue}{input}=pca\_group \textcolor{blue}{output\_prefix}=pca\_ \textcolor{blue}{percent}=99 --o\newline}
 
-%Minted version Not working (+ compile needs -shell-escape)
-%\begin{minted}[frame=single,linenos,mathescape,fontsize=\small]{sh}
-%	i.group group=pca_group input=$(g.mlist type=rast pattern=*h28v07*EVI)
-%	i.pca input=pca_group output_prefix=pca_ percent=99 --o
-%\end{minted}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,7 +162,7 @@ The results discern large areas in VMD dominated by irrigated triple crop rice a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Acknowledgements}{
 \smallskip
-The authors would like to acknowledge the WLE Seed funding for innovative research.\newline
+The authors would like to acknowledge the WLE  (\url{wle.cgiar.org}) Seed funding for innovative research.\newline
 }
 
 
@@ -193,7 +185,7 @@ The authors would like to acknowledge the WLE Seed funding for innovative resear
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Recession cropping \& natural vegetation}{
+\blocknode{From recession cropping (UL) to natural vegetation (LR)}{
 \begin{center}
 	\begin{tabular}{cc}
  	\begin{tabular}{c}
@@ -210,6 +202,25 @@ The authors would like to acknowledge the WLE Seed funding for innovative resear
 
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{GRASS GIS script for MODIS PCA \& segmentation of PCA}{
+\smallskip
+{\footnotesize \fontfamily{pcr}\selectfont 
+\textbf{\#Select MODIS EVI archive\newline} 
+i.group \textcolor{blue}{group}=pca\_group \textcolor{blue}{input}=\$(g.mlist \textcolor{blue}{type}=rast \textcolor{blue}{pattern}=*h28v07*EVI)\newline
+\textbf{\#Run the PCA on the EVI archive\newline}
+i.pca \textcolor{blue}{input}=pca\_group \textcolor{blue}{output\_prefix}=pca \textcolor{blue}{percent}=99 --o\newline
+\textbf{\#As an example, you can select the 1$^{st}$ to the 9$^{th}$ PCA members\newline}
+i.group \textcolor{blue}{group}=ta\_group \textcolor{blue}{input}=\$(g.mlist \textcolor{blue}{type}=rast \textcolor{blue}{pattern}=pca.[123456789] sep=,) \newline
+\textbf{\#and run an object-based classification analysis on them\newline}
+i.segment \textcolor{blue}{group}=ta\_group \textcolor{blue}{output}=seg\_ta \textcolor{blue}{threshold}=0.9 \textcolor{blue}{memory}=5000 \textcolor{blue}{iterations}=50 --o \& \newline}
+
+%Minted version Not working (+ compile needs -shell-escape)
+%\begin{minted}[frame=single,linenos,mathescape,fontsize=\small]{sh}
+%	i.group group=pca_group input=$(g.mlist type=rast pattern=*h28v07*EVI)
+%	i.pca input=pca_group output_prefix=pca_ percent=99 --o
+%\end{minted}
+}
 
 
 \startfourthcolumn
