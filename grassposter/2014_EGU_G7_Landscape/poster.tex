@@ -165,9 +165,8 @@ Additional topological data related to nodes, lines, areas, and isles are stored
 
 \blocknode{Lidar}{
 \smallskip
-The Lidar library ({\url {www.liblas.org}}) included in GRASS GIS permits the import of Lidar (.las)
-data in raster (r.in.lidar using statistics of choice) or in vector format (v.in.lidar). 
-Author Markus Metz tested r.in.lidar with a 705Gb .las file. \newline
+The Lidar library ({\url {www.liblas.org}}) used by GRASS GIS permits the import of LAS Lidar
+data. The imported data can be in raster (r.in.lidar using statistics of choice) or in vector format (v.in.lidar). \newline
 On-farm water storage study with lidar data in NSW (Australia) developed a full remote sensing monitoring methodology
 of water availability with lidar-based bathymetric survey and multi-source remote sensing survey [8].\newline
 \begin{center}
@@ -190,11 +189,11 @@ of water availability with lidar-based bathymetric survey and multi-source remot
 {\bf Other functions}
 
 \begin{itemize}
- \item {\bf v.} blabla
- \item {\bf v.} blabla
- \item {\bf v.} blabla
- \item {\bf v.} blabla
- \item {\bf v.} blabla
+ \item {\bf v.distance:} Calculates distances from points, lines, or areas to points, lines, or areas.
+ \item {\bf v.overlay:} The processing speed has been substantially improved.
+ \item {\bf v.net.*:} All vector network analysis tools provide now fine control over node costs.
+ \item {\bf v.voronoi:} New option to create Voronoi diagrams for areas.
+ \item {\bf v.rectify:} Vector data can now be georeferenced using various methods for 2D and 3D coordinate transformation.
 \end{itemize}
 }
 
