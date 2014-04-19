@@ -235,16 +235,15 @@ g.gui.animation stvds=particles
 
 \begin{center}
 \includegraphics[width=\textwidth]{images/particles}%
-\raisebox{0pt}[0pt][0pt]{\hspace{-3cm}\colorbox{white}{\includegraphics[width=3cm]{images/particles_qr_short}}}
+\raisebox{0pt}[0pt][0pt]{\hspace{-3cm}\colorbox{white}{\includegraphics[width=3cm]{images/particles_qr_short}}}%
+\newcommand{\seeanimtext}{see animation online}%
+\newlength{\myl}%
+\settowidth{\myl}{\small\seeanimtext}%
+\raisebox{-2ex}[0pt][0pt]{\hspace{-\myl}\colorbox{white}{\small\seeanimtext}}%
 \end{center}
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\getcurrentrow{box}
-\coordinate (funkcionalita) at (box.south west);
-\coordinate (funkcionalitaeast) at (box.east);
-\coordinate (screenshot) at (box.north west);
 
-% \blocknodew[($(funkcionalita)+(20,-1)$)]{35}{References}{ % special smaller box
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{References}{
 % \scriptsize <<- too small for a poster!
 \begin{center}
