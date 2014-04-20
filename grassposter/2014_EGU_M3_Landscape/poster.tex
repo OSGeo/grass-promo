@@ -84,6 +84,7 @@ Neteler et al. (2012) & Environment \& Modeling Software, 31:124-130.\\{}
 Snape et al. (2013) & LPSC Abstracts 44:1044.\\{}
 Weider et al. (2010) & Icarus, 209, 323-336.\\{}
 Wilcox et al. (2005) & J. Geophys. Res. 110(E11):2156-2202.\\{}
+Zhang et al. (2013) & LPSC Abstracts 44:374.\\{}
 \end{tabular}
 \end{flushleft}
 \smallskip
@@ -129,59 +130,67 @@ Wilcox et al. (2005) & J. Geophys. Res. 110(E11):2156-2202.\\{}
 \begin{center}
  \includegraphics[width=0.75\textwidth]{./images/Clementine}
  \newline
- Figure 1: Clementine RGB153, segmentation and FeO (wt\%) per segmentation class.
+ Figure 1: Clementine RGB153 (top), segmentation (middle) and FeO (wt\%) per segmentation class (bottom).
 \end{center}
 }
 
 
 
 \startthirdcolumn
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{$M^3$ data analysis}{
-nn
-\newline
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{M$^3$ Signal at Apollo 12 landing site}{
+\smallskip
 \begin{center}
- \includegraphics[width=0.5\textwidth]{./images/M3FEOlarge}
- \newline
- Figure 3: FeO
-\end{center}
+\begin{tabular}{ c p{0.45\textwidth}}
+ \raisebox{-1.2\totalheight}{\includegraphics[width=0.5\textwidth]{./images/M3_A12_craters_signal}}\newline
+ %\caption{Spectral signature of $M^3$ from four craters}
+ \label{fig:specsignature4craters}
+ &
+ \noindent Chandrayaan $M^3$ data was  downloaded from PDS \url{http://pds-imaging.jpl.nasa.gov/}{pds-imaging.jpl.nasa.gov}. The tile \textit{M3G20090111T013904\_V01\_RFL.IMG} was imported in GRASS GIS, resulting in 85 bands. The spectrum for four craters where extracted in the Figure \ref{fig:specsignature4craters}. Bench and Surveyor are both together in the lower reflectance curves. On the higher side, Sharp and Middle Crescent are consistently above the two others. This higher broadband Albedo is increasing towards the West, where one of the ray is clearly drawn (Oblique white strip in the middle of The Clementine upper map. Compared to the spectral data from Figure ~\ref{fig:specsignatureASTERlib} the reflectance is overall lower and the obvious shape differences are there.
+ \end{tabular}
+ \end{center}
+ \begin{flushleft}
+ \hspace{22mm}
+ \includegraphics[width=0.45\textwidth]{./images/Apollo12_signatures}
+ %\caption{Spectral signature from Apollo 12 (ASTER library)}
+ \label{fig:specsignatureASTERlib}
+ \end{flushleft}
 
 }
-
-
-
 
 
 \startfourthcolumn
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Segmentation of PCA elements}{
-GRASS GIS segmentation of the PCA of the full temporal archive of MODIS EVI.
-\newline
-
-A summary of the code needed to reach this point of analysis is here.\newline
-\hrule
-{\footnotesize \fontfamily{pcr}\selectfont i.group \textcolor{blue}{group}=pca\_group \textcolor{blue}{input}=\$(g.mlist \textcolor{blue}{type}=rast \textcolor{blue}{pattern}=*h28v07*EVI)\newline
-i.pca \textcolor{blue}{input}=pca\_group \textcolor{blue}{output\_prefix}=pca\_ \textcolor{blue}{percent}=99 --o\newline
-\#Here, run {\it i.group} interactively to add the PCA output files you want to use for segmentation\newline
-i.segment \textcolor{blue}{group}=seg\_group \textcolor{blue}{output}=seg \textcolor{blue}{threshold}=0.9 \textcolor{blue}{memory}=3000 \textcolor{blue}{iterations}=100 --o\newline}
-\hrule
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Temporal PCA-based classification}{
-Classes found to follow one crop per year
-\newline
+\blocknode{M$^3$ derived FeO from standard equations}{
+\noindent The wt\%FeO equations have a large range of results when used with $M^3$ data:
+\begin{center}
+\begin{tabular}{ l r r}
+\hline
+Authors & Bench & Surveyor\\
+\hline
+Lucey et al. (2000) & -26.64 & -23.32 \\
+Lawrence et al. (2002) & 4.72 & 6.38 \\
+Wilcox et al. (2005) & 22.28 & 21.82 \\
+Zhang et al. (2013) & 19.74 & 19.49 \\
+\hline
+\end{tabular}
+\end{center}
+\bigskip
 
 \begin{center}
- \includegraphics[width=0.55\textwidth]{./images/startup_banner_isis}\newline
- \newline
- Figure 4: Single-crop classes from PCA.
+\begin{tabular}{ c p{0.45\textwidth}}
+ \raisebox{-0.8\totalheight}{\includegraphics[width=0.5\textwidth]{./code/code1}}
+ %\caption{Testing FeO algorithms.}
+ \label{fig:FeOtesting}
+ &
+ \noindent It is known that the local range of FeO is below 10wt\% from UVVIS data (see Figure on the lower left), only the Lawrence et al. (2002) equation is giving an appropriate range. Lucey et al. (2000) equation fails because of the offset of uvvis4/uvvis2(=1.15 vs offset = 1.19) and the one for uvvis2(=0.05 vs offset = 0.08), as both of the parts are negative thus giving a positive division output, their interplay should bring a negative number for the arctangent negative sign to compensate. This clearly does not happen with $M^3$ data in the Bench and Surveyor craters, the results from the arctangent being positive, and the sign change brings the main part of the equation to a negative, further reduced by the negative final offset.\newline
+\end{tabular}
 \end{center}
+\noindent Upon using the  Lawrence et al. (2002) equation, it turned out that though the wt\%FeO range was satisfactory for few crater points, the rate of change was actually reverse to the expected one, reducing to null towards the South of the landing site and increasing towards the North.\newline
+\noindent The equation from Zhang et al. (2013) is giving an appropriate rate of change, however, the local values are too large compared to the Clementine derived FeO values.\newline
 
 }
+
 
 
 \end{tikzpicture}
