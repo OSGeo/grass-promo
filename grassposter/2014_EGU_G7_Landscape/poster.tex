@@ -52,12 +52,12 @@ $^1$ CRI, FEM, Italy, $^2$ CTU in Prague, Czech Republic, $^3$ NCSU, USA, $^4$ I
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Abstract}{
 % \small <<- too small for a poster!
-The upcoming GRASS GIS 7 release improves not only raster processing and general design but the vector processing in the first place. GRASS GIS, as a topological GIS, recognizes that the topology plays the key role in the vector processing and analysis.\newline
-Topology ensures that adjacent geographic components in a single vector map are related. In contrast to non-topological GIS, a border common to two areas exists only once and is shared between the two areas. Topological representation of vector data helps to produce and maintain vector maps with clean geometry as well as enables the user to perform certain analyses that can not be conducted with non-topological or spaghetti data. Non-topological vector data are automatically converted to a topological representation upon import. Further more, various cleaning tools exist to remove non-trivial topological errors.\newline
-In the upcoming GRASS GIS 7 release the vector library was particularly improved to make it faster and more efficient with an improved internal vector file format. This new topological format reduces memory and disk space requirements, leading to a generally faster processing. Opening an existing vector requires less memory providing additionally support for large files. The new spatial index performs queries faster (compared to GRASS GIS 6 more than 10 times for large vectors). As a new option the user can select a file-based version of the spatial index for large vector data. All topological cleaning tools have been optimized with regard to processing speed, robustness, and system requirements.\newline
+The upcoming GRASS GIS 7 release improves not only raster processing and general design but the vector processing in the first place. GRASS GIS, as a topological GIS, recognizes that the topology plays the key role in the vector processing and analysis.\newline\linebreak
+Topology ensures that adjacent geographic components in a single vector map are related. In contrast to non-topological GIS, a border common to two areas exists only once and is shared between the two areas. Topological representation of vector data helps to produce and maintain vector maps with clean geometry as well as enables the user to perform certain analyses that can not be conducted with non-topological or spaghetti data. Non-topological vector data are automatically converted to a topological representation upon import. Further more, various cleaning tools exist to remove non-trivial topological errors.\newline\linebreak
+In the upcoming GRASS GIS 7 release the vector library was particularly improved to make it faster and more efficient with an improved internal vector file format. This new topological format reduces memory and disk space requirements, leading to a generally faster processing. Opening an existing vector requires less memory providing additionally support for large files. The new spatial index performs queries faster (compared to GRASS GIS 6 more than 10 times for large vectors). As a new option the user can select a file-based version of the spatial index for large vector data. All topological cleaning tools have been optimized with regard to processing speed, robustness, and system requirements.\newline\linebreak
 The vector engine comes with a new prototype for direct read/write support of OGR Simple Features API.\newline
 Additionally vector data can be directly exchanged with topological PostGIS 2 databases. This enables GRASS to read and write topological primitives beside native file-based format also to the topological PostGIS 2 databases. \newline
-Considering the wide spread usage of Esri Shapefile, a non-topological format for vector data exchange, it is particularly advantageous that GRASS GIS 7 offers advanced cleaning tools.\newline
+Considering the wide spread usage of Esri Shapefile, a non-topological format for vector data exchange, it is particularly advantageous that GRASS GIS 7 offers advanced cleaning tools.\newline\linebreak
 For power users and programmers, the new Python interface allows to directly access functions provided by the underlying C libraries; this combines the ease of writing Python scripts with the power of optimized C functionality in the library backend.
 }
 
@@ -66,14 +66,8 @@ For power users and programmers, the new Python interface allows to directly acc
 \small
 The GRASS GIS native vector format stores objects in a topology format. The OGC Simple Features can be imported into and exported from the GRASS GIS format through topological vector conversion. For attribute management several database management system (DBMS) with SQL support are supported including SQLite (default DB backend), DBF, PostgreSQL, MySQL, ODBC.
 
-The following \textbf{basic topological elements} can be edited directly: point, centroid, line, and boundary. A GRASS vector map can contain a~combination of several different types of the elements.
-From these basic geometry types the following \textbf{derived topological elements} can be generated: area (closed ring of boundaries + centroid), isle (closed ring of boundaries, no centroid), and node (at both ends of lines/boundaries). Isles and Nodes are not visible to the user. Furthermore face, kernel (3D centroid) and volume (3D area) as defined in the format.
-
 % TODO: point to http://grass.osgeo.org/programming7/
-
 % TODO: 2. explain topology changes <<- needed?
-
-
 % TODO: show the internal format change or rather the actual model?
 \begin{center}
  \includegraphics[width=0.48\textwidth]{odp_slides/grass7_basic_vector_types_digitizer}
@@ -82,6 +76,9 @@ From these basic geometry types the following \textbf{derived topological elemen
  \newline
  Figure 1a: Basic and derived topological elements in GRASS GIS 7
 \end{center}
+
+The following \textbf{basic topological elements} can be edited directly: point, centroid, line, and boundary. A GRASS vector map can contain a~combination of several different types of the elements.
+From these basic geometry types the following \textbf{derived topological elements} can be generated: area (closed ring of boundaries + centroid), isle (closed ring of boundaries, no centroid), and node (at both ends of lines/boundaries). Isles and Nodes are not visible to the user. Furthermore face, kernel (3D centroid) and volume (3D area) as defined in the format.\newline
 
 \begin{center}
  \includegraphics[width=0.38\textwidth]{svg_images/grass6-topo}
@@ -121,6 +118,23 @@ It is easy-to-use but its performance is comparable to C code since it calls GRA
 
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Other Improvements \& Additions}{
+\smallskip
+
+{\bf Remanufacturing, performance improvement}
+
+
+{\bf Other functions}
+
+\begin{itemize}
+ \item {\bf v.distance:} Calculates distances from points, lines, or areas to points, lines, or areas.
+ \item {\bf v.overlay:} The processing speed has been substantially improved.
+ \item {\bf v.net.*:} All vector network analysis tools provide now fine control over node costs.
+ \item {\bf v.voronoi:} New option to create Voronoi diagrams for areas.
+ \item {\bf v.rectify:} Vector data can now be georeferenced using various methods for 2D and 3D coordinate transformation.
+\end{itemize}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -174,35 +188,23 @@ Additional topological data related to nodes, lines, areas, and isles are stored
 \smallskip
 The Lidar library ({\url {www.liblas.org}}) used by GRASS GIS permits the import of LAS Lidar
 data. The imported data can be in raster ({\bf r.in.lidar} using statistics of choice) or in vector format ({\bf v.in.lidar}). \newline
-On-farm water storage study with lidar data in NSW (Australia) developed a full remote sensing monitoring methodology
-of water availability with lidar-based bathymetric survey and multi-source remote sensing survey [8].\newline
 \begin{center}
- %\includegraphics[width=0.4\textwidth]{images/ofs1}
- %\newline
- %Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [8]
- 
- \includegraphics[width=0.4\textwidth]{images/grass7_las_support}
+ \includegraphics[width=0.7\textwidth]{images/grass7_las_support}
  \newline
  Figure 4: Example for LAS support in GRASS GIS 7: rapid LAS data assessment through binning
 \end{center}
+
+On-farm water storage study with lidar data in NSW (Australia) developed a full remote sensing monitoring methodology of water availability with lidar-based bathymetric survey and multi-source remote sensing survey [Chemin 2011].\newline
+\begin{center}
+\includegraphics[width=0.4\textwidth]{images/ofs1}
+\hspace{5mm}
+\includegraphics[width=0.3\textwidth]{images/ofs2}
+\newline
+Figure 5: On-Farm-Water-Storage Lidar survey and Depth-Volume-Area surveying [8]
+\end{center}
 }
 
-\blocknode{Other Improvements \& Additions}{
-\smallskip
 
-{\bf Remanufacturing, performance improvement}
-
-
-{\bf Other functions}
-
-\begin{itemize}
- \item {\bf v.distance:} Calculates distances from points, lines, or areas to points, lines, or areas.
- \item {\bf v.overlay:} The processing speed has been substantially improved.
- \item {\bf v.net.*:} All vector network analysis tools provide now fine control over node costs.
- \item {\bf v.voronoi:} New option to create Voronoi diagrams for areas.
- \item {\bf v.rectify:} Vector data can now be georeferenced using various methods for 2D and 3D coordinate transformation.
-\end{itemize}
-}
 
 \startfourthcolumn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -257,11 +259,12 @@ g.gui.animation stvds=particles
 % \scriptsize <<- too small for a poster!
 \begin{center}
 \begin{tabular}{rp{0.8\textwidth}}
-[Neteler 2012] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
+[Chemin 2011] & Chemin \& Rabbani, 2011. International Journal of Geoinformatics,  7(3):1-6.\\{}
 [Gebbert 2014] & Gebbert \& Pebesma, 2014. TGRASS: A temporal GIS for field based environmental modeling, Environmental Modelling \& Software 53:1–12.\\{}
-[Zambelli 2013] & Zambelli \& Gebbert \& Ciolli, 2013. PyGRASS: An Object Oriented Python API for GRASS GIS. ISPRS International Journal of Geo-Information 2.1:201-219.\\{}
+[Landa 2013] & Landa, 2013. Vektorová architektura systému GRASS GIS [GRASS GIS Vector Architecture]. PhD thesis, CTU in Prague, Czech Republic.\\{}
 [Neteler 2005] & Neteler \& Grasso \& Michelazzi \& Miori \& Merler \& Furlanello, 2005. International Journal of Geoinformatics, 1(1):51-61.\\{}
-[Landa 2013] & Landa, 2013. Vektorová architektura systému GRASS GIS [GRASS GIS Vector Architecture]. PhD thesis, CTU in Prague, Czech Republic.
+[Neteler 2012] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
+[Zambelli 2013] & Zambelli \& Gebbert \& Ciolli, 2013. PyGRASS: An Object Oriented Python API for GRASS GIS. ISPRS International Journal of Geo-Information 2.1:201-219.\\{}
 \end{tabular}
 \end{center}
 \smallskip
