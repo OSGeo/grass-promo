@@ -1,11 +1,11 @@
 FILE=poster
 SVGDIR = svg_images
-CODE = code
+CODEDIR = code
 
 SVGFILES = $(shell ls $(SVGDIR)/*.svg)
 SVGPDF = $(patsubst %.svg, %.pdf, $(SVGFILES))
-CODE = $(shell ls $(CODE)/*.tex)
-CODEPDF = $(patsubst %.tex, %.pdf, $(CODE))
+CODEFILES = $(shell ls $(CODEDIR)/*.tex)
+CODEPDF = $(patsubst %.tex, %.pdf, $(CODEFILES))
 
 
 all: $(FILE).pdf
@@ -25,8 +25,8 @@ fig: $(SVGPDF)
 $(SVGPDF): %.pdf: %.svg
 	inkscape -z --export-pdf=$@ --export-area-drawing --export-dpi=300 $<
 
-$(CODEPDF): %.pdf: %.tex
-	pdflatex -shell-escape -output-directory=$(CODE) $< 
+#$(CODEPDF): %.pdf: %.tex
+#	pdflatex -shell-escape -output-directory=$(CODEDIR) $< 
 
 clean:
 	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib *.ps
