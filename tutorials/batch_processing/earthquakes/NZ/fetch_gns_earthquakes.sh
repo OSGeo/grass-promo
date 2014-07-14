@@ -23,8 +23,8 @@ fi
 XMLNAME="$OUTFILE.tmp_$$"
 
 
-URL="http://wfs-beta.geonet.org.nz/geoserver/geonet/ows?"
-REQUEST="service=WFS&version=1.1.0&request=GetFeature&typeName=geonet:quake&outputFormat=text/xml; subtype=gml/3.2"
+URL="http://wfs.geonet.org.nz/geonet/ows?"
+REQUEST="service=WFS&version=1.1.0&request=GetFeature&typeName=geonet:quake_search_v1&outputFormat=text/xml; subtype=gml/3.2"
 
 START_DATE=`date --utc --date="last week" +%F`
 #START_DATE=`date --utc --date="2 weeks ago" +%F`
@@ -42,7 +42,7 @@ if [ $? -ne 0 ] ; then
 fi
 
 
-BASE="wfs:FeatureCollection/wfs:member/geonet:quake"
+BASE="wfs:FeatureCollection/wfs:member/geonet_search_v1:quake"
 FIELDS="
 geonet:origintime
 geonet:longitude
