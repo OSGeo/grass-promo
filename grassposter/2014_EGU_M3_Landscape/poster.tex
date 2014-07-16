@@ -201,29 +201,39 @@ Authors & Bench & Surveyor\\
 		&
 		\includegraphics[width=0.47\textwidth]{./images/mdi_low}
 	\end{tabular}\newline
-Figure 3 (left): Locating FCE above Lansberg P, with the upper 95\% FeO wt\%\\
-Figure4 (right): Locating lowest E Westward Copernicus, with the lower 5\% FeO wt\%.
+Figure 7 (left): Locating FCE above Lansberg P, with the upper 95\% FeO wt\%\\
+Figure 8 (right): Locating lowest E Westward Copernicus, with the lower 5\% FeO wt\%.
 \end{center}
 
-\noindent The H value is the lower boundary of the FeO wt\% in the region, typically found in the nearest highland region. There are two solid constraints to it value. H should be strictly less than E and strictly more than zero ($0<H<E$). The E value was found in Copernicus ejecta ring and actually taken from the FeO wt\% map. The minimum value found in the FeO\_M3G20090111T013904.destripe map is 3.88 wt\%, belonging to the ejecta ring of Copernicus. Thus it can be inferred that $0<H<3.88$, strictly, in this Copernican work. Looking at over M$^3$ FeO tiles, there is no lower value to the crater ejecta of Copernicus. Some Alpes Formation and Dark Mantling Material in the vicinity of Gay Lussac do not go lower than this.\newline
+\smallskip
 
+\begin{center}
+\begin{tabular}{ c p{0.45\textwidth}}
+ \raisebox{-0.95\totalheight}{\includegraphics[width=0.45\textwidth]{./images/MariaDepthm}}\hspace{10mm}
+ %\caption{Testing FeO algorithms.}
+ \label{fig:MariaDepthm}
+ &
+\noindent The H value is the lower boundary of the FeO wt\% in the region, typically found in the nearest highland region. There are two solid constraints to it value. H should be strictly less than E and strictly more than zero ($0<H<E$). The E value was found in Copernicus ejecta ring and actually taken from the FeO wt\% map. The minimum value found in the FeO\_M3G20090111T013904.destripe map is 3.88 wt\%, belonging to the ejecta ring of Copernicus. Thus it can be inferred that $0<H<3.88$, strictly, in this Copernican work. Looking at over M$^3$ FeO tiles, there is no lower value to the crater ejecta of Copernicus. Some Alpes Formation and Dark Mantling Material in the vicinity of Gay Lussac do not go lower than this.\newline
 \noindent This is obviously shows the limit of this statistical search method. Another attempt was undertaken using the original tile FeO\_M320090610T113334 a visual search for H in the vicinity of Montes Carpatus (Northwestern of Copernicus with -23.6070634574E, 14.571534275N) was done and from 14 samples found $\overline{H}=5.88$. Another visual search in the ejecta blanket of Copernicus for a FCE value, 22 samples were collected, giving an average FCE value of 7.16. Thus, it is found that $0 < \overline H < \overline{FCE}$, which is a logical outcome. It is thus proposed to carry forward this parametrisation for mapping the depth of the Copernican lava flow with the following equation ~\ref{eq:NewMareDepthVal}.\newline
 \begin{equation}\label{eq:NewMareDepthVal}
-Mh = \frac {D_*} {8} \times \frac {E-\overline{H}} {\overline{FCE}-\overline{H}} = \frac {117000}{8} \times \frac {E-5.88}{17.87-5.88} [m]
+Mh = \frac {D_*} {8} \times \frac {E-\overline{H}} {\overline{FCE}-\overline{H}} [m]
 \end{equation}
-\noindent Which realizes as the following equation.\newline
+\noindent Which realizes as the following equation ~\ref{eq:NewMareDepthValCoef}.\newline
 \begin{equation}\label{eq:NewMareDepthValCoef}
-Mh = (E-5.88) \times 1219.77 [m]
+Mh = \frac {117000}{8} \times \frac {E-5.88}{17.87-5.88} [m]
 \end{equation} 
+Figure 9: Attempt at Maria Depth mapping\newline
+\end{tabular}
+\end{center}
+
 }
-
-
-
 
 
 \blocknode{Conclusions}{
 \smallskip
-Conclusions
+Some attempts at using M$^3$ data to assess Apollo 12 landing site properties has proven to be constrained at every steps of the study. The cartographic, radiometric and data noise issues were of the most difficult to address. Combined, these issues reduced the mosaicking potential, thus the area covered.\newline
+
+The Lava Flow Depth estimation, to this date is still very doubtful and has to be research from scratch. Differences in estimation of FeO (wt\%) from M$^3$ and UVVis are not negligible. This is particularly troublesome. 
 }
 
 \startfourthcolumn
@@ -232,9 +242,21 @@ Conclusions
 \smallskip
 
 \begin{center}
- \includegraphics[width=0.45\textwidth]{./images/Clementine}
- \newline
- Figure 3: Clementine RGB153 (top), segmentation (middle) and FeO (wt\%) per segmentation class (bottom).
+\begin{tabular}{ c p{0.35\textwidth}}
+ \raisebox{-0.95\totalheight}{\includegraphics[width=0.5\textwidth]{./images/Clementine}}\hspace{10mm}
+  \label{fig:FeOClem}
+ &
+\noindent Clementine data was downloaded from \url{pdsimage.wr.usgs.gov}, UV-Vis 5 bands covering tiles \textit{ui03s333.img} and \textit{ui03s339.img}, both 3 degrees South and surrounding the 336E meridian. Ingestion of UV-Vis 5 bands in Isis (\url{isis.astrogeology.usgs.gov}) was done by using the \textit{pds2isis} conversion module, and import in GRASS GIS done by \textit{r.in.gdal}. This can be done in ISIS-GRASS bridge mode.\newline
+
+\noindent An object-based classification is run using the \textit{i.segment} module on the UVVis dataset. The output is vectorized with \textit{r.to.vect} and FeO statistics are extracted per vector polygons (also called zonal statistics) using \textit{v.rast.stats}. The mean zonal FeO statistics indicate a very clear threshold increase South of Apollo 12 landing site.\newline
+
+Figure 10 a): UVVIS RGB composite\newline
+
+Figure 10 b): Object-oriented classification (\textit{i.segment})\newline
+
+Figure 10 c): Zonal statistics (\textit{v.rast.stats})\newline
+
+\end{tabular}
 \end{center}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -256,11 +278,11 @@ Conclusions
  }%End of tabular
  &
  \noindent Chandrayaan $M^3$ data was  downloaded from PDS \url{http://pds-imaging.jpl.nasa.gov/}. The tile \textit{M3G20090111T013904\_V01\_RFL.IMG} was imported in GRASS GIS, resulting in 85 bands. The spectrum for four craters where extracted in the Figure \ref{fig:specsignature4craters}. Bench and Surveyor are both together in the lower reflectance curves. On the higher side, Sharp and Middle Crescent are consistently above the two others. This higher broadband Albedo is increasing towards the West, where one of the ray is clearly drawn (Oblique white strip in the middle of The Clementine upper map. Compared to the spectral data from Figure ~\ref{fig:specsignatureASTERlib} the reflectance is overall lower and the obvious shape differences are there. Additional spectrum signature data from \cite{clark2007usgs} is in the process of being extracted for analysis.\newline\linebreak
- \noindent Figure 8: \newline Spectral signature of $M^3$ from four craters.
+ \noindent Figure 11: \newline Spectral signature of $M^3$ from four craters.
  \newline\linebreak 
- \noindent Figure 9: \newline Spectral signature from Apollo 12 (Speclib v2.0).
+ \noindent Figure 12: \newline Spectral signature from Apollo 12 (Speclib v2.0).
  \newline\linebreak 
- \noindent Figure 10: \newline Spectral signature from Apollo 12 from \cite{Baldridge2009711}.
+ \noindent Figure 13: \newline Spectral signature from Apollo 12 from \cite{Baldridge2009711}.
  \newline\linebreak 
 \end{tabular}
 \end{center}
