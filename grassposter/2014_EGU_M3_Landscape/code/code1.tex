@@ -2,6 +2,7 @@
 \usepackage{minted}
 \begin{document}
 \begin{minted}[frame=single,linenos,mathescape,fontsize=\small]{py}
+
 #!/bin/env python
 from math import *
 
@@ -19,15 +20,16 @@ def feozhang2013(uvvis2,uvvis4):
   return(17.83*(-atan(((uvvis4/uvvis2)-1.26)/0.01)) - 6.87)
 
 print "@Surveyor"
-#dummy
-uvvis1=0.04
 #M3 at Surveyor crater
+
 uvvis2=0.05028829
 uvvis4=0.0579434
 
 print "@Bench"
 #M3 at Bench (north outside)
+
 uvvis2=0.05045871
 uvvis4=0.05715561
+
 \end{minted}
 \end{document}

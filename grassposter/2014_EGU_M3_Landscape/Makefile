@@ -17,16 +17,19 @@ $(FILE).pdf: *.tex Makefile
 		make pdf; \
 	done
 
-pdf: fig
+pdf: fig code
 	pdflatex $(FILE).tex
+	bibtex $(FILE)
 
 fig: $(SVGPDF)
 
 $(SVGPDF): %.pdf: %.svg
 	inkscape -z --export-pdf=$@ --export-area-drawing --export-dpi=300 $<
 
-#$(CODEPDF): %.pdf: %.tex
-#	pdflatex -shell-escape -output-directory=$(CODEDIR) $< 
+code: $(CODEPDF)
+
+$(CODEPDF): %.pdf: %.tex
+	pdflatex -shell-escape -output-directory=$(CODEDIR) $< 
 
 clean:
 	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib *.ps

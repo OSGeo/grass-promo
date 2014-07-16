@@ -504,9 +504,9 @@
                 (0,0) -- ($(\paperwidth+5,0) + tan(\a)*(0,\paperwidth)$); }
 
               \foreach \i in {1,2,...,35}{
-                \begin{scope}[shift={($(rand*60,rand*70)$)}]
+                \begin{scope}[shift={($(rand*120,rand*70)$)}]%Yann: double rand shift 60->120: all page circles
                   \draw[backgroundlightcolor!80!, line width=0.1cm]
-                  ($0.5*(topright)$) circle (4); 
+                  ($0.5*(topright)$) circle (rand*2+4);%Yann: added rand*2 to circle config
                 \end{scope}
               }        
               % }{}
