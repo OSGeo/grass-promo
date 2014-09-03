@@ -1,0 +1,110 @@
+\usepackage{listings}
+\lstdefinestyle{C++}{%
+  % language
+  language=C++, % [ANSI]C++, GNU, ISO, Visual
+  basicstyle=\ttfamily\small,
+  commentstyle=\itshape,
+  keywordstyle=\bfseries, % needs another \ttdefault
+  showstringspaces=false,
+  stringstyle=,
+  identifierstyle=,
+  % working with latex
+  escapeinside={//lst}{\^^M}  
+}
+
+\lstset{%
+%  frame=trBL,
+%  backgroundcolor=\color{},
+  linewidth=\textwidth,
+  % working with latex
+  gobble=2,
+  % float
+  nolol=false,
+  numberbychapter=true,
+  captionpos=t,% tb
+  % breaking lines
+  breaklines=true,
+  breakatwhitespace=true,
+  breakindent=10em,
+  breakautoindent=true,
+  prebreak={},
+  postbreak={},
+  %document default style
+    basicstyle=\ttfamily
+}
+
+
+%\lstlistlistingname % The header name for the list of listings.
+%\lstlistingname % The caption label for listings.
+
+\lstnewenvironment{cmdline}[1][]
+{\lstset{
+  style=C++,
+  #1}}
+{}
+
+\lstnewenvironment{scpp}[1][]
+{\lstset{
+  style=C++,
+  #1}}
+{}
+
+\lstnewenvironment{ncpp}[1][]
+{\lstset{
+  style=C++,
+  numbers=left, 
+  numberstyle=\scriptsize, 
+  stepnumber=1,
+  numbersep=5pt,
+  #1}}
+{}
+
+\lstnewenvironment{fcpp}[1][]
+{\lstset{
+  style=C++,
+  float,
+   % line numbers
+  numbers=left, 
+  numberstyle=\scriptsize, 
+  stepnumber=1,
+  numbersep=5pt,
+  #1}}
+{}
+
+
+\lstnewenvironment{lcpp}[1][]
+{\lstset{%
+style=C++,
+numbers=left, 
+numberstyle=\scriptsize, 
+stepnumber=1,
+numbersep=5pt,
+xleftmargin=12pt,
+breakautoindent=false,
+breaklines=false,%
+#1}}{}
+
+\lstnewenvironment{smallcpp}[1][]
+{\lstset{%
+style=C++,
+numbers=left, 
+numberstyle=\tiny, 
+stepnumber=1,
+numbersep=5pt,
+xleftmargin=12pt,
+breakautoindent=false,
+breaklines=false,%
+basicstyle=\ttfamily\scriptsize,
+#1}}{}
+
+
+\lstnewenvironment{pscpp}[1][]
+{\lstset{%
+style=C++,
+xleftmargin=12pt,
+breakautoindent=false,
+breaklines=false,
+#1}}{}
+
+
+%\lstset{index={square},index={[2]root}}
