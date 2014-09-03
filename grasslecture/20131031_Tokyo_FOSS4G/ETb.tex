@@ -81,7 +81,7 @@ Yann Chemin}
  \includegraphics[width=14cm]{ciacanolafield}
 \end{flushleft}
 }
-\date{\tiny October 31, 2013}
+\date{\tiny November 2nd, 2013}
 
 
 %\AtBeginSection[]{\begin{frame}\frametitle{Obsah}%
@@ -111,17 +111,50 @@ Yann Chemin}
 \newcommand{\pron}[2]{#1 [#2]}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TOC frame setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol}
+\colorlet{mycolor}{orange!80!black}% change this color to suit your needs
+\AtBeginSection[]{
+  \setbeamercolor{section in toc shaded}{use=structure,fg=structure.fg}
+  \setbeamercolor{section in toc}{fg=mycolor}
+  \setbeamercolor{subsection in toc shaded}{fg=black}
+  \setbeamercolor{subsection in toc}{fg=mycolor}
+  \frame<beamer>{\begin{multicols}{2}
+  \frametitle{Outline}
+  \setcounter{tocdepth}{2}  
+  \tableofcontents[currentsection,subsections]
+\end{multicols} 
+ }
+}
+
+\setbeamercolor{author in head/foot}{fg=white}
+\setbeamercolor{title in head/foot}{fg=white}
+\setbeamercolor{section in head/foot}{fg=mycolor}
+\setbeamertemplate{section in head/foot shaded}{\color{white!70!black}\insertsectionhead}
+\setbeamercolor{subsection in head/foot}{fg=mycolor}
+\setbeamertemplate{subsection in head/foot shaded}{\color{white!70!black}\insertsubsectionhead}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{framesubtitle}{fg=white}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-\titlepage
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+ \maketitle
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Contents}
-\tableofcontents
+ \begin{multicols}{2}
+  \setcounter{tocdepth}{2}  
+  \tableofcontents
+ \end{multicols} 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -159,7 +192,7 @@ Full Open Access \& Open Source research data and publication
 
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Overview}
+\begin{frame}[fragile]{Introduction}
 
 Evapotranspiration is the largest transiting quantity in the daily 
 hydrological cycle along with rain. It is used by scientists and
@@ -177,7 +210,6 @@ managers in:
 \end{frame}
 
 \section{Evapotranspiration Modeling}
-\subsection{Overview}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Overview}
 
@@ -207,7 +239,7 @@ There are several types of evapotranspiration modeling methods:\\
 \end{block}
 \end{frame}
 
-\subsection{ET examples}
+\subsection{ET \& Equity in Irrigation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Equity of water use in irrigation systems}
 
@@ -231,11 +263,13 @@ Irrigation water monitoring \& management
 % Evaporative Fraction 2012 October 4th Hakra, Punjab, Pakistan ~4000 images (2000-2012)
 \end{frame}
 
+\subsection{Crop Water Consumption}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Crop water consumption in irrigation systems}
 
 Actual evapotranspiration (mm/d, daily, 11 years)\\ 
 for agricultural water performance management.\\
+Irrigation System is 70,000 ha.
 
 \begin{center}
  \includegraphics[width=11cm]{ciameanet}\\
@@ -243,17 +277,43 @@ for agricultural water performance management.\\
 \end{center}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{}
+
+\begin{center}
+ {\Huge Code for} 
+ \hspace{10mm} 
+ \includegraphics[width=3.5cm]{kayama}
+\end{center}
+\end{frame}
+
+\subsection{River Basins Monitoring}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Water depletion in River Basins}
 
-Actual evapotranspiration (mm/d, daily, 11 years)\\ 
+Actual evapotranspiration (mm/d, daily, 7 years)\\ 
 for the Murray-Darling Basin (1M Km\textsuperscript{2})\\
+Japan is 0.37M Km\textsuperscript{2}\\
+
+\begin{center}
+ \includegraphics[width=6cm]{murray-darling_basin}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Water depletion in River Basins}
+
+Actual evapotranspiration (mm/d, daily, 7 years)\\ 
+for the Murray-Darling Basin (1M Km\textsuperscript{2})\\
+Japan is 0.37M Km\textsuperscript{2}\\
 
 \begin{center}
  \includegraphics[width=11.5cm]{mdbmeanet}
 \end{center}
 \end{frame}
 
+\subsection{Country Monitoring}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Evapotranspiration @ country level}
 
@@ -267,6 +327,7 @@ for water resources monitoring \& management.\\
 \end{center}
 \end{frame}
 
+\subsection{ET Models Benchmarking}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{ET models Benchmarking}
 
@@ -370,7 +431,7 @@ Chain processing has a fundamental impact on remote sensing work:\\
 
 \end{frame}
 
-
+\section{Future}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Future: 128-cores from Tile-GX}
 
@@ -438,6 +499,21 @@ Chain processing has a fundamental impact on remote sensing work:\\
 \end{block}
 
 \end{frame}
+
+% \section{Collaboration Call}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Collaboration call}
+
+We are looking for collaborators:
+\begin{itemize}
+ \item Having HPC capabilities
+ \item Interested in Global Water ET monitoring from Space
+ \item Using distributed FOSS4G tools
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Thank You}

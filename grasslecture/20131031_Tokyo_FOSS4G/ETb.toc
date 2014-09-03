@@ -1,11 +1,15 @@
 \beamer@endinputifotherversion {3.33pt}
 \beamer@sectionintoc {1}{Introduction}{4}{0}{1}
-\beamer@sectionintoc {2}{Evapotranspiration Modeling}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{Overview}{5}{0}{2}
-\beamer@subsectionintoc {2}{2}{ET examples}{6}{0}{2}
-\beamer@sectionintoc {3}{Frameworks}{11}{0}{3}
-\beamer@subsectionintoc {3}{1}{Chain processing}{11}{0}{3}
-\beamer@subsectionintoc {3}{2}{Blueprint}{12}{0}{3}
-\beamer@subsectionintoc {3}{3}{GDAL}{13}{0}{3}
-\beamer@subsectionintoc {3}{4}{GRASS GIS}{15}{0}{3}
-\beamer@sectionintoc {4}{Conclusions}{20}{0}{4}
+\beamer@sectionintoc {2}{Evapotranspiration Modeling}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{ET \& Equity in Irrigation}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Crop Water Consumption}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{River Basins Monitoring}{11}{0}{2}
+\beamer@subsectionintoc {2}{4}{Country Monitoring}{13}{0}{2}
+\beamer@subsectionintoc {2}{5}{ET Models Benchmarking}{14}{0}{2}
+\beamer@sectionintoc {3}{Frameworks}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Chain processing}{16}{0}{3}
+\beamer@subsectionintoc {3}{2}{Blueprint}{17}{0}{3}
+\beamer@subsectionintoc {3}{3}{GDAL}{18}{0}{3}
+\beamer@subsectionintoc {3}{4}{GRASS GIS}{20}{0}{3}
+\beamer@sectionintoc {4}{Future}{22}{0}{4}
+\beamer@sectionintoc {5}{Conclusions}{26}{0}{5}

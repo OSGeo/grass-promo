@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.8.27)  3 SEP 2014 23:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.8.27)  3 SEP 2014 23:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1162,38 +1162,87 @@ Now handling font encoding T3 ...
 (/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.def
 File: ot1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding OT1 on input line 43.
-))) (./ETb.aux)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
+\c@tracingmulticols=\count161
+\mult@box=\box57
+\multicol@leftmargin=\dimen200
+\c@unbalance=\count162
+\c@collectmore=\count163
+\doublecol@number=\count164
+\multicoltolerance=\count165
+\multicolpretolerance=\count166
+\full@width=\dimen201
+\page@free=\dimen202
+\premulticols=\dimen203
+\postmulticols=\dimen204
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
+\partial@page=\box58
+\last@line=\box59
+\maxbalancingoverflow=\dimen205
+\mult@rightbox=\box60
+\mult@grightbox=\box61
+\mult@gfirstbox=\box62
+\mult@firstbox=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\c@columnbadness=\count167
+\c@finalcolumnbadness=\count168
+\last@try=\dimen206
+\multicolovershoot=\dimen207
+\multicolundershoot=\dimen208
+\mult@nat@firstbox=\box81
+\colbreak@box=\box82
+\mc@col@check@num=\count169
+) (./ETb.aux)
 \openout1 = `ETb.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 143.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 117.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 117.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 143.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 143.
 
 (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    ... okay on input line 143.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1231,16 +1280,16 @@ LaTeX Font Info:    ... okay on input line 117.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count161
-\scratchdimen=\dimen200
-\scratchbox=\box57
-\nofMPsegments=\count162
-\nofMParguments=\count163
+\scratchcounter=\count170
+\scratchdimen=\dimen209
+\scratchbox=\box83
+\nofMPsegments=\count171
+\nofMParguments=\count172
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count164
-\MPscratchDim=\dimen201
-\MPnumerator=\count165
-\makeMPintoPDFobject=\count166
+\MPscratchCnt=\count173
+\MPscratchDim=\dimen210
+\MPnumerator=\count174
+\makeMPintoPDFobject=\count175
 \everyMPtoPDFconversion=\toks48
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1258,8 +1307,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 117.
+\AtBeginShipoutBox=\box84
+Package hyperref Info: Link coloring OFF on input line 143.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1267,58 +1316,58 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count167
+\c@section@level=\count176
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 143.
+LaTeX Info: Redefining \pageref on input line 143.
+LaTeX Info: Redefining \nameref on input line 143.
 
 (./ETb.out) (./ETb.out)
 \@outlinefile=\write5
 \openout5 = `ETb.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 117.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 143.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 117.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 143.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 117.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 117.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 117.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 143.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 117.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 117.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 143.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 117.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 117.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 143.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 117.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 117.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 143.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 117.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 117.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 117.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 117.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 117.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 117.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 117.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 143.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1344,26 +1393,26 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 117.
-\c@lstlisting=\count168
+LaTeX Info: Redefining \includegraphics on input line 143.
+\c@lstlisting=\count177
  (./ETb.nav)
-<ciacanolafield.png, id=60, 2852.4969pt x 643.9257pt>
+<ciacanolafield.png, id=40, 2852.4969pt x 643.9257pt>
 File: ciacanolafield.png Graphic file (type png)
  <use ciacanolafield.png>
-Package pdftex.def Info: ciacanolafield.png used on input line 121.
+Package pdftex.def Info: ciacanolafield.png used on input line 148.
 (pdftex.def)             Requested size: 398.33858pt x 89.91316pt.
 
-Overfull \hbox (56.04327pt too wide) in paragraph at lines 121--121
+Overfull \hbox (56.04327pt too wide) in paragraph at lines 148--148
 []  
  []
 
 
-Overfull \vbox (72.05124pt too high) detected at line 121
+Overfull \vbox (72.05124pt too high) detected at line 148
  []
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 121.
+(Font)              size <5> substituted on input line 148.
 
 [1
 
@@ -1393,13 +1442,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 19.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<CGIAR_Green.jpg, id=141, 967.36406pt x 1147.28625pt>
+<CGIAR_Green.jpg, id=131, 967.36406pt x 1147.28625pt>
 File: CGIAR_Green.jpg Graphic file (type jpg)
  <use CGIAR_Green.jpg>
 Package pdftex.def Info: CGIAR_Green.jpg used on input line 21.
 (pdftex.def)             Requested size: 42.67912pt x 50.61029pt.
 
-<WLE_and_partners-vertical_logo_strip.png, id=142, 135.1449pt x 307.3884pt>
+<WLE_and_partners-vertical_logo_strip.png, id=132, 135.1449pt x 307.3884pt>
 File: WLE_and_partners-vertical_logo_strip.png Graphic file (type png)
 
 <use WLE_and_partners-vertical_logo_strip.png>
@@ -1409,9 +1458,35 @@ Package pdftex.def Info: WLE_and_partners-vertical_logo_strip.png used on input
 ) [3
 
  <./CGIAR_Green.jpg> <./WLE_and_partners-vertical_logo_strip.png>]
+
+! Package keyval Error: subsections undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.193 \section{Introduction}
+                            
+? 
+(./ETb.toc) [4
+
+]
 \openout4 = `ETb.vrb'.
 
- (./ETb.vrb) [4
+ (./ETb.vrb) [5
+
+]
+
+! Package keyval Error: subsections undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.212 \section{Evapotranspiration Modeling}
+                                           
+? 
+(./ETb.toc) [6
 
 ]
 \openout4 = `ETb.vrb'.
@@ -1427,24 +1502,24 @@ Type  H <return>  for immediate help.
 l.12 \begin{columns}[l]
                        
 ? 
-<OSGeo_logo.png, id=199, 240.9pt x 104.39pt>
+<OSGeo_logo.png, id=274, 240.9pt x 104.39pt>
 File: OSGeo_logo.png Graphic file (type png)
  <use OSGeo_logo.png>
 Package pdftex.def Info: OSGeo_logo.png used on input line 15.
 (pdftex.def)             Requested size: 56.9055pt x 24.65907pt.
 
-<GDALLogoColor.png, id=200, 459.316pt x 507.496pt>
+<GDALLogoColor.png, id=275, 459.316pt x 507.496pt>
 File: GDALLogoColor.png Graphic file (type png)
  <use GDALLogoColor.png>
 Package pdftex.def Info: GDALLogoColor.png used on input line 19.
 (pdftex.def)             Requested size: 56.9055pt x 62.87154pt.
 
-<Grass_GIS.png, id=201, 166.221pt x 179.872pt>
+<Grass_GIS.png, id=276, 166.221pt x 179.872pt>
 File: Grass_GIS.png Graphic file (type png)
  <use Grass_GIS.png>
 Package pdftex.def Info: Grass_GIS.png used on input line 23.
 (pdftex.def)             Requested size: 56.9055pt x 61.57834pt.
-) [5
+) [7
 
  <./OSGeo_logo.png> <./GDALLogoColor.png> <./Grass_GIS.png>]
 \openout4 = `ETb.vrb'.
@@ -1460,7 +1535,7 @@ Type  H <return>  for immediate help.
 l.9 \begin{columns}[l]
                       
 ? 
-<fess2012ef.png, id=231, 945.5325pt x 738.76pt>
+<fess2012ef.png, id=306, 945.5325pt x 738.76pt>
 File: fess2012ef.png Graphic file (type png)
  <use fess2012ef.png>
 Package pdftex.def Info: fess2012ef.png used on input line 12.
@@ -1470,98 +1545,133 @@ Overfull \hbox (45.35301pt too wide) in paragraph at lines 12--13
  [] 
  []
 
-<fess2012meaneftemporal.png, id=232, 1511.8884pt x 586.8324pt>
+<fess2012meaneftemporal.png, id=307, 1511.8884pt x 586.8324pt>
 File: fess2012meaneftemporal.png Graphic file (type png)
 
 <use fess2012meaneftemporal.png>
 Package pdftex.def Info: fess2012meaneftemporal.png used on input line 17.
 (pdftex.def)             Requested size: 227.62204pt x 88.34341pt.
-) [6
+) [8
 
  <./fess2012ef.png> <./fess2012meaneftemporal.png>]
 \openout4 = `ETb.vrb'.
 
- (./ETb.vrb <ciameanet.png, id=260, 1172.88188pt x 320.69812pt>
+ (./ETb.vrb <ciameanet.png, id=335, 1172.88188pt x 320.69812pt>
 File: ciameanet.png Graphic file (type png)
 
 <use ciameanet.png>
-Package pdftex.def Info: ciameanet.png used on input line 7.
+Package pdftex.def Info: ciameanet.png used on input line 8.
 (pdftex.def)             Requested size: 312.9803pt x 85.57669pt.
- <ciaminmaxet.png, id=261, 1166.85938pt x 316.18124pt>
+ <ciaminmaxet.png, id=336, 1166.85938pt x 316.18124pt>
 File: ciaminmaxet.png Graphic file (type png)
 
 <use ciaminmaxet.png>
-Package pdftex.def Info: ciaminmaxet.png used on input line 8.
+Package pdftex.def Info: ciaminmaxet.png used on input line 9.
 (pdftex.def)             Requested size: 312.9803pt x 84.8056pt.
-) [7
+) [9
 
  <./ciameanet.png> <./ciaminmaxet.png>]
 \openout4 = `ETb.vrb'.
 
  (./ETb.vrb
-<mdbmeanet.png, id=290, 1364.09625pt x 532.99126pt>
-File: mdbmeanet.png Graphic file (type png)
- <use mdbmeanet.png>
-Package pdftex.def Info: mdbmeanet.png used on input line 7.
-(pdftex.def)             Requested size: 327.20668pt x 127.84732pt.
-)
-[8
+<kayama.png, id=364, 100.375pt x 100.375pt>
+File: kayama.png Graphic file (type png)
+ <use kayama.png>
+Package pdftex.def Info: kayama.png used on input line 6.
+(pdftex.def)             Requested size: 99.58464pt x 99.59209pt.
+) [10
 
- <./mdbmeanet.png (PNG copy)>]
+ <./kayama.png>]
+\openout4 = `ETb.vrb'.
+
+ (./ETb.vrb <murray-darling_basin.jpg, id=393, 398.99063pt x 348.55219pt>
+File: murray-darling_basin.jpg Graphic file (type jpg)
+
+<use murray-darling_basin.jpg>
+Package pdftex.def Info: murray-darling_basin.jpg used on input line 8.
+(pdftex.def)             Requested size: 170.71652pt x 149.13524pt.
+) [11
+
+ <./murray-darling_basin.jpg>]
 \openout4 = `ETb.vrb'.
 
  (./ETb.vrb
-<slet2005.png, id=317, 800.9925pt x 930.47626pt>
+<mdbmeanet.png, id=421, 1364.09625pt x 532.99126pt>
+File: mdbmeanet.png Graphic file (type png)
+ <use mdbmeanet.png>
+Package pdftex.def Info: mdbmeanet.png used on input line 8.
+(pdftex.def)             Requested size: 327.20668pt x 127.84732pt.
+)
+[12
+
+ <./mdbmeanet.png>]
+\openout4 = `ETb.vrb'.
+
+ (./ETb.vrb
+<slet2005.png, id=448, 800.9925pt x 930.47626pt>
 File: slet2005.png Graphic file (type png)
  <use slet2005.png>
 Package pdftex.def Info: slet2005.png used on input line 7.
 (pdftex.def)             Requested size: 142.26378pt x 165.24942pt.
 
-<slet2010.png, id=318, 800.9925pt x 930.47626pt>
+<slet2010.png, id=449, 800.9925pt x 930.47626pt>
 File: slet2010.png Graphic file (type png)
  <use slet2010.png>
 Package pdftex.def Info: slet2010.png used on input line 9.
 (pdftex.def)             Requested size: 142.26378pt x 165.24942pt.
-) [9
+) [13
 
  <./slet2005.png> <./slet2010.png>]
 \openout4 = `ETb.vrb'.
 
  (./ETb.vrb
-<sltemporaletb.png, id=344, 1680.2775pt x 443.6575pt>
+<sltemporaletb.png, id=477, 1680.2775pt x 443.6575pt>
 File: sltemporaletb.png Graphic file (type png)
  <use sltemporaletb.png>
 Package pdftex.def Info: sltemporaletb.png used on input line 5.
 (pdftex.def)             Requested size: 341.43306pt x 90.15155pt.
 )
-[10
+[14
 
  <./sltemporaletb.png>]
+
+! Package keyval Error: subsections undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.350 \section{Frameworks}
+                          
+? 
+(./ETb.toc) [15
+
+]
 \openout4 = `ETb.vrb'.
 
- (./ETb.vrb) [11
+ (./ETb.vrb) [16
 
 ]
 \openout4 = `ETb.vrb'.
 
  (./ETb.vrb
-<chain0.png, id=400, 653.44125pt x 492.33937pt>
+<chain0.png, id=574, 653.44125pt x 492.33937pt>
 File: chain0.png Graphic file (type png)
  <use chain0.png>
 Package pdftex.def Info: chain0.png used on input line 4.
 (pdftex.def)             Requested size: 213.39566pt x 160.78218pt.
-) [12
+) [17
 
  <./chain0.png>]
 \openout4 = `ETb.vrb'.
 
- (./ETb.vrb <chain2.png, id=426, 819.8128pt x 548.0475pt>
+ (./ETb.vrb <chain2.png, id=602, 819.8128pt x 548.0475pt>
 File: chain2.png Graphic file (type png)
 
 <use chain2.png>
 Package pdftex.def Info: chain2.png used on input line 5.
 (pdftex.def)             Requested size: 241.84842pt x 161.6726pt.
-) [13
+) [18
 
  <./chain2.png>]
 \openout4 = `ETb.vrb'.
@@ -1577,7 +1687,7 @@ Type  H <return>  for immediate help.
 l.3 \begin{columns}[l]
                       
 ? 
-<chain1.png, id=454, 692.5875pt x 526.96875pt>
+<chain1.png, id=630, 692.5875pt x 526.96875pt>
 File: chain1.png Graphic file (type png)
  <use chain1.png>
 Package pdftex.def Info: chain1.png used on input line 7.
@@ -1587,37 +1697,50 @@ Overfull \hbox (8.0164pt too wide) in paragraph at lines 7--8
  [][] 
  []
 
-<cores.png, id=455, 211.93787pt x 141.21724pt>
+<cores.png, id=631, 211.93787pt x 141.21724pt>
 File: cores.png Graphic file (type png)
  <use cores.png>
 Package pdftex.def Info: cores.png used on input line 12.
 (pdftex.def)             Requested size: 113.81102pt x 75.83597pt.
-) [14
+) [19
 
  <./chain1.png (PNG copy)> <./cores.png (PNG copy)>]
 \openout4 = `ETb.vrb'.
 
  (./ETb.vrb
-<architecture_implementation.png, id=481, 816.80156pt x 540.51938pt>
+<architecture_implementation.png, id=658, 816.80156pt x 540.51938pt>
 File: architecture_implementation.png Graphic file (type png)
 
 <use architecture_implementation.png>
 Package pdftex.def Info: architecture_implementation.png used on input line 4.
 (pdftex.def)             Requested size: 241.84842pt x 160.03741pt.
-) [15
+) [20
 
  <./architecture_implementation.png>]
 \openout4 = `ETb.vrb'.
 
-(./ETb.vrb <pyGRASS1.png, id=510, 963.6pt x 563.10374pt>
+(./ETb.vrb <pyGRASS1.png, id=686, 963.6pt x 563.10374pt>
 File: pyGRASS1.png Graphic file (type png)
  <use pyGRASS1.png>
 Package pdftex.def Info: pyGRASS1.png used on input line 5.
 (pdftex.def)             Requested size: 284.52756pt x 166.26881pt.
 )
-[16
+[21
 
  <./pyGRASS1.png (PNG copy)>]
+
+! Package keyval Error: subsections undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.434 \section{Future}
+                      
+? 
+(./ETb.toc) [22
+
+]
 \openout4 = `ETb.vrb'.
 
  (./ETb.vrb
@@ -1631,20 +1754,20 @@ Type  H <return>  for immediate help.
 l.3 \begin{columns}[l]
                       
 ? 
-<TILE-Gx_Block_Diagram_large.png, id=538, 1749.53625pt x 1505.625pt>
+<TILE-Gx_Block_Diagram_large.png, id=755, 1749.53625pt x 1505.625pt>
 File: TILE-Gx_Block_Diagram_large.png Graphic file (type png)
 
 <use TILE-Gx_Block_Diagram_large.png>
 Package pdftex.def Info: TILE-Gx_Block_Diagram_large.png used on input line 7.
 (pdftex.def)             Requested size: 142.26378pt x 122.42822pt.
 
-<tilera_quanta_sq2_mobo.jpg, id=539, 501.875pt x 353.32pt>
+<tilera_quanta_sq2_mobo.jpg, id=756, 501.875pt x 353.32pt>
 File: tilera_quanta_sq2_mobo.jpg Graphic file (type jpg)
 
 <use tilera_quanta_sq2_mobo.jpg>
 Package pdftex.def Info: tilera_quanta_sq2_mobo.jpg used on input line 12.
 (pdftex.def)             Requested size: 142.26378pt x 100.15273pt.
-) [17
+) [23
 
  <./TILE-Gx_Block_Diagram_large.png> <./tilera_quanta_sq2_mobo.jpg>]
 \openout4 = `ETb.vrb'.
@@ -1660,47 +1783,65 @@ Type  H <return>  for immediate help.
 l.3 \begin{columns}[l]
                       
 ? 
-<xeon-phi-oh.jpg, id=568, 451.6875pt x 339.2675pt>
+<xeon-phi-oh.jpg, id=785, 451.6875pt x 339.2675pt>
 File: xeon-phi-oh.jpg Graphic file (type jpg)
  <use xeon-phi-oh.jpg>
 Package pdftex.def Info: xeon-phi-oh.jpg used on input line 7.
 (pdftex.def)             Requested size: 142.26378pt x 106.8543pt.
 
-<Gigabyte-GS-R22PHL-Xeon-Phi-Cage-600x440.png, id=569, 602.25pt x 441.65pt>
+<Gigabyte-GS-R22PHL-Xeon-Phi-Cage-600x440.png, id=786, 602.25pt x 441.65pt>
 File: Gigabyte-GS-R22PHL-Xeon-Phi-Cage-600x440.png Graphic file (type png)
 
 <use Gigabyte-GS-R22PHL-Xeon-Phi-Cage-600x440.png>
 Package pdftex.def Info: Gigabyte-GS-R22PHL-Xeon-Phi-Cage-600x440.png used on i
 nput line 12.
 (pdftex.def)             Requested size: 142.26378pt x 104.32687pt.
-) [18
+) [24
 
  <./xeon-phi-oh.jpg> <./Gigabyte-GS-R22PHL-Xeon-Phi-Cage-600x440.png>]
 \openout4 = `ETb.vrb'.
 
- (./ETb.vrb) [19
+ (./ETb.vrb) [25
+
+]
+
+! Package keyval Error: subsections undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.486 \section{Conclusions}
+                           
+? 
+(./ETb.toc) [26
 
 ]
 \openout4 = `ETb.vrb'.
 
- (./ETb.vrb)
-[20
+ (./ETb.vrb) [27
 
 ]
 \openout4 = `ETb.vrb'.
 
- (./ETb.vrb <iwmi.png, id=648, 87.4467pt x 61.4295pt>
+ (./ETb.vrb) [28
+
+]
+\openout4 = `ETb.vrb'.
+
+ (./ETb.vrb
+<iwmi.png, id=932, 87.4467pt x 61.4295pt>
 File: iwmi.png Graphic file (type png)
  <use iwmi.png>
 Package pdftex.def Info: iwmi.png used on input line 5.
 (pdftex.def)             Requested size: 85.35826pt x 59.9624pt.
 
-<etb_qr.png, id=649, 409.53pt x 409.53pt>
+<etb_qr.png, id=933, 409.53pt x 409.53pt>
 File: etb_qr.png Graphic file (type png)
  <use etb_qr.png>
 Package pdftex.def Info: etb_qr.png used on input line 7.
 (pdftex.def)             Requested size: 56.9055pt x 56.90262pt.
-) [21
+) [29
 
  <./iwmi.png> <./etb_qr.png>]
 \tf@nav=\write6
@@ -1712,37 +1853,38 @@ Package pdftex.def Info: etb_qr.png used on input line 7.
 \tf@snm=\write8
 \openout8 = `ETb.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 454.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 454.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 530.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 530.
  (./ETb.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 454.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 454.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 530.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 530.
 Package rerunfilecheck Info: File `ETb.out' has not changed.
-(rerunfilecheck)             Checksum: 0DD14B302418770B6B2E12F1CDE076EE;556.
+(rerunfilecheck)             Checksum: DD966FD3DBF7F1D3A01587AA5F0E231C;241.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 454.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 530.
  ) 
 Here is how much of TeX's memory you used:
- 20103 strings out of 495021
- 366289 string characters out of 6181344
- 425498 words of memory out of 5000000
- 22738 multiletter control sequences out of 15000+600000
- 14221 words of font info for 53 fonts, out of 8000000 for 9000
+ 20312 strings out of 495021
+ 369724 string characters out of 6181344
+ 432075 words of memory out of 5000000
+ 22905 multiletter control sequences out of 15000+600000
+ 14527 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,16n,62p,383b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,16n,65p,383b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on ETb.pdf (21 pages, 9213443 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on ETb.pdf (29 pages, 9342685 bytes).
 PDF statistics:
- 710 PDF objects out of 1000 (max. 8388607)
- 625 compressed objects within 7 object streams
- 53 named destinations out of 1000 (max. 500000)
- 295 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1001 PDF objects out of 1200 (max. 8388607)
+ 899 compressed objects within 9 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

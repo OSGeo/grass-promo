@@ -81,7 +81,7 @@ Yann Chemin}
  \includegraphics[width=14cm]{ciacanolafield}
 \end{flushleft}
 }
-\date{\tiny October 31, 2013}
+\date{\tiny November 2nd, 2013}
 
 
 %\AtBeginSection[]{\begin{frame}\frametitle{Obsah}%
@@ -111,6 +111,32 @@ Yann Chemin}
 \newcommand{\pron}[2]{#1 [#2]}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TOC frame setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol}
+\colorlet{mycolor}{orange!80!black}% change this color to suit your needs
+\AtBeginSection[]{
+  \setbeamercolor{section in toc shaded}{use=structure,fg=structure.fg}
+  \setbeamercolor{section in toc}{fg=mycolor}
+  \setbeamercolor{subsection in toc shaded}{fg=black}
+  \setbeamercolor{subsection in toc}{fg=mycolor}
+  \frame<beamer>{\begin{multicols}{2}
+  \frametitle{Outline}
+  \setcounter{tocdepth}{2}  
+  \tableofcontents[currentsection,subsections]
+\end{multicols} 
+ }
+}
+
+\setbeamercolor{author in head/foot}{fg=white}
+\setbeamercolor{title in head/foot}{fg=white}
+\setbeamercolor{section in head/foot}{fg=mycolor}
+\setbeamertemplate{section in head/foot shaded}{\color{white!70!black}\insertsectionhead}
+\setbeamercolor{subsection in head/foot}{fg=mycolor}
+\setbeamertemplate{subsection in head/foot shaded}{\color{white!70!black}\insertsubsectionhead}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{framesubtitle}{fg=white}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -370,7 +396,7 @@ Chain processing has a fundamental impact on remote sensing work:\\
 
 \end{frame}
 
-
+\section{Future}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Future: 128-cores from Tile-GX}
 
@@ -413,13 +439,11 @@ Chain processing has a fundamental impact on remote sensing work:\\
 \begin{frame}[fragile]{Outlooks}
 
 \begin{itemize}
- \item {\bf Crunch (0):} Multi-Cores Hardware (Tile-GX, Xeon Phi)
- \item {\bf Crunch (1):} Multi-GPU distribution (OpenCL, CUDA)
- \item {\bf Crunch (2):} Multi-CPU distribution (MPI)
- \item {\bf Think (1):} TSEB to test/fix
- \item {\bf Think (2):} SEBS to complete
- \item {\bf More (1):} ETLook to digest and code
- \item {\bf More (2):} MODIS and Landsat archives under close pipe distance?
+ \item Multi-Cores Hardware (Tile-GX, Xeon Phi)
+ \item Multi-GPU distribution (OpenCL, CUDA)
+ \item Multi-CPU distribution (MPI)
+ \item MODIS and Landsat archives under close pipe distance?
+ \item Online: automatic, PyWPS, SOS/network ? 
 \end{itemize}
 
 \end{frame}
@@ -430,10 +454,11 @@ Chain processing has a fundamental impact on remote sensing work:\\
 
 \begin{block}{Distributed ET models benchmarking setup with OSGEO tools}
 \begin{itemize}
- \item {\bf GDAL:} C+OpenMP, core-based scaling\\
-
- \item {\bf GRASS GIS:} pyGRASS for metaModule, C+OpenMP inside modules\\
-
+ \item {\bf GDAL:} C+OpenMP
+ \item {\bf GDAL:} Core-based scaling
+ \item {\bf GRASS GIS:} pyGRASS for metaModule
+ \item {\bf GRASS GIS:} pyGRASS finish\_=False
+ \item {\bf GRASS GIS:} C+OpenMP inside modules
  \item {\bf Targets:} MODIS (Terra/Aqua), Landsat (all), Aster
 \end{itemize}
 \end{block}
@@ -443,9 +468,12 @@ Chain processing has a fundamental impact on remote sensing work:\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Thank You}
 
-\begin{center}
- \includegraphics[width=3cm]{OpenInnovation}
-\end{center}
+\vspace{50mm}
+\begin{flushright}
+ \includegraphics[width=3cm]{iwmi}
+ \hspace{10mm}
+ \includegraphics[width=2cm]{etb_qr}
+\end{flushright}
 
 \end{frame}
 
