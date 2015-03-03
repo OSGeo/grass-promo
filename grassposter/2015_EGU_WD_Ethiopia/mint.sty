@@ -1,0 +1,16 @@
+\ProvidesPackage{minted}
+\makeatletter
+\newenvironment{terminal}{%for code
+  \VerbatimEnvironment
+  \minted@resetoptions
+  \setkeys{minted@opt}{frame=single}
+  \begin{figure}[htp]
+    \centering
+    \begin{minipage}{6cm}    
+      \begin{VerbatimOut}{\jobname.pyg}}
+{%example code
+      \end{VerbatimOut}
+      \minted@pygmentize{sh}
+      \DeleteFile{\jobname.pyg}
+    \end{minipage}
+  \end{figure}}
