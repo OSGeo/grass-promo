@@ -32,7 +32,7 @@ $(CODEPDF): %.pdf: %.tex
 	pdflatex -shell-escape -output-directory=$(CODEDIR) $< 
 
 clean:
-	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib *.ps
+	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib *.ps *.pyg
 	rm -f $(SVGPDF) $(CODEPDF)
 
 distclean:
