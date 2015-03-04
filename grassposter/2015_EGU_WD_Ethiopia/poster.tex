@@ -9,6 +9,9 @@
 \usepackage{wrapfig}
 \usepackage{url}
 
+% For blibliography styling
+\usepackage{natbib}
+
 %Used for better control on code display
 
 \usepackage[margin=\margin cm, paperwidth=197cm, paperheight=100cm]{geometry}
@@ -48,9 +51,9 @@
 \blocknode{Abstract}{
 \small \noindent This research work is about finding the connection between farmers perspectives on changes of water conditions in their socio-agricultural environment and satellite remote sensing analysis.\newline
 Key informant surveys were conducted to investigate localised views on water scarcity as a counterpoint to the physical measurement of water availability. Does a numerical or mapped image identifying water scarcity always equate to a dearth of water for agriculture? To push the limits of the relationship between human and physical data we sought to ground-truth GIS results with the practical experience and knowledge of people living in the area.\newline\linebreak
-\noindent We data-mined public domain satellite data with FOSS (GDAL[2], GRASS GIS[1]) and produced water-related spatio-temporal domains for our study area and the larger Upper Nile Basin.\newline\linebreak
-Accumulated remote sensing information was then cross-referenced with informant’s accounts of water availability for the same space and time. During the survey fieldwork the team also took photographs electron- ically stamped with GPS coordinates to compare and contrast the views of informants and the remote sensing information with high resolution images of the landscape.\newline\linebreak
-We found that farmers perspective on the Spring maize crop sensibility to variability of rainfall can be quantified in space and time by remote sensing cumulative transpiration. A crop transpiration gap of 1-2.5 mm/day for about 20 days is to be overcome, a full amount of 20 to 50 mm, depending on the type of year deficit. Such gap can be overcome, even by temporary supplemental irrigation practices, however, the economical and cultural set up is already developed in another way, as per sesonal renting of higher soil profile water retention capacity fields.
+\noindent We data-mined public domain satellite data with FOSS (GDAL \cite{GDAL}, GRASS GIS \cite{neteler2012grass}) and produced water-related spatio-temporal domains for our study area and the larger Upper Nile Basin.\newline\linebreak
+Accumulated remote sensing information was then cross-referenced with informant’s accounts of water availability for the same space and time. During the survey fieldwork the team also took photographs electronically stamped with GPS coordinates to compare and contrast the views of informants and the remote sensing information with high resolution images of the landscape.\newline\linebreak
+We found that farmers perspective on the Spring maize crop sensibility to variability of rainfall can be quantified in space and time by remote sensing cumulative transpiration. A crop transpiration gap of 1-2.5 mm/day for about 20 days is to be overcome, a full amount of 20 to 50 mm, depending on the type of year deficit. Such gap can be overcome, even by temporary supplemental irrigation practices, however, the economical and cultural set up is already developed in another way, as per seasonal renting of higher soil profile water retention capacity fields.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -60,7 +63,7 @@ We found that farmers perspective on the Spring maize crop sensibility to variab
 	\begin{tabular}{c p{0.5\textwidth}}
 	 \raisebox{-0.9\totalheight}{\includegraphics[width=0.45\textwidth]{./images/fig1}}
 	&
-	The transpiration data is created from energy balance modelling [3] modules (i.eb.*, i.evapo.*) within GRASS GIS version 7, by partitioning the net radiation (r.sun) into soil heat flux (i.eb.soilheatflux), sensible heat flux (i.eb.h\_*) and the residual being the energy needed to evaporate water (i.eb.evapfr, i.eb.eta). This information is then fractionated into biotic (transpiration) and abiotic (evaporation) parts using vegetation fraction.\newline\linebreak
+	The transpiration data is created from energy balance modelling \citep{chemin2012distributed} modules (i.eb.*, i.evapo.*) within GRASS GIS version 7, by partitioning the net radiation (r.sun) into soil heat flux (i.eb.soilheatflux), sensible heat flux (i.eb.h\_*) and the residual being the energy needed to evaporate water (i.eb.evapfr, i.eb.eta). This information is then fractionated into biotic (transpiration) and abiotic (evaporation) parts using vegetation fraction.\newline\linebreak
 The accumulated transpiration is subjected to temporal scrutiny ...\newline
  	\end{tabular}\newline
 \end{center}
@@ -95,13 +98,13 @@ More info here...\newline
 \blocknode{Farmer's perspectives on changes of water conditions}{
 \smallskip
 Farmer’s perspectives on changes of water conditions is tied to the socio-agricultural environment. Localised views on water scarcity is a counterpoint to the physical measurement of water availability.\newline\linebreak
-Scholars have raised the concern that conventional approaches are driven largely by biophysical crop data, disregarding farmers’ behaviours, responses and strategies (Hurd, 2008). Likewise, the persistent view that risk should be determined “scientifically” and “objectively” relegated community perceptions and assessments to be uninformed, false, illusory, or irrational (Oliver-Smith, 1996). This study aims at listening to people's perspectives and support it from remote sensing.\newline\linebreak
+Scholars have raised the concern that conventional approaches are driven largely by biophysical crop data, disregarding farmers’ behaviours, responses and strategies \citep{hurd2008challenges}. Likewise, the persistent view that risk should be determined “scientifically” and “objectively” relegated community perceptions and assessments to be uninformed, false, illusory, or irrational \citep{oliver1996anthropological}. This study aims at listening to people's perspectives and support it from remote sensing.\newline\linebreak
 The practical experience and knowledge of people living in an area is driving decision-making and is a lever for assessing improvement of social and economic well-being.\newline
 Farmers in Fogera, Ethiopia depend on rainfed agriculture for their livelihoods using ox-drawn ploughs. Crop production largely depends on mono-modal rainfall which starts in May and extends from June to September. The wet season crop calendar, i.e. planting and harvesting, starts in May and ends by December, depending on the type of crop (see Table 1).\newline\linebreak
 \begin{center}
 \includegraphics[width=0.6\textwidth]{./images/table1}
 \end{center}
-Key informants in Fogera described how rainfall patterns have become more irregular over the last two decades. Farmers we interviewed also indicated that the rain comes irregularly or at times, fails. There is a common agreement by farmers that years of sufficient rainfall, without hail or frost, providing good harvest have become less. Mostly increased variability and hazard are the new norm in recent decades (Wakjira and Gizaw, 2008).\newline\linebreak
+Key informants in Fogera described how rainfall patterns have become more irregular over the last two decades. Farmers we interviewed also indicated that the rain comes irregularly or at times, fails. There is a common agreement by farmers that years of sufficient rainfall, without hail or frost, providing good harvest have become less. Mostly increased variability and hazard are the new norm in recent decades \citep{wakjira2008diversifying}.\newline\linebreak
 We data-mined public domain satellite data and produced water-related spatio-temporal domains that was then cross-referenced with informant’s accounts of water availability for the same space and time.\newline
 }
 
@@ -126,7 +129,7 @@ Cumulative transpiration on a yearly basis highlights different years, and heter
 \blocknode{May rainfall deficit perceived water scarcity}{
 Farmers in upland Fogera associate the failure of the May rains with “drought”. For instance, a male farmer stated that, “When it is drought, it is the season of millet (teff).” A female farmer stressed this seasonal scarcity in water availability by insisting that “It is this drought that hinders crop production.” However, if the rain fails in May, it does not necessarily represent an inevitable drought year, in that rain can be available in the subsequent months. Nevertheless, rainfed maize and millet planting in May is a central concern as it provides food and fodder for season, buffering household food security and reducing stress on further crop-related decision-making.\newline\linebreak
 Rainfall variability has been one of the important factors impeding sustained implementation of intensification strategies, and particularly the use of fertilisers. Key informants indicated that rainfall variability has been discouraging the use of fertiliser due to risk of unsuccessful crop production which exacerbates farmers’ indebtedness besides losing production.i\newline\linebreak
-Vulnerability and capacity to respond to rainfall variability differs depending on individual natural, financial and social assets, as well as gender and socio-cultural variables. Farmers in Fogera have been attempting to respond to problems related to water availability based on adaptation, indigenous knowledge, practicing available options. Responses undertaken by individual farmers and communities include: adjusting planting times and cropping pattern; deploying traditional ecological knowledge of soil to mitigate risk associated with water availability, expanding traditional and motor-pump irrigation (Dessalegn and Merry 2014); and sponsoring religious figures to ameliorate the violation of spiritual sanctions that are transgressed in contemporary agricultural production.\newline\linebreak
+Vulnerability and capacity to respond to rainfall variability differs depending on individual natural, financial and social assets, as well as gender and socio-cultural variables. Farmers in Fogera have been attempting to respond to problems related to water availability based on adaptation, indigenous knowledge, practicing available options. Responses undertaken by individual farmers and communities include: adjusting planting times and cropping pattern; deploying traditional ecological knowledge of soil to mitigate risk associated with water availability, expanding traditional and motor-pump irrigation \citep{dessalegn2014is}; and sponsoring religious figures to ameliorate the violation of spiritual sanctions that are transgressed in contemporary agricultural production.\newline\linebreak
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -142,17 +145,6 @@ i.group \textcolor{blue}{group}=ta\_group \textcolor{blue}{input}=\$(g.mlist \te
 \textbf{\#and run an object-based classification analysis on them\newline}
 i.segment \textcolor{blue}{group}=ta\_group \textcolor{blue}{output}=seg\_ta \textcolor{blue}{threshold}=0.9 \textcolor{blue}{memory}=5000 \textcolor{blue}{iterations}=50 --o \& \newline}
 
-%Minted version Not working (+ compile needs -shell-escape)
-%\begin{minted}[frame=single,linenos,mathescape,fontsize=\small]{sh}
-%	#Select MODIS EVI archive
-%	i.group group=pca_group input=$(g.mlist type=rast pattern=*h28v07*EVI)
-%	#Run the PCA on the EVI archive
-%	i.pca input=pca_group output_prefix=pca_ percent=99 --o
-%	#As an example, you can select the 1$^{st}$ to the 9$^{th}$ PCA members
-%	i.group group=ta_group input=\$(g.mlist type=rast pattern=pca.[123456789] sep=,)
-%	#and run an object-based classification analysis on them
-%	i.segment group=ta_group output=seg_ta threshold=0.9 memory=5000 iterations=50 --o \&
-%\end{minted}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,16 +155,15 @@ i.segment \textcolor{blue}{group}=ta\_group \textcolor{blue}{output}=seg\_ta \te
 
 \blocknodew[($(funkcionalita)+(20,-1)$)]{35}{References}{
 \scriptsize
-\begin{center}
-\begin{tabular}{rp{0.9\textwidth}}
-[1] & Neteler \& Bowman \&  Landa \& Metz, 2012. Environment \& Modeling Software, 31:124-130\\{}
-[2] & GDAL, 2014. {\url {http://gdal.osgeo.org}}\\{}
-[3] & Chemin, 2012. Chapter 19, DOI: 10.5772/23571 ({\url {http://bit.ly/16qJOep}})\\{}
-\end{tabular}
-\end{center}
-\smallskip
-\hrulefill
-\vspace{-5pt}
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliographystyle{plain}
+\bibliography{poster}
+\endgroup
+
+%\smallskip
+%\hrulefill
+%\vspace{-5pt}
 
 \begin{center}
 \begin{tabular}{cp{0.9\textwidth}}
@@ -219,7 +210,7 @@ Object based classification (\textit{i.segment}) of the sum transpiration for ea
  	\begin{tabular}{p{0.5\textwidth}}
  	\includegraphics[width=0.45\textwidth]{./images/fig1}\\
  	\vspace{5mm}
- 	This perspective proposes that irrigated areas along the Mekong may not be transpiring as much as the recession cropping areas around Tonle Sap. Whether the transpiration in recession zones is actually used by crops all the time depends on the opportunity of farming intensification and risk avoidance.\newline 
+blablablablablabla
 	\end{tabular}
  	& 
  	\begin{tabular}{c}

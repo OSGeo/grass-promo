@@ -14,7 +14,8 @@ $(FILE).pdf: *.tex Makefile
 	done
 
 pdf: fig
-	pdflatex -shell-escape $(FILE).tex 
+	pdflatex -shell-escape $(FILE).tex
+	bibtex $(FILE) 
 
 fig: $(SVGPDF)
 
