@@ -1,0 +1,20 @@
+% taken from grass-promo/grassposter, written by me I think
+
+\documentclass{standalone}
+
+\usepackage[active,tightpage]{preview}
+\usepackage{listings}
+\PreviewEnvironment{lstlisting}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\input{listings_settings}
+
+\begin{document}
+
+\begin{lstlisting}[language=Python,linewidth=34.2em]
+run_command('r.neighbors', input='elevation',
+            output='elevation_smooth',
+            method='median', flags='c')
+\end{lstlisting}
+\end{document}  

@@ -1,0 +1,33 @@
+% taken from grass-promo/grassposter, written by me I think
+
+\documentclass{standalone}
+
+\usepackage[active,tightpage]{preview}
+\usepackage{listings}
+\PreviewEnvironment{lstlisting}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\input{listings_settings}
+
+\begin{document}
+
+\begin{lstlisting}[language=Python,linewidth=34.2em]
+#%module
+#% description: Adds the values of two rasters (A + B)
+#% keywords: raster
+#% keywords: algebra
+#% keywords: sum
+#%end
+#%option G_OPT_R_INPUT
+#% key: araster
+#% description: Raster A in the expression A + B
+#%end
+#%option G_OPT_R_INPUT
+#% key: braster
+#% description: Raster B in the expression A + B
+#%end
+#%option G_OPT_R_OUTPUT
+#%end
+\end{lstlisting}
+\end{document}

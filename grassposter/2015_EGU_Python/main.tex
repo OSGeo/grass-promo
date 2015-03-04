@@ -1,25 +1,39 @@
 \documentclass[innermargin=10mm]{tikzposter}
 \usepackage{enumitem}
-\geometry{paperwidth=63in,paperheight=42in}
+\geometry{paperwidth=197cm,paperheight=100cm}
 \usepackage{url}
+
+\usepackage{alltt}
+
+\newcommand{\inst}[1]{\hspace{2pt}$^{\mbox{\normalsize#1}}$\hspace{-7pt}}
+\newcommand{\instlist}[1]{\hspace{1pt}$^{#1}$}
 
 \title{
   \begin{minipage}{\textwidth}
     \centering
     Analyzing rasters, vectors and time series using new Python interfaces in GRASS GIS 7
+    \bigskip
   \end{minipage}
 }
 \author{
-V\'{a}clav Petr\'{a}\v{s} (1), Anna Petr\'{a}\v{s}ov\'{a} (1), Yann Chemin (2), Pietro Zambelli (3), Martin Landa (4), \\
-S\"{o}ren Gebbert (5), Markus Neteler (6), and Peter L\"{o}we (7)
+V\'{a}clav Petr\'{a}\v{s}\inst{1},
+Anna Petr\'{a}\v{s}ov\'{a}\inst{1},
+Yann Chemin\inst{2},
+Pietro Zambelli\inst{3},
+Martin Landa\inst{4},
+S\"{o}ren Gebbert\inst{5},
+Markus Neteler\inst{6}, and
+Peter L\"{o}we\inst{7}
 }
 \institute{
-\large  % using smaller size of font than default because the list is long
-(1) North Carolina State University, Raleigh, USA (wenzeslaus@gmail.com, vpetras@ncsu.edu), (2) International Water Management Institute,
-Pelawatta, Sri Lanka, (3) EURAC Research, Institute for Renewable Energy, Bolzano/Bozen, Italy, (4) Faculty of Civil
-Engineering, Czech Technical University in Prague, Czech Republic, (5) Th\"{u}nen Institute of Climate-Smart Agriculture,
-Braunschweig, Germany, (6) Research and Innovation Centre, Fondazione Edmund Mach, San Michele all'Adige, Italy, (7)
-German National Library for Science and Technology, Hanover, Germany
+\large
+\instlist{1}North Carolina State University, Raleigh, USA (wenzeslaus@gmail.com, vpetras@ncsu.edu),
+\instlist{2}International Water Management Institute, Pelawatta, Sri Lanka,
+\instlist{3}EURAC Research, Institute for Renewable Energy, Bolzano/Bozen, Italy,
+\instlist{4}Faculty of Civil Engineering, Czech Technical University in Prague, Czech Republic,
+\instlist{5}Th\"{u}nen Institute of Climate-Smart Agriculture, Braunschweig, Germany,
+\instlist{6}Research and Innovation Centre, Fondazione Edmund Mach, San Michele all'Adige, Italy,
+\instlist{7}German National Library for Science and Technology, Hanover, Germany
 }
 % \titlegraphic{}
 
@@ -31,6 +45,9 @@ German National Library for Science and Technology, Hanover, Germany
 }
 
 \definecolor{textcolor}{HTML}{000000}
+
+\definecolor{titleTextColor}{HTML}{2E652E}
+
 
 \definecolorpalette{sampleColorPalette} {
   \definecolor{colorOne}{HTML}{419041}
@@ -46,46 +63,49 @@ German National Library for Science and Technology, Hanover, Germany
 \useblockstyle{Default} % Basic
 % \usecolorpalette{e}
 
-
 \makeatletter
 \renewcommand\TP@maketitle{%
-    \begin{minipage}{0.2\linewidth}
+    \begin{minipage}{0.12\linewidth}
        \centering
        
+       \newcommand{\logowidth}{0.17\textwidth}
+       \newcommand{\logovspace}{\vspace{3ex}}
+       \newcommand{\logohspace}{\hspace{1ex}}
+       
        % TODO: get other logos
-       \includegraphics[width=0.2\textwidth]{ncstate}
-       \hspace{2ex}
-       \includegraphics[width=0.2\textwidth]{iwmi}
+       \includegraphics[width=\logowidth]{ncstate}
+       \logohspace
+       \includegraphics[width=\logowidth]{iwmi}
 
-       \vspace{4ex}
+       \logovspace
 
-       \includegraphics[width=0.2\textwidth]{ncstate}
-       \hspace{2ex}
-       \includegraphics[width=0.2\textwidth]{ctu_prague}
-       \hspace{2ex}
-       \includegraphics[width=0.2\textwidth]{ncstate}
+       \includegraphics[width=\logowidth]{ncstate}
+       \logohspace
+       \includegraphics[width=\logowidth]{ctu_prague}
+       \logohspace
+       \includegraphics[width=\logowidth]{ncstate}
 
-       \vspace{4ex}
+       \logovspace
 
-       \includegraphics[width=0.2\textwidth]{fem_cri}
-       \hspace{2ex}
-       \includegraphics[width=0.2\textwidth]{ncstate}
+       \includegraphics[width=\logowidth]{fem_cri}
+       \logohspace
+       \includegraphics[width=\logowidth]{ncstate}
     \end{minipage}%
     \hfill
-   \begin{minipage}{0.6\linewidth}
+   \begin{minipage}{0.74\linewidth}
         \centering
         \color{titlefgcolor}
-        {\bfseries  \sc {\fontsize{85}{60}\selectfont \@title}  \par}
+        {\textcolor{titleTextColor}{\textsf{\textbf{{\fontsize{85}{60}\selectfont \@title}}}}  \par}
         \vspace*{1em}
         {\huge \@author \par}
         \vspace*{1em}
         {\LARGE \@institute}
     \end{minipage}%
     \hfill
-    \begin{minipage}{0.2\linewidth}
+    \begin{minipage}{0.12\linewidth}
        \centering
-       \includegraphics[width=0.39\textwidth]{grass}\\
-       \LARGE \textbf{\textsf{GRASS GIS}}
+       \includegraphics[width=0.35\textwidth]{grass}\\
+       \Large \textbf{\textsf{GRASS GIS}}
     \end{minipage}
 }
 \setlength{\TP@visibletextwidth}{\textwidth-3\TP@innermargin}
@@ -97,12 +117,20 @@ German National Library for Science and Technology, Hanover, Germany
 
 \graphicspath{{images/}{logos/}{qrcodes/}{listings/}}
 
+% listings package does not work well with the tikzposter class,
+% so we need to include PDFs with code generated separately
+
 \newcommand{\partitle}[1]{\bigskip \textbf{#1}\\[1ex]}
 \newcommand{\parinlinetitle}[1]{\bigskip \textbf{#1}\ }
 \newcommand{\textfontsize}{\LARGE}
 
+% GRASS module
 \newcommand{\gmodule}[1]{\emph{#1}}
+
 \newcommand{\rafun}[1]{\texttt{#1()}}
+
+% GRASS Python package
+\newcommand{\pkg}[1]{\emph{#1}}
 
 \begin{document}
 \maketitle[width=0.95\textwidth]
@@ -150,7 +178,6 @@ German National Library for Science and Technology, Hanover, Germany
 % TODO: the two blocks below are just taken from testing poster
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{Highlights}{
 % \setlength{\parskip}{1em}
 \textfontsize
@@ -160,7 +187,6 @@ German National Library for Science and Technology, Hanover, Germany
 \item The framework supports code maintenance which results in long term preservation of algorithms.
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{Description}{
 % \textfontsize
@@ -223,11 +249,55 @@ GRASS GIS Python libraries documentation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \column{0.25}
 
-\block{Example of including code generated aside}{
 
-% listings package does not work well with the tikzposter class,
-% so we need to include pdf
-\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{sample}
+\block{GRASS Scripting library interface to GRASS GIS modules}{
+
+The same applies to \pkg{grass.pygrass} syntax:
+
+\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{script_doc_syntax}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{PyGRASS interface to GRASS GIS modules}{
+
+The same applies to \pkg{grass.pygrass} syntax:
+
+\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_doc_syntax}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Using documentation for GRASS GIS modules}{
+
+Documentation of GRASS GIS modules usually use Bash syntax for examples:
+
+\begin{alltt}
+r.neighbors input=elevation output=elevation\_smooth method=median -c
+\end{alltt}
+
+This can be easily rewritten to \pkg{grass.script} syntax:
+
+\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{script_doc_syntax}
+
+The same applies to \pkg{grass.script} syntax:
+
+\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_doc_syntax}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\pkg{ctypes} interface to C libraries}{
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Using NumPy}{
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Using IPython Notebook}{
 
 }
 
@@ -237,10 +307,24 @@ GRASS GIS Python libraries documentation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \column{0.25}
 
-\block{Sample block}{
-\textfontsize
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Automatic creation of GUI and CLI}{
 
-See abstact for topics which can become blocks.
+\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{grass_module}
+
+\includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{grass_module_gui}
+\includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{grass_module_cli}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{PyGRASS interface to C libraries}{
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Python script versus GRASS GIS module}{
+and running code from IDE
 }
 
 
@@ -250,11 +334,35 @@ See abstact for topics which can become blocks.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \column{0.25}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Temporal framework}{
+
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Testing the code}{
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{GRASS GIS Addons}{
+The GRASS GIS Addons ensures long-term preservation of the code.
+Well maintained modules in Addons can be moved to GRASS GIS itself.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Alternatives to Python}{
+GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
+and as subprocesses virtually any language as long as proper environment is set.
+
+The GRASS GIS library has a C API which is often used to create GRASS modules in C and C++.
+
+GRASS GIS modules can be used in R using \pkg{rgrass7} package.
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{Acknowledgements}{
-\begin{tabular}{cp{28em}}
+\begin{tabular}{cp{0.75\linewidth}}
 \raisebox{-.4\height}{
 \includegraphics[width=0.2\linewidth]{osgeo}
 }
@@ -263,12 +371,11 @@ See abstact for topics which can become blocks.
 \raisebox{-.8\height}{
 \includegraphics[width=0.2\linewidth]{google}
 }
-& Initial development of pygrass and gunittest packages was done during Google Summer of Code.
+& Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done during Google Summer of Code.
 \end{tabular}
 }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{References}{
 

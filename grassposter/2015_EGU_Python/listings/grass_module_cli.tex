@@ -1,0 +1,39 @@
+% taken from grass-promo/grassposter, written by me I think
+
+\documentclass{standalone}
+
+\usepackage[active,tightpage]{preview}
+\usepackage{listings}
+\PreviewEnvironment{lstlisting}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\input{listings_settings}
+
+\begin{document}
+
+% do some trim here, do more trim when including if needed
+\begin{lstlisting}[linewidth=34.2em]
+Description:
+ Adds the values of two rasters (A + B)
+
+Keywords:
+ raster, algebra, sum
+
+Usage:
+ r.plus araster=name braster=name output=name [--overwrite] [--help]
+   [--verbose] [--quiet] [--ui]
+
+Flags:
+ --o   Allow output files to overwrite existing files
+ --h   Print usage summary
+ --v   Verbose module output
+ --q   Quiet module output
+ --ui  Force launching GUI dialog
+
+Parameters:
+  araster   Name of input raster A in an expression A + B
+  braster   Name of input raster B in an expression A + B
+   output   Name for output raster map
+\end{lstlisting}
+\end{document}  
