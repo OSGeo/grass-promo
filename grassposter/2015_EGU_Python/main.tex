@@ -1,3 +1,6 @@
+% License: CC0
+% The license is CC0 but you can acknowledge the authors if you want to. See their names bellow.
+
 \documentclass[innermargin=10mm]{tikzposter}
 \usepackage{enumitem}
 \geometry{paperwidth=197cm,paperheight=100cm}
@@ -123,6 +126,10 @@ Peter L\"{o}we\inst{7}
 \newcommand{\partitle}[1]{\bigskip \textbf{#1}\\[1ex]}
 \newcommand{\parinlinetitle}[1]{\bigskip \textbf{#1}\ }
 \newcommand{\textfontsize}{\LARGE}
+\newcommand{\blocktitlewrap}[1]{\textsf{\textbf{\LARGE#1}}}
+% it is not possible (?) to change block title in the class, using wrapper
+% the command introduced using:
+%   sed -i 's/\\block{\([^}]*\)}/\\block{\\blocktitlewrap{\1}}/g' main.tex
 
 % GRASS module
 \newcommand{\gmodule}[1]{\emph{#1}}
@@ -178,7 +185,7 @@ Peter L\"{o}we\inst{7}
 % TODO: the two blocks below are just taken from testing poster
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Highlights}{
+\block{\blocktitlewrap{Highlights}}{
 % \setlength{\parskip}{1em}
 \textfontsize
 % \begin{itemize}
@@ -188,7 +195,7 @@ Peter L\"{o}we\inst{7}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Description}{
+\block{\blocktitlewrap{Description}}{
 % \textfontsize
 \Large
 \newcommand{\intropartitle}[1]{\parinlinetitle{#1}}
@@ -212,7 +219,7 @@ the testing framework allows not only to test GRASS GIS core functionality but a
 \intropartitle{Scientific impact}
 }
 
-\block{More information}{
+\block{\blocktitlewrap{More information}}{
 \newcommand{\qrcodewidth}{1\linewidth}
 \hspace{-0.02\linewidth}
 \begin{tabular}{lll}
@@ -250,7 +257,7 @@ GRASS GIS Python libraries documentation
 \column{0.25}
 
 
-\block{GRASS Scripting library interface to GRASS GIS modules}{
+\block{\blocktitlewrap{GRASS Scripting library interface to GRASS GIS modules}}{
 
 The same applies to \pkg{grass.pygrass} syntax:
 
@@ -259,7 +266,7 @@ The same applies to \pkg{grass.pygrass} syntax:
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{PyGRASS interface to GRASS GIS modules}{
+\block{\blocktitlewrap{PyGRASS interface to GRASS GIS modules}}{
 
 The same applies to \pkg{grass.pygrass} syntax:
 
@@ -268,7 +275,7 @@ The same applies to \pkg{grass.pygrass} syntax:
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Using documentation for GRASS GIS modules}{
+\block{\blocktitlewrap{Using documentation for GRASS GIS modules}}{
 
 Documentation of GRASS GIS modules usually use Bash syntax for examples:
 
@@ -287,17 +294,17 @@ The same applies to \pkg{grass.script} syntax:
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\pkg{ctypes} interface to C libraries}{
+\block{\blocktitlewrap{ctypes interface to C libraries}}{
 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Using NumPy}{
+\block{\blocktitlewrap{Using NumPy}}{
 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Using IPython Notebook}{
+\block{\blocktitlewrap{Using IPython Notebook}}{
 
 }
 
@@ -308,7 +315,7 @@ The same applies to \pkg{grass.script} syntax:
 \column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Automatic creation of GUI and CLI}{
+\block{\blocktitlewrap{Automatic creation of GUI and CLI}}{
 
 \includegraphics[width=\linewidth, clip, trim=0 0 0 0]{grass_module}
 
@@ -318,12 +325,12 @@ The same applies to \pkg{grass.script} syntax:
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{PyGRASS interface to C libraries}{
+\block{\blocktitlewrap{PyGRASS interface to C libraries}}{
 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Python script versus GRASS GIS module}{
+\block{\blocktitlewrap{Python script versus GRASS GIS module}}{
 and running code from IDE
 }
 
@@ -335,23 +342,23 @@ and running code from IDE
 \column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Temporal framework}{
+\block{\blocktitlewrap{Temporal framework}}{
 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Testing the code}{
+\block{\blocktitlewrap{Testing the code}}{
 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{GRASS GIS Addons}{
+\block{\blocktitlewrap{GRASS GIS Addons}}{
 The GRASS GIS Addons ensures long-term preservation of the code.
 Well maintained modules in Addons can be moved to GRASS GIS itself.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Alternatives to Python}{
+\block{\blocktitlewrap{Alternatives to Python}}{
 GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
 and as subprocesses virtually any language as long as proper environment is set.
 
@@ -361,23 +368,34 @@ GRASS GIS modules can be used in R using \pkg{rgrass7} package.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{Acknowledgements}{
-\begin{tabular}{cp{0.75\linewidth}}
-\raisebox{-.4\height}{
-\includegraphics[width=0.2\linewidth]{osgeo}
-}
-& GRASS GIS is a OSGeo project. OSGeo provides infrastructure for websites and source code management.
-\\
-\raisebox{-.8\height}{
-\includegraphics[width=0.2\linewidth]{google}
-}
-& Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done during Google Summer of Code.
-\end{tabular}
+\block{\blocktitlewrap{Acknowledgements}}{
+
+\newcommand{\listhspace}{\hspace{0.005\linewidth}}
+\newcommand{\listlogowidth}{0.22\linewidth}
+\newcommand{\listtextwidth}{0.76\linewidth}
+
+\begin{minipage}{\listlogowidth}
+\includegraphics[width=\linewidth]{osgeo}
+\end{minipage}
+\listhspace
+\begin{minipage}{\listtextwidth}
+GRASS GIS is a OSGeo project. OSGeo provides infrastructure for websites and source code management.
+\end{minipage}
+
+\bigskip
+
+\begin{minipage}{\listlogowidth}
+\includegraphics[width=\linewidth]{google}
+\end{minipage}
+\listhspace
+\begin{minipage}{\listtextwidth}
+Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done during Google Summer of Code.
+\end{minipage}
 }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{References}{
+\block{\blocktitlewrap{References}}{
 
 % disable the title
 \renewcommand{\section}[2]{}
