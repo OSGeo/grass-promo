@@ -58,39 +58,42 @@ $^5$ TICSA, Germany, $^6$ EURAC, Italy, $^7$ GNLST, Germany, $^8$ EC-JRC, Italy}
 \small \noindent Geographical Information Systems (GIS) is known for its capacity 
 to spatially enhance the capacity of man- agement of natural resources. 
 While being often used as an analytical tool, it also represents a collaborative 
-scientific platform to develop new algorithms. GRASS GIS \cite{neteler2012grass}, 
-a free and open source GIS, is used by many scientists directly or through other 
-projects such as R or QGIS to perform geoprocessing tasks. Thus, a large number 
-of scientific geospatial computations depend on quality and correct functionality 
-of GRASS GIS. Integrating scientific algorithms into GRASS GIS helps to preserve 
-reproducibility of scientific results over time as the original author designed 
-it \cite{rocchini2012let}. Moreover, subsequent improvements are tracked in the 
-source code versioning system and are immediately available to the public (Petras, 2014). 
-Thus, GRASS GIS acts as a repository of scientific peer-reviewed code and 
-algorithm/knowledge hub for future generation of scientists.\vspace{5mm}\newline
+scientific platform to develop new algorithms. GRASS GIS (Neteler et al., 2012 
+\cite{neteler2012grass}), a free and open source GIS, is used by many scientists 
+directly or through other projects such as R or QGIS to perform geoprocessing tasks. 
+Thus, a large number of scientific geospatial computations depend on quality and 
+correct functionality of GRASS GIS. Integrating scientific algorithms into GRASS GIS 
+helps to preserve reproducibility of scientific results over time as the original author 
+designed it (Rocchini \& Neteler, 2012 \cite{rocchini2012let}). Moreover, subsequent 
+improvements are tracked in the source code versioning system and are immediately 
+available to the public (Petras, 2014 \cite{Petras2014}). Thus, GRASS GIS acts as a 
+repository of scientific peer-reviewed code and algorithm/knowledge hub for future 
+generation of scientists.\vspace{5mm}\newline
 
 With the various types of actual ET models being developed in the last 20 years, 
 it becomes necessary to inter-compare methods. Most of already published ETa models 
 comparisons address few number of models, and small to medium areas 
-(\cite{chemin2012distributed}; \cite{gao2008intercomparison}; \cite{garcia2007comparison}; 
-\cite{suleiman2008intercomparison}; \cite{timmermans2007intercomparison}). 
+(Chemin, 2014 \cite{chemin2012distributed}; Gao and Long, 2008 \cite{gao2008intercomparison}; 
+Garcia et al., 2007 \cite{garcia2007comparison}; Suleiman et al., 2008
+\cite{suleiman2008intercomparison}; Timmermans et al., 2007 \cite{timmermans2007intercomparison}). 
 With the large amount of remote sensing data covering the Earth, and the daily 
 information available for the past ten years (i.e. Aqua/Terra-MODIS) for each pixel 
 location, it becomes paramount to have a more complete comparison, 
 in space and time.\vspace{5mm}\newline
 
 To address this new experimental requirement, a distributed computing framework was 
-designed, and created \cite{chemin2012distributed}. The design architecture was built 
-from original satellite datasets to various levels of processing until reaching the 
-requirement of various ETa models input dataset. Each input product is computed once 
-and reused in all ETa models requiring such input. This permits standardization of 
+designed, and created (Chemin, 2012 \cite{chemin2012distributed}). 
+The design architecture was built from original satellite datasets to various levels 
+of processing until reaching the requirement of various ETa models input dataset. 
+Each input product is computed once and reused in all ETa models requiring such input. 
+This permits standardization of 
 inputs as much as possible to zero-in variations of models to the models 
 internals/specificities. All of the ET models are available in the new GRASS GIS 
 version 7 as imagery modules and replicability is complete for future 
 research.\vspace{5mm}\newline
 
 A set of modules for multiscale analysis of landscape structure was added in 1992 
-by \cite{baker1992r} who developed the r.le model similar to 
+by Baker et al. \cite{baker1992r}, who developed the r.le model similar to 
 FRAGSTATS \cite{mcgarigal1995fragstats}, see manual. The modules were gradually 
 improved to become r.li in 2006. Further development continued, with a significant 
 speed up (Trac1, 2014) and new interactive user interface.\vspace{5mm}\newline
@@ -100,18 +103,19 @@ of GRASS GIS and is even taught at geospatial modeling courses, for example
 http://courses.ncsu.edu/gis582/common/grass/interpolation\_2.html.\vspace{5mm}\newline
 
 GRASS GIS entails several modules that constitute the result of active research on 
-natural hazard. The r.sim.water simulation model (Mitas and Mitasova, 1998) for 
-overland flow under rainfall excess conditions was integrated into the Emergency 
-Routing Decision Planning system as a WPS \cite{raghavan2014deploying}. It was also 
-modified by Petrasova et al. (2014) and is now part of a specialised software 
-called Tangible Landscape (previously Tangible GIS), which also incorporated the 
-r.damflood module.\vspace{5mm}\newline
+natural hazard. The r.sim.water simulation model (Mitas and Mitasova, 1998 \cite{Mitas1998b}) 
+for overland flow under rainfall excess conditions was integrated into the Emergency 
+Routing Decision Planning system as a WPS (Raghavan et al., 2014 \cite{raghavan2014deploying}). 
+It was also modified by Petrasova et al., 2014 \cite{Petrasova2014} and is now part of a 
+specialised software called Tangible Landscape (previously Tangible GIS), which also 
+incorporated the r.damflood module.\vspace{5mm}\newline
 
-The wildfire simulation toolset, firstly developed by \cite{xu1994simulating}, 
+The wildfire simulation toolset, firstly developed by Xu, 1994 \cite{xu1994simulating}, 
 implementing Rothermel’s model \cite{Rothermel1983how}, available through the GRASS 
 functions r.ros and r.spread, is object of active research. It has been extensively 
-tested and recently adapted to European fuel types (\cite{rodriguez2013data} ; 
-\cite{derigo2013architecture} ; Di Leo et al., 2013).
+tested and recently adapted to European fuel types (Rodriguez-Aseretto et al.,
+2013 \cite{rodriguez2013data} ; de Rigo et al., 2013 \cite{derigo2013architecture} ; 
+Di Leo et al., 2013 \cite{2013_DiLeo_etAl}).
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
