@@ -23,8 +23,10 @@
 % \setthirdcolor{red!80!black}
 
 \title{\bigskip GRASS GIS: a peer-reviewed scientific platform\\ and future research repository\bigskip}
-\author{Yann Chemin$^4$, Vaclav Petráš$^3$, Anna Petrášova$^3$, Martin Landa$^2$, Soeren Gebbert$^5$, \\Pietro Zambelli$^6$, Markus Neteler$^1$, Peter Loewe$^7$, Magherita di Leo$^8$\\ \bigskip
-$^1$ CRI, FEM, Italy, $^2$ CTU in Prague, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri Lanka, $^5$ TICSA, Germany, $^6$ EURAC, Italy, $^7$ GNLST, Germany, $^8$ EC-JRC, Itlay}
+\author{Yann Chemin$^4$, Vaclav Petráš$^3$, Anna Petrášova$^3$, Martin Landa$^2$, Soeren Gebbert$^5$, 
+\\Pietro Zambelli$^6$, Markus Neteler$^1$, Peter Loewe$^7$, Magherita di Leo$^8$\\ \bigskip
+$^1$ CRI, FEM, Italy, $^2$ CTU in Prague, Czech Republic, $^3$ NCSU, USA, $^4$ IWMI, Sri Lanka, 
+$^5$ TICSA, Germany, $^6$ EURAC, Italy, $^7$ GNLST, Germany, $^8$ EC-JRC, Italy}
 
 \usetemplate{1}
 \setinstituteshift{1}
@@ -42,22 +44,74 @@ $^1$ CRI, FEM, Italy, $^2$ CTU in Prague, Czech Republic, $^3$ NCSU, USA, $^4$ I
 \titleblock{90}{1}
 % \setblocktitleheight{1}
 
-\addlogo[north west]{(2,-1)}{9cm}{svg_images/Grass_GIS.pdf}
+\addlogo[north west]{(2,-1)}{9cm}{images/Grass_GIS}
 %Please insert your institution logo here
-\addlogo[north east]{(-2,-2.5)}{4cm}{svg_images/logo_FEM_CRI.pdf}
-\addlogo[north east]{(-2,-5.5)}{4cm}{svg_images/NC_State_Seal.pdf}
-\addlogo[north east]{(-8,-2.5)}{4cm}{images/Logo_cvut.jpg}
-\addlogo[north east]{(-8,-6.5)}{4cm}{svg_images/IWMI_logo.pdf}
+\addlogo[north east]{(-2,-2.5)}{4cm}{images/logo_FEM_CRI}
+\addlogo[north east]{(-2,-5.5)}{4cm}{images/NC_State_Seal}
+\addlogo[north east]{(-8,-2.5)}{4cm}{images/Logo_cvut}
+\addlogo[north east]{(-8,-6.5)}{4cm}{images/IWMI_logo}
+\addlogo[north east]{(-2,-10.5)}{4cm}{images/logo_ec-jrc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Abstract}{
-\small \noindent Geographical Information Systems (GIS) is known for its capacity to spatially enhance the capacity of man- agement of natural resources. While being often used as an analytical tool, it also represents a collaborative scientific platform to develop new algorithms. GRASS GIS \cite{neteler2012grass}, a free and open source GIS, is used by many scientists directly or through other projects such as R or QGIS to perform geoprocessing tasks. Thus, a large number of scientific geospatial computations depend on quality and correct functionality of GRASS GIS. Integrating scientific algorithms into GRASS GIS helps to preserve reproducibility of scientific results over time as the original author designed it \cite{rocchini2012let}. Moreover, subsequent improvements are tracked in the source code versioning system and are immediately available to the public (Petras, 2014). Thus, GRASS GIS acts as a repository of scientific peer-reviewed code and algorithm/knowledge hub for future generation of scientists.\vspace{5mm}\newline
-With the various types of actual ET models being developed in the last 20 years, it becomes necessary to inter-compare methods. Most of already published ETa models comparisons address few number of models, and small to medium areas (\cite{chemin2012distributed}; \cite{gao2008intercomparison}; \cite{garcia2007comparison}; \cite{suleiman2008intercomparison}; \cite{timmermans2007intercomparison}). With the large amount of remote sensing data covering the Earth, and the daily information available for the past ten years (i.e. Aqua/Terra-MODIS) for each pixel location, it becomes paramount to have a more complete comparison, in space and time.\vspace{5mm}\newline
-To address this new experimental requirement, a distributed computing framework was designed, and created \cite{chemin2012distributed}. The design architecture was built from original satellite datasets to various levels of processing until reaching the requirement of various ETa models input dataset. Each input product is computed once and reused in all ETa models requiring such input. This permits standardization of inputs as much as possible to zero-in variations of models to the models internals/specificities. All of the ET models are available in the new GRASS GIS version 7 as imagery modules and replicability is complete for future research.\vspace{5mm}\newline
-A set of modules for multiscale analysis of landscape structure was added in 1992 by \cite{baker1992r} who developed the r.le model similar to FRAGSTATS \cite{mcgarigal1995fragstats}, see manual. The modules were gradually improved to become r.li in 2006. Further development continued, with a significant speed up (Trac1, 2014) and new interactive user interface.\vspace{5mm}\newline
-The module v.surf.rst for spatial interpolation was developed approximately 12 years ago, since then it was improved several times (Trac2, 2014). It is an important part of GRASS GIS and is even taught at geospatial modeling courses, for example http://courses.ncsu.edu/gis582/common/grass/interpolation\_2.html.\vspace{5mm}\newline
-GRASS GIS entails several modules that constitute the result of active research on natural hazard. The r.sim.water simulation model (Mitas and Mitasova, 1998) for overland flow under rainfall excess conditions was integrated into the Emergency Routing Decision Planning system as a WPS \cite{raghavan2014deploying}. It was also modified by Petrasova et al. (2014) and is now part of a specialised software called Tangible Landscape (previously Tangible GIS), which also incorporated the r.damflood module.\vspace{5mm}\newline
-The wildfire simulation toolset, firstly developed by \cite{xu1994simulating}, implementing Rothermel’s model \cite{Rothermel1983how}, available through the GRASS functions r.ros and r.spread, is object of active research. It has been exten- sively tested and recently adapted to European fuel types (\cite{rodriguez2013data} ; \cite{derigo2013architecture} ; Di Leo et al., 2013).
+\blocknode{Abstract}
+{
+\small \noindent Geographical Information Systems (GIS) is known for its capacity 
+to spatially enhance the capacity of man- agement of natural resources. 
+While being often used as an analytical tool, it also represents a collaborative 
+scientific platform to develop new algorithms. GRASS GIS \cite{neteler2012grass}, 
+a free and open source GIS, is used by many scientists directly or through other 
+projects such as R or QGIS to perform geoprocessing tasks. Thus, a large number 
+of scientific geospatial computations depend on quality and correct functionality 
+of GRASS GIS. Integrating scientific algorithms into GRASS GIS helps to preserve 
+reproducibility of scientific results over time as the original author designed 
+it \cite{rocchini2012let}. Moreover, subsequent improvements are tracked in the 
+source code versioning system and are immediately available to the public (Petras, 2014). 
+Thus, GRASS GIS acts as a repository of scientific peer-reviewed code and 
+algorithm/knowledge hub for future generation of scientists.\vspace{5mm}\newline
+
+With the various types of actual ET models being developed in the last 20 years, 
+it becomes necessary to inter-compare methods. Most of already published ETa models 
+comparisons address few number of models, and small to medium areas 
+(\cite{chemin2012distributed}; \cite{gao2008intercomparison}; \cite{garcia2007comparison}; 
+\cite{suleiman2008intercomparison}; \cite{timmermans2007intercomparison}). 
+With the large amount of remote sensing data covering the Earth, and the daily 
+information available for the past ten years (i.e. Aqua/Terra-MODIS) for each pixel 
+location, it becomes paramount to have a more complete comparison, 
+in space and time.\vspace{5mm}\newline
+
+To address this new experimental requirement, a distributed computing framework was 
+designed, and created \cite{chemin2012distributed}. The design architecture was built 
+from original satellite datasets to various levels of processing until reaching the 
+requirement of various ETa models input dataset. Each input product is computed once 
+and reused in all ETa models requiring such input. This permits standardization of 
+inputs as much as possible to zero-in variations of models to the models 
+internals/specificities. All of the ET models are available in the new GRASS GIS 
+version 7 as imagery modules and replicability is complete for future 
+research.\vspace{5mm}\newline
+
+A set of modules for multiscale analysis of landscape structure was added in 1992 
+by \cite{baker1992r} who developed the r.le model similar to 
+FRAGSTATS \cite{mcgarigal1995fragstats}, see manual. The modules were gradually 
+improved to become r.li in 2006. Further development continued, with a significant 
+speed up (Trac1, 2014) and new interactive user interface.\vspace{5mm}\newline
+The module v.surf.rst for spatial interpolation was developed approximately 12 years 
+ago, since then it was improved several times (Trac2, 2014). It is an important part 
+of GRASS GIS and is even taught at geospatial modeling courses, for example 
+http://courses.ncsu.edu/gis582/common/grass/interpolation\_2.html.\vspace{5mm}\newline
+
+GRASS GIS entails several modules that constitute the result of active research on 
+natural hazard. The r.sim.water simulation model (Mitas and Mitasova, 1998) for 
+overland flow under rainfall excess conditions was integrated into the Emergency 
+Routing Decision Planning system as a WPS \cite{raghavan2014deploying}. It was also 
+modified by Petrasova et al. (2014) and is now part of a specialised software 
+called Tangible Landscape (previously Tangible GIS), which also incorporated the 
+r.damflood module.\vspace{5mm}\newline
+
+The wildfire simulation toolset, firstly developed by \cite{xu1994simulating}, 
+implementing Rothermel’s model \cite{Rothermel1983how}, available through the GRASS 
+functions r.ros and r.spread, is object of active research. It has been extensively 
+tested and recently adapted to European fuel types (\cite{rodriguez2013data} ; 
+\cite{derigo2013architecture} ; Di Leo et al., 2013).
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,7 +146,7 @@ The wildfire simulation toolset, firstly developed by \cite{xu1994simulating}, i
 \end{minipage}
 
 \begin{minipage}{0.15\textwidth}
-\includegraphics[width=0.7in]{./svg_images/public_domain_logo.pdf}
+\includegraphics[width=0.7in]{./images/public_domain_logo}
 \end{minipage}
 
 \begin{minipage}{0.3\textwidth}
