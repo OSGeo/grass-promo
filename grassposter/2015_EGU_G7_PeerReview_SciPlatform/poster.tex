@@ -82,7 +82,10 @@ generation of scientists.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Landform detection: Geomorphons}{
 
-\gamodule{r.geomorphon}
+Jasiewicz and Stepinski \cite{jasiewicz2013geomorphons} developed a method and module \gamodule{r.geomorphon}
+which provide orientation-invariant and relief-invariant method to classify landforms
+in a scale-independent way.
+Ashtekar et al. \cite{ashtekar2014digital} used geomorphons to study soil properties in northwestern South America.
 
 \begin{minipage}{0.5\linewidth}
 \includegraphics[width=\textwidth]{geomorphon}
@@ -92,6 +95,24 @@ Geomorphons for part of Yakima Training Center (area 5x3~km, USA)
 \begin{minipage}{0.5\linewidth}
 \includegraphics[width=\textwidth]{geomorphon_tangible_high_tatras}
 Ridges and valleys detected on the sand physical model of High Tatras (Slovakia) using \gamodule{r.geomorphon} integrated in Tangible Landscape system
+\end{minipage}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Spatial interpolation}{
+The module v.surf.rst for spatial interpolation was developed approximately 12 years 
+ago, since then it was improved several times (Trac2, 2014). It is now an important part 
+of GRASS GIS and is even taught at geospatial modeling courses, for example 
+\url{http://courses.ncsu.edu/gis582/common/grass/interpolation_2.html}.
+
+\begin{minipage}{0.5\linewidth}
+\includegraphics[width=\textwidth]{interpolation_precip_vvolrst}
+Precipitation interpolated from meteorological stations in 3D space using \gmodule{v.vol.rst} in the area of North Carolina mountains (USA)
+\end{minipage}
+~
+\begin{minipage}{0.5\linewidth}
+\includegraphics[width=\textwidth]{elevation_lidar}
+Digital elevation model interpolated from lidar point cloud using \gmodule{v.surf.rst}. Data are showing tillage in an agricultural field near Raleigh (North Carolina, USA)
 \end{minipage}
 }
 
@@ -131,12 +152,19 @@ research.\vspace{5mm}\newline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \startthirdcolumn
 
-\blocknode{}{
+\blocknode{Landscape structure}{
 A set of modules for multiscale analysis of landscape structure was added in 1992 
 by Baker et al. \cite{baker1992r}, who developed the r.le model similar to 
 FRAGSTATS \cite{mcgarigal1995fragstats}, see manual. The modules were gradually 
 improved to become \textit{r.li} in 2006. Further development continued, with a significant 
 speed up (Trac1, 2014) and new interactive user interface.
+Rocchini et al. \cite{rocchini2013calculating} used \gmodule{r.li} modules to implement
+high level tool for calculating landscape diversity.
+
+\begin{minipage}{0.5\linewidth}
+\includegraphics[width=\textwidth, trim={0 180 0 0}, clip]{rdiversity}
+Landscape diversity according to shannon index in near Charlotte (North Carolina, USA).
+\end{minipage}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -180,31 +208,23 @@ Wildfire simulation in Tangible Landscape environment
 \end{minipage}
 }
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \startfourthcolumn
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Spatial interpolation}{
-The module v.surf.rst for spatial interpolation was developed approximately 12 years 
-ago, since then it was improved several times (Trac2, 2014). It is now an important part 
-of GRASS GIS and is even taught at geospatial modeling courses, for example 
-\url{http://courses.ncsu.edu/gis582/common/grass/interpolation_2.html}.
-
-\begin{minipage}{0.5\linewidth}
-\includegraphics[width=\textwidth]{interpolation_precip_vsurfrst}
-Precipitation interpolated from meteorological stations in 3D space using \gmodule{v.vol.rst}
-\end{minipage}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Conclusions}{
-
+\begin{itemize}
+ \item Algorithms and models once included into GRASS GIS are still available.
+ \item GRASS GIS development team takes care of API related updates and operating system related changes.
+ \item Scientists are using highly specialized tools implemented by other people when having both scientific publication and source code at hand.
+ \item New research and tools is build upon the existing one.
+\end{itemize}
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{References}{
-\smallskip
 \scriptsize
 
 \begingroup
@@ -213,44 +233,61 @@ Precipitation interpolated from meteorological stations in 3D space using \gmodu
 \bibliography{poster}
 \endgroup
 
-\subsubsection*{Acknowledgement}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Acknowledgement}{
 
 Matthew Horvath for \emph{Spill impacts from coal ash pond using GRASS GIS}
 % http://www4.ncsu.edu/~jcfounta/Summer14Posters/horvath.pdf
 
 Eva Stopkova for physical model of High Tatras.
+}
 
-\hrulefill
-\vspace{-5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{More information}{
+
+% \hrulefill
+% \vspace{-5pt}
+
+\newcommand{\qrcodesize}{0.05\textwidth}
+
+% TODO: add proper QR codes
 
 \begin{center}
 \begin{tabular}{c}
-\hspace{5mm}
-\begin{minipage}{0.2\textwidth}
-\includegraphics[width=0.5in]{./images/grass_qr.pdf}
-\end{minipage}
 
-\begin{minipage}{0.25\textwidth}
-\small {\url{grasswiki.osgeo.org}}
+% \hspace{5mm}
+
+\begin{minipage}{\qrcodesize}
+\includegraphics[width=\textwidth]{./images/grass_qr.pdf}
 \end{minipage}
 
 \begin{minipage}{0.15\textwidth}
-\href{http://creativecommons.org/licenses/by-sa/4.0/}{\includegraphics[width=0.7in]{ccbysa}}
-\end{minipage}
-
-\begin{minipage}{0.3\textwidth}
 \small {\url{grass.osgeo.org}}
 \end{minipage}
 
+\begin{minipage}{\qrcodesize}
+\includegraphics[width=\textwidth]{./images/grass_qr.pdf}
+\end{minipage}
+
 \begin{minipage}{0.2\textwidth}
-\includegraphics[width=0.5in]{./images/grass_qr.pdf}
+\small {\url{grasswiki.osgeo.org}}
+\end{minipage}
+
+\begin{minipage}{0.1\textwidth}
+\href{http://creativecommons.org/licenses/by-sa/4.0/}{\includegraphics[width=\textwidth]{ccbysa}}
+\end{minipage}
+
+\begin{minipage}{0.35\textwidth}
+\small This poster is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 \end{minipage}
 
 \end{tabular}
 \end{center}
 
 }
-
 
 \end{tikzpicture}
 
