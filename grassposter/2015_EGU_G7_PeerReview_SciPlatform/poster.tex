@@ -46,7 +46,7 @@ GRASS GIS: a peer-reviewed scientific platform and future research repository
 \includegraphics[height=\grasslogoheight]{osgeo_project}
 \end{minipage}
 \hfill
-\begin{minipage}{0.16\linewidth}
+\begin{minipage}{0.2\linewidth}
 \setlength{\baselineskip}{120pt}
 \begin{flushright}
 \includegraphics[height=\instlogoheight]{iwmi}
@@ -54,6 +54,8 @@ GRASS GIS: a peer-reviewed scientific platform and future research repository
 \includegraphics[height=\instlogoheight]{ncstate}
 ~
 \includegraphics[height=\instlogoheight]{ctu_prague}
+~
+\includegraphics[height=\instlogoheight]{ti}
 ~
 \includegraphics[height=\instlogoheight]{eurac}
 ~
@@ -226,11 +228,30 @@ Biological fraction of 2014 ET (cumul. mm/y), Tonle Sap, Cambodia.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Temporal framework (TGRASS)}}{
+\block{\blocktitlewrap{GRASS as Temporal GIS}}{
+The time dimension was introduced in GRASS GIS version 7 for raster, 3D raster and
+vector map layers, transforming it into a full featured temporal GIS (Gebbert and Pebesma, 2014 \cite{Gebbert20141}).
+Time series of map layers are managed in space time datasets, a new data type in GRASS GIS.
+Based on the GRASS GIS Temporal Framework, more than 45 modules were implemented to manage, analyze, process
+and visualize space time datasets. The temporal enabled GRASS GIS is able to efficiently
+handle more than 100.000 map layers. It was used to analyze the
+European Climate Assessment \& Dataset ECA\&D (Haylock et al. \cite{Haylock2008_climate_series})
+for climate change indicators.
 
-Described some applications
-
-% TODO: images width captions
+\begin{minipage}{0.5\linewidth}
+\includegraphics[scale=0.5]{images/summer_mean_temp_slope.pdf}
+The linear regression slope computed with t.rast.series of the temperate climate zone in the European Union  
+for summer season from 1950 - 2011 (Gebbert and Pebesma, 2014 \cite{Gebbert20141}). Red color
+indicates rising temperature, blue indicates falling temperature. Units are degree Celsius per year.
+\end{minipage}
+~
+\begin{minipage}{0.5\linewidth}
+\includegraphics[scale=1.25]{images/Seasonal_temperature_trend_Europe_1950_2010.pdf}
+Seasonal mean temperature trend for the temperate climate zone of the European Union 
+(Gebbert and Pebesma, 2014 \cite{Gebbert20141}). The modules t.rast.aggregate, 
+t.rast.univar and the open source statistical software system R
+were used to create this plot.
+\end{minipage}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
