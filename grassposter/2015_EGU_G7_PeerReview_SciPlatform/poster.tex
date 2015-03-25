@@ -172,12 +172,12 @@ Ridges and valleys detected on the sand physical model of High Tatras (Slovakia)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Natural Hazards: Wildfire Spread}}{
-The wildfire simulation toolset, firstly developed by Xu, 1994 \cite{xu1994simulating}, 
-implementing Rothermel’s model \cite{Rothermel1983how}, available through the GRASS 
-functions \textit{r.ros} and \textit{r.spread}, is object of active research. It has been extensively 
+The wildfire simulation toolset, firstly developed by Xu, 1994~\cite{xu1994simulating}, 
+implementing Rothermel’s model~\cite{Rothermel1983how}, available through the GRASS 
+functions \gmodule{r.ros} and \gmodule{r.spread}, is object of active research. It has been extensively 
 tested and recently adapted to European fuel types (Rodriguez-Aseretto et al.,
-2013 \cite{rodriguez2013data}; de Rigo et al., 2013 \cite{derigo2013architecture} ; 
-Di Leo et al., 2013 \cite{2013_DiLeo_etAl}).
+2013~\cite{rodriguez2013data}; de Rigo et al., 2013~\cite{derigo2013architecture};
+Di Leo et al., 2013~\cite{2013_DiLeo_etAl}).
 
 \begin{minipage}{0.5\linewidth}
 \includegraphics{fire}
@@ -209,16 +209,16 @@ for climate change indicators.
 
 \begin{minipage}{0.5\linewidth}
 \includegraphics[scale=0.5]{images/summer_mean_temp_slope.pdf}
-The linear regression slope computed with t.rast.series of the temperate climate zone in the European Union  
+The linear regression slope computed with t.rast.series of the temperate climate zone in the European Union
 for summer season from 1950 - 2011 (Gebbert and Pebesma, 2014 \cite{Gebbert20141}). Red color
 indicates rising temperature, blue indicates falling temperature. Units are degree Celsius per year.
 \end{minipage}
 ~
 \begin{minipage}{0.5\linewidth}
 \includegraphics[scale=1.25]{images/Seasonal_temperature_trend_Europe_1950_2010.pdf}
-Seasonal mean temperature trend for the temperate climate zone of the European Union 
-(Gebbert and Pebesma, 2014 \cite{Gebbert20141}). The modules t.rast.aggregate, 
-t.rast.univar and the open source statistical software system R
+Seasonal mean temperature trend for the temperate climate zone of the European Union
+(Gebbert and Pebesma, 2014 \cite{Gebbert20141}). The modules \gmodule{t.rast.aggregate},
+\gmodule{t.rast.univar} and the open source statistical software system R
 were used to create this plot.
 \end{minipage}
 }
@@ -279,7 +279,8 @@ Garcia et al., 2007 \cite{garcia2007comparison}; Suleiman et al., 2008
 With the large amount of remote sensing data covering the Earth, and the daily 
 information available for the past ten years (i.e. Aqua/Terra-MODIS) for each pixel 
 location, it becomes paramount to have a more complete comparison, 
-in space and time.\newline
+in space and time.
+\newline
 
 \begin{minipage}{0.5\linewidth}
 \begin{center}
@@ -319,7 +320,7 @@ research.
 A set of modules for multiscale analysis of landscape structure was added in 1992 
 by Baker et al. \cite{baker1992r}, who developed the r.le model similar to 
 FRAGSTATS \cite{mcgarigal1995fragstats}, see manual. The modules were gradually 
-improved to become \textit{r.li} in 2006. Further development continued, with a significant 
+improved to become \gmodule{r.li} in 2006. Further development continued, with a significant 
 speed up (Trac1, 2014) and new interactive user interface.
 Rocchini et al. \cite{rocchini2013calculating} used \gmodule{r.li} modules to implement
 high level tool for calculating landscape diversity.
