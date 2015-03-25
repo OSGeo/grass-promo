@@ -229,6 +229,24 @@ GRASS GIS Python libraries documentation
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{GRASS GIS Addons}}{
+The GRASS GIS Addons ensures long-term preservation of the code.
+Well maintained modules in Addons can be moved to GRASS GIS itself.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Alternatives to Python}}{
+GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
+and as subprocesses virtually any language as long as proper environment is set.
+
+The GRASS GIS library has a C API which is often used to create GRASS modules in C and C++.
+
+GRASS GIS modules can be used in R using \pkg{rgrass7} package.
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -312,6 +330,10 @@ The same applies to \pkg{grass.script} syntax:
 and running code from IDE
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Testing the code}}{
+\cite{Petras2014}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -320,29 +342,12 @@ and running code from IDE
 \column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Temporal framework}}{
-\cite{Gebbert2014}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Testing the code}}{
-\cite{Petras2014}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{GRASS GIS Addons}}{
-The GRASS GIS Addons ensures long-term preservation of the code.
-Well maintained modules in Addons can be moved to GRASS GIS itself.
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Alternatives to Python}}{
-GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
-and as subprocesses virtually any language as long as proper environment is set.
-
-The GRASS GIS library has a C API which is often used to create GRASS modules in C and C++.
-
-GRASS GIS modules can be used in R using \pkg{rgrass7} package.
+\block{\blocktitlewrap{GRASS GIS Temporal Framework}}{
+The GRASS GIS Temporal Framework implements the temporal GIS functionality of GRASS GIS 
+and provides a Python API to implement spatio-temporal processing modules. 
+The framework introduces space time datasets that represent time series of raster, 
+3D raster or vector maps. Some API examples:
+\includegraphics[width=1\linewidth, clip, trim=0 0 0 0]{tgrass_examples}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

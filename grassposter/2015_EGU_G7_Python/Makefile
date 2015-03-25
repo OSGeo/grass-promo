@@ -6,10 +6,10 @@ SVGDIR = svg_images
 ODPDIR = odp_slides
 TEXDIR = listings
 
-SVGFILES = $(shell ls $(SVGDIR)/*.svg)
-SVGPDF = $(patsubst %.svg, %.pdf, $(SVGFILES))
-ODPFILES = $(shell ls $(ODPDIR)/*.odp)
-ODPPDF = $(patsubst %.odp, %.pdf, $(ODPFILES))
+#SVGFILES = $(shell ls $(SVGDIR)/*.svg)
+#SVGPDF = $(patsubst %.svg, %.pdf, $(SVGFILES))
+#ODPFILES = $(shell ls $(ODPDIR)/*.odp)
+#ODPPDF = $(patsubst %.odp, %.pdf, $(ODPFILES))
 TEXFILES = $(shell ls $(TEXDIR)/*.tex)
 TEXPDF = $(patsubst %.tex, %.pdf, $(TEXFILES))
 

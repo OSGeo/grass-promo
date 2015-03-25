@@ -1,0 +1,41 @@
+% taken from grass-promo/grassposter, written by me I think
+
+\documentclass{standalone}
+
+\usepackage[active,tightpage]{preview}
+\usepackage{listings}
+\PreviewEnvironment{lstlisting}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\input{listings_settings}
+
+\begin{document}
+
+
+\begin{lstlisting}[language=Python,linewidth=34.2em]
+# Import the GRASS GIS temporal framework
+import grass.temporal as tgis
+# Open an existing space time raster dataset (STRDS)
+temp_strds = tgis.open_old_stds(name="temp_daily", 
+                                type="strds")
+# Shift all registered raster map layer 2 days in the future
+temp_strds.shift("2 days")
+# Open an exitsing time stamped raster map as map object
+temp_19770324 = tgis.open_new_map_dataset(type='raster', 
+                                name='temp_1977_Mar_24')
+# Unregister the raster map from the STRDS
+temp_strds.unregister_map(temp_19770324)
+# Get a list of all registered raster map layers with
+# a start time later 1990-05-22 from the STRDS
+maps = temp_strds.get_registered_maps_as_objects(\
+                     where="start_time > '1990-05-22'")
+# Create a temporal buffer of 6h for each map in the list
+for map in maps:
+    map.temporal_buffer("6 hours", update=True)
+# Compute new spatio-temporal extent and granularity 
+temp_strds.update_from_registered_maps()
+# Get the granuarity of the STRDS
+gran = temp_strds.get_granularity()
+\end{lstlisting}
+\end{document}  
