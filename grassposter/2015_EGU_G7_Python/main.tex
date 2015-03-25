@@ -70,18 +70,17 @@ Peter L\"{o}we\inst{7}
 \renewcommand\TP@maketitle{%
     \begin{minipage}{0.12\linewidth}
        \centering
-       
+
        \newcommand{\logowidth}{0.17\textwidth}
        \newcommand{\logovspace}{\vspace{3ex}}
        \newcommand{\logohspace}{\hspace{1ex}}
-       
-       % TODO: get other logos
+
        \includegraphics[width=\logowidth]{ncstate}
        \logohspace
        \includegraphics[width=\logowidth]{iwmi}
 
        \logovspace
-
+       % TODO: TICSA logo (Soeren)
        \includegraphics[width=\logowidth]{ncstate}
        \logohspace
        \includegraphics[width=\logowidth]{ctu_prague}
@@ -92,6 +91,7 @@ Peter L\"{o}we\inst{7}
 
        \includegraphics[width=\logowidth]{fem_cri}
        \logohspace
+       % TODO: GNLST logo (Peter)
        \includegraphics[width=\logowidth]{ncstate}
     \end{minipage}%
     \hfill
@@ -182,41 +182,19 @@ Peter L\"{o}we\inst{7}
 % interfaces and documentation. Finally, we will show how GRASS GIS can be used together with powerful Python
 % tools such as the NumPy package and the IPython Notebook.
 
-% TODO: the two blocks below are just taken from testing poster
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Highlights}}{
 % \setlength{\parskip}{1em}
 \textfontsize
 % \begin{itemize}
 \renewcommand{\item}{\par\vspace{0.8ex}}
-\item GRASS GIS is a platform for geospatial computations.
-\item The framework supports code maintenance which results in long term preservation of algorithms.
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Description}}{
-% \textfontsize
-\Large
-\newcommand{\intropartitle}[1]{\parinlinetitle{#1}}
-% \setlength{\parskip}{1em}
-
-\intropartitle{Motivation}
-GRASS GIS \cite{Neteler2012}, a free and open source GIS, is used by many scientists directly or through other projects such as R or QGIS to perform geoprocessing tasks.
-Thus, a large number of scientific geospatial computations depend on quality and correct functionality of GRASS GIS.
-Automatic functionality testing is therefore necessary to ensure software reliability.
-
-\intropartitle{Unique features}
-We present a testing framework for GRASS GIS which addresses different needs of GRASS GIS and geospatial software in general.
-It tests GRASS tools (referred to as GRASS modules) and
-examines outputs including large raster and vector maps as well as temporal datasets.
-Furthermore, it enables to test all levels of GRASS GIS architecture including C and Python application programming interface and GRASS modules invoked as subprocesses.
-
-\intropartitle{Audience}
-Since GRASS GIS is used as a platform for development of geospatial algorithms and models,
-the testing framework allows not only to test GRASS GIS core functionality but also tools developed by scientists as a part of their research.
-
-\intropartitle{Scientific impact}
+\item GRASS GIS \cite{Neteler2012} is a platform for geospatial computations.
+\item GRASS GIS used directly using Python or GUI or through other software such as QGIS or R.
+\item GRASS GIS ecosystem supports code maintenance.
+\item The functionality is divided into set of modules (individual tools, functions, algorithms or models).
+\item Core libraries and algorithms implemented in C for high performance.
+\item The system together with the broad community ensures long term preservation of algorithms.
+% \end{itemize}
 }
 
 \block{\blocktitlewrap{More information}}{
@@ -343,12 +321,12 @@ and running code from IDE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Temporal framework}}{
-
+\cite{Gebbert2014}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Testing the code}}{
-
+\cite{Petras2014}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -391,6 +369,12 @@ GRASS GIS is a OSGeo project. OSGeo provides infrastructure for websites and sou
 \begin{minipage}{\listtextwidth}
 Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done during Google Summer of Code.
 \end{minipage}
+
+\bigskip
+
+Luca Delucchi contributed significantly to development of Python interfaces for GRASS GIS
+by extensive testing in early stages of development, documenting the APIs
+and general contributions to the code itself.
 }
 
 
