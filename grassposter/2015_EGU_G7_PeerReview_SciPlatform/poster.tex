@@ -196,37 +196,6 @@ Wildfire simulation in Tangible Landscape environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \column{0.25}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Evapotranspiration (ET)}}{
-With the various types of actual ET models being developed in the last 20 years, 
-it becomes necessary to inter-compare methods. Most of already published ETa models 
-comparisons address few number of models, and small to medium areas 
-(Chemin, 2014 \cite{chemin2012distributed}; Gao and Long, 2008 \cite{gao2008intercomparison}; 
-Garcia et al., 2007 \cite{garcia2007comparison}; Suleiman et al., 2008
-\cite{suleiman2008intercomparison}; Timmermans et al., 2007 \cite{timmermans2007intercomparison}). 
-With the large amount of remote sensing data covering the Earth, and the daily 
-information available for the past ten years (i.e. Aqua/Terra-MODIS) for each pixel 
-location, it becomes paramount to have a more complete comparison, 
-in space and time.
-
-To address this new experimental requirement, a distributed computing framework was 
-designed, and created (Chemin, 2012 \cite{chemin2012distributed}). 
-The design architecture was built from original satellite datasets to various levels 
-of processing until reaching the requirement of various ETa models input dataset. 
-Each input product is computed once and reused in all ETa models requiring such input. 
-This permits standardization of inputs as much as possible to zero-in variations of 
-models to the models internals/specificities. All of the ET models are available in the 
-new GRASS GIS version 7 as imagery modules and replicability is complete for future 
-research.\newline
-
-\begin{minipage}{0.5\linewidth}
-\includegraphics[width=\textwidth]{TonleSapTa}
-Biological fraction of 2014 ET (cumul. mm/y), Tonle Sap, Cambodia.
-\end{minipage}
-
-}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{GRASS as Temporal GIS}}{
 The time dimension was introduced in GRASS GIS version 7 for raster, 3D raster and
@@ -255,11 +224,7 @@ were used to create this plot.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\column{0.25}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Natural Hazards: Water, Floods and Erosion}}{
 GRASS GIS entails several modules that constitute the result of active research on 
 natural hazard. The \gmodule{r.sim.water} simulation model (Mitas and Mitasova, 1998 \cite{Mitas1998b}) 
@@ -280,6 +245,10 @@ Coal ash pond breach in Tangible Landscape environment using \gamodule{r.damfloo
 }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\column{0.25}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Spatial interpolation}}{
 The module v.surf.rst for spatial interpolation was developed approximately 12 years 
@@ -298,6 +267,38 @@ Precipitation interpolated from meteorological stations in 3D space using \gmodu
 Digital elevation model interpolated from lidar point cloud using \gmodule{v.surf.rst}. Data are showing tillage in an agricultural field near Raleigh (North Carolina, USA)
 \end{minipage}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Evapotranspiration (ET)}}{
+With the various types of actual ET models being developed in the last 20 years, 
+it becomes necessary to inter-compare methods. Most of already published ETa models 
+comparisons address few number of models, and small to medium areas 
+(Chemin, 2014 \cite{chemin2012distributed}; Gao and Long, 2008 \cite{gao2008intercomparison}; 
+Garcia et al., 2007 \cite{garcia2007comparison}; Suleiman et al., 2008
+\cite{suleiman2008intercomparison}; Timmermans et al., 2007 \cite{timmermans2007intercomparison}). 
+With the large amount of remote sensing data covering the Earth, and the daily 
+information available for the past ten years (i.e. Aqua/Terra-MODIS) for each pixel 
+location, it becomes paramount to have a more complete comparison, 
+in space and time.\newline
+
+\begin{minipage}{0.5\linewidth}
+\includegraphics[width=0.9\textwidth]{TonleSapTa}
+\vspace{1mm}
+Biological fraction of 2014 ET (cumul. mm/y), Tonle Sap, Cambodia.
+\end{minipage}
+\bigskip
+
+To address this new experimental requirement, a distributed computing framework was 
+designed, and created (Chemin, 2012 \cite{chemin2012distributed}). 
+The design architecture was built from original satellite datasets to various levels 
+of processing until reaching the requirement of various ETa models input dataset. 
+Each input product is computed once and reused in all ETa models requiring such input. 
+This permits standardization of inputs as much as possible to zero-in variations of 
+models to the models internals/specificities. All of the ET models are available in the 
+new GRASS GIS version 7 as imagery modules and replicability is complete for future 
+research.
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
