@@ -49,7 +49,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Abstract}{
-\small \noindent This research work is about finding the connection between farmers perspectives on changes of water conditions in their socio-agricultural environment and satellite remote sensing analysis.\newline
+\small \noindent This research work is about finding the connection between farmers perspectives on changes of water conditions in their socio-agricultural environment and satellite remote sensing analysis.\newline\linebreak
 Key informant surveys were conducted to investigate localised views on water scarcity as a counterpoint to the physical measurement of water availability. Does a numerical or mapped image identifying water scarcity always equate to a dearth of water for agriculture? To push the limits of the relationship between human and physical data we sought to ground-truth GIS results with the practical experience and knowledge of people living in the area.\newline\linebreak
 \noindent We data-mined public domain satellite data with FOSS (GDAL \cite{GDAL}, GRASS GIS \cite{neteler2012grass}) and produced water-related spatio-temporal domains for our study area and the larger Upper Nile Basin.\newline\linebreak
 Accumulated remote sensing information was then cross-referenced with informant’s accounts of water availability for the same space and time. During the survey fieldwork the team also took photographs electronically stamped with GPS coordinates to compare and contrast the views of informants and the remote sensing information with high resolution images of the landscape.\newline\linebreak
@@ -61,21 +61,15 @@ We found that farmers perspective on the Spring maize crop sensibility to variab
 \smallskip
 \begin{center}
 	\begin{tabular}{c p{0.5\textwidth}}
-	 \raisebox{-0.9\totalheight}{\includegraphics[width=0.45\textwidth]{./images/fig1}}
+	 \raisebox{-0.9\totalheight}{\includegraphics[width=0.45\textwidth]{./images/ETH_UBN_Fogera}}
 	&
-	The transpiration data is created from energy balance modelling \citep{chemin2012distributed} modules (i.eb.*, i.evapo.*) within GRASS GIS version 7, by partitioning the net radiation (r.sun) into soil heat flux (i.eb.soilheatflux), sensible heat flux (i.eb.h\_*) and the residual being the energy needed to evaporate water (i.eb.evapfr, i.eb.eta). This information is then fractionated into biotic (transpiration) and abiotic (evaporation) parts using vegetation fraction.\newline\linebreak
-The accumulated transpiration is subjected to temporal scrutiny ...\newline
- 	\end{tabular}\newline
+	The transpiration data is created from energy balance modelling \citep{chemin2012distributed} modules (i.eb.*, i.evapo.*) within GRASS GIS \cite{neteler2012grass} version 7, by partitioning the net radiation (r.sun) into soil heat flux (i.eb.soilheatflux), sensible heat flux (i.eb.h\_*) and the residual being the energy needed to evaporate water (i.eb.evapfr, i.eb.eta). This information is then fractionated into biotic (transpiration) and abiotic (evaporation) parts using vegetation fraction.\newline\linebreak
+The accumulated transpiration is subjected to temporal scrutiny, the major transpiration peak every year is preceded by a temporary increment in transpiration. This temporary change may (or not) carry enough trasnpiration to crop Spring maize in Fogera, the topic of this research.\newline
+\end{tabular}\newline
 \end{center}
 \begin{center}
-	\begin{tabular}{cc}
- 	\includegraphics[width=0.45\textwidth]{./images/fig1}
- 	& 
- 	\includegraphics[width=0.45\textwidth]{./images/fig1}
-	\end{tabular}
+\includegraphics[width=\textwidth]{./images/Ta}
 \end{center}
-
-More info here...\newline
 
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,6 +102,16 @@ Key informants in Fogera described how rainfall patterns have become more irregu
 We data-mined public domain satellite data and produced water-related spatio-temporal domains that was then cross-referenced with informant’s accounts of water availability for the same space and time.\newline
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Rainfall deficit in May perceived as water scarcity}{
+Farmers in upland Fogera associate the failure of the May rains with “drought”. For instance, a male farmer stated that, “When it is drought, it is the season of millet (teff).” A female farmer stressed this seasonal scarcity in water availability by insisting that “It is this drought that hinders crop production.” However, if the rain fails in May, it does not necessarily represent an inevitable drought year, in that rain can be available in the subsequent months. Nevertheless, rainfed maize and millet planting in May is a central concern as it provides food and fodder for season, buffering household food security and reducing stress on further crop-related decision-making.\newline\linebreak
+Rainfall variability has been one of the important factors impeding sustained implementation of intensification strategies, and particularly the use of fertilisers. Key informants indicated that rainfall variability has been discouraging the use of fertiliser due to risk of unsuccessful crop production which exacerbates farmers’ indebtedness besides losing production.i\newline\linebreak
+Vulnerability and capacity to respond to rainfall variability differs depending on individual natural, financial and social assets, as well as gender and socio-cultural variables. Farmers in Fogera have been attempting to respond to problems related to water availability based on adaptation, indigenous knowledge, practicing available options. Responses undertaken by individual farmers and communities include: adjusting planting times and cropping pattern; deploying traditional ecological knowledge of soil to mitigate risk associated with water availability, expanding traditional and motor-pump irrigation \citep{dessalegn2014is}; and sponsoring religious figures to ameliorate the violation of spiritual sanctions that are transgressed in contemporary agricultural production.\newline\linebreak
+}
+
+\startthirdcolumn
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Spring Maize and food security}{
 \begin{center}
@@ -120,16 +124,6 @@ We argue that a better understanding of the dynamics of water variability and th
 \end{center}
 Cumulative transpiration on a yearly basis highlights different years, and heterogeneity periods (breaks) in the growing curve. Looking closely into the May-July period, one can identified the transpiration gap found most of the time for the early Maize crop much discussed by farmers. Out of 14 years, only 4 seem to have made the transpiration leap above the others (red ellipse in Figure 1). The leap can be quantified by an average of 20mm of rainfall over a period of 20 days, 1 mm of transpiration per day is missing at minimum (red ellipse) and 2.5mm/day at maximum (yellow ellipse) from mid-June to early July.\newline\linebreak
 
-}
-
-
-\startthirdcolumn
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{May rainfall deficit perceived water scarcity}{
-Farmers in upland Fogera associate the failure of the May rains with “drought”. For instance, a male farmer stated that, “When it is drought, it is the season of millet (teff).” A female farmer stressed this seasonal scarcity in water availability by insisting that “It is this drought that hinders crop production.” However, if the rain fails in May, it does not necessarily represent an inevitable drought year, in that rain can be available in the subsequent months. Nevertheless, rainfed maize and millet planting in May is a central concern as it provides food and fodder for season, buffering household food security and reducing stress on further crop-related decision-making.\newline\linebreak
-Rainfall variability has been one of the important factors impeding sustained implementation of intensification strategies, and particularly the use of fertilisers. Key informants indicated that rainfall variability has been discouraging the use of fertiliser due to risk of unsuccessful crop production which exacerbates farmers’ indebtedness besides losing production.i\newline\linebreak
-Vulnerability and capacity to respond to rainfall variability differs depending on individual natural, financial and social assets, as well as gender and socio-cultural variables. Farmers in Fogera have been attempting to respond to problems related to water availability based on adaptation, indigenous knowledge, practicing available options. Responses undertaken by individual farmers and communities include: adjusting planting times and cropping pattern; deploying traditional ecological knowledge of soil to mitigate risk associated with water availability, expanding traditional and motor-pump irrigation \citep{dessalegn2014is}; and sponsoring religious figures to ameliorate the violation of spiritual sanctions that are transgressed in contemporary agricultural production.\newline\linebreak
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
