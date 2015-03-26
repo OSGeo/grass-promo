@@ -14,18 +14,18 @@
 
 
 \begin{lstlisting}[language=Python,linewidth=34.2em]
-# Import the GRASS GIS temporal framework
+# Import and initialize the GRASS GIS temporal framework
 import grass.temporal as tgis
+tgis.init()
 # Open an existing space time raster dataset (STRDS)
 temp_strds = tgis.open_old_stds(name="temp_daily", 
                                 type="strds")
 # Shift all registered raster map layer 2 days in the future
 temp_strds.shift("2 days")
 # Open an exitsing time stamped raster map as map object
-temp_19770324 = tgis.open_new_map_dataset(type='raster', 
-                                name='temp_1977_Mar_24')
+temp_24Mar77 = tgis.RasterDataset('temp_1977_Mar_24@soeren')
 # Unregister the raster map from the STRDS
-temp_strds.unregister_map(temp_19770324)
+temp_strds.unregister_map(temp_24Mar77)
 # Get a list of all registered raster map layers with
 # a start time later 1990-05-22 from the STRDS
 maps = temp_strds.get_registered_maps_as_objects(\
