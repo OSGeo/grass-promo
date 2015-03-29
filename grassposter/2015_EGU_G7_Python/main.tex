@@ -1,5 +1,5 @@
 % License: CC0
-% The license is CC0 but you can acknowledge the authors if you want to. See their names bellow.
+% The license is CC0 but you can acknowledge the authors if you want to. See their names below.
 
 \documentclass[innermargin=10mm]{tikzposter}
 \usepackage{enumitem}
@@ -197,6 +197,23 @@ Peter L\"{o}we\inst{7}
 % \end{itemize}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{GRASS GIS Addons}}{
+The GRASS GIS Addons ensure long-term preservation of the code.
+Well maintained modules in Addons can be moved to GRASS GIS core.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Alternatives to Python}}{
+GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
+and as subprocesses virtually any language as long as proper environment is set.
+
+The GRASS GIS library povides a C API which is commonly used to create GRASS modules in C and C++.
+
+GRASS GIS modules can be used within R using the \pkg{rgrass7} package.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{More information}}{
 \newcommand{\qrcodewidth}{1\linewidth}
 \hspace{-0.02\linewidth}
@@ -227,24 +244,6 @@ GRASS GIS Python libraries documentation
 % rm grass-user.eps
 
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{GRASS GIS Addons}}{
-The GRASS GIS Addons ensures long-term preservation of the code.
-Well maintained modules in Addons can be moved to GRASS GIS itself.
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Alternatives to Python}}{
-GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
-and as subprocesses virtually any language as long as proper environment is set.
-
-The GRASS GIS library has a C API which is often used to create GRASS modules in C and C++.
-
-GRASS GIS modules can be used in R using \pkg{rgrass7} package.
-}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -313,6 +312,13 @@ The same applies to \pkg{grass.script} syntax:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Automatic creation of GUI and CLI}}{
 
+The g.parser module provides full parser support for GRASS GIS scripts.
+It provides the creation of help page template, and command line option
+checking. Each command and scripts which uses the GRASS GIS parser can
+publish its parameter and flags description in XML. Through the included
+XML parser this description can be turned into a graphical user interface with
+standardized styling.
+
 \includegraphics[width=\linewidth, clip, trim=0 0 0 0]{grass_module}
 
 \includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{grass_module_gui}
@@ -342,10 +348,10 @@ and running code from IDE
 \column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{GRASS GIS Temporal Framework}}{
-The GRASS GIS Temporal Framework implements the temporal GIS functionality of GRASS GIS 
+\block{\blocktitlewrap{GRASS GIS 7 Temporal Framework}}{
+The GRASS GIS Temporal Framework offers the temporal GIS functionality of GRASS GIS 
 and provides a Python API to implement spatio-temporal processing modules. 
-The framework introduces space time datasets that represent time series of raster, 
+The framework introduces space-time datasets that represent time series of raster, 
 3D raster or vector maps. Some API examples:
 \includegraphics[width=1\linewidth, clip, trim=0 0 0 0]{tgrass_examples}
 }
@@ -362,7 +368,8 @@ The framework introduces space time datasets that represent time series of raste
 \end{minipage}
 \listhspace
 \begin{minipage}{\listtextwidth}
-GRASS GIS is a OSGeo project. OSGeo provides infrastructure for websites and source code management.
+GRASS GIS is a OSGeo project. OSGeo provides infrastructure for project
+Web sites, mailing lists and source code management.
 \end{minipage}
 
 \bigskip
@@ -372,13 +379,13 @@ GRASS GIS is a OSGeo project. OSGeo provides infrastructure for websites and sou
 \end{minipage}
 \listhspace
 \begin{minipage}{\listtextwidth}
-Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done during Google Summer of Code.
+Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done during Google Summer of Code 2014.
 \end{minipage}
 
 \bigskip
 
-Luca Delucchi contributed significantly to development of Python interfaces for GRASS GIS
-by extensive testing in early stages of development, documenting the APIs
+Luca Delucchi, Italy, contributed significantly to development of Python interfaces for GRASS GIS 7
+through extensive testing in early stages of development, documenting the APIs
 and general contributions to the code itself.
 }
 
@@ -393,11 +400,11 @@ and general contributions to the code itself.
 \bibitem{Neteler2012}
   Neteler, M., Bowman, M. H., Landa, M., Metz, M., 2012.
   \emph{GRASS GIS: A multi-purpose open source GIS.}
-  Environmental Modelling \& Software, 31(0), 124-130.
+  Environmental Modelling \& Software, 31, 124--130.
 
 \bibitem{Gebbert2014}
   Gebbert, S., Pebesma, E., 2014. A temporal GIS for field based environmental modeling. Environmental
-  Modelling \& Software 53, 1-12.
+  Modelling \& Software 53, 1--12.
 
 \bibitem{Petras2014}
   Petras, V., Gebbert, S., 2014. Testing framework for GRASS GIS: ensuring reproducibility of scientific
@@ -406,7 +413,7 @@ and general contributions to the code itself.
 \bibitem{Zambelli2013}
   Zambelli, P., Gebbert, S., Ciolli, M., 2013. Pygrass: An Object Oriented Python Application Programming
   Interface (API) for Geographic Resources Analysis Support System (GRASS) Geographic Information System
-  (GIS). ISPRS International Journal of Geo-Information 2, 201-219.
+  (GIS). ISPRS International Journal of Geo-Information 2, 201--219.
 
 \end{thebibliography}
 }
