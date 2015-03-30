@@ -300,9 +300,15 @@ to access C functions from GRASS GIS libraries directly.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{GRASS GIS modules, addons and Python scripts}}{
-The GRASS GIS Addons ensure long-term preservation of the code.
+A Python script can by turned into a GRASS GIS modules by adding a definition of the interface.
+Also, GRASS GIS modules expect to be executed in GRASS GIS session.
+Python scripts which are using GRASS GIS can be written in a way that GRASS GIS session is not required;
+the setup of a necessary environment is done in the script itself.
+% running code from IDE
+
+The GRASS GIS Addon repository ensures vendor-independent long-term preservation of the code
+and ensures an easy distribution of module to individual users.
 Well maintained modules in Addons can be moved to GRASS GIS core.
-and running code from IDE
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
