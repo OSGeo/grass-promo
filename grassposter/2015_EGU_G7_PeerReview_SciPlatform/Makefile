@@ -10,7 +10,11 @@ $(FILE).pdf: *.tex Makefile
 	done
 
 pdf:
-	pdflatex $(FILE).tex
+	# using - to ignore error from the first latex
+	# the error is caused by something related to hyperref and
+	# second compilation gets through (this is an workaround)
+	-pdflatex -interaction=nonstopmode $(FILE).tex
+	pdflatex -interaction=nonstopmode $(FILE).tex
 	bibtex $(FILE)
 
 clean:
