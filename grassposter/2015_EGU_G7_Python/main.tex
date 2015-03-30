@@ -285,15 +285,12 @@ These can be easily rewritten to \pkg{grass.script} or \pkg{grass.pygrass} synta
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{PyGRASS interface to C libraries}}{
-Some API examples to convert a raster map to a numpy array and then back to a raster.
+Some API examples to convert a raster map to a NumPy array and then back to a raster.
 
 \includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_raster_examples}
 
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Python script versus GRASS GIS module}}{
-and running code from IDE
+In addition to PyGRASS interface, advanced programmers can use \pkg{ctypes} interface
+to access C functions from GRASS GIS libraries directly.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -302,30 +299,19 @@ and running code from IDE
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{GRASS GIS Addons}}{
+\block{\blocktitlewrap{GRASS GIS modules, addons and Python scripts}}{
 The GRASS GIS Addons ensure long-term preservation of the code.
 Well maintained modules in Addons can be moved to GRASS GIS core.
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{ctypes interface to C libraries}}{
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Using NumPy}}{
-
+and running code from IDE
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Alternatives to Python}}{
+GRASS GIS API is not limited only to Python.
 GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
-and as subprocesses virtually any language as long as proper environment is set.
-
-The GRASS GIS library povides a C API which is commonly used to create GRASS modules in C and C++.
-
-GRASS GIS modules can be used within R using the \pkg{rgrass7} package.
+and as subprocesses in virtually any language as long as the proper environment is set.
+The GRASS GIS library provides a C API which is commonly used to create GRASS GIS modules in C and C++ programming languages.
+Finally, GRASS GIS modules can be used within R statistical environment using the \pkg{rgrass7} package.
 }
 
 
