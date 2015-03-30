@@ -1,0 +1,38 @@
+% taken from grass-promo/grassposter, written by me I think
+
+\documentclass{standalone}
+
+\usepackage[active,tightpage]{preview}
+\usepackage{listings}
+\PreviewEnvironment{lstlisting}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\input{listings_settings}
+
+\begin{document}
+
+\begin{lstlisting}[language=Python,linewidth=44.2em]
+import numpy as np
+from grass.pygrass.raster import RasterRow
+from grass.pygrass.raster.buffer import Buffer
+from grass.pygrass.gis.region import Region
+
+def raster2numpy(name, mapset):
+    """Return a numpy array from a raster map"""
+    with RasterRow(name, mapset, mode='r') as array:
+        return np.array(array)
+
+def numpy2raster(array, mtype, name):
+    """Save a numpy array to a raster map"""
+    reg = Region()
+    if (reg.rows, reg.cols) != array.shape:
+        msg = "Region and array shape are different: %r != %r"
+        raise TypeError(msg % ((reg.rows, reg.cols), array.shape))
+    with RasterRow(name, mode='w', mtype=mtype) as new:
+        newrow = Buffer((array.shape[1],), mtype=mtype)
+        for row in array:
+            newrow[:] = row[:]   # cast array to raster type
+            new.put_row(newrow)  # write row to raster map
+\end{lstlisting}
+\end{document}  
