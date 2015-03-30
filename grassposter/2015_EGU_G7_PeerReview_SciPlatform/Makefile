@@ -9,7 +9,7 @@ $(FILE).pdf: *.tex Makefile
 		make pdf; \
 	done
 
-pdf:
+pdf: poster.bib
 	# using - to ignore error from the first latex
 	# the error is caused by something related to hyperref and
 	# second compilation gets through (this is an workaround)
