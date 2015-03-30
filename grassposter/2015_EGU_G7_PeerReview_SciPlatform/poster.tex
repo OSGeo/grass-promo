@@ -330,12 +330,19 @@ speed up (Trac1, 2014) and new interactive user interface.
 Rocchini et al. \cite{rocchini2013calculating} used \gmodule{r.li} modules to implement
 high level tool for calculating landscape diversity.
 
+\bigskip
+
 \begin{minipage}{0.5\linewidth}
-\includegraphics[width=\textwidth, trim={0 180 0 0}, clip]{rdiversity}
-Landscape diversity according to Shannon index in near Charlotte (North Carolina, USA).
+\includegraphics[width=\textwidth, trim={0 180 0 0}, clip]{diversity_classes}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\includegraphics[width=\textwidth, trim={0 180 0 0}, clip]{diversity_shannon}
 \end{minipage}
 
-% TODO: some other example or something completely else?
+\medskip
+Landuse classes and derived landscape diversity according to Shannon index in near Charlotte (North Carolina, USA).
+% r.diversity input=development_2006 prefix=diversity alpha=0.5 size=65
+% r.li.shannon input="development_2006" config="conf_diversity_65.0" output="diversity_shannon_size_65.0"
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -370,9 +377,8 @@ Landscape diversity according to Shannon index in near Charlotte (North Carolina
 %\blocksectiontitle{Acknowledgements}
 \textbf{Acknowledgments}
 
-Matthew Horvath for \emph{Spill impacts from coal ash pond using GRASS GIS};
+We acknowledge Matthew Horvath for \emph{Spill impacts from coal ash pond using GRASS GIS} and
 % http://www4.ncsu.edu/~jcfounta/Summer14Posters/horvath.pdf
-
 Eva Stopkova for physical model of High Tatras.
 
 GRASS GIS project is a Open Source Geospatial Foundation (OSGeo) project and is using OSGeo infrastructure for Web site and code repository.
