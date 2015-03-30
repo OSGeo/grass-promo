@@ -23,7 +23,7 @@
 % \setsecondcolor{gray!80!}
 % \setthirdcolor{red!80!black}
 
-\title{Water Dynamics in Fogera and the Upper Blue Nile\\Farmers perspectives and remote sensing\bigskip}
+\title{Water Dynamics in Fogera and the Upper Blue Nile\\Farmers perspectives and remote sensing\\}
 \author{Yann Chemin, Mengistu Dessalegn, Jayne Curnow\\
 \bigskip
 \\ International Water Management Institute}
@@ -49,41 +49,35 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Abstract}{
-\small \noindent This research work is about finding the connection between farmers perspectives on changes of water conditions in their socio-agricultural environment and satellite remote sensing analysis.\newline\linebreak
+\noindent This research work is about finding the connection between farmers perspectives on changes of water conditions in their socio-agricultural environment and satellite remote sensing analysis.\newline\linebreak
 Key informant surveys were conducted to investigate localised views on water scarcity as a counterpoint to the physical measurement of water availability. Does a numerical or mapped image identifying water scarcity always equate to a dearth of water for agriculture? To push the limits of the relationship between human and physical data we sought to ground-truth GIS results with the practical experience and knowledge of people living in the area.\newline\linebreak
 \noindent We data-mined public domain satellite data with FOSS (GDAL \cite{GDAL}, GRASS GIS \cite{neteler2012grass}) and produced water-related spatio-temporal domains for our study area and the larger Upper Nile Basin.\newline\linebreak
 Accumulated remote sensing information was then cross-referenced with informant’s accounts of water availability for the same space and time. During the survey fieldwork the team also took photographs electronically stamped with GPS coordinates to compare and contrast the views of informants and the remote sensing information with high resolution images of the landscape.\newline\linebreak
 We found that farmers perspective on the Spring maize crop sensibility to variability of rainfall can be quantified in space and time by remote sensing cumulative transpiration. A crop transpiration gap of 1-2.5 mm/day for about 20 days is to be overcome, a full amount of 20 to 50 mm, depending on the type of year deficit. Such gap can be overcome, even by temporary supplemental irrigation practices, however, the economical and cultural set up is already developed in another way, as per seasonal renting of higher soil profile water retention capacity fields.
+\newline\linebreak
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Transpiration of Fogera crops}{
 \smallskip
 \begin{center}
-	\begin{tabular}{c p{0.5\textwidth}}
-	 \raisebox{-0.9\totalheight}{\includegraphics[width=0.45\textwidth]{./images/ETH_UBN_Fogera}}
+	\begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
+	 \raisebox{-0.95\totalheight}{\includegraphics[width=0.5\textwidth]{./images/ETH_UBN_Fogera}}
+	 \newline\linebreak
+	 Figure 1: Fogera woreda location near Lake Tana.\newline\linebreak
 	&
 	The transpiration data is created from energy balance modelling \citep{chemin2012distributed} modules (i.eb.*, i.evapo.*) within GRASS GIS \cite{neteler2012grass} version 7, by partitioning the net radiation (r.sun) into soil heat flux (i.eb.soilheatflux), sensible heat flux (i.eb.h\_*) and the residual being the energy needed to evaporate water (i.eb.evapfr, i.eb.eta). This information is then fractionated into biotic (transpiration) and abiotic (evaporation) parts using vegetation fraction.\newline\linebreak
-The accumulated transpiration is subjected to temporal scrutiny, the major transpiration peak every year is preceded by a temporary increment in transpiration. This temporary change may (or not) carry enough trasnpiration to crop Spring maize in Fogera, the topic of this research.\newline
-\end{tabular}\newline
+	The accumulated transpiration is subjected to temporal scrutiny, the major transpiration peak every year is preceded by a temporary increment in transpiration. This temporary change may (or not) carry enough transpiration to crop Spring maize in Fogera, the topic of this research.\newline
+	\end{tabular}
 \end{center}
 \begin{center}
 \includegraphics[width=\textwidth]{./images/Ta}
+\newline
+Figure 2: 14 years of daily transpiration for Gumura basin in Fogera woreda.
+\newline
 \end{center}
 
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{Acknowledgements}{
-\smallskip
-\begin{tabular}{p{0.70\textwidth} c}
-	The authors would like to acknowledge the CGIAR Research Program on Water, Land and Ecosystems (WLE ; \url{wle.cgiar.org}) Innovation Fund.
-	&
-	\hspace{3mm}
-	\raisebox{-0.5\totalheight}{\includegraphics[width=0.27\textwidth]{./images/WLE}}
-\end{tabular}
-}
-
-
 
 \startsecondcolumn
 
@@ -110,34 +104,31 @@ Rainfall variability has been one of the important factors impeding sustained im
 Vulnerability and capacity to respond to rainfall variability differs depending on individual natural, financial and social assets, as well as gender and socio-cultural variables. Farmers in Fogera have been attempting to respond to problems related to water availability based on adaptation, indigenous knowledge, practicing available options. Responses undertaken by individual farmers and communities include: adjusting planting times and cropping pattern; deploying traditional ecological knowledge of soil to mitigate risk associated with water availability, expanding traditional and motor-pump irrigation \citep{dessalegn2014is}; and sponsoring religious figures to ameliorate the violation of spiritual sanctions that are transgressed in contemporary agricultural production.\newline\linebreak
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\blocknode{Acknowledgements}{
+\smallskip
+\begin{tabular}{p{0.70\textwidth} c}
+	The authors would like to acknowledge the CGIAR Research Program on Water, Land and Ecosystems (WLE ; \url{wle.cgiar.org}) Innovation Fund.
+	&
+	\hspace{3mm}
+	\raisebox{-0.5\totalheight}{\includegraphics[width=0.27\textwidth]{./images/WLE}}
+\end{tabular}
+}
+
 \startthirdcolumn
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \blocknode{Spring Maize and food security}{
+We found that in one case (figure 3), farmers perspective on the Spring maize crop sensibility to variability of rainfall can be quantified in space and time by remote sensing cumulative transpiration. A crop transpiration gap of 1-2.5 mm/day for about 20 days is to be overcome, a full amount of 20 to 50 mm, depending on the type of year deficit. Such gap can be overcome, even by temporary supplemental irrigation practices.\newline\linebreak
+We argue that a better understanding of the dynamics of water variability and the implications on water management, agricultural production and livelihoods should consider small-holder farmers’ perceptions, concerns and responses. This is essential to devise well-targeted policies and interventions that can improve livelihoods, as well as optimising water management and agricultural production.
+
 \begin{center}
-	\begin{tabular}{c p{0.5\textwidth}}
- 	\raisebox{-0.9\totalheight}{\includegraphics[width=0.45\textwidth]{./images/fig1}}
-	&
-	We found that in one case (figure 1), farmers perspective on the Spring maize crop sensibility to variability of rainfall can be quantified in space and time by remote sensing cumulative transpiration. A crop transpiration gap of 1-2.5 mm/day for about 20 days is to be overcome, a full amount of 20 to 50 mm, depending on the type of year deficit. Such gap can be overcome, even by temporary supplemental irrigation practices.\newline
-We argue that a better understanding of the dynamics of water variability and the implications on water management, agricultural production and livelihoods should consider small-holder farmers’ perceptions, concerns and responses. This is essential to devise well-targeted policies and interventions that can improve livelihoods, as well as optimising water management and agricultural production.\newline\linebreak
-	\end{tabular}
+ \includegraphics[width=0.65\textwidth]{./images/fig1}\\
+ \vspace{5mm}
+ Figure 3: Transpiration deficiency, month of May, one year out four.
 \end{center}
-Cumulative transpiration on a yearly basis highlights different years, and heterogeneity periods (breaks) in the growing curve. Looking closely into the May-July period, one can identified the transpiration gap found most of the time for the early Maize crop much discussed by farmers. Out of 14 years, only 4 seem to have made the transpiration leap above the others (red ellipse in Figure 1). The leap can be quantified by an average of 20mm of rainfall over a period of 20 days, 1 mm of transpiration per day is missing at minimum (red ellipse) and 2.5mm/day at maximum (yellow ellipse) from mid-June to early July.\newline\linebreak
 
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{GRASS GIS script}{
-\smallskip
-{\footnotesize \fontfamily{pcr}\selectfont 
-\textbf{\#Select MODIS EVI archive\newline} 
-i.group \textcolor{blue}{group}=pca\_group \textcolor{blue}{input}=\$(g.mlist \textcolor{blue}{type}=rast \textcolor{blue}{pattern}=*h28v07*EVI)\newline
-\textbf{\#Run the PCA on the EVI archive\newline}
-i.pca \textcolor{blue}{input}=pca\_group \textcolor{blue}{output\_prefix}=pca \textcolor{blue}{percent}=99 --o\newline
-\textbf{\#As an example, you can select the 1$^{st}$ to the 9$^{th}$ PCA members\newline}
-i.group \textcolor{blue}{group}=ta\_group \textcolor{blue}{input}=\$(g.mlist \textcolor{blue}{type}=rast \textcolor{blue}{pattern}=pca.[123456789] sep=,) \newline
-\textbf{\#and run an object-based classification analysis on them\newline}
-i.segment \textcolor{blue}{group}=ta\_group \textcolor{blue}{output}=seg\_ta \textcolor{blue}{threshold}=0.9 \textcolor{blue}{memory}=5000 \textcolor{blue}{iterations}=50 --o \& \newline}
+Cumulative transpiration on a yearly basis highlights different years, and heterogeneity periods (breaks) in the growing curve. Looking closely into the May-July period, one can identified the transpiration gap found most of the time for the early Maize crop much discussed by farmers. Out of 14 years, only 4 seem to have made the transpiration leap above the others (red ellipse in Figure 3). The leap can be quantified by an average of 20mm of rainfall over a period of 20 days, 1 mm of transpiration per day is missing at minimum (red ellipse) and 2.5mm/day at maximum (yellow ellipse) from mid-June to early July.
 
 }
 
@@ -148,7 +139,7 @@ i.segment \textcolor{blue}{group}=ta\_group \textcolor{blue}{output}=seg\_ta \te
 \coordinate (screenshot) at (box.north west);
 
 \blocknodew[($(funkcionalita)+(20,-1)$)]{35}{References}{
-\scriptsize
+\small
 \begingroup
 \renewcommand{\section}[2]{}%
 \bibliographystyle{plain}
@@ -191,28 +182,40 @@ i.segment \textcolor{blue}{group}=ta\_group \textcolor{blue}{output}=seg\_ta \te
 }
 
 
+
 \startfourthcolumn
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\blocknode{TBC...}{
+\blocknode{Yearly Transpiration gap in the Upper Nile Basin}{
 \smallskip
-TBC...\newline\linebreak
 
-Object based classification (\textit{i.segment}) of the sum transpiration for each year has been done and merged, resulting areas were clumped (\textit{r.clump}) and averaged statistics of yearly transpiration extracted (\textit{r.stats.zonal}).\newline
 \begin{center}
-	\begin{tabular}{cc}
- 	\begin{tabular}{p{0.5\textwidth}}
- 	\includegraphics[width=0.45\textwidth]{./images/fig1}\\
- 	\vspace{5mm}
-blablablablablabla
+	\begin{tabular}{ll}
+ 	\begin{tabular}{c}
+ 	 \includegraphics[width=0.48\textwidth]{./images/Ta_Gap_2001}\\
+ 	 \includegraphics[width=0.48\textwidth]{./images/Ta_Gap_2006}
 	\end{tabular}
  	& 
  	\begin{tabular}{c}
- 	\includegraphics[width=0.45\textwidth]{./images/fig1}\\
- 	\includegraphics[width=0.45\textwidth]{./images/fig1}
+ 	\includegraphics[width=0.48\textwidth]{./images/Ta_Gap_2011}\\
+ 	\includegraphics[width=0.48\textwidth]{./images/Ta_Gap_2014}
 	\end{tabular}
+	\end{tabular}
+	Figure 4: Area Equalized Transpiration Gap in the Upper Nile Basin.\\
+	\vspace{5mm}
+ 	\begin{tabular}{| c | c |}
+	\hline
+	&\\
+	2001 & 2011\\
+	&\\
+	\hline
+	&\\
+	2006 & 2014\\
+	&\\
+	\hline
 	\end{tabular}
 \end{center}
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -220,6 +223,8 @@ blablablablablabla
 \smallskip
 Space science (i.e. remote sensing plant transpiration data and analysis) complements and augments farmer’s responses to rainfall variability. In such marginal landscapes access to this information can mean the difference between seasonal hunger and food security.
 }
+
+
 
 
 \end{tikzpicture}
