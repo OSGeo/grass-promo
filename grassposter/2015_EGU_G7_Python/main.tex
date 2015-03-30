@@ -197,122 +197,6 @@ Peter L\"{o}we\inst{7}
 % \end{itemize}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{GRASS GIS Addons}}{
-The GRASS GIS Addons ensure long-term preservation of the code.
-Well maintained modules in Addons can be moved to GRASS GIS core.
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Alternatives to Python}}{
-GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
-and as subprocesses virtually any language as long as proper environment is set.
-
-The GRASS GIS library povides a C API which is commonly used to create GRASS modules in C and C++.
-
-GRASS GIS modules can be used within R using the \pkg{rgrass7} package.
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{More information}}{
-\newcommand{\qrcodewidth}{1\linewidth}
-\hspace{-0.02\linewidth}
-\begin{tabular}{lll}
-\begin{minipage}{0.1\linewidth}
-\includegraphics[height=\qrcodewidth]{grass_osgeo_org}
-\end{minipage}
-\begin{minipage}{0.27\linewidth}
-GRASS GIS website
-\end{minipage}
-&
-\begin{minipage}{0.1\linewidth}
-\includegraphics[height=\qrcodewidth]{python_doc}
-\end{minipage}
-\begin{minipage}{0.45\linewidth}
-GRASS GIS Python libraries documentation
-\end{minipage}
-\\
-% http://grass.osgeo.org/
-\url{grass.osgeo.org}
-&
-% http://grass.osgeo.org/grass71/manuals/libpython/
-\url{grass.osgeo.org/grass71/manuals/libpython}
-\end{tabular}
-
-% qrcode -t EPS -o grass-user.eps "http://lists.osgeo.org/listinfo/grass-user"
-% epstopdf grass-user.eps
-% rm grass-user.eps
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\column{0.25}
-
-
-\block{\blocktitlewrap{GRASS Scripting library interface to GRASS GIS modules}}{
-
-The same applies to \pkg{grass.pygrass} syntax:
-
-\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{script_doc_syntax}
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{PyGRASS interface to GRASS GIS modules}}{
-
-The same applies to \pkg{grass.pygrass} syntax:
-
-\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_doc_syntax}
-\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_doc_sc_syntax}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Using documentation for GRASS GIS modules}}{
-
-Documentation of GRASS GIS modules usually use Bash syntax for examples:
-
-\begin{alltt}
-r.neighbors input=elevation output=elevation\_smooth method=median -c
-\end{alltt}
-
-This can be easily rewritten to \pkg{grass.script} syntax:
-
-\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{script_doc_syntax}
-
-The same applies to \pkg{grass.script} syntax:
-
-\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_doc_syntax}
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{ctypes interface to C libraries}}{
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Using NumPy}}{
-
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Using IPython Notebook}}{
-
-	IPython Notebook is a web-based application that provides a tool to: developing, documenting, and executing code, as well as communicating the results.
-	One great tool to process and visualize your data/maps, integrating formulas and explanatory text, interacting with remote server and clusters.
-
-	%\includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{pygrass_ipython_cli}
-	\includegraphics[width=0.8\linewidth, clip, trim=0 0 0 0]{ipython_nb}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Automatic creation of GUI and CLI}}{
@@ -330,6 +214,74 @@ standardized styling.
 \includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{grass_module_cli}
 
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\column{0.25}
+
+
+\block{\blocktitlewrap{GRASS Scripting library interface to GRASS GIS modules}}{
+
+The \pkg{grass.script} package offers simple and straightforward syntax to call GRASS GIS modules:
+
+\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{script_doc_syntax}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{PyGRASS interface to GRASS GIS modules}}{
+
+The \pkg{grass.pygrass} package provides a object-oriented way to work with GRASS GIS modules and their parameters:
+
+\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_doc_syntax}
+
+Additionally, the \pkg{grass.pygrass} package offers simpler, Python oriented, way of accessing modules:
+
+\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_doc_sc_syntax}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Using documentation for GRASS GIS modules}}{
+
+Documentation of GRASS GIS modules usually use Bash syntax for examples:
+
+\begin{alltt}
+r.neighbors input=elevation output=elevation\_smooth method=median -c
+\end{alltt}
+
+These can be easily rewritten to \pkg{grass.script} or \pkg{grass.pygrass} syntax shown above.
+
+% This can be easily rewritten to \pkg{grass.script} syntax:
+% 
+% \includegraphics[width=\linewidth, clip, trim=0 0 0 0]{script_doc_syntax}
+% 
+% The same applies to \pkg{grass.script} syntax:
+% 
+% \includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_doc_syntax}
+% 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Using IPython Notebook}}{
+
+	IPython Notebook is a web-based application that provides a tool to: developing, documenting, and executing code, as well as communicating the results.
+	One great tool to process and visualize your data/maps, integrating formulas and explanatory text, interacting with remote server and clusters.
+
+	\bigskip
+	%\includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{pygrass_ipython_cli}
+	\centering
+	\includegraphics[width=0.95\linewidth, clip, trim=0 120 0 0]{ipython_nb}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{PyGRASS interface to C libraries}}{
@@ -350,6 +302,34 @@ and running code from IDE
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{GRASS GIS Addons}}{
+The GRASS GIS Addons ensure long-term preservation of the code.
+Well maintained modules in Addons can be moved to GRASS GIS core.
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{ctypes interface to C libraries}}{
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Using NumPy}}{
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Alternatives to Python}}{
+GRASS GIS modules are command line tools, so they can be used in shell scripting (e.g. Bash)
+and as subprocesses virtually any language as long as proper environment is set.
+
+The GRASS GIS library povides a C API which is commonly used to create GRASS modules in C and C++.
+
+GRASS GIS modules can be used within R using the \pkg{rgrass7} package.
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -365,11 +345,39 @@ The framework introduces space-time datasets that represent time series of raste
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Acknowledgements}}{
+\block{\blocktitlewrap{References and Acknowledgements}}{
+
+\newcommand{\blocksectiontitle}[1]{\bigskip\textbf{\textcolor{gray}{\textsf{#1}}}}
+
+% disable the title
+\renewcommand{\section}[2]{}
+\begin{thebibliography}{9}
+
+\bibitem{Neteler2012}
+  Neteler, M., Bowman, M. H., Landa, M., Metz, M., 2012.
+  \emph{GRASS GIS: A multi-purpose open source GIS.}
+  Environmental Modelling \& Software, 31, 124--130.
+
+\bibitem{Gebbert2014}
+  Gebbert, S., Pebesma, E., 2014. A temporal GIS for field based environmental modeling. Environmental
+  Modelling \& Software 53, 1--12.
+
+\bibitem{Petras2014}
+  Petras, V., Gebbert, S., 2014. Testing framework for GRASS GIS: ensuring reproducibility of scientific
+  geospatial computing. Poster presented at: AGU Fall Meeting, December 15-19, 2014, San Francisco, USA.
+
+\bibitem{Zambelli2013}
+  Zambelli, P., Gebbert, S., Ciolli, M., 2013. Pygrass: An Object Oriented Python Application Programming
+  Interface (API) for Geographic Resources Analysis Support System (GRASS) Geographic Information System
+  (GIS). ISPRS International Journal of Geo-Information 2, 201--219.
+
+\end{thebibliography}
+
+\blocksectiontitle{Acknowledgements}
 
 \newcommand{\listhspace}{\hspace{0.005\linewidth}}
-\newcommand{\listlogowidth}{0.22\linewidth}
-\newcommand{\listtextwidth}{0.76\linewidth}
+\newcommand{\listlogowidth}{0.15\linewidth}
+\newcommand{\listtextwidth}{0.82\linewidth}
 
 \begin{minipage}{\listlogowidth}
 \includegraphics[width=\linewidth]{osgeo}
@@ -395,35 +403,36 @@ Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done durin
 Luca Delucchi, Italy, contributed significantly to development of Python interfaces for GRASS GIS 7
 through extensive testing in early stages of development, documenting the APIs
 and general contributions to the code itself.
-}
 
+\blocksectiontitle{More information}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{References}}{
+\newcommand{\qrcodewidth}{1\linewidth}
+\hspace{-0.02\linewidth}
+\begin{tabular}{lll}
+\begin{minipage}{0.1\linewidth}
+\includegraphics[height=\qrcodewidth]{grass_osgeo_org}
+\end{minipage}
+\begin{minipage}{0.27\linewidth}
+GRASS GIS website\newline
+% http://grass.osgeo.org/
+\url{grass.osgeo.org}
+\end{minipage}
+&
+\begin{minipage}{0.1\linewidth}
+\includegraphics[height=\qrcodewidth]{python_doc}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+GRASS GIS Python libraries documentation\newline
+% http://grass.osgeo.org/grass71/manuals/libpython/
+\url{grass.osgeo.org/grass71/manuals}
+\end{minipage}
 
-% disable the title
-\renewcommand{\section}[2]{}
-\begin{thebibliography}{9}
+\end{tabular}
 
-\bibitem{Neteler2012}
-  Neteler, M., Bowman, M. H., Landa, M., Metz, M., 2012.
-  \emph{GRASS GIS: A multi-purpose open source GIS.}
-  Environmental Modelling \& Software, 31, 124--130.
+% qrcode -t EPS -o grass-user.eps "http://lists.osgeo.org/listinfo/grass-user"
+% epstopdf grass-user.eps
+% rm grass-user.eps
 
-\bibitem{Gebbert2014}
-  Gebbert, S., Pebesma, E., 2014. A temporal GIS for field based environmental modeling. Environmental
-  Modelling \& Software 53, 1--12.
-
-\bibitem{Petras2014}
-  Petras, V., Gebbert, S., 2014. Testing framework for GRASS GIS: ensuring reproducibility of scientific
-  geospatial computing. Poster presented at: AGU Fall Meeting, December 15-19, 2014, San Francisco, USA.
-
-\bibitem{Zambelli2013}
-  Zambelli, P., Gebbert, S., Ciolli, M., 2013. Pygrass: An Object Oriented Python Application Programming
-  Interface (API) for Geographic Resources Analysis Support System (GRASS) Geographic Information System
-  (GIS). ISPRS International Journal of Geo-Information 2, 201--219.
-
-\end{thebibliography}
 }
 
 \end{columns}

@@ -16,5 +16,9 @@
 r_neighbors = Module('r.neighbors', input='elevation',
                      output='elevation_smooth',
                      method='median', flags='c')
+# get result with alternative method
+r_neighbors.inputs.method = 'mode'
+r_neighbors.outputs.output = 'elevation_smooth_2'
+r_neighbors.run()
 \end{lstlisting}
 \end{document}  
