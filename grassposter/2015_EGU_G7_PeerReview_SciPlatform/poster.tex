@@ -176,9 +176,9 @@ Ridges and valleys detected on the sand physical model of High Tatras (Slovakia)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Natural Hazards: Wildfire Spread}}{
-The wildfire simulation toolset, firstly developed by Xu, 1994~\cite{xu1994simulating}, 
-implementing Rothermel’s model~\cite{Rothermel1983how}, available through the GRASS 
-functions \gmodule{r.ros} and \gmodule{r.spread}, is object of active research. It has been extensively 
+The wildfire simulation toolset, originally developed by Xu (1994~\cite{xu1994simulating}) 
+implements Rothermel’s model~\cite{Rothermel1983how}. It is available through the GRASS GIS 
+modules \gmodule{r.ros} and \gmodule{r.spread} and object of active research. It has been extensively 
 tested and recently adapted to European fuel types (Rodriguez-Aseretto et al.,
 2013~\cite{rodriguez2013data}; de Rigo et al., 2013~\cite{derigo2013architecture};
 Di Leo et al., 2013~\cite{2013_DiLeo_etAl}).
@@ -206,8 +206,8 @@ The time dimension was introduced in GRASS GIS version 7 for raster, 3D raster a
 vector map layers, transforming it into a full featured temporal GIS (Gebbert and Pebesma, 2014 \cite{Gebbert20141}).
 Time series of map layers are managed in space time datasets, a new data type in GRASS GIS.
 Based on the GRASS GIS Temporal Framework, more than 45 modules were implemented to manage, analyze, process
-and visualize space time datasets. The temporal enabled GRASS GIS is able to efficiently
-handle more than 100.000 map layers. It was used to analyze the
+and visualize space time datasets. The temporal enabled GRASS GIS is capable to efficiently
+handle more than 100,000 map layers. E.g., it was used to analyze the
 European Climate Assessment \& Dataset ECA\&D (Haylock et al. \cite{Haylock2008_climate_series})
 for climate change indicators.
 
@@ -269,7 +269,7 @@ Precipitation interpolated from meteorological stations in 3D space using \gmodu
 ~
 \begin{minipage}{0.5\linewidth}
 \includegraphics[width=\textwidth]{elevation_lidar}
-Digital elevation model interpolated from lidar point cloud using \gmodule{v.surf.rst}. Data are showing tillage in an agricultural field near Raleigh (North Carolina, USA)
+Digital elevation model interpolated from LiDAR point clouds using \gmodule{v.surf.rst}. Data are showing tillage in an agricultural field near Raleigh (North Carolina, USA)
 \end{minipage}
 }
 
@@ -282,7 +282,7 @@ comparisons address few number of models, and small to medium areas
 Garcia et al., 2007 \cite{garcia2007comparison}; Suleiman et al., 2008
 \cite{suleiman2008intercomparison}; Timmermans et al., 2007 \cite{timmermans2007intercomparison}). 
 With the large amount of remote sensing data covering the Earth, and the daily 
-information available for the past ten years (i.e. Aqua/Terra-MODIS) for each pixel 
+information available for more than twelve years (i.e. Aqua/Terra-MODIS) for each pixel 
 location, it becomes paramount to have a more complete comparison, 
 in space and time.
 \newline
@@ -304,8 +304,8 @@ Biological fraction of 2014 ET (cumul. mm/y) \& January average gap (mm/m), Tonl
 \end{center}
 
 To address this new experimental requirement, a distributed computing framework was 
-designed, and created (Chemin, 2012 \cite{chemin2012distributed}). 
-The design architecture was built from original satellite datasets to various levels 
+designed and created (Chemin, 2012 \cite{chemin2012distributed}). 
+The architecture design was built from original satellite datasets to various levels 
 of processing until reaching the requirement of various ETa models input dataset. 
 Each input product is computed once and reused in all ETa models requiring such input. 
 This permits standardization of inputs as much as possible to zero-in variations of 
