@@ -1,0 +1,24 @@
+% taken from grass-promo/grassposter, written by me I think
+
+\documentclass{standalone}
+
+\usepackage[active,tightpage]{preview}
+\usepackage{listings}
+\PreviewEnvironment{lstlisting}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\input{listings_settings}
+
+\begin{document}
+
+\begin{lstlisting}[language=Python,linewidth=44.2em]
+# run the series interpolation module in a highly controlled way
+self.assertModule('r.series.interp',
+                  input=['prec_1', 'prec_5'], datapos=(0.0, 1.0),
+                  output=['prec_2', 'prec_3', 'prec_4'],
+                  samplingpos=(0.25, 0.5, 0.75), method='linear')
+# check the interpolated raster prec_2 for minimum and maximum (same here)
+self.assertRasterMinMax(map='prec_2', refmin=200, refmax=200)
+\end{lstlisting}
+\end{document}  

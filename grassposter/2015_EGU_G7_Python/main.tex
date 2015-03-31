@@ -82,7 +82,6 @@ Peter L\"{o}we\inst{7}
        \includegraphics[width=\logowidth]{iwmi}
 
        \logovspace
-       % TODO: TICSA logo (Soeren)
        \includegraphics[width=2\logowidth]{ti}
        \logohspace
        \includegraphics[width=1.2\logowidth]{ctu_prague}
@@ -93,7 +92,6 @@ Peter L\"{o}we\inst{7}
 
        \includegraphics[width=1.5\logowidth]{fem_cri}
        \logohspace
-       % TODO: GNLST logo (Peter)
        \includegraphics[width=3\logowidth]{tib}
     \end{minipage}%
     \hfill
@@ -191,11 +189,14 @@ Peter L\"{o}we\inst{7}
 % \begin{itemize}
 \renewcommand{\item}{\par\vspace{0.8ex}}
 \item GRASS GIS \cite{Neteler2012} is a platform for geospatial computations.
-\item GRASS GIS used directly using Python or GUI or through other software such as QGIS or R.
-\item GRASS GIS ecosystem supports code maintenance.
+% \item GRASS GIS used directly using Python or GUI or through other software.
 \item The functionality is divided into set of modules (individual tools, functions, algorithms or models).
 \item Core libraries and algorithms implemented in C for high performance.
-\item The system together with the broad community ensures long term preservation of algorithms.
+\item Python APIs for GRASS GIS are an interface for both the modules and the library.
+\item Standardization of inputs and interface serves as a tool for integration a sharing.
+\item Other Python tools such as NumPy or IPython can be used together with GRASS GIS.
+% \item The system together with the broad community ensures long term preservation of algorithms.
+% \item GRASS GIS ecosystem supports code maintenance.
 % \end{itemize}
 }
 
@@ -276,7 +277,7 @@ These can be easily rewritten to \pkg{grass.script} or \pkg{grass.pygrass} synta
 	\bigskip
 	%\includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{pygrass_ipython_cli}
 	\centering
-	\includegraphics[width=0.95\linewidth, clip, trim=0 120 0 0]{ipython_nb}
+	\includegraphics[width=0.95\linewidth, clip, trim=0 145 0 0]{ipython_nb}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -297,7 +298,24 @@ to access C functions from GRASS GIS libraries directly.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Testing the code}}{
-\cite{Petras2014}
+% To facilitate the development of the module, GRASS GIS provides
+% a Python library for testing (Petras and Gebbert, 2014)
+% which helps researchers to ensure the robustness of the
+% algorithm, correctness of the results in edge cases
+% as well as the detection of changes in results due to new
+% development.
+
+To show that all promised functionality is available and algorithm works as expected
+every module should be supplied with a test.
+This also ensures that functionality
+can be simply tested any time in the future \cite{Petras2014}.
+
+\includegraphics[width=\linewidth, clip, trim=0 5 0 0]{gunittest}
+
+% Tests can be written to check the numerical results but also general functionality
+% such as if different parameters are accepted.
+Tests can use standardize datasets or use custom reference data.
+Basic tests can also just look at the statistical summary of a result.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
