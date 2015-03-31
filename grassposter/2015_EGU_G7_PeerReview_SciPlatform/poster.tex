@@ -216,6 +216,8 @@ handle more than 100,000 map layers. E.g., it was used to analyze the
 European Climate Assessment \& Dataset ECA\&D (Haylock et al. \cite{Haylock2008_climate_series})
 for climate change indicators.
 
+\vspace*{1cm}
+
 \begin{minipage}{0.5\linewidth}
 \includegraphics[scale=0.5]{images/summer_mean_temp_slope.pdf}
 The linear regression slope computed with t.rast.series of the temperate climate zone in the European Union
@@ -230,28 +232,42 @@ Seasonal mean temperature trend for the temperate climate zone of the European U
 \gmodule{t.rast.univar} and the open source statistical software system R
 were used to create this plot.
 \end{minipage}
+
+\vspace*{1cm}
+
 }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Natural Hazards: Water, Floods and Erosion}}{
-GRASS GIS entails several modules that constitute the result of active research on 
-natural hazard. The \gmodule{r.sim.water} simulation model (Mitas and Mitasova, 1998 \cite{Mitas1998b}) 
-for overland flow under rainfall excess conditions was integrated into the Emergency 
-Routing Decision Planning system as a WPS (Raghavan et al., 2014 \cite{raghavan2014deploying}). 
-It was also modified by Petrasova et al., 2014 \cite{Petrasova2014} and is now part of a 
-specialised software called \textit{Tangible Landscape} (previously \textit{Tangible GIS}), which also 
-incorporated the \gamodule{r.damflood} module.\newline\linebreak
+
+GRASS GIS entails several modules that constitute the result of active research on natural hazard.
+The \gmodule{r.sim.water} simulation model (Mitas and Mitasova, 1998 \cite{Mitas1998b})
+for overland flow with spatially variable rainfall excess conditions was integrated into the Emergency
+Routing Decision Planning system as a WPS (Raghavan et al., 2014 \cite{raghavan2014deploying}).
+The module \gmodule{r.sim.water} together with
+the module \gmodule{r.sim.sediment} for erosion-deposition modeling
+implements path sampling algorithm which is robust and easy to parallelize.
+The \gmodule{r.sim.water} module was also utilized by Petrasova et al., 2014 \cite{Petrasova2014} and is now part of
+\emph{Tangible Landscape}, a tangible GIS system, which also incorporated \gmodule{r.damflood},
+a dam break inundation simulation \cite{cannata2012two}.
+
+\bigskip
+
+\vspace*{1cm}
 
 \begin{minipage}{0.5\linewidth}
 \includegraphics[width=\textwidth]{rsimwater_architects}
 Overland flow used for landscape architecture design in Tangible Landscape environment
 \end{minipage}
+~
 \begin{minipage}{0.5\linewidth}
 \includegraphics[width=\textwidth]{damflood_tangible}
 Coal ash pond breach in Tangible Landscape environment using \gamodule{r.damflood} module
 \end{minipage}
+
+\vspace*{1.4cm}
 }
 
 
@@ -289,7 +305,10 @@ With the large amount of remote sensing data covering the Earth, and the daily
 information available for more than twelve years (i.e. Aqua/Terra-MODIS) for each pixel 
 location, it becomes paramount to have a more complete comparison, 
 in space and time.
-\newline
+
+\bigskip
+
+\vspace*{1cm}
 
 \begin{minipage}{0.5\linewidth}
 \begin{center}
@@ -307,6 +326,8 @@ in space and time.
 Biological fraction of 2014 ET (cumul. mm/y) \& January average gap (mm/m), Tonle Sap, Cambodia.
 \end{center}
 
+\bigskip
+
 To address this new experimental requirement, a distributed computing framework was 
 designed and created (Chemin, 2012 \cite{chemin2012distributed}). 
 The architecture design was built from original satellite datasets to various levels 
@@ -316,6 +337,9 @@ This permits standardization of inputs as much as possible to zero-in variations
 models to the models internals/specificities. All of the ET models are available in the 
 new GRASS GIS version 7 as imagery modules and replicability is complete for future 
 research.
+
+\vspace*{0.6cm}
+
 }
 
 
