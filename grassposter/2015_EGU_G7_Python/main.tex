@@ -36,7 +36,7 @@ Peter L\"{o}we\inst{7}
 \instlist{4}Faculty of Civil Engineering, Czech Technical University in Prague, Czech Republic,
 \instlist{5}Th\"{u}nen Institute of Climate-Smart Agriculture, Braunschweig, Germany,
 \instlist{6}Research and Innovation Centre, Fondazione Edmund Mach, San Michele all'Adige, Italy,
-\instlist{7}German National Library for Science and Technology, Hanover, Germany
+\instlist{7}TIB Hannover - German National Library of Science and Technology, Hanover, Germany
 }
 % \titlegraphic{}
 
@@ -66,30 +66,32 @@ Peter L\"{o}we\inst{7}
 \useblockstyle{Default} % Basic
 % \usecolorpalette{e}
 
+\newlength{\logowidth}
+
 \makeatletter
 \renewcommand\TP@maketitle{%
     \begin{minipage}{0.12\linewidth}
        \centering
 
-       \newcommand{\logowidth}{0.17\textwidth}
+       \setlength{\logowidth}{0.17\textwidth}
        \newcommand{\logovspace}{\vspace{3ex}}
        \newcommand{\logohspace}{\hspace{1ex}}
 
-       \includegraphics[width=\logowidth]{ncstate}
+       \includegraphics[width=1.6\logowidth]{ncstate}
        \logohspace
        \includegraphics[width=\logowidth]{iwmi}
 
        \logovspace
        % TODO: TICSA logo (Soeren)
-       \includegraphics[width=\logowidth]{ti}
+       \includegraphics[width=2\logowidth]{ti}
        \logohspace
-       \includegraphics[width=\logowidth]{ctu_prague}
+       \includegraphics[width=1.2\logowidth]{ctu_prague}
        \logohspace
-       \includegraphics[width=\logowidth]{eurac}
+       \includegraphics[width=2\logowidth]{eurac}
 
        \logovspace
 
-       \includegraphics[width=\logowidth]{fem_cri}
+       \includegraphics[width=1.5\logowidth]{fem_cri}
        \logohspace
        % TODO: GNLST logo (Peter)
        \includegraphics[width=\logowidth]{ncstate}
