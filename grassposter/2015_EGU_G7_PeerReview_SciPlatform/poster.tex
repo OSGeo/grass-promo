@@ -282,9 +282,8 @@ Coal ash pond breach in Tangible Landscape environment using \gamodule{r.damfloo
 \block{\blocktitlewrap{Spatial interpolation}}{
 The module v.surf.rst for spatial interpolation was developed approximately 12 years 
 ago, since then it was improved several times (Trac2, 2014). It is now an important part 
-of GRASS GIS and is even taught at geospatial modeling courses, for example 
-\url{http://courses.ncsu.edu/gis582/common/grass/interpolation_2.html}.
-% TODO: move link to references
+of GRASS GIS and is even taught at geospatial modeling courses, for example at North Carolina State University
+\cite{ncsugis582}.
 
 \begin{minipage}{0.5\linewidth}
 \includegraphics[width=\textwidth]{interpolation_precip_vvolrst}
@@ -371,8 +370,11 @@ Landuse classes and derived landscape diversity according to Shannon index in ne
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Conclusions}}{
+
+\renewcommand{\labelitemi}{\textcolor{gray}{$\bullet$}\hspace{0.5ex}}
+
 % TODO: review the points, it should be the highlight or something like that
-% TODO: style of bullets is strange
+
 \begin{itemize}
  \item Algorithms and models once included into GRASS GIS remain available long term.
  \item GRASS GIS development team takes care of API related updates and operating system related changes.
@@ -387,7 +389,8 @@ Landuse classes and derived landscape diversity according to Shannon index in ne
 \block{\blocktitlewrap{References and Acknowledgements}}{
 \scriptsize
 
-\newcommand{\blocksectiontitle}[1]{\subsubsection*{\textcolor{gray}{\textsf{#1}}}}
+% \newcommand{\blocksectiontitle}[1]{\subsubsection*{\textcolor{gray}{\textsf{#1}}}}
+\newcommand{\blocksectiontitle}[1]{\textbf{#1}}
 
 %\blocksectiontitle{References}
 \begingroup
@@ -396,10 +399,11 @@ Landuse classes and derived landscape diversity according to Shannon index in ne
 \bibliography{poster}
 \endgroup
 
+\textcolor{gray}{
 \hrulefill
+}
 
-%\blocksectiontitle{Acknowledgements}
-\textbf{Acknowledgments}
+\blocksectiontitle{Acknowledgements}
 
 We acknowledge Matthew Horvath for \emph{Spill impacts from coal ash pond using GRASS GIS} and
 % http://www4.ncsu.edu/~jcfounta/Summer14Posters/horvath.pdf
@@ -414,7 +418,8 @@ GRASS GIS project is a Open Source Geospatial Foundation (OSGeo) project and is 
 
 \newcommand{\qrcodesize}{0.05\linewidth}
 
-% TODO: add proper QR codes and fix links
+% qrencode http://grass.osgeo.org -o qr_grass.eps -t EPS
+% epspdf -b qr_grass.eps qr_grass.pdf
 
 \begin{center}
 \begin{tabular}{c}
@@ -422,25 +427,25 @@ GRASS GIS project is a Open Source Geospatial Foundation (OSGeo) project and is 
 % \hspace{5mm}
 
 \begin{minipage}{\qrcodesize}
-\includegraphics[width=\textwidth]{./images/grass_qr.pdf}
+\includegraphics[width=\textwidth]{./images/qr_grass.pdf}
 \end{minipage}
-
+~
 \begin{minipage}{0.15\linewidth}
-\small {\url{grass.osgeo.org}}
+\small {\href{http://grass.osgeo.org}{\nolinkurl{grass.osgeo.org}}}
 \end{minipage}
 
 \begin{minipage}{\qrcodesize}
-\includegraphics[width=\textwidth]{./images/grass_qr.pdf}
+\includegraphics[width=\textwidth]{./images/qr_grasswiki.pdf}
 \end{minipage}
-
+~
 \begin{minipage}{0.2\linewidth}
-\small {\url{grasswiki.osgeo.org}}
+\small {\href{http://grasswiki.osgeo.org}{\nolinkurl{grasswiki.osgeo.org}}}
 \end{minipage}
 
 \begin{minipage}{0.1\linewidth}
 \href{http://creativecommons.org/licenses/by-sa/4.0/}{\includegraphics[width=\textwidth]{ccbysa}}
 \end{minipage}
-
+~
 \begin{minipage}{0.35\linewidth}
 \small This poster is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 \end{minipage}
