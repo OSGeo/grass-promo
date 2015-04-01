@@ -187,14 +187,15 @@ Peter L\"{o}we\inst{7}
 % \setlength{\parskip}{1em}
 \textfontsize
 % \begin{itemize}
-\renewcommand{\item}{\par\vspace{0.8ex}}
+\renewcommand{\item}{\par\vspace{0.9ex}}
 \item GRASS GIS \cite{Neteler2012} is a platform for geospatial computations.
 % \item GRASS GIS used directly using Python or GUI or through other software.
-\item The functionality is divided into set of modules (individual tools, functions, algorithms or models).
+\item The functionality is divided into a set of modules (individual tools, functions, algorithms or models).
 \item Core libraries and algorithms implemented in C for high performance.
-\item Python APIs for GRASS GIS are an interface for both the modules and the library.
-\item Standardization of inputs and interface serves as a tool for integration a sharing.
-\item Other Python tools such as NumPy or IPython can be used together with GRASS GIS.
+\item Both the modules and the libraries are accessible through the Python API.
+\item Specialized Python APIs support different use cases ranging from high level scripting to fine data editing.
+\item It is simple to build graphical user interface.
+\item NumPy or IPython can be used together with GRASS GIS Python APIs.
 % \item The system together with the broad community ensures long term preservation of algorithms.
 % \item GRASS GIS ecosystem supports code maintenance.
 % \end{itemize}
@@ -204,16 +205,19 @@ Peter L\"{o}we\inst{7}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Automatic creation of GUI and CLI}}{
 
-The g.parser module provides full parser support for GRASS GIS scripts.
-It provides the creation of help page template, and command line option
-checking. Each command and scripts which uses the GRASS GIS parser can
-publish its parameter and flags description in XML. Through the included
-XML parser this description can be turned into a graphical user interface with
-standardized styling.
+The \gmodule{g.parser} module provides full interface definition support for Python scripts
+including creation of standardized part of a help page and command line checking.
+Each script which uses the GRASS GIS parser can
+publish definition of its parameters (options and flags) in XML.
+The GRASS GIS graphical user interface is able to use the XML
+to dynamically generate an interactive graphical dialog with unified styling. 
+
+\bigskip
 
 \includegraphics[width=\linewidth, clip, trim=0 0 0 0]{grass_module}
 
 \includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{grass_module_gui}
+~
 \includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{grass_module_cli}
 
 }
@@ -226,7 +230,7 @@ standardized styling.
 \column{0.25}
 
 
-\block{\blocktitlewrap{GRASS Scripting library interface to GRASS GIS modules}}{
+\block{\blocktitlewrap{GRASS Scripting Library interface to GRASS GIS modules}}{
 
 The \pkg{grass.script} package offers simple and straightforward syntax to call GRASS GIS modules:
 
@@ -250,13 +254,13 @@ Additionally, the \pkg{grass.pygrass} package offers simpler, Python oriented, w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Using documentation for GRASS GIS modules}}{
 
-Documentation of GRASS GIS modules usually use Bash syntax for examples:
+Documentation of GRASS GIS modules usually use Bash syntax to provide an example of usage, e.g.:
 
 \begin{alltt}
 r.neighbors input=elevation output=elevation\_smooth method=median -c
 \end{alltt}
 
-These can be easily rewritten to \pkg{grass.script} or \pkg{grass.pygrass} syntax shown above.
+This syntax can be easily rewritten to the \pkg{grass.script} syntax or the \pkg{grass.pygrass} syntax shown above.
 
 % This can be easily rewritten to \pkg{grass.script} syntax:
 % 
@@ -269,15 +273,16 @@ These can be easily rewritten to \pkg{grass.script} or \pkg{grass.pygrass} synta
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Using IPython Notebook}}{
+\block{\blocktitlewrap{IPython Notebook}}{
 
-	IPython Notebook is a web-based application that provides a tool to: developing, documenting, and executing code, as well as communicating the results.
-	One great tool to process and visualize your data/maps, integrating formulas and explanatory text, interacting with remote server and clusters.
+IPython Notebook is a web-based tool to develop, document, and execute code, as well as communicate the results.
+In combination with GRASS GIS, it is an excellent tool to process and visualize your geospatial data,
+integrate formulas, explanatory text and maps, and interact with remote servers and clusters.
 
-	\bigskip
-	%\includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{pygrass_ipython_cli}
-	\centering
-	\includegraphics[width=0.95\linewidth, clip, trim=0 145 0 0]{ipython_nb}
+\bigskip
+%\includegraphics[width=0.5\linewidth, clip, trim=0 0 0 0]{pygrass_ipython_cli}
+\centering
+\includegraphics[width=0.95\linewidth, clip, trim=0 145 0 0]{ipython_nb}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -288,16 +293,16 @@ These can be easily rewritten to \pkg{grass.script} or \pkg{grass.pygrass} synta
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{PyGRASS interface to C libraries}}{
-Some API examples to convert a raster map to a NumPy array and then back to a raster.
+Examples of using the API to convert a raster map to a NumPy array and back to raster:
 
-\includegraphics[width=\linewidth, clip, trim=0 0 0 0]{pygrass_raster_examples}
+\includegraphics[width=\linewidth, clip, trim=0 8 0 0]{pygrass_raster_examples}
 
 In addition to PyGRASS interface, advanced programmers can use \pkg{ctypes} interface
 to access C functions from GRASS GIS libraries directly.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Testing the code}}{
+\block{\blocktitlewrap{Testing the algorithms}}{
 % To facilitate the development of the module, GRASS GIS provides
 % a Python library for testing (Petras and Gebbert, 2014)
 % which helps researchers to ensure the robustness of the
@@ -310,23 +315,25 @@ every module should be supplied with a test.
 This also ensures that functionality
 can be simply tested any time in the future \cite{Petras2014}.
 
-\includegraphics[width=\linewidth, clip, trim=0 5 0 0]{gunittest}
+\includegraphics[width=\linewidth, clip, trim=0 8 0 0]{gunittest}
 
 % Tests can be written to check the numerical results but also general functionality
 % such as if different parameters are accepted.
 Tests can use standardize datasets or use custom reference data.
-Basic tests can also just look at the statistical summary of a result.
+It is very easy to write a sophisticated test just by checking a statistical summary of computation results.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{GRASS GIS modules, addons and Python scripts}}{
-A Python script can by turned into a GRASS GIS modules by adding a definition of the interface.
-Also, GRASS GIS modules expect to be executed in GRASS GIS session.
+A Python script can by turned into a GRASS GIS module by adding a definition of the interface
+using GRASS GIS parser mechanism.
+Another difference is that GRASS GIS modules expect to be executed in GRASS GIS session.
 Python scripts which are using GRASS GIS can be written in a way that GRASS GIS session is not required;
-the setup of a necessary environment is done in the script itself.
+the setup of a necessary environment is done in the script itself in this case.
 % running code from IDE
 
-The GRASS GIS Addon repository ensures vendor-independent long-term preservation of the code
+The GRASS GIS Addon repository contains modules from wide range of contributors
+and ensures vendor-independent long-term preservation of the code
 and ensures an easy distribution of module to individual users.
 Well maintained modules in Addons can be moved to GRASS GIS core.
 }
@@ -348,11 +355,12 @@ Finally, GRASS GIS modules can be used within R statistical environment using th
 \column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{GRASS GIS 7 Temporal Framework}}{
-The GRASS GIS Temporal Framework offers the temporal GIS functionality of GRASS GIS 
-and provides a Python API to implement spatio-temporal processing modules. 
-The framework introduces space-time datasets that represent time series of raster, 
-3D raster or vector maps. Some API examples:
+\block{\blocktitlewrap{GRASS GIS Temporal Framework}}{
+The GRASS GIS Temporal Framework implements the temporal GIS functionality
+and provides a Python API to implement spatio-temporal processing modules.
+The framework introduces space-time datasets that represent time series of raster,
+3D raster or vector maps.
+An API example:
 \includegraphics[width=1\linewidth, clip, trim=0 0 0 0]{tgrass_examples}
 }
 
@@ -397,7 +405,7 @@ The framework introduces space-time datasets that represent time series of raste
 \listhspace
 \begin{minipage}{\listtextwidth}
 GRASS GIS is a OSGeo project. OSGeo provides infrastructure for project
-Web sites, mailing lists and source code management.
+websites, mailing lists and source code management.
 \end{minipage}
 
 \bigskip
@@ -407,7 +415,7 @@ Web sites, mailing lists and source code management.
 \end{minipage}
 \listhspace
 \begin{minipage}{\listtextwidth}
-Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done during Google Summer of Code 2014.
+Initial development of \pkg{pygrass} and \pkg{gunittest} packages was done during Google Summer of Code 2012 and 2014.
 \end{minipage}
 
 \bigskip

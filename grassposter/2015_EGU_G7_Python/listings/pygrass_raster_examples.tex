@@ -32,7 +32,8 @@ def numpy2raster(array, mtype, name):
     with RasterRow(name, mode='w', mtype=mtype) as new:
         newrow = Buffer((array.shape[1],), mtype=mtype)
         for row in array:
-            newrow[:] = row[:]   # cast array to raster type
+            newrow[:] = row[:]  # cast array to raster type
             new.put_row(newrow)  # write row to raster map
+# note that there is a specialized package which implements this functionality
 \end{lstlisting}
 \end{document}  
