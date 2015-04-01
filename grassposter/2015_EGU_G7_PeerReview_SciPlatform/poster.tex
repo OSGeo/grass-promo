@@ -162,19 +162,19 @@ such as R or QGIS to perform geoprocessing tasks.
 Thanks to the user and developer community, submitted code is evaluated
 in different fields of application beyond
 the field of expertise of the original authors, and different scales of magnitude
-for the data to be processed.
+of data.
 This exceeds the established review process for scientific writing in a given journal
 or a data publication in a defined field of science.
 
-Immediate access to software repository enables instant quality checking
+Immediate access to the software repository enables instant quality checking
 of the current software version both by continuous automated tests (Petras, 2014 \cite{Petras2014}),
 and code review by human experts.
 
 New scientific algorithms can be developed against the reviewed functionalities
 already provided by the GRASS GIS codebase.
-This avoids unnecessary overhead by re-implementation,
+This avoids unnecessary overheads, by re-implementation,
 ensures quality by use of trusted components and allows reuse and long term preservation
-within the project software repository:
+within the project software repository.
 Integrating scientific algorithms into GRASS GIS helps to preserve reproducibility
 of scientific results over time as the original author designed it
 (Rocchini \& Neteler, 2012 \cite{rocchini2012let}).
@@ -205,7 +205,7 @@ Ridges and valleys detected on the sand physical model of High Tatras (Slovakia)
 \block{\blocktitlewrap{Natural Hazards: Wildfire Spread}}{
 The wildfire simulation toolset, originally developed by Xu (1994~\cite{xu1994simulating}) 
 implements Rothermel’s model~\cite{Rothermel1983how}. It is available through the GRASS GIS 
-modules \gmodule{r.ros} and \gmodule{r.spread} and object of active research. It has been extensively 
+modules \gmodule{r.ros} and \gmodule{r.spread} and is object of active research. It has been extensively 
 tested and recently adapted to European fuel types (Rodriguez-Aseretto et al.,
 2013~\cite{rodriguez2013data}; de Rigo et al., 2013~\cite{derigo2013architecture};
 Di Leo et al., 2013~\cite{2013_DiLeo_etAl}).
@@ -220,7 +220,7 @@ Wildfire simulation in Tangible Landscape environment
 \begin{minipage}{0.5\linewidth}
 \includegraphics[width=\textwidth]{fire_valencia_040914}
 Major wildfire event near Valencia (Spain) between June 28th and July 4th 2012.
-The actual perimeters recorded by JRC-EFFIS shown, in 
+The actual perimeters recorded by JRC-EFFIS are shown, in 
 comparison with burnt area simulated in GRASS GIS.
 \end{minipage}
 }
@@ -237,8 +237,8 @@ The time dimension was introduced in GRASS GIS version 7 for raster, 3D raster a
 vector map layers, transforming it into a full featured temporal GIS (Gebbert and Pebesma, 2014 \cite{Gebbert20141}).
 Time series of map layers are managed in space time datasets, a new data type in GRASS GIS.
 Based on the GRASS GIS Temporal Framework, more than 45 modules were implemented to manage, analyze, process
-and visualize space time datasets. The temporal enabled GRASS GIS is capable to efficiently
-handle more than 100,000 map layers. E.g., it was used to analyze the
+and visualize space time datasets. The temporal enabled GRASS GIS is capable of efficiently
+handling more than 100,000 map layers; e.g., it was used to analyze the
 European Climate Assessment \& Dataset ECA\&D (Haylock et al. \cite{Haylock2008_climate_series})
 for climate change indicators.
 
@@ -268,13 +268,13 @@ were used to create this plot.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Natural Hazards: Water, Floods and Erosion}}{
 
-GRASS GIS entails several modules that constitute the result of active research on natural hazard.
+GRASS GIS entails several modules that constitute the result of active research on natural hazards.
 The \gmodule{r.sim.water} simulation model (Mitas and Mitasova, 1998 \cite{Mitas1998b})
 for overland flow with spatially variable rainfall excess conditions was integrated into the Emergency
 Routing Decision Planning system as a WPS (Raghavan et al., 2014 \cite{raghavan2014deploying}).
 The module \gmodule{r.sim.water} together with
 the module \gmodule{r.sim.sediment} for erosion-deposition modeling
-implements path sampling algorithm which is robust and easy to parallelize.
+implements a path sampling algorithm which is robust and easy to parallelize.
 The \gmodule{r.sim.water} module was also utilized by Petrasova et al., 2014 \cite{Petrasova2014} and is now part of
 \emph{Tangible Landscape}, a tangible GIS system, which also incorporated \gmodule{r.damflood},
 a dam break inundation simulation \cite{cannata2012two}.
@@ -304,7 +304,7 @@ Coal ash pond breach in Tangible Landscape environment using \gamodule{r.damfloo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Spatial interpolation}}{
 The module \gmodule{v.surf.rst} for spatial interpolation was developed approximately 20 years
-ago, since then it was improved several times \cite{tracvsurfrst}. It is now an important part
+ago, since then it has been improved several times (Trac2, 2014). It is now an important part
 of GRASS GIS and is even taught at geospatial modeling courses, for example at North Carolina State University
 \cite{ncsugis582}.
 
@@ -324,8 +324,8 @@ using \gmodule{v.surf.rst}. Data are showing tillage in an agricultural field ne
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Evapotranspiration (ET)}}{
 With the various types of actual ET models being developed in the last 20 years, 
-it becomes necessary to inter-compare methods. Most of already published ETa models 
-comparisons address few number of models, and small to medium areas 
+it becomes necessary to inter-compare methods. Most already published ETa model 
+comparisons address a low number of models, and small to medium areas 
 (Chemin, 2014 \cite{chemin2012distributed}; Gao and Long, 2008 \cite{gao2008intercomparison}; 
 Garcia et al., 2007 \cite{garcia2007comparison}; Suleiman et al., 2008
 \cite{suleiman2008intercomparison}; Timmermans et al., 2007 \cite{timmermans2007intercomparison}). 
@@ -359,10 +359,11 @@ Biological fraction of 2014 ET (cumul. mm/y) \& January average gap (mm/m), Tonl
 To address this new experimental requirement, a distributed computing framework was 
 designed and created (Chemin, 2012 \cite{chemin2012distributed}). 
 The architecture design was built from original satellite datasets to various levels 
-of processing until reaching the requirement of various ETa models input dataset. 
+of processing until reaching the input dataset requirements of various ETa models. 
 Each input product is computed once and reused in all ETa models requiring such input. 
 This permits standardization of inputs as much as possible to zero-in variations of 
-models to the models internals/specificities. All of the ET models are available in the 
+models to the models internals/specificities. % can this sentence be rephrased 
+All of the ET models are available in the 
 new GRASS GIS version 7 as imagery modules and replicability is complete for future 
 research.
 
@@ -382,7 +383,7 @@ A set of modules for multiscale analysis of landscape structure was added in 199
 by Baker et al. \cite{baker1992r}, who developed the \gmodulenolink{r.le} model similar to 
 FRAGSTATS \cite{mcgarigal1995fragstats}, see manual. The modules were gradually 
 improved to become \gmodule{r.li} in 2006. Further development continued, with a significant 
-speed up \cite{tracrli} and new interactive user interface.
+increase in speed \cite{tracrli} and a new interactive user interface.
 Rocchini et al. \cite{rocchini2013calculating} used \gmodule{r.li} modules to implement
 high level tool for calculating landscape diversity.
 
@@ -409,9 +410,9 @@ Landuse classes and derived landscape diversity according to Shannon index in ne
 % TODO: review the points, it should be the highlight or something like that
 
 \begin{itemize}
- \item Algorithms and models, included into GRASS GIS remain long term available (already for 30 years).
+ \item Algorithms and models, included in GRASS GIS remain available long term (already for 30 years).
  \item The GRASS GIS development team takes care of API and operating system related changes. % in the provided contributions.
- \item Scientists can use highly specialized tools implemented by others because of having both scientific publications and source code at hand.
+ \item Scientists can use highly specialized tools implemented by others as a result of having both scientific publications and source code at hand.
  \item The long term preservation of knowledge allows scientists to build new research and tools upon existing know-how.
 \end{itemize}
 }
