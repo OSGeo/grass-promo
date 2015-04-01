@@ -125,6 +125,7 @@ Margherita Di Leo\inst{8}
 % GRASS module
 \newcommand{\gmodule}[1]{\href{http://grass.osgeo.org/grass70/manuals/#1.html}{\emph{#1}}}
 \newcommand{\gamodule}[1]{\href{http://grass.osgeo.org/grass70/manuals/addons/#1.html}{\emph{#1}}}
+\newcommand{\gmodulenolink}[1]{\emph{#1}}
 
 \begin{document}
 \maketitle[width=0.92\textwidth]
@@ -303,7 +304,7 @@ Coal ash pond breach in Tangible Landscape environment using \gamodule{r.damfloo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Spatial interpolation}}{
 The module \gmodule{v.surf.rst} for spatial interpolation was developed approximately 20 years
-ago, since then it was improved several times (Trac2, 2014). It is now an important part
+ago, since then it was improved several times \cite{tracvsurfrst}. It is now an important part
 of GRASS GIS and is even taught at geospatial modeling courses, for example at North Carolina State University
 \cite{ncsugis582}.
 
@@ -378,10 +379,10 @@ research.
 
 \block{\blocktitlewrap{Landscape structure}}{
 A set of modules for multiscale analysis of landscape structure was added in 1992 
-by Baker et al. \cite{baker1992r}, who developed the r.le model similar to 
+by Baker et al. \cite{baker1992r}, who developed the \gmodulenolink{r.le} model similar to 
 FRAGSTATS \cite{mcgarigal1995fragstats}, see manual. The modules were gradually 
 improved to become \gmodule{r.li} in 2006. Further development continued, with a significant 
-speed up (Trac1, 2014) and new interactive user interface.
+speed up \cite{tracrli} and new interactive user interface.
 Rocchini et al. \cite{rocchini2013calculating} used \gmodule{r.li} modules to implement
 high level tool for calculating landscape diversity.
 
@@ -418,6 +419,8 @@ Landuse classes and derived landscape diversity according to Shannon index in ne
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{References and Acknowledgements}}{
+\vspace{-0.8cm}
+
 \scriptsize
 
 % \newcommand{\blocksectiontitle}[1]{\subsubsection*{\textcolor{gray}{\textsf{#1}}}}
@@ -442,10 +445,13 @@ Eva Stopkova for physical model of High Tatras.
 
 GRASS GIS project is a Open Source Geospatial Foundation (OSGeo) project and is using OSGeo infrastructure for Web site and code repository.
 
+\vspace{-0.2cm}
+
 \textcolor{gray}{
 \hrulefill
 }
-% \vspace{-5pt}
+
+\vspace{-0.1cm}
 
 \newcommand{\qrcodesize}{0.05\linewidth}
 
@@ -484,6 +490,7 @@ GRASS GIS project is a Open Source Geospatial Foundation (OSGeo) project and is 
 \end{tabular}
 \end{center}
 
+\vspace{-0.8cm}
 }
 
 \end{columns}
