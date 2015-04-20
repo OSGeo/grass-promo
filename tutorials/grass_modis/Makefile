@@ -18,8 +18,8 @@ all:
 	${LATEX} $(FILE)
 	#bibtex $(FILE)
 	#now loop over ${LATEX} files, until stable:
-	echo Rerun > $(FILE).log
-	while grep Rerun $(FILE).log >/dev/null 2>&1 ; do ${LATEX} $(FILE).tex ; done
+	echo 'Rerun to get' > $(FILE).log
+	while grep 'Rerun to get' $(FILE).log >/dev/null 2>&1 ; do ${LATEX} $(FILE).tex ; done
 
 #check references:
 refcheck: all
@@ -41,7 +41,7 @@ pdf: all
 
 html:
 	$(MAKE) all
-	latex2html -init_file l2h.conf  -split=+2 -address "(C) 2005, <a href=http://grass.itc.it/newsletter/>GRASS Newsletter editorial board</a><br>Last modified: `/bin/date +%d-%m-%Y`" $(FILE)
+	latex2html -init_file l2h.conf  -split=+2 -address "(C) 2005, <a href=http://grass.osgeo.org/newsletter/>GRASS Newsletter editorial board</a><br>Last modified: `/bin/date +%d-%m-%Y`" $(FILE)
 	@echo "HTML Newsletter generated in ./$(FILE)"
 
 # set to your preferred software such as detex, untex, ...

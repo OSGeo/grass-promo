@@ -18,8 +18,8 @@ all:
 	${LATEX} $(FILE)
 	#bibtex $(FILE)
 	#now loop over ${LATEX} files, until stable:
-	echo Rerun > $(FILE).log
-	while grep Rerun $(FILE).log >/dev/null 2>&1 ; do ${LATEX} $(FILE).tex ; done
+	echo 'Rerun to get' > $(FILE).log
+	while grep 'Rerun to get' $(FILE).log >/dev/null 2>&1 ; do ${LATEX} $(FILE).tex ; done
 
 #check references:
 refcheck: all
