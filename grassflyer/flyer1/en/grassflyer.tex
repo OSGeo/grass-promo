@@ -64,23 +64,25 @@
 
 \section{What is GRASS}
 
-GRASS (Geographic Resources Analysis Support System) is Free and Open Source Software for performing spatial analysis. It consists of more than 350 modules for processing vector (2D/3D), raster and voxel data. Many interfaces to other programs in related domains like geostatistics, databases, mapserver and even other GIS software exist. It is the largest Open Source GIS. It can serve as a Desktop GIS and as the backbone of a complete GIS infrastructure.
+GRASS GIS (Geographic Resources Analysis Support System) is Free and Open Source Software for performing spatial analysis. It consists of \textbf{more than 400 modules for processing vector (2D/3D), raster, voxel and temporal data (4D)}. Many interfaces to other programs in related domains like geostatistics, databases, map web services and even other GIS software exist. It is the oldest and largest Free and Open Source GIS. It can serve as a Desktop GIS and as the backbone of a complete GIS infrastructure.
 
 \section{Where is GRASS used}
 
-GRASS is used in scientific applications, commercial settings and by public authorities all over the world. GRASS has shown strong potential for solving geospatial problems in numerous situations world-wide.
+GRASS GIS is used in scientific applications, commercial settings and by public authorities all over the world. GRASS GIS has shown strong potential for solving geospatial problems in numerous situations world-wide.
 
 \section{History}
 
-GRASS was originally developed in the early 1980's by the US Army Construction Engineering Research Laboratories (USA-CERL) and was published as public domain software. When the USA-CERL withdrew from GRASS development, an international developer team assumed responsibility for the task. Since 1999, GRASS has been published as free software under the terms of the GNU General Public Licence.
-\begin{myfig}[1.5ex]
-\includegraphics[width=0.7\textwidth]{visibility}
-\captionof{figure}{Viewshed analysis performed with GRASS}
+GRASS GIS was originally developed in the early 1980's by the US Army Construction Engineering Research Laboratories (USA-CERL) and was published as public domain software. When the USA-CERL withdrew from GRASS GIS development, an international developer team assumed responsibility for the task. Since 1999, GRASS GIS has been published as free software under the terms of the GNU General Public Licence. Several people during years contributed to improve the software, they helped to add new functionality, speedup existing modules, make \textbf{GRASS GIS easier, more useful and powerful to everybody}. \newline
+
+\begin{myfig}
+\includegraphics[width=0.8\textwidth]{isodist}
+\captionof{figure}{Default GUI configuration showing GRASS network analysis capabilites}
 \end{myfig}
 
-\section{Open Source Philosophy}
 
-The Open Source philosophy lets the user see the source code and structure of the program, which offers great transparency. Users can extend the program for their own needs. Immediate source code peer review increases the quality. With the help of the extension manager, new modules can be created without GRASS package source code.
+\section{Free and Open Source Philosophy}
+
+The Free and Open Source philosophy lets the user see the source code and structure of the program, which offers great transparency. Users can extend the program for their own needs. Immediate source code peer review increases the quality. With the help of the extension manager, new modules can be created without GRASS GIS package source code.
 
 \section{Technical Data Sheet}
 
@@ -95,8 +97,8 @@ GRASS runs on nearly all platforms. It supports GNU/Linux, Posix compliant Unix 
 \subsection{Design}
 
 \begin{itemize}
-\item Modular
-\item Consists of more than 350 modules
+\item Modular commands
+\item Consists of more than 400 modules
 \end{itemize}
 
 \subsection{Programming languages}
@@ -104,8 +106,7 @@ GRASS runs on nearly all platforms. It supports GNU/Linux, Posix compliant Unix 
 \begin{itemize}
 \item ANSI C
 \item GRASS-SWIG interface
-\item Python for WebGIS applications
-\item Java Version: JGRASS
+\item Python API, scripting library and GUI
 \end{itemize}
 
 \subsection{Data management capabilities}
@@ -116,6 +117,8 @@ GRASS runs on nearly all platforms. It supports GNU/Linux, Posix compliant Unix 
 \item Image manipulation
 \item Vector topology / Network analysis
 \item Geostatistics (Interface to R)
+\item Temporal dataset
+\item WPS interface
 \end{itemize}
 
 \begin{myfig}[1ex]
@@ -132,25 +135,29 @@ ASCII, ARC/INFO ungenerate, ARC/INFO E00, Arc\-View SHAPE, BIL, DLG (U.S.), DXF,
 
 \subsection{Raster file formats}
 ASCII, ARC/GRID, E00, GIF, GMT, TIF, PNG, Vis5D, SURFER (.grd),\dots
-\begin{myfig}
-\includegraphics[width=0.7\textwidth]{isodist}
-\captionof{figure}{Default GUI configuration showing GRASS network analysis capabilites}
+\begin{myfig}[1.ex]
+\includegraphics[width=0.7\textwidth]{visibility}
+\captionof{figure}{Viewshed analysis performed with GRASS}
 \end{myfig}
 
 \subsection{Image file formats}
 
-CEOS (SAR, SRTM, LANDSAT7 etc.), ERDAS LAN / IMG, HDF, LANDSAT TM/MSS, NHAP aerial photos, SAR, SPOT, \dots
-\begin{myfig}[1.5ex]
-\includegraphics[width=0.7\textwidth]{ndvi}
-\captionof{figure}{Image processing options in GRASS}
+CEOS (SAR, SRTM, LANDSAT7 etc.), ERDAS LAN / IMG, HDF, LANDSAT TM/MSS, NHAP aerial photos, SAR, SPOT, MODIS \dots
+% \begin{myfig}[1.5ex]
+% \includegraphics[width=0.7\textwidth]{ndvi}
+% \captionof{figure}{Image processing options in GRASS}
+% \end{myfig}
+\begin{myfig}
+\includegraphics[width=0.7\textwidth]{mapswipe}
+\captionof{figure}{MapSwipe tool showing differences before and after Japan Tsunami 2011}
 \end{myfig}
 
 \subsection{Database support}
 
 \begin{itemize}
+\item SQLite
 \item PostgreSQL / PostGIS
 \item MySQL
-\item SQLite
 \item ODBC
 \item DBF
 \end{itemize}
@@ -158,32 +165,32 @@ CEOS (SAR, SRTM, LANDSAT7 etc.), ERDAS LAN / IMG, HDF, LANDSAT TM/MSS, NHAP aeri
 \subsection{Output}
 
 \begin{itemize}
-\item Mapping modules
+\item Mapping modules (animation, cartographic \dots)
 \item NVIZ for visualization of 2.5D and 3D data (creation of animations \& flybys)
 %\item{GMT export}
 %item{VRML}
 \item VTK, POVray
-\item WebGIS via Mapserver, Python, etc.
+\item Web Services
 \end{itemize}
 
 \subsection{Interoperability with other GIS-related Software}
 
 \begin{itemize}
-\item Quantum GIS (Free geodata viewer and more)
+\item QGIS (Free geodata viewer and more)
 \item R-Language (Statistics)
 \item Gstat (Geostatistics)
-\item UMN Mapserver (Webmapping)
+\item UMN MapServer (Webmapping)
 \end{itemize}
 
 \section{Where to find more information}
 
 \begin{itemize}
-%\begin{flushleft}
+% \begin{flushleft}
 \item{Project Website: \\\GRASSurl}
 \item{GRASS Wiki: \\\url{http://grass.osgeo.org/wiki}}
-\item{GRASS Promotion Team: \\\url{malte@perlomat.de}}
-\item{GRASS mailing lists: \\\url{http://grass.osgeo.org/community/support.php}}
-%\end{flushleft}
+% \item{GRASS Promotion Team: \\\url{malte@perlomat.de}}
+\item{GRASS mailing lists: \\\url{http://grass.osgeo.org/community}}
+% \end{flushleft}
 \end{itemize}
 
 \vfill
@@ -191,7 +198,7 @@ CEOS (SAR, SRTM, LANDSAT7 etc.), ERDAS LAN / IMG, HDF, LANDSAT TM/MSS, NHAP aeri
 
 GRASS is a founding project of the Open Source Geospatial Foundation which has the aim to create high quality open source geospatial software. For further information visit the OSGeo homepage:
 \begin{center}
-\includegraphics[width=0.8\textwidth]{OSGeo_CMYK}\\
+\includegraphics[width=0.7\textwidth]{OSGeo_CMYK}\\
 \url{http://www.osgeo.org}
 \end{center}
 
