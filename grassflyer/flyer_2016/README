@@ -10,5 +10,10 @@ Font installation
    dnf install mozilla-fira-sans-fonts
 
 - Ubuntu:
-   ?
-   Maybe using "TypeCatcher"
+   cd /tmp
+   wget https://github.com/mozilla/Fira/archive/master.zip   # 102 MB
+   unzip master.zip
+   sudo mkdir -p /usr/share/fonts/truetype/fira
+   sudo cp Fira-master/ttf/* /usr/share/fonts/truetype/fira/
+   rm -rf /tmp/master.zip /tmp/Fira-master
+
