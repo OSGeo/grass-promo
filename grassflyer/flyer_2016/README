@@ -1,1 +1,14 @@
 Flyer created by Vincent Bain
+
+Font: Fira Sans
+--> mozilla-fira-sans-fonts
+
+
+Font installation
+
+- Fedora:
+   dnf install mozilla-fira-sans-fonts
+
+- Ubuntu:
+   ?
+   Maybe using "TypeCatcher"
