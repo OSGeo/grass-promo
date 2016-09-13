@@ -16,7 +16,7 @@
    id="svg4222"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="grass_flyer_apos.svg"
+   sodipodi:docname="grass_flyer.svg"
    enable-background="new">
   <title
      id="title4123">GRASS GIS flyer</title>
@@ -796,7 +796,6 @@
          inkscape:export-xdpi="300"
          inkscape:export-ydpi="300">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/fr/../images/largedataset.png"
            xlink:href="../images/largedataset.png"
            y="331.20322"
            x="2209.6113"
@@ -913,7 +912,6 @@
                style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1" /><flowPara
                id="flowPara3588-7-1-1"
                style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1" /></flowRoot>          <image
-             sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/fr/../images/mapswipe.png"
              xlink:href="../images/mapswipe.png"
              y="328.19818"
              x="1673.9125"
@@ -979,7 +977,6 @@
              id="flowPara3586-8-6" /><flowPara
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
              id="flowPara3588-7-1" /></flowRoot>        <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/fr/../images/nviz.png"
            xlink:href="../images/nviz.png"
            width="208.2"
            height="180"
@@ -993,7 +990,6 @@
          style="display:inline;enable-background:new"
          id="g6131">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/fr/../images/gmodeler.png"
            xlink:href="../images/gmodeler.png"
            width="336.11362"
            height="157.01659"
@@ -1038,7 +1034,6 @@
          transform="translate(0,-308.26772)"
          style="display:inline">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/fr/../images/grass_world.png"
            xlink:href="../images/grass_world.png"
            width="1052.3622"
            height="248.03149"

@@ -799,14 +799,13 @@
          inkscape:export-xdpi="300"
          inkscape:export-ydpi="300">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/largedataset.png"
            xlink:href="../images/largedataset.png"
-           width="397.52524"
-           height="177.03552"
-           preserveAspectRatio="none"
-           id="image4378"
+           y="331.20322"
            x="2209.6113"
-           y="331.20322" />
+           id="image4378"
+           preserveAspectRatio="none"
+           height="177.03552"
+           width="397.52524" />
         <flowRoot
            xml:space="preserve"
            id="flowRoot3548-3"
@@ -916,14 +915,13 @@
                style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1" /><flowPara
                id="flowPara3588-7-1-1"
                style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1" /></flowRoot>          <image
-             sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/mapswipe.png"
-             xlink:href="../images/mapswipe.png"
-             width="240"
-             height="180"
-             preserveAspectRatio="none"
-             id="image4527"
+               xlink:href="../images/mapswipe.png"
+             y="328.19818"
              x="1673.9125"
-             y="328.19818" />
+             id="image4527"
+             preserveAspectRatio="none"
+             height="180"
+             width="240" />
         </g>
       </g>
       <g
@@ -982,28 +980,26 @@
              id="flowPara3586-8-6" /><flowPara
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
              id="flowPara3588-7-1" /></flowRoot>        <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/nviz.png"
            xlink:href="../images/nviz.png"
-           y="328.19818"
-           x="2007.079"
-           id="image4651"
-           preserveAspectRatio="none"
+           width="208.2"
            height="180"
-           width="208.2" />
+           preserveAspectRatio="none"
+           id="image4651"
+           x="2007.079"
+           y="328.19818" />
       </g>
       <g
          transform="translate(-1174.5809,-301.20089)"
          style="display:inline;enable-background:new"
          id="g6131">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/gmodeler.png"
            xlink:href="../images/gmodeler.png"
-           y="566.94891"
-           x="1511.1951"
-           id="image5112"
-           preserveAspectRatio="none"
+           width="336.11362"
            height="157.01659"
-           width="336.11362" />
+           preserveAspectRatio="none"
+           id="image5112"
+           x="1511.1951"
+           y="566.94891" />
         <flowRoot
            transform="translate(1341.5412,718.53579)"
            style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#4d4d4d;fill-opacity:1;stroke:none;enable-background:new"
@@ -1041,14 +1037,13 @@
          transform="translate(0,-308.26772)"
          style="display:inline">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/grass_world.png"
            xlink:href="../images/grass_world.png"
-           y="556.29919"
-           x="0"
-           id="image5199"
-           preserveAspectRatio="none"
+           width="1052.3622"
            height="248.03149"
-           width="1052.3622" />
+           preserveAspectRatio="none"
+           id="image5199"
+           x="0"
+           y="556.29919" />
       </g>
       <g
          style="display:inline"
@@ -1697,7 +1692,7 @@
              id="flowSpan6978"
              style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"> GIS <flowSpan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6984"> (Geographic Resources Analysis Support System) is a free and open source software for performing spatial analysis. It consists of more than 400 modules for processing vector (2D/3D), raster, voxel and temporal data (4D). Many interfaces to other programs in related domains like geostatistics, databases, map web services and even other GIS software exist. It is the oldest and largest free and open source GIS. It can serve as a desktop GIS as well as the backbone of a complete GIS infrastructure.</flowSpan></flowSpan></flowPara><flowPara
+   id="flowSpan6984">(Geographic Resources Analysis Support System) is a free and open source software for performing spatial analysis. It consists of more than 400 modules for processing vector (2D/3D), raster, voxel and temporal data (4D). Many interfaces to other programs in related domains like geostatistics, databases, map web services and even other GIS software exist. It is the oldest and largest free and open source GIS. It can serve as a desktop GIS as well as the backbone of a complete GIS infrastructure.</flowSpan></flowSpan></flowPara><flowPara
            style="font-size:15.22460365px"
            id="flowPara3360-6" /><flowPara
            style="font-size:15.22460365px"
