@@ -1,12 +1,37 @@
-Note to translators:
-this is a new version of the GRASS GIS flyer. The format is svg, you can view the file with a graphics editor like Inkscape.
+Font: Fira Sans
+---> mozilla-fira-sans-fonts
 
-English, french, and partially italian versions are already achieved. You are very welcome to add your translator's contributions !
+Font installation
+- Fedora:
+   dnf install mozilla-fira-sans-fonts
 
-Dealing with graphics files is not as easy to handle as editing classical localization files. Fortunately SVG is an application of XML, supporting its formalism and the UTF-8 character set, thus quite well adapted to textual editing.
+- Ubuntu:
+   cd /tmp
+   wget https://github.com/mozilla/Fira/archive/master.zip   # 102 MB
+   unzip master.zip
+   sudo mkdir -p /usr/share/fonts/truetype/fira
+   sudo cp Fira-master/ttf/* /usr/share/fonts/truetype/fira/
+   rm -rf /tmp/master.zip /tmp/Fira-master
 
-In order to preserve the original document settings, I think it would be better to avoid editing the file from within e.g. Inkscape, but rather add translated chains through a text editor, or better via a dedicated solution like OmegaT[1]. It provides a rather convenient/intuitive GUI to access strings to translate.                 
 
-The two-sided document is given a certain page layout. Text blocks are not much expandable : please when translating keep in mind this constraint and try to be as concise as english (I know it's a bit challenging).
+#####################
+Note to translators
 
-[1]www.omegat.org/
+by Vincent Bain
+
+This is a new version of the GRASS GIS flyer. The format is svg, you can view the file with a graphics editor like Inkscape.
+
+English, French, and partially Italian versions are already achieved. You are very welcome to add your translator's contributions !
+
+Dealing with graphics files is not as easy to handle as editing classical localization files. Fortunately SVG is an application
+of XML, supporting its formalism and the UTF-8 character set, thus quite well adapted to textual editing.
+
+In order to preserve the original document settings, I think it would be better to avoid editing the file from within e.g. Inkscape, but
+rather add translated chains through a text editor, or better via a dedicated solution like OmegaT[1].
+It provides a rather convenient/intuitive GUI to access strings to translate.                 
+
+The two-sided document is given a certain page layout. Text blocks are not much expandable : please when translating keep in mind
+this constraint and try to be as concise as English (I know it's a bit challenging).
+
+[1] http://www.omegat.org/
+
