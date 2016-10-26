@@ -13,23 +13,38 @@
    width="297mm"
    height="210mm"
    viewBox="0 0 1052.3622 744.09448"
-   id="svg4222"
+   id="svg1"
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="grass_flyer.svg"
    enable-background="new">
   <title
-     id="title4123">GRASS GIS flyer</title>
+     id="title1">GRASS GIS flyer</title>
   <defs
-     id="defs4224">
+     id="def1">
     <filter
        style="color-interpolation-filters:sRGB"
-       id="filter3491"
+       id="filter1"
        inkscape:label="blur">
       <feGaussianBlur
          stdDeviation="2"
-         id="feGaussianBlur3493" />
+         id="feGaussianBlur1" />
     </filter>
+    <g
+       id="grassgis">
+      <flowSpan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
+         id="flowSpan10000">GRASS</flowSpan>
+      <flowSpan
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
+         id="flowSpan10001"> GIS</flowSpan>
+    </g>
+    <path
+       id="brins"
+       d="m 0,0 1.14496,1.16208 0.3905,-0.41911 -0.69801,-5.20092 0.0594,-0.83981 0.35629,-1.2555 0.37325,-1.15369 0.40719,-0.90769 1.32335,2.22256 1.28942,2.3498 0.2863,1.37903 1.79945,-1.76554 0.90875,-6.83256 1.90869,-9.24651 1.23004,-6.27745 2.49401,-4.94561 0.37326,-1.02645 0.13573,-0.6023 0.0509,-0.97555 -0.1527,-0.78044 -0.35629,-0.70409 -0.65319,-0.6532 0.0339,0.17815 0.32236,0.33084 0.29691,0.6956 0.0339,0.55989 -0.40718,1.11976 -0.52596,1.20459 -1.12824,2.02745 0.62775,-4.68264 0.17814,-2.46009 -0.22904,-0.0424 -1.26397,8.41518 -0.23753,0.42415 -2.07835,3.91069 -2.65519,5.25948 -2.23104,4.56388 -1.23852,3.18114 -0.70409,-1.2046 0.44111,-0.90768 2.42615,-4.65719 2.46009,-4.10579 1.02645,-2.002 0.8483,-1.66268 0.22904,-0.56836 0.0509,-0.5514 -0.1018,-0.42415 -0.10179,0 -0.0763,0.37325 -0.42416,0.97555 -1.02645,1.73055 -2.93513,4.51297 -1.67116,2.47705 -1.14521,2.02745 0.70409,-6.98155 0.26297,-2.97754 0.11028,-6.29442 -0.0169,0 0.0509,-0.21207 0.16118,-0.39022 0.12725,-0.3563 0.15269,-0.26297 0,-0.51747 -0.0509,-0.65319 0.22904,-0.42415 -0.10179,-0.61926 0,-0.46657 0.0848,-0.26298 0.17815,-0.58532 0.12725,-0.31388 -0.23753,-0.39022 0.20359,-0.39022 -0.32235,-0.22904 -0.19511,-0.58533 0.27994,-0.45809 -0.39022,-0.12724 -0.16966,-0.30539 0,-0.26297 -0.17814,-0.29691 -0.17815,-0.16118 0.017,-0.24601 0,-0.27145 -0.0848,-0.73802 -0.0594,-0.42416 -0.26298,-0.19511 -0.12724,-0.22904 -0.29691,-0.14421 -0.17815,-0.32236 0.0339,-0.36477 -0.0339,-0.37325 -0.1951,-0.32236 -0.33933,-0.0679 -0.31387,-0.11028 -0.16118,-0.22904 -0.11028,-0.24601 -0.246,0.16118 -0.1018,0.31387 -0.0509,0.33932 -0.16118,0.53443 -0.11028,-0.17814 0.0509,0.6532 -0.0339,0.1442 0,0.24602 0.0933,0.1951 0.0848,0.26298 0.16118,0.21208 0.0679,0.0933 0.0509,0.24601 -0.20359,0.15269 0.0848,0.22056 -0.1951,0.24601 0.0339,0.19511 0.0509,0.19511 0.16118,0.19511 0.14421,0.17815 0.1951,0.16965 0.0339,0.14421 -0.0679,0.21208 -0.16118,0.14422 -0.0763,0.11876 0.0255,0.30539 0.24602,0.16117 0.14421,0.1527 0.0848,0.30539 -0.26297,0.31387 -0.0424,0.22056 0.11028,0.24601 0.16118,0.19511 0,0.19511 0.11876,0.15269 0.11028,0.12725 0.0848,0.14421 -0.0509,0.24601 0.16118,0.22904 0.14421,0.0339 0.0509,0.11028 -0.0509,0.19511 0.13573,0.27994 0.14421,0.11028 0.11028,0.22904 -0.11028,0.39022 0.16118,0.35629 0.15269,0.0679 0.0763,0.16118 0.0339,0.45808 -0.0848,0.19512 -0.0763,0.22904 0.22904,1.15369 0.40718,0.26298 -0.0339,5.00499 -0.47504,5.40369 -0.27994,3.13025 -0.45809,3.8004 -0.17814,0.45809 -1.50998,-2.58733 -0.51747,-3.46957 -0.67016,-5.63273 -0.79741,-5.22556 0.0594,4.76747 0.27996,3.94461 0.48353,3.75799 -3.36776,-5.33583 -4.83534,-7.253 -1.11128,-1.54391 -0.0933,0 0.32235,0.92465 0.6023,1.50149 0.88223,2.002 1.54392,3.30839 0.93314,1.66268 1.15369,2.002 2.38373,3.77494 2.1547,3.42716 0.33084,3.07086 1.02644,7.01547 -5.4e-4,-0.004 -1.187,-3.68575 -2.51098,-6.18414 -2.00199,-4.1567 -2.6552,-4.31787 -1.3488,-1.77295 -1.07735,-1.07734 -1.75598,-1.62875 0.72954,0.89921 1.17914,1.20458 0.69561,0.78044 0.45809,0.79741 0.55139,0.88224 0.89921,1.54391 0.78044,1.43363 0.7974,1.77296 0.97555,2.36677 1.90868,4.93713 2.002,5.20858 1.20459,3.68165 z m -3.51282,-3.49744 -0.34934,-0.93505 -0.64471,-1.22156 -1.40818,-2.68912 -1.98504,-3.57985 -1.3997,-2.2989 -1.2979,-1.98503 -0.7041,-0.97555 -0.58533,-0.58533 1.00948,1.91717 0.92466,2.14621 1.39121,3.16417 0.61078,1.3997 0.61184,1.81955 z m -8.3743,-14.27039 -0.017,-0.0339 -0.0509,-0.0339 z m 21.30092,-6.38773 -0.33932,1.41666 -1.53543,6.14173 -0.74651,3.48653 -0.78044,4.21607 -0.86527,2.74851 -0.30539,-0.71258 -1.96806,-3.6477 0.66167,-1.53544 2.1547,-4.51297 1.15369,-2.42616 1.54391,-3.25749 z m 1.90868,4.57236 -0.27994,1.62874 -0.7974,2.70609 -0.79741,2.002 -0.88223,2.6043 -0.46657,2.56187 -0.44112,2.72359 1.59481,-1.62079 0.0679,-0.83134 0.17815,-1.44212 0.42415,-2.03593 0.92466,-3.63922 0.42415,-2.69761 z m -11.41817,7.42266 0.64471,1.07735 -0.13573,2.51098 -0.10179,0.0763 z m 1.08583,1.80689 0.37325,0.61926 -0.28842,0.67865 -0.21207,0.15269 z"
+       style="display:inline;fill:#8f8f8f;fill-opacity:1;stroke:none;enable-background:new"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -38,11 +53,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1073862"
+     inkscape:zoom="1.1020106"
      inkscape:cx="526.1811"
      inkscape:cy="372.04724"
      inkscape:document-units="mm"
-     inkscape:current-layer="svg4222"
+     inkscape:current-layer="svg1"
      showgrid="true"
      inkscape:window-width="1680"
      inkscape:window-height="1011"
@@ -81,7 +96,7 @@
        id="guide5135" />
   </sodipodi:namedview>
   <metadata
-     id="metadata4227">
+     id="metadata1">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -90,8 +105,8 @@
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title>GRASS GIS flyer</dc:title>
         <cc:license
-           rdf:resource="" />
-        <dc:date>20160908</dc:date>
+           rdf:resource="http://www.gnu.org/licenses/gpl.html" />
+        <dc:date>20161025</dc:date>
         <dc:creator>
           <cc:Agent>
             <dc:title>Vincent BAIN</dc:title>
@@ -109,73 +124,149 @@
   </metadata>
   <g
      inkscape:groupmode="layer"
-     id="layer7"
+     id="verso"
      inkscape:label="verso"
      style="display:inline"
      sodipodi:insensitive="true">
     <g
        inkscape:groupmode="layer"
-       id="layer8"
-       inkscape:label="v_sections"
-       sodipodi:insensitive="true"
-       style="display:inline">
+       id="illustr"
+       inkscape:label="illustr"
+       style="display:inline"
+       sodipodi:insensitive="true">
       <g
-         style="display:inline"
-         id="g5445"
-         transform="translate(-1.6108646,-0.90870614)">
-        <path
-           sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-           inkscape:connector-curvature="0"
-           style="display:inline;fill:#bdbdbd;fill-opacity:1;stroke:none"
-           d="m 33.8599,566.48768 1.3303,1.35016 0.4537,-0.48694 -0.811,-6.04278 0.069,-0.97578 0.414,-1.45872 0.4336,-1.34037 0.4731,-1.05465 1.5376,2.58235 1.4981,2.73012 0.3327,1.60219 2.0907,-2.05127 1.0558,-7.93849 2.2176,-10.7432 1.4292,-7.29362 2.8977,-5.74612 0.4337,-1.19252 0.1577,-0.69987 0.059,-1.13343 -0.1774,-0.90671 -0.4139,-0.81813 -0.7589,-0.75885 0.039,0.20693 0.3746,0.38438 0.3449,0.80823 0.039,0.65049 -0.4731,1.30098 -0.611,1.39964 -1.3109,2.35563 0.7293,-5.44062 0.207,-2.85827 -0.2661,-0.0495 -1.4686,9.77732 -0.2759,0.49274 -2.4148,4.54372 -3.085,6.1108 -2.5921,5.30258 -1.439,3.69609 -0.8181,-1.39955 0.5125,-1.05465 2.8189,-5.41103 2.8583,-4.77035 1.1926,-2.32604 0.9856,-1.93178 0.2661,-0.66038 0.059,-0.64069 -0.1183,-0.49284 -0.1183,0 -0.089,0.43376 -0.4928,1.13343 -1.1926,2.01065 -3.4103,5.24348 -1.9416,2.87797 -1.3306,2.35563 0.818,-8.11165 0.3056,-3.45948 0.1281,-7.31322 -0.02,0 0.059,-0.24641 0.1873,-0.45345 0.1478,-0.41387 0.1774,-0.3056 0,-0.60121 -0.059,-0.75895 0.2662,-0.49274 -0.1183,-0.71956 0,-0.54203 0.098,-0.3056 0.207,-0.68007 0.1479,-0.36468 -0.276,-0.45336 0.2365,-0.45335 -0.3745,-0.26612 -0.2267,-0.68007 0.3253,-0.53223 -0.4534,-0.14785 -0.1972,-0.35488 0,-0.3055 -0.2069,-0.34499 -0.207,-0.18724 0.02,-0.28581 0,-0.3154 -0.099,-0.85752 -0.069,-0.49283 -0.3055,-0.22663 -0.1478,-0.26612 -0.345,-0.16764 -0.207,-0.37448 0.039,-0.42386 -0.039,-0.43366 -0.2267,-0.37448 -0.3942,-0.079 -0.3647,-0.12816 -0.1873,-0.26612 -0.1281,-0.2858 -0.2858,0.18724 -0.1183,0.36468 -0.059,0.39427 -0.1873,0.6209 -0.1281,-0.20694 0.059,0.75895 -0.039,0.16755 0,0.28581 0.1084,0.22672 0.099,0.3055 0.1873,0.24642 0.079,0.10837 0.059,0.2859 -0.2365,0.17735 0.099,0.25631 -0.2267,0.28581 0.039,0.22673 0.059,0.22662 0.1873,0.22673 0.1675,0.20693 0.2267,0.19714 0.039,0.16754 -0.079,0.24642 -0.1872,0.16755 -0.089,0.13805 0.03,0.35479 0.2858,0.18724 0.1676,0.17744 0.098,0.35478 -0.3055,0.36469 -0.049,0.25631 0.1281,0.28581 0.1873,0.22672 0,0.22663 0.138,0.17744 0.1281,0.14785 0.099,0.16755 -0.059,0.28581 0.1873,0.26611 0.1675,0.04 0.059,0.12806 -0.059,0.22673 0.1577,0.32519 0.1676,0.12816 0.1281,0.26611 -0.1281,0.45345 0.1872,0.41387 0.1774,0.079 0.089,0.18733 0.039,0.53223 -0.099,0.22663 -0.089,0.26611 0.2661,1.34047 0.4731,0.3055 -0.039,5.8152 -0.5519,6.27835 -0.3253,3.63692 -0.5322,4.41556 -0.207,0.53222 -1.7544,-3.00612 -0.6012,-4.03118 -0.7787,-6.54447 -0.9264,-6.07142 0.069,5.53919 0.3253,4.58311 0.5618,4.36628 -3.9129,-6.19958 -5.618,-8.42695 -1.2912,-1.79382 -0.1084,0 0.3746,1.07435 0.6998,1.74453 1.025,2.32604 1.7938,3.84385 1.0842,1.93187 1.3404,2.32604 2.7696,4.38597 2.5035,3.9819 0.3843,3.56794 1.1926,8.15095 -6e-4,-0.01 -1.3791,-4.28236 -2.9174,-7.18515 -2.3261,-4.82953 -3.085,-5.01676 -1.5671,-2.05993 -1.2517,-1.2517 -2.0402,-1.89238 0.8476,1.04476 1.37,1.39954 0.8082,0.90681 0.5322,0.9264 0.6407,1.02506 1.0447,1.79382 0.9068,1.66575 0.9265,2.05993 1.1334,2.74981 2.2177,5.73632 2.326,6.05163 1.3996,4.27761 z m -4.0814,-4.06363 -0.4059,-1.08634 -0.7491,-1.41933 -1.6361,-3.12438 -2.3063,-4.15925 -1.6263,-2.67103 -1.508,-2.30635 -0.818,-1.13343 -0.6801,-0.68008 1.1729,2.22748 1.0743,2.49359 1.6164,3.6763 0.7096,1.62627 0.7109,2.11406 z m -9.7298,-16.58019 -0.02,-0.04 -0.059,-0.039 z m 24.7488,-7.42168 -0.3943,1.64597 -1.7839,7.13577 -0.8674,4.05088 -0.9067,4.8986 -1.0054,3.19336 -0.3548,-0.82793 -2.2866,-4.23812 0.7688,-1.78401 2.5034,-5.24349 1.3405,-2.81879 1.7938,-3.78476 z m 2.2176,5.31247 -0.3252,1.89238 -0.9265,3.14408 -0.9265,2.32604 -1.025,3.02582 -0.5421,2.97662 -0.5125,3.16444 1.8529,-1.88315 0.079,-0.96589 0.207,-1.67555 0.4928,-2.36553 1.0743,-4.22832 0.4928,-3.13418 z m -13.2664,8.62409 0.7491,1.25169 -0.1577,2.91745 -0.1183,0.0885 z m 1.2616,2.09932 0.4337,0.71956 -0.3351,0.78845 -0.2464,0.17744 z"
-           id="path4566-6-6-5-6" />
+         style="display:inline;enable-background:new"
+         id="map_swipe"
+         transform="translate(-1134.133,-310.48166)"
+         inkscape:export-filename="verso.png">
+        <g
+           id="g4705">
+          <flowRoot
+             transform="translate(1504.8417,503.81581)"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#4c4c4c;fill-opacity:1;stroke:none"
+             id="flowRoot3548-3-3-3"
+             xml:space="preserve"><flowRegion
+               id="flowRegion3550-6-6-6"><rect
+                 ry="0"
+                 y="12.585855"
+                 x="168.55138"
+                 height="38"
+                 width="255.41425"
+                 id="rect3552-7-7-7"
+                 style="fill:#4c4c4c;fill-opacity:1" /></flowRegion><flowPara
+               id="flowPara3588-7-1-1"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1">wxGUI offers many powerful graphical tools. <flowSpan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1"
+   id="flowSpan4201">Map Swipe</flowSpan> allows you to easily compare raster maps.</flowPara></flowRoot>          <image
+             sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/mapswipe.png"
+             xlink:href="../images/mapswipe.png"
+             width="240"
+             height="180"
+             preserveAspectRatio="none"
+             id="image4527"
+             x="1673.9125"
+             y="328.19818" />
+        </g>
+      </g>
+      <g
+         style="display:inline;enable-background:new"
+         id="illustr_nviz"
+         transform="translate(-1195.8349,-310.48166)">
         <flowRoot
            xml:space="preserve"
-           id="flowRoot4976-7-3-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1;stroke:none"
-           transform="matrix(1.2981272,0,0,1.2981272,-544.10278,-620.84366)"><flowRegion
-             id="flowRegion4978-2-1-5"><rect
-               id="rect4980-7-8-2"
-               width="230.30847"
-               height="30.928738"
-               x="463.03217"
-               y="871.11304"
-               style="fill:#008f00;fill-opacity:1" /></flowRegion><flowPara
-             id="flowPara4982-5-6-4"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.48817253px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Supported file formats</flowPara></flowRoot>      </g>
+           id="flowRoot3548-3-3"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#4d4d4d;fill-opacity:1;stroke:none"
+           transform="translate(1838.5282,503.81612)"><flowRegion
+             id="flowRegion3550-6-6"><rect
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
+               id="rect3552-7-7"
+               width="219.68445"
+               height="45.654484"
+               x="168.55138"
+               y="12.585855"
+               ry="0" /></flowRegion><flowPara
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
+             id="flowPara3588-7-1">Combine, visualize and animate your 3D raster and vector data thanks to <flowSpan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
+   id="flowSpan4203">nviz</flowSpan> visualization tool.</flowPara></flowRoot>        <image
+           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/nviz.png"
+           xlink:href="../images/nviz.png"
+           y="328.19818"
+           x="2007.079"
+           id="image4651"
+           preserveAspectRatio="none"
+           height="180"
+           width="208.2" />
+      </g>
       <g
-         style="display:inline"
-         id="g5457">
-        <path
-           sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-           inkscape:connector-curvature="0"
-           style="display:inline;fill:#bdbdbd;fill-opacity:1;stroke:none"
-           d="m 32.2461,69.51598 1.3303,1.35016 0.4537,-0.48694 -0.811,-6.04278 0.069,-0.97578 0.414,-1.45872 0.4336,-1.34037 0.4731,-1.05465 1.5376,2.58235 1.4981,2.73012 0.3327,1.60219 2.0907,-2.05127 1.0558,-7.93849 2.2177,-10.7432 1.4291,-7.29362 2.8977,-5.74612 0.4337,-1.19252 0.1577,-0.69987 0.059,-1.13343 -0.1775,-0.90671 -0.4139,-0.81813 -0.7589,-0.75885 0.039,0.20693 0.3745,0.38438 0.3449,0.80823 0.039,0.65049 -0.4731,1.30098 -0.611,1.39964 -1.3109,2.35563 0.7294,-5.44062 0.2069,-2.85827 -0.2661,-0.0495 -1.4686,9.77732 -0.2759,0.49274 -2.4148,4.54372 -3.085,6.1108 -2.5921,5.30258 -1.439,3.69609 -0.8181,-1.39955 0.5125,-1.05465 2.8189,-5.41103 2.8583,-4.77035 1.1926,-2.32604 0.9856,-1.93178 0.2661,-0.66038 0.059,-0.64069 -0.1183,-0.49284 -0.1183,0 -0.089,0.43376 -0.4928,1.13343 -1.1926,2.01065 -3.4103,5.24348 -1.9416,2.87797 -1.3306,2.35563 0.8181,-8.11165 0.3055,-3.45948 0.1281,-7.31322 -0.02,0 0.059,-0.24641 0.1873,-0.45345 0.1478,-0.41387 0.1774,-0.3056 0,-0.60121 -0.059,-0.75895 0.2662,-0.49274 -0.1183,-0.71956 0,-0.54203 0.099,-0.3056 0.207,-0.68007 0.1479,-0.36468 -0.276,-0.45336 0.2365,-0.45335 -0.3745,-0.26612 -0.2267,-0.68007 0.3253,-0.53223 -0.4534,-0.14785 -0.1971,-0.35488 0,-0.3055 -0.207,-0.34499 -0.207,-0.18724 0.02,-0.28581 0,-0.3154 -0.099,-0.85752 -0.069,-0.49283 -0.3055,-0.22663 -0.1478,-0.26612 -0.345,-0.16764 -0.207,-0.37448 0.039,-0.42386 -0.039,-0.43366 -0.2267,-0.37448 -0.3942,-0.079 -0.3647,-0.12816 -0.1873,-0.26612 -0.1281,-0.2858 -0.2858,0.18724 -0.1183,0.36468 -0.059,0.39427 -0.1872,0.6209 -0.1282,-0.20694 0.059,0.75895 -0.039,0.16755 0,0.28581 0.1084,0.22672 0.099,0.3055 0.1873,0.24642 0.079,0.10837 0.059,0.2859 -0.2365,0.17735 0.099,0.25631 -0.2267,0.28581 0.039,0.22673 0.059,0.22662 0.1873,0.22673 0.1675,0.20693 0.2267,0.19714 0.039,0.16754 -0.079,0.24642 -0.1872,0.16755 -0.089,0.13805 0.03,0.35479 0.2858,0.18724 0.1676,0.17744 0.099,0.35478 -0.3055,0.36469 -0.049,0.25631 0.1281,0.28581 0.1873,0.22672 0,0.22663 0.138,0.17744 0.1281,0.14785 0.099,0.16755 -0.059,0.28581 0.1873,0.26611 0.1675,0.04 0.059,0.12806 -0.059,0.22673 0.1577,0.32519 0.1676,0.12816 0.1281,0.26611 -0.1281,0.45345 0.1872,0.41387 0.1775,0.079 0.089,0.18733 0.039,0.53223 -0.098,0.22663 -0.089,0.26611 0.2661,1.34047 0.4731,0.3055 -0.039,5.8152 -0.5519,6.27835 -0.3253,3.63692 -0.5322,4.41556 -0.207,0.53222 -1.7544,-3.00612 -0.6012,-4.03118 -0.7787,-6.54447 -0.9264,-6.07142 0.069,5.53919 0.3253,4.58311 0.5618,4.36628 -3.9129,-6.19958 -5.618,-8.42695 -1.2911,-1.79382 -0.1085,0 0.3746,1.07435 0.6998,1.74453 1.025,2.32604 1.7938,3.84385 1.0842,1.93187 1.3404,2.32604 2.7696,4.38597 2.5035,3.9819 0.3844,3.56794 1.1926,8.15095 -7e-4,-0.01 -1.3791,-4.28236 -2.9174,-7.18515 -2.3261,-4.82953 -3.0849,-5.01676 -1.5672,-2.05993 -1.2517,-1.2517 -2.0402,-1.89238 0.8476,1.04476 1.37,1.39954 0.8082,0.90681 0.5322,0.9264 0.6407,1.02506 1.0447,1.79382 0.9068,1.66575 0.9265,2.05993 1.1334,2.74981 2.2177,5.73632 2.326,6.05163 1.3996,4.27761 z m -4.0814,-4.06363 -0.4059,-1.08634 -0.7491,-1.41933 -1.6361,-3.12438 -2.3063,-4.15925 -1.6263,-2.67103 -1.508,-2.30635 -0.818,-1.13343 -0.6801,-0.68008 1.1729,2.22748 1.0743,2.49359 1.6164,3.6763 0.7096,1.62627 0.7109,2.11406 z m -9.7298,-16.58019 -0.02,-0.04 -0.059,-0.039 z m 24.7488,-7.42168 -0.3943,1.64597 -1.7839,7.13577 -0.8674,4.05088 -0.9067,4.8986 -1.0054,3.19336 -0.3548,-0.82793 -2.2866,-4.23812 0.7688,-1.78401 2.5034,-5.24349 1.3405,-2.81879 1.7938,-3.78476 z m 2.2176,5.31247 -0.3252,1.89238 -0.9265,3.14408 -0.9265,2.32604 -1.025,3.02582 -0.5421,2.97662 -0.5125,3.16444 1.8529,-1.88315 0.079,-0.96589 0.207,-1.67555 0.4928,-2.36553 1.0743,-4.22832 0.4928,-3.13418 z m -13.2664,8.62409 0.7491,1.25169 -0.1577,2.91745 -0.1183,0.0885 z m 1.2616,2.09932 0.4337,0.71956 -0.3351,0.78845 -0.2464,0.17744 z"
-           id="path4566-6-6-5" />
+         transform="translate(-1174.5809,-301.20089)"
+         style="display:inline;enable-background:new"
+         id="illustr_gmod">
+        <flowRoot
+           transform="translate(1341.5412,718.53579)"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#4d4d4d;fill-opacity:1;stroke:none;enable-background:new"
+           id="flowRoot3548-3-3-2"
+           xml:space="preserve"><flowRegion
+             id="flowRegion3550-6-6-0"><rect
+               ry="0"
+               y="12.585855"
+               x="168.55138"
+               height="27.190117"
+               width="373.14972"
+               id="rect3552-7-7-6"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#4d4d4d;fill-opacity:1" /></flowRegion><flowPara
+             id="flowPara3588-7-1-2"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Using the <flowSpan
+   id="flowSpan4220"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Graphical Modeler</flowSpan>, a chain of processes can be wrapped into one process through an easy-to-use interface.</flowPara></flowRoot>        <image
+           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/gmodeler.png"
+           xlink:href="../images/gmodeler.png"
+           y="566.94891"
+           x="1511.1951"
+           id="image5112"
+           preserveAspectRatio="none"
+           height="157.01659"
+           width="336.11362" />
+      </g>
+      <g
+         style="display:inline;enable-background:new"
+         id="illustr_bigdata"
+         transform="translate(-1578.4909,184.84381)">
+        <image
+           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/largedataset.png"
+           xlink:href="../images/largedataset.png"
+           width="397.52524"
+           height="177.03552"
+           preserveAspectRatio="none"
+           id="image4378"
+           x="2209.6113"
+           y="331.20322" />
         <flowRoot
            xml:space="preserve"
-           id="flowRoot4976-7-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1;stroke:none"
-           transform="matrix(1.2981272,0,0,1.2981272,-545.71657,-1117.7434)"><flowRegion
-             id="flowRegion4978-2-1"><rect
-               id="rect4980-7-8"
-               width="230.31073"
-               height="30.873302"
-               x="463.03217"
-               y="871.11304"
-               style="fill:#008f00;fill-opacity:1" /></flowRegion><flowPara
-             id="flowPara4982-5-6"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.48817253px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Technical datasheet</flowPara></flowRoot>      </g>
+           id="flowRoot3548-3"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#4c4c4c;fill-opacity:1;stroke:none"
+           transform="translate(2039.4582,503.85667)"><flowRegion
+             id="flowRegion3550-6"><rect
+               style="fill:#4c4c4c;fill-opacity:1"
+               id="rect3552-7"
+               width="404.5321"
+               height="31.612198"
+               x="168.55138"
+               y="12.585855"
+               ry="0" /></flowRegion><flowPara
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1"
+             id="flowPara3588-7">Easily view and manage your most complex datasets :  huge geometries linked to main full-featured DBMSs are supported.</flowPara></flowRoot>      </g>
     </g>
     <g
        inkscape:groupmode="layer"
-       id="layer11"
+       id="v_content"
        inkscape:label="v_content"
-       style="display:inline">
+       style="display:inline"
+       sodipodi:insensitive="true">
       <flowRoot
          transform="translate(3.9432157,-8.4390772)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3434"
+         id="conception"
          xml:space="preserve"
          inkscape:export-filename="verso.png"
          inkscape:export-xdpi="300"
@@ -200,11 +291,8 @@
            id="flowPara3546">- Documentation and examples for each module</flowPara></flowRoot>      <flowRoot
          transform="translate(9.6207153,486.69942)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3548"
-         xml:space="preserve"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         id="gis_formats"
+         xml:space="preserve"><flowRegion
            id="flowRegion3550"><rect
              ry="0"
              y="56.338501"
@@ -214,52 +302,20 @@
              id="rect3552"
              style="font-size:13px" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3599"><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6222">GRASS </flowSpan><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6220">GIS</flowSpan> supports nearly all common GIS file formats through the use of the GDAL/OGR library.</flowPara><flowPara
+           id="flowPara3599"><use
+   xlink:href="#grassgis"
+   id="use44" />
+ supports nearly all common GIS file formats through the use of the GDAL/OGR library.</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara6224">It also supports the Open GIS Consortium’s Simple Features.</flowPara><flowPara
+           id="flowPara6224">supports as well OpenGeospatialConsortium Simple Features.</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3601" /><flowPara
            id="flowPara3560"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'" /><flowPara
-           style="font-size:13px"
-           id="flowPara3562" /><flowPara
-           style="font-size:13px"
-           id="flowPara3564" /><flowPara
-           style="font-size:13px"
-           id="flowPara3566" /><flowPara
-           style="font-size:13px"
-           id="flowPara3568" /><flowPara
-           style="font-size:13px"
-           id="flowPara3570" /><flowPara
-           id="flowPara3572"
-           style="font-size:13px" /><flowPara
-           id="flowPara3574"
-           style="font-size:13px" /><flowPara
-           id="flowPara3576"
-           style="font-size:13px" /><flowPara
-           id="flowPara3578"
-           style="font-size:13px" /><flowPara
-           id="flowPara3580"
-           style="font-size:13px" /><flowPara
-           id="flowPara3582"
-           style="font-size:13px" /><flowPara
-           id="flowPara3584"
-           style="font-size:13px" /><flowPara
-           id="flowPara3586"
-           style="font-size:13px" /><flowPara
-           id="flowPara3588"
-           style="font-size:13px" /></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'" /></flowRoot>      <flowRoot
          xml:space="preserve"
-         id="flowRoot3110"
+         id="vect_formats"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="translate(10.196715,527.08865)"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         transform="translate(10.196715,527.08865)"><flowRegion
            id="flowRegion3112"><rect
              id="rect3114"
              width="278.0163"
@@ -274,11 +330,8 @@
            id="flowPara3163">ASCII, ARC/INFO ungenerate, ARC/INFO E00, ArcView SHAPE, BIL, DLG (U.S.), DXF, DXF3D, GMT, GPS-ASCII USGS-DEM, IDRISI, MOSS, MapInfo, MIF, PostGIS, TIGER, VRML, etc.</flowPara></flowRoot>      <flowRoot
          transform="translate(10.040715,619.00107)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3169"
-         xml:space="preserve"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         id="rst_formats"
+         xml:space="preserve"><flowRegion
            id="flowRegion3171"><rect
              ry="0"
              y="56.338501"
@@ -293,11 +346,8 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">ASCII, ARC/GRID, E00, GIF, GMT, TIF, PNG, Vis5D, SURFER (.grd), etc.</flowPara></flowRoot>      <flowRoot
          transform="translate(313.85221,527.08865)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3231"
-         xml:space="preserve"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         id="img_formats"
+         xml:space="preserve"><flowRegion
            id="flowRegion3233"><rect
              ry="0"
              y="56.338501"
@@ -313,12 +363,9 @@
            id="flowPara3273"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">SAR, SPOT, MODIS, etc.</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
-         id="flowRoot3287"
+         id="database"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="translate(314.60161,619.00107)"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         transform="translate(314.60161,619.00107)"><flowRegion
            id="flowRegion3289"><rect
              id="rect3291"
              width="204.3004"
@@ -333,11 +380,8 @@
            id="flowPara3351">SQLite, PostgreSQL / PostGIS, MySQL, ODBC, DBF</flowPara></flowRoot>      <flowRoot
          transform="translate(255.34764,-8.6992662)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3355"
-         xml:space="preserve"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         id="output"
+         xml:space="preserve"><flowRegion
            id="flowRegion3357"><rect
              ry="0"
              y="56.338501"
@@ -351,14 +395,14 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3401">- Mapping modules (animation, cartography...)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3405">- NVIZ for visualization of 2.5D and 3D data (creation of animations &amp; flybys)</flowPara><flowPara
+           id="flowPara3405">- NVIZ for visualization of 2.5D and 3D data (creation of animations and flybys)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3407">- VTK, POVray</flowPara><flowPara
            id="flowPara3397"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- Web services</flowPara></flowRoot>      <flowRoot
          transform="translate(713.82663,296.33065)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3415"
+         id="interop"
          xml:space="preserve"
          inkscape:export-filename="verso.png"
          inkscape:export-xdpi="300"
@@ -372,11 +416,11 @@
              id="rect3419"
              style="font-size:13px;text-align:start;text-anchor:start" /></flowRegion><flowPara
            id="flowPara3423"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Interoperability with other GIS-related software</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Interoperability with other GIS-related software </flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
-           id="flowPara3461">- QGIS (Free geodata viewer and more)</flowPara><flowPara
+           id="flowPara3461">- QGIS (general purpose GIS)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
-           id="flowPara3465">- R-Language (statistics)</flowPara><flowPara
+           id="flowPara3465">- R (language and environment for statistics)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
            id="flowPara3469">- Gstat (geostatistics)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
@@ -384,12 +428,9 @@
            id="flowPara3457"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start">- ZOO-Project, PyWPS (WPS)</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
-         id="flowRoot7539"
+         id="platforms"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="translate(492.96665,264.30245)"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         transform="translate(492.96665,264.30245)"><flowRegion
            id="flowRegion7541"><rect
              id="rect7543"
              width="265.96823"
@@ -401,20 +442,15 @@
            id="flowPara7547"
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Supported platforms</flowPara><flowPara
            style="font-size:13px;text-align:start;text-anchor:start"
-           id="flowPara7579"><flowSpan
-             id="flowSpan5776"
-             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">GRASS</flowSpan><flowSpan
-             id="flowSpan5778"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start"> GIS</flowSpan><flowSpan
+           id="flowPara7579"><use
+             xlink:href="#grassgis"
+             id="use106" /><flowSpan
              id="flowSpan5772"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"> runs on nearly all platforms. It supports GNU/Linux, Posix compliant Unix Systems, MS Windows and MacOS X.</flowSpan></flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
-         id="flowRoot9798"
+         id="data_handling"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="translate(4.1252157,215.48517)"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         transform="translate(4.1252157,215.48517)"><flowRegion
            id="flowRegion9800"><rect
              id="rect9802"
              width="248.65471"
@@ -426,28 +462,25 @@
            id="flowPara9822"
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Data management capabilities</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9885">- Raster / Vector / Voxel data processing</flowPara><flowPara
+           id="flowPara9885"> Raster / Vector / Voxel data processing</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara9887">- 2D / 3D Raster / Vector modeling</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara9889">- Image manipulation</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9891">- Vector topology</flowPara><flowPara
+           id="flowPara9891">- Vector topologie</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara4885">- Network analysis</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara9893">- Geostatistics (Interface to R)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9895">- Temporal dataset</flowPara><flowPara
+           id="flowPara9895">- Temporal datasets</flowPara><flowPara
            id="flowPara9848"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- OGC web services interface</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
-         id="flowRoot9916"
+         id="prog_languages"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="translate(4.1252157,75.490353)"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
+         transform="translate(4.1252157,75.490353)"><flowRegion
            id="flowRegion9918"><rect
              id="rect9920"
              width="284.0878"
@@ -463,162 +496,80 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara9967">- ANSI C</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9969">- GRASS-SWIG interface</flowPara><flowPara
+           id="flowPara9969">- <use
+   xlink:href="#grassgis"
+   id="use128" />-SWIG interface </flowPara><flowPara
            id="flowPara9956"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- Python API, scripting library and GUI</flowPara></flowRoot>    </g>
     <g
        inkscape:groupmode="layer"
-       id="layer12"
-       inkscape:label="illustr"
-       style="display:inline">
+       id="v_sections"
+       inkscape:label="v_sections"
+       style="display:inline"
+       sodipodi:insensitive="true">
       <g
-         style="display:inline;enable-background:new"
-         id="g4729"
-         transform="translate(-1578.4909,184.84381)"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300">
-        <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/largedataset.png"
-           xlink:href="../images/largedataset.png"
-           y="331.20322"
-           x="2209.6113"
-           id="image4378"
-           preserveAspectRatio="none"
-           height="177.03552"
-           width="397.52524" />
+         id="v_1">
+        <use
+           xlink:href="#brins"
+           id="logo_v1"
+           x="10mm"
+           y="20mm"
+           width="100%"
+           height="100%" />
         <flowRoot
            xml:space="preserve"
-           id="flowRoot3548-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#4c4c4c;fill-opacity:1;stroke:none"
-           transform="translate(2039.4582,503.85667)"><flowRegion
-             id="flowRegion3550-6"><rect
-               style="fill:#4c4c4c;fill-opacity:1"
-               id="rect3552-7"
-               width="404.5321"
-               height="31.612198"
-               x="168.55138"
-               y="12.585855"
-               ry="0" /></flowRegion><flowPara
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1"
-             id="flowPara3588-7">Easily view and manage your most complex datasets :  huge geometries linked to main full-featured DBMSs are supported.</flowPara></flowRoot>      </g>
+           id="flowRoot4976-7"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.55879784px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           transform="translate(0,0)"><flowRegion
+             id="flowRegion4978-2"><rect
+               id="rect4980-7"
+               width="300"
+               height="44"
+               x="15mm"
+               y="5mm" /></flowRegion><flowPara
+             id="flowPara4982-5"
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Technical datasheet</flowPara></flowRoot>      </g>
       <g
-         style="display:inline;enable-background:new"
-         id="g4681"
-         transform="translate(-1134.133,-310.48166)"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300">
-        <g
-           id="g4705">
-          <flowRoot
-             transform="translate(1504.8417,503.81581)"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#4c4c4c;fill-opacity:1;stroke:none"
-             id="flowRoot3548-3-3-3"
-             xml:space="preserve"><flowRegion
-               id="flowRegion3550-6-6-6"><rect
-                 ry="0"
-                 y="12.585855"
-                 x="168.55138"
-                 height="38"
-                 width="255.41425"
-                 id="rect3552-7-7-7"
-                 style="fill:#4c4c4c;fill-opacity:1" /></flowRegion><flowPara
-               id="flowPara3588-7-1-1"
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1">wxGUI offers many powerful graphical tools. <flowSpan
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1"
-   id="flowSpan4201">Map Swipe</flowSpan> allows you to easily compare raster maps. </flowPara></flowRoot>          <image
-             sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/mapswipe.png"
-             xlink:href="../images/mapswipe.png"
-             y="328.19818"
-             x="1673.9125"
-             id="image4527"
-             preserveAspectRatio="none"
-             height="180"
-             width="240" />
-        </g>
-      </g>
-      <g
-         style="display:inline;enable-background:new"
-         id="g4658"
-         transform="translate(-1195.8349,-310.48166)"
-         inkscape:export-filename="verso.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300">
+         id="v_2">
+        <use
+           xlink:href="#brins"
+           id="logo_v2"
+           x="10mm"
+           y="159.5mm"
+           width="100%"
+           height="100%"
+           transform="translate(0,0)" />
         <flowRoot
            xml:space="preserve"
-           id="flowRoot3548-3-3"
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#4d4d4d;fill-opacity:1;stroke:none"
-           transform="translate(1838.5282,503.81612)"><flowRegion
-             id="flowRegion3550-6-6"><rect
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
-               id="rect3552-7-7"
-               width="219.68445"
-               height="45.654484"
-               x="168.55138"
-               y="12.585855"
-               ry="0" /></flowRegion><flowPara
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
-             id="flowPara3588-7-1">Combine, visualize and animate your 3D raster and vector data thanks to <flowSpan
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
-   id="flowSpan4203">nviz</flowSpan> visualization tool.</flowPara></flowRoot>        <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/nviz.png"
-           xlink:href="../images/nviz.png"
-           width="208.2"
-           height="180"
-           preserveAspectRatio="none"
-           id="image4651"
-           x="2007.079"
-           y="328.19818" />
-      </g>
-      <g
-         transform="translate(-1174.5809,-301.20089)"
-         style="display:inline;enable-background:new"
-         id="g6131">
-        <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/en/../images/gmodeler.png"
-           xlink:href="../images/gmodeler.png"
-           width="336.11362"
-           height="157.01659"
-           preserveAspectRatio="none"
-           id="image5112"
-           x="1511.1951"
-           y="566.94891" />
-        <flowRoot
-           transform="translate(1341.5412,718.53579)"
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#4d4d4d;fill-opacity:1;stroke:none;enable-background:new"
-           id="flowRoot3548-3-3-2"
-           xml:space="preserve"><flowRegion
-             id="flowRegion3550-6-6-0"><rect
-               ry="0"
-               y="12.585855"
-               x="168.55138"
-               height="27.190117"
-               width="407.73123"
-               id="rect3552-7-7-6"
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#4d4d4d;fill-opacity:1" /></flowRegion><flowPara
-             id="flowPara3588-7-1-2"
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Using the <flowSpan
-   id="flowSpan4220"
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Graphical Modeler</flowSpan>, a chain of processes can be wrapped into one process through an easy-to-use interface.</flowPara></flowRoot>      </g>
+           id="flowRoot140"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.55879784px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           transform="translate(0,0)"><flowRegion
+             id="flowRegion142"><rect
+               id="rect144"
+               width="300"
+               height="44"
+               x="15mm"
+               y="143.5mm" /></flowRegion><flowPara
+             id="flowPara146"
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Supported file formats</flowPara></flowRoot>      </g>
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
-     id="layer6"
+     id="recto"
      inkscape:label="recto"
      style="display:inline"
      sodipodi:insensitive="true">
     <g
        inkscape:groupmode="layer"
-       id="layer4"
+       id="cover"
        inkscape:label="cover"
        style="display:inline"
        sodipodi:insensitive="true">
       <g
          inkscape:label="background_image"
          inkscape:groupmode="layer"
-         id="layer1"
+         id="background_image"
          transform="translate(0,-308.26772)"
          style="display:inline">
         <image
@@ -634,31 +585,31 @@
       <g
          style="display:inline"
          inkscape:label="GRASS_GIS_shadow"
-         id="g3447"
+         id="grass_shadow"
          inkscape:groupmode="layer">
         <g
            id="g6457"
-           style="filter:url(#filter3491)">
+           style="filter:url(#filter1)">
           <path
              inkscape:export-ydpi="300"
              inkscape:export-xdpi="300"
              id="path3455"
              d="m 154.93655,450.42692 4.33013,4.39484 1.47684,-1.585 -2.63982,-19.66922 0.22428,-3.17612 1.34741,-4.74808 1.41158,-4.36317 1.53994,-3.43273 5.00478,8.40544 4.87645,8.88666 1.08274,5.21532 6.80532,-6.67708 3.43676,-25.83986 7.21839,-34.96919 4.65189,-23.74056 9.43204,-18.70368 1.41161,-3.88192 0.51332,-2.27778 0.19229,-3.68943 -0.57748,-2.95152 -1.34745,-2.6628 -2.4703,-2.4703 0.12832,0.67374 1.21909,1.25119 1.12289,2.6307 0.12833,2.11738 -1.53994,4.2348 -1.98906,4.55563 -4.2669,7.66758 2.37407,-17.7092 0.67371,-9.3037 -0.8662,-0.16071 -4.78022,31.82518 -0.8983,1.60407 -7.86003,14.78974 -10.04162,19.89074 -8.43751,17.26 -4.68395,12.03067 -2.6628,-4.55562 1.66831,-3.43274 9.17538,-17.61292 9.30375,-15.52761 3.88188,-7.57127 3.20818,-6.28806 0.86623,-2.14949 0.1923,-2.08532 -0.38499,-1.60411 -0.38498,0 -0.28864,1.41162 -1.60411,3.68943 -3.88188,6.54468 -11.10031,17.06751 -6.32013,9.36791 -4.33107,7.66754 2.6628,-26.40332 0.99453,-11.26074 0.41709,-23.80469 -0.0644,0 0.19269,-0.80203 0.60955,-1.47578 0.48121,-1.34741 0.57748,-0.99457 0,-1.95699 -0.1923,-2.4703 0.8662,-1.60407 -0.38499,-2.34198 0,-1.7645 0.32063,-0.99457 0.67374,-2.21361 0.48122,-1.18706 -0.89827,-1.47574 0.76994,-1.47574 -1.21909,-0.86623 -0.7379,-2.21365 1.05869,-1.7324 -1.47574,-0.48125 -0.64165,-1.15492 0,-0.99457 -0.6737,-1.12285 -0.67375,-0.60958 0.0644,-0.93037 0,-1.02659 -0.32062,-2.79112 -0.22467,-1.60411 -0.99457,-0.73787 -0.48121,-0.8662 -1.12286,-0.54538 -0.6737,-1.21912 0.12832,-1.37955 -0.12832,-1.41158 -0.73791,-1.21912 -1.28325,-0.25666 -1.18706,-0.41708 -0.60954,-0.8662 -0.41705,-0.93036 -0.93036,0.60954 -0.38499,1.18702 -0.19229,1.28328 -0.60954,2.02116 -0.41705,-0.67371 0.19269,2.47027 -0.12833,0.54542 0,0.93036 0.353,0.73787 0.32102,0.99457 0.60954,0.80203 0.25666,0.353 0.19229,0.93037 -0.76997,0.57747 0.32063,0.83414 -0.73787,0.93036 0.12833,0.73791 0.19269,0.73787 0.60954,0.73787 0.54537,0.67375 0.73787,0.64164 0.12833,0.54538 -0.25665,0.80203 -0.60955,0.54542 -0.28864,0.44915 0.0964,1.15492 0.9304,0.60958 0.54538,0.57748 0.32102,1.15491 -0.99453,1.18706 -0.16071,0.8341 0.41705,0.93036 0.60954,0.73787 0,0.73787 0.44915,0.57748 0.41705,0.48125 0.32063,0.54538 -0.1927,0.9304 0.60955,0.8662 0.54541,0.12833 0.19269,0.41705 -0.19269,0.73791 0.51332,1.05869 0.54537,0.41705 0.41705,0.86624 -0.41705,1.47574 0.60955,1.34745 0.57747,0.25665 0.28864,0.60954 0.12833,1.73244 -0.32062,0.73787 -0.28864,0.86624 0.8662,4.36309 1.5399,0.99453 -0.12833,18.92828 -1.7966,20.43611 -1.05869,11.83818 -1.7324,14.37265 -0.6737,1.73244 -5.71059,-9.78496 -1.95699,-13.12147 -2.53447,-21.30231 -3.01568,-19.76241 0.22467,18.02997 1.05877,14.91807 1.82866,14.21221 -12.73647,-20.17942 -18.28664,-27.42998 -4.2027,-5.83888 -0.353,0 1.21912,3.49694 2.27777,5.67848 3.33655,7.57131 5.83887,12.51188 3.529,6.28803 4.36313,7.57131 9.01499,14.27642 8.14879,12.96107 1.25118,11.61359 3.88189,26.53168 -0.002,-0.0158 -4.48905,-13.93914 -9.4962,-23.38763 -7.57135,-15.7201 -10.04162,-16.32964 -5.101,-6.70507 -4.07438,-4.07442 -6.64094,-6.15969 2.75902,3.40067 4.4594,4.55562 2.6307,2.95152 1.73244,3.01568 2.08532,3.33651 3.40067,5.83887 2.95152,5.42183 3.01568,6.70515 3.68939,8.95078 7.21842,18.67162 7.57131,19.69825 4.55563,13.9235 z m -13.28505,-13.22689 -1.32112,-3.53623 -2.43824,-4.61975 -5.3256,-10.16994 -7.50714,-13.53856 -5.29346,-8.69416 -4.90855,-7.50715 -2.6628,-3.68939 -2.21365,-2.21365 3.81776,7.25049 3.49693,8.11669 5.26144,11.96655 2.30987,5.29345 2.31391,6.88134 z m -31.67056,-53.96883 -0.0644,-0.12832 -0.19269,-0.12833 z m 80.55749,-24.1576 -1.28329,5.35762 -5.80681,23.22728 -2.82323,13.18559 -2.95148,15.9447 -3.27238,10.3945 -1.15492,-2.69487 -7.44298,-13.79517 2.50237,-5.80685 8.14879,-17.06751 4.36313,-9.17538 5.83888,-12.31946 z m 7.21838,17.29206 -1.05869,6.15974 -3.01568,10.23407 -3.01572,7.57131 -3.33647,9.84912 -1.76454,9.68873 -1.66823,10.30025 6.03137,-6.12961 0.25665,-3.14401 0.67375,-5.45393 1.60407,-7.69963 3.49689,-13.76311 1.60411,-10.20201 z m -43.18211,28.07159 2.43821,4.07442 -0.51332,9.4962 -0.38498,0.28864 z m 4.10648,6.83344 1.41162,2.34198 -1.09084,2.56657 -0.80203,0.57744 z"
-             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter5386)"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
              inkscape:connector-curvature="0"
              sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
           <path
              inkscape:export-ydpi="300"
              inkscape:export-xdpi="300"
              inkscape:connector-curvature="0"
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.82688445;marker:none;filter:url(#filter5386);enable-background:accumulate"
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.82688445;marker:none;enable-background:accumulate"
              d="m 82.755287,385.32912 -3.079847,3.07985 23.13102,23.13098 -3.047787,3.04778 23.098917,23.09892 -3.07984,3.07985 39.49272,39.49272 39.52482,-39.49272 -3.07989,-3.07985 23.09892,-23.09892 -3.04779,-3.04778 23.13102,-23.13098 -3.07989,-3.07985 -76.54719,76.51514 -76.515183,-76.51514 z"
              id="path3457" />
           <path
              inkscape:export-ydpi="300"
              inkscape:export-xdpi="300"
              inkscape:connector-curvature="0"
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80000001;marker:none;filter:url(#filter5386);enable-background:accumulate"
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80000001;marker:none;enable-background:accumulate"
              d="m 159.27047,263.83527 -95.860507,95.89257 95.860507,95.89256 95.89256,-95.89256 -95.89256,-95.89257 z m 0,1.70034 94.19218,94.19223 -94.19218,94.19218 -94.192234,-94.19218 94.192234,-94.19223 z"
              id="path3459" />
           <path
@@ -730,12 +681,12 @@
                sodipodi:role="line"
                id="tspan3489"
                x="1032.5798"
-               y="453.41135">Bringing advanced geospatial technologies to the world</tspan></text>
+               y="453.41135">Offrir à tous les technologies géospatiales les plus avancées</tspan></text>
         </g>
       </g>
       <g
          inkscape:groupmode="layer"
-         id="layer2"
+         id="grass_white"
          inkscape:label="GRASS_GIS_white"
          style="display:inline">
         <g
@@ -755,21 +706,21 @@
                    inkscape:export-xdpi="300"
                    id="path6419"
                    d="m 154.9365,450.42694 4.33013,4.39484 1.47684,-1.585 -2.63982,-19.66922 0.22428,-3.17612 1.34741,-4.74808 1.41158,-4.36317 1.53994,-3.43273 5.00478,8.40544 4.87645,8.88666 1.08274,5.21532 6.80532,-6.67708 3.43676,-25.83986 7.21839,-34.96919 4.65189,-23.74056 9.43204,-18.70368 1.41161,-3.88192 0.51332,-2.27778 0.19229,-3.68943 -0.57748,-2.95152 -1.34745,-2.6628 -2.4703,-2.4703 0.12832,0.67374 1.21909,1.25119 1.12289,2.6307 0.12833,2.11738 -1.53994,4.2348 -1.98906,4.55563 -4.2669,7.66758 2.37407,-17.7092 0.67371,-9.3037 -0.8662,-0.16071 -4.78022,31.82518 -0.8983,1.60407 -7.86003,14.78974 -10.04162,19.89074 -8.43751,17.26 -4.68395,12.03067 -2.6628,-4.55562 1.66831,-3.43274 9.17538,-17.61292 9.30375,-15.52761 3.88188,-7.57127 3.20818,-6.28806 0.86623,-2.14949 0.1923,-2.08532 -0.38499,-1.60411 -0.38498,0 -0.28864,1.41162 -1.60411,3.68943 -3.88188,6.54468 -11.10031,17.06751 -6.32013,9.36791 -4.33107,7.66754 2.6628,-26.40332 0.99453,-11.26074 0.41709,-23.80469 -0.0644,0 0.19269,-0.80203 0.60955,-1.47578 0.48121,-1.34741 0.57748,-0.99457 0,-1.95699 -0.1923,-2.4703 0.8662,-1.60407 -0.38499,-2.34198 0,-1.7645 0.32063,-0.99457 0.67374,-2.21361 0.48122,-1.18706 -0.89827,-1.47574 0.76994,-1.47574 -1.21909,-0.86623 -0.7379,-2.21365 1.05869,-1.7324 -1.47574,-0.48125 -0.64165,-1.15492 0,-0.99457 -0.6737,-1.12285 -0.67375,-0.60958 0.0644,-0.93037 0,-1.02659 -0.32062,-2.79112 -0.22467,-1.60411 -0.99457,-0.73787 -0.48121,-0.8662 -1.12286,-0.54538 -0.6737,-1.21912 0.12832,-1.37955 -0.12832,-1.41158 -0.73791,-1.21912 -1.28325,-0.25666 -1.18706,-0.41708 -0.60954,-0.8662 -0.41705,-0.93036 -0.93036,0.60954 -0.38499,1.18702 -0.19229,1.28328 -0.60954,2.02116 -0.41705,-0.67371 0.19269,2.47027 -0.12833,0.54542 0,0.93036 0.353,0.73787 0.32102,0.99457 0.60954,0.80203 0.25666,0.353 0.19229,0.93037 -0.76997,0.57747 0.32063,0.83414 -0.73787,0.93036 0.12833,0.73791 0.19269,0.73787 0.60954,0.73787 0.54537,0.67375 0.73787,0.64164 0.12833,0.54538 -0.25665,0.80203 -0.60955,0.54542 -0.28864,0.44915 0.0964,1.15492 0.9304,0.60958 0.54538,0.57748 0.32102,1.15491 -0.99453,1.18706 -0.16071,0.8341 0.41705,0.93036 0.60954,0.73787 0,0.73787 0.44915,0.57748 0.41705,0.48125 0.32063,0.54538 -0.1927,0.9304 0.60955,0.8662 0.54541,0.12833 0.19269,0.41705 -0.19269,0.73791 0.51332,1.05869 0.54537,0.41705 0.41705,0.86624 -0.41705,1.47574 0.60955,1.34745 0.57747,0.25665 0.28864,0.60954 0.12833,1.73244 -0.32062,0.73787 -0.28864,0.86624 0.8662,4.36309 1.5399,0.99453 -0.12833,18.92828 -1.7966,20.43611 -1.05869,11.83818 -1.7324,14.37265 -0.6737,1.73244 -5.71059,-9.78496 -1.95699,-13.12147 -2.53447,-21.30231 -3.01568,-19.76241 0.22467,18.02997 1.05877,14.91807 1.82866,14.21221 -12.73647,-20.17942 -18.28664,-27.42998 -4.2027,-5.83888 -0.353,0 1.21912,3.49694 2.27777,5.67848 3.33655,7.57131 5.83887,12.51188 3.529,6.28803 4.36313,7.57131 9.01499,14.27642 8.14879,12.96107 1.25118,11.61359 3.88189,26.53168 -0.002,-0.0158 -4.48905,-13.93914 -9.4962,-23.38763 -7.57135,-15.7201 -10.04162,-16.32964 -5.101,-6.70507 -4.07438,-4.07442 -6.64094,-6.15969 2.75902,3.40067 4.4594,4.55562 2.6307,2.95152 1.73244,3.01568 2.08532,3.33651 3.40067,5.83887 2.95152,5.42183 3.01568,6.70515 3.68939,8.95078 7.21842,18.67162 7.57131,19.69825 4.55563,13.9235 z m -13.28505,-13.22689 -1.32112,-3.53623 -2.43824,-4.61975 -5.3256,-10.16994 -7.50714,-13.53856 -5.29346,-8.69416 -4.90855,-7.50715 -2.6628,-3.68939 -2.21365,-2.21365 3.81776,7.25049 3.49693,8.11669 5.26144,11.96655 2.30987,5.29345 2.31391,6.88134 z m -31.67056,-53.96883 -0.0644,-0.12832 -0.19269,-0.12833 z m 80.55749,-24.1576 -1.28329,5.35762 -5.80681,23.22728 -2.82323,13.18559 -2.95148,15.9447 -3.27238,10.3945 -1.15492,-2.69487 -7.44298,-13.79517 2.50237,-5.80685 8.14879,-17.06751 4.36313,-9.17538 5.83888,-12.31946 z m 7.21838,17.29206 -1.05869,6.15974 -3.01568,10.23407 -3.01572,7.57131 -3.33647,9.84912 -1.76454,9.68873 -1.66823,10.30025 6.03137,-6.12961 0.25665,-3.14401 0.67375,-5.45393 1.60407,-7.69963 3.49689,-13.76311 1.60411,-10.20201 z m -43.18211,28.07159 2.43821,4.07442 -0.51332,9.4962 -0.38498,0.28864 z m 4.10648,6.83344 1.41162,2.34198 -1.09084,2.56657 -0.80203,0.57744 z"
-                   style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter5386)"
+                   style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
                    inkscape:connector-curvature="0"
                    sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
                 <path
                    inkscape:export-ydpi="300"
                    inkscape:export-xdpi="300"
                    inkscape:connector-curvature="0"
-                   style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.82688445;marker:none;filter:url(#filter5386);enable-background:accumulate"
+                   style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.82688445;marker:none;enable-background:accumulate"
                    d="m 82.755241,385.32914 -3.079847,3.07985 23.131016,23.13098 -3.047783,3.04778 23.098913,23.09892 -3.07984,3.07985 39.49272,39.49272 39.52482,-39.49272 -3.07989,-3.07985 23.09892,-23.09892 -3.04779,-3.04778 23.13102,-23.13098 -3.07989,-3.07985 -76.54719,76.51514 -76.515179,-76.51514 z"
                    id="path6421" />
                 <path
                    inkscape:export-ydpi="300"
                    inkscape:export-xdpi="300"
                    inkscape:connector-curvature="0"
-                   style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.80000001;marker:none;filter:url(#filter5386);enable-background:accumulate"
+                   style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.80000001;marker:none;enable-background:accumulate"
                    d="m 159.27042,263.83529 -95.860503,95.89257 95.860503,95.89256 95.89256,-95.89256 -95.89256,-95.89257 z m 0,1.70034 94.19218,94.19223 -94.19218,94.19218 -94.19223,-94.19218 94.19223,-94.19223 z"
                    id="path6423" />
                 <path
@@ -850,279 +801,19 @@
     </g>
     <g
        inkscape:groupmode="layer"
-       id="layer5"
-       inkscape:label="r_sections"
+       id="logos"
+       inkscape:label="logos"
        style="display:inline"
        sodipodi:insensitive="true">
       <g
-         style="display:inline;enable-background:new"
-         id="g5929"
-         transform="translate(-208.8231,-659.59541)"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300">
-        <g
-           id="g5415"
-           transform="translate(-2.2225978,-2.1961594)">
-          <g
-             id="g5424"
-             transform="translate(0,0.40500326)">
-            <path
-               sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-               inkscape:connector-curvature="0"
-               style="display:inline;fill:#bdbdbd;fill-opacity:1;stroke:none"
-               d="m 243.29278,1226.9655 1.33029,1.3502 0.45372,-0.4869 -0.81101,-6.0428 0.069,-0.9758 0.41396,-1.4587 0.43367,-1.3404 0.4731,-1.0546 1.53755,2.5823 1.49814,2.7301 0.33264,1.6022 2.09072,-2.0512 1.05584,-7.9385 2.21764,-10.7432 1.42914,-7.2937 2.89771,-5.7461 0.43367,-1.1925 0.1577,-0.6999 0.0592,-1.1334 -0.17741,-0.9067 -0.41395,-0.8181 -0.75893,-0.7589 0.0394,0.2069 0.37453,0.3844 0.34497,0.8083 0.0394,0.6504 -0.4731,1.301 -0.61108,1.3997 -1.31086,2.3556 0.72935,-5.4406 0.20698,-2.8583 -0.26611,-0.05 -1.46857,9.7773 -0.27597,0.4928 -2.41476,4.5437 -3.08498,6.1108 -2.59216,5.3026 -1.439,3.6961 -0.81807,-1.3996 0.51253,-1.0546 2.81886,-5.4111 2.85828,-4.7703 1.1926,-2.3261 0.98561,-1.9317 0.26612,-0.6604 0.0592,-0.6407 -0.11827,-0.4928 -0.11829,0 -0.0887,0.4337 -0.4928,1.1335 -1.1926,2.0106 -3.41023,5.2435 -1.94165,2.8779 -1.33059,2.3557 0.81806,-8.1117 0.30554,-3.4594 0.12813,-7.3133 -0.0197,0 0.0592,-0.2464 0.18726,-0.4534 0.14785,-0.4139 0.17741,-0.3056 0,-0.6012 -0.0592,-0.759 0.26611,-0.4927 -0.11827,-0.7196 0,-0.542 0.0986,-0.3056 0.20696,-0.6801 0.14785,-0.3646 -0.27598,-0.4534 0.23656,-0.4534 -0.37454,-0.2661 -0.22669,-0.68 0.32526,-0.5323 -0.45339,-0.1478 -0.19712,-0.3549 0,-0.3055 -0.20698,-0.345 -0.20699,-0.1872 0.0197,-0.2858 0,-0.3154 -0.0986,-0.8576 -0.069,-0.4928 -0.30554,-0.2266 -0.14784,-0.2661 -0.34496,-0.1677 -0.20698,-0.3745 0.0394,-0.4238 -0.0394,-0.4337 -0.2267,-0.3745 -0.39424,-0.079 -0.36468,-0.1282 -0.18726,-0.2661 -0.12814,-0.2858 -0.28582,0.1872 -0.11827,0.3647 -0.0592,0.3943 -0.18727,0.6209 -0.12813,-0.2069 0.0592,0.7589 -0.0394,0.1676 0,0.2858 0.10842,0.2267 0.0986,0.3055 0.18727,0.2464 0.0789,0.1084 0.0592,0.2859 -0.23655,0.1773 0.0986,0.2563 -0.2267,0.2858 0.0394,0.2268 0.0592,0.2266 0.18727,0.2267 0.16755,0.207 0.22669,0.1971 0.0394,0.1675 -0.0789,0.2465 -0.18727,0.1675 -0.0887,0.1381 0.0296,0.3547 0.28584,0.1873 0.16756,0.1774 0.0986,0.3548 -0.30554,0.3647 -0.0493,0.2563 0.12813,0.2858 0.18727,0.2267 0,0.2267 0.13798,0.1774 0.12813,0.1479 0.0986,0.1675 -0.0592,0.2858 0.18727,0.2661 0.16755,0.04 0.0592,0.128 -0.0592,0.2268 0.1577,0.3252 0.16756,0.1281 0.12813,0.2661 -0.12813,0.4535 0.18727,0.4139 0.17741,0.079 0.0887,0.1874 0.0394,0.5322 -0.0986,0.2266 -0.0887,0.2661 0.26612,1.3405 0.4731,0.3055 -0.0394,5.8152 -0.55195,6.2783 -0.32525,3.637 -0.53223,4.4155 -0.20698,0.5322 -1.7544,-3.0061 -0.60123,-4.0312 -0.77863,-6.5444 -0.92648,-6.0714 0.069,5.5391 0.32527,4.5832 0.5618,4.3662 -3.9129,-6.1995 -5.61799,-8.427 -1.29116,-1.7938 -0.10842,0 0.37453,1.0743 0.69979,1.7446 1.02504,2.326 1.79382,3.8439 1.08418,1.9318 1.34043,2.3261 2.76958,4.3859 2.50346,3.9819 0.38439,3.568 1.1926,8.1509 -6.3e-4,-0.01 -1.37913,-4.2824 -2.91742,-7.1851 -2.32605,-4.8295 -3.08497,-5.0168 -1.56713,-2.0599 -1.25173,-1.2517 -2.04023,-1.8924 0.84764,1.0447 1.37,1.3996 0.8082,0.9068 0.53223,0.9264 0.64065,1.0251 1.04475,1.7938 0.90677,1.6657 0.92648,2.06 1.13346,2.7498 2.21763,5.7363 2.32606,6.0516 1.39957,4.2776 z m -4.08142,-4.0636 -0.40588,-1.0863 -0.74908,-1.4194 -1.63611,-3.1243 -2.30634,-4.1593 -1.62627,-2.671 -1.50799,-2.3064 -0.81806,-1.1334 -0.68007,-0.6801 1.17288,2.2275 1.07432,2.4936 1.61641,3.6763 0.70964,1.6263 0.71088,2.114 z m -9.7298,-16.5802 -0.0197,-0.04 -0.0592,-0.039 z m 24.74879,-7.4217 -0.39424,1.646 -1.78397,7.1358 -0.86734,4.0509 -0.90676,4.8986 -1.00533,3.1933 -0.35483,-0.8279 -2.28662,-4.2381 0.76878,-1.784 2.50346,-5.2435 1.34043,-2.8188 1.79383,-3.7848 z m 2.21764,5.3125 -0.32526,1.8924 -0.92648,3.1441 -0.92647,2.326 -1.02505,3.0258 -0.54208,2.9767 -0.51253,3.1644 1.85296,-1.8832 0.0789,-0.9658 0.20699,-1.6756 0.49281,-2.3655 1.07431,-4.2283 0.49281,-3.1342 z m -13.26639,8.6241 0.74908,1.2517 -0.1577,2.9174 -0.11828,0.089 z m 1.26159,2.0993 0.43367,0.7196 -0.3351,0.7884 -0.24641,0.1775 z"
-               id="path4566-6" />
-            <flowRoot
-               xml:space="preserve"
-               id="flowRoot4976"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.55879784px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
-                 id="flowRegion4978"><rect
-                   id="rect4980"
-                   width="369.53226"
-                   height="44.437405"
-                   x="266.40472"
-                   y="1170.5214" /></flowRegion><flowPara
-                 id="flowPara4982"
-                 style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">What is <flowSpan
-   id="flowSpan5927"
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">GRASS</flowSpan><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24.00000191px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;letter-spacing:-2px;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1"
-   id="flowSpan4319"> GIS</flowSpan> ?</flowPara></flowRoot>          </g>
-        </g>
-      </g>
-      <g
-         style="display:inline;enable-background:new"
-         id="g5929-4"
-         transform="translate(-208.8231,-1157.0708)"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300">
-        <g
-           id="g5408"
-           transform="translate(-2.2225546,0.15440342)">
-          <g
-             id="g5433"
-             transform="translate(0,-0.02426169)">
-            <path
-               sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-               inkscape:connector-curvature="0"
-               style="display:inline;fill:#bdbdbd;fill-opacity:1;stroke:none"
-               d="m 243.29261,1226.4566 1.33027,1.3502 0.45372,-0.4869 -0.811,-6.0427 0.069,-0.9759 0.41397,-1.4586 0.43365,-1.3404 0.4731,-1.0546 1.53754,2.5824 1.49811,2.73 0.33264,1.6022 2.0907,-2.0513 1.05582,-7.9384 2.21762,-10.743 1.42912,-7.2936 2.89768,-5.746 0.43365,-1.1925 0.1577,-0.6998 0.0591,-1.1335 -0.17741,-0.9067 -0.41395,-0.8181 -0.75892,-0.7589 0.0394,0.2069 0.37453,0.3845 0.34497,0.8082 0.0394,0.6504 -0.47309,1.301 -0.61107,1.3996 -1.31085,2.3556 0.72934,-5.4405 0.20698,-2.8583 -0.26611,-0.05 -1.46855,9.7772 -0.27597,0.4927 -2.41473,4.5437 -3.08494,6.1107 -2.59213,5.3025 -1.43899,3.6961 -0.81805,-1.3995 0.51252,-1.0547 2.81882,-5.4109 2.85826,-4.7704 1.19258,-2.326 0.9856,-1.9318 0.26611,-0.6603 0.0591,-0.6407 -0.11827,-0.4929 -0.11828,0 -0.0886,0.4338 -0.4928,1.1335 -1.19259,2.0106 -3.41018,5.2433 -1.94163,2.878 -1.33058,2.3557 0.81806,-8.1117 0.30554,-3.4593 0.12812,-7.3132 -0.0196,0 0.0591,-0.2464 0.18727,-0.4534 0.14784,-0.414 0.1774,-0.3055 0,-0.6012 -0.0591,-0.7589 0.26612,-0.4928 -0.11828,-0.7196 0,-0.5419 0.0985,-0.3057 0.20696,-0.68 0.14785,-0.3647 -0.27597,-0.4533 0.23655,-0.4534 -0.37454,-0.2661 -0.22668,-0.68 0.32525,-0.5323 -0.45339,-0.1479 -0.19711,-0.3548 0,-0.3055 -0.20698,-0.345 -0.20698,-0.1872 0.0196,-0.2859 0,-0.3153 -0.0985,-0.8576 -0.069,-0.4928 -0.30553,-0.2266 -0.14784,-0.2662 -0.34496,-0.1676 -0.20698,-0.3744 0.0394,-0.4239 -0.0394,-0.4337 -0.22669,-0.3744 -0.39424,-0.079 -0.36468,-0.1281 -0.18726,-0.2662 -0.12813,-0.2858 -0.28582,0.1873 -0.11828,0.3647 -0.0591,0.3943 -0.18726,0.6208 -0.12813,-0.2069 0.0591,0.7589 -0.0394,0.1675 0,0.2858 0.10842,0.2268 0.0985,0.3055 0.18727,0.2464 0.0789,0.1084 0.0591,0.2859 -0.23655,0.1773 0.0985,0.2564 -0.2267,0.2857 0.0394,0.2267 0.0591,0.2267 0.18727,0.2267 0.16755,0.2069 0.22669,0.1972 0.0394,0.1675 -0.0789,0.2464 -0.18726,0.1676 -0.0886,0.138 0.0296,0.3548 0.28584,0.1873 0.16754,0.1774 0.0986,0.3548 -0.30553,0.3646 -0.0493,0.2563 0.12813,0.2859 0.18726,0.2266 0,0.2267 0.13799,0.1774 0.12813,0.1479 0.0985,0.1675 -0.0591,0.2858 0.18727,0.2661 0.16755,0.04 0.0591,0.128 -0.0591,0.2268 0.15769,0.3252 0.16755,0.1281 0.12813,0.2661 -0.12813,0.4534 0.18727,0.414 0.17742,0.078 0.0886,0.1873 0.0394,0.5323 -0.0985,0.2266 -0.0886,0.2661 0.26612,1.3405 0.47308,0.3054 -0.0394,5.8152 -0.55194,6.2782 -0.32526,3.637 -0.53222,4.4154 -0.20698,0.5322 -1.75437,-3.006 -0.60122,-4.0312 -0.77863,-6.5444 -0.92646,-6.0713 0.069,5.5392 0.32528,4.583 0.56178,4.3662 -3.91284,-6.1995 -5.61794,-8.4268 -1.29114,-1.7938 -0.10841,0 0.37452,1.0743 0.69978,1.7445 1.02503,2.3261 1.7938,3.8437 1.08417,1.9318 1.34041,2.3261 2.76955,4.3859 2.50343,3.9818 0.38438,3.568 1.19259,8.1508 -6.4e-4,-0.01 -1.3791,-4.2823 -2.91739,-7.1851 -2.32602,-4.8294 -3.08494,-5.0168 -1.56711,-2.0599 -1.25172,-1.2517 -2.0402,-1.8923 0.84762,1.0448 1.37,1.3995 0.80818,0.9068 0.53223,0.9264 0.64064,1.025 1.04474,1.7937 0.90676,1.6658 0.92646,2.06 1.13345,2.7497 2.21761,5.7362 2.32602,6.0516 1.39956,4.2776 z m -4.08138,-4.0635 -0.40588,-1.0863 -0.74906,-1.4194 -1.63609,-3.1243 -2.30632,-4.1592 -1.62624,-2.671 -1.50797,-2.3063 -0.81806,-1.1335 -0.68006,-0.6801 1.17286,2.2275 1.07431,2.4936 1.61639,3.6763 0.70963,1.6262 0.71088,2.114 z m -9.72968,-16.5801 -0.0197,-0.04 -0.0591,-0.039 z m 24.7485,-7.4215 -0.39424,1.646 -1.78395,7.1357 -0.86732,4.0508 -0.90676,4.8985 -1.00532,3.1933 -0.35482,-0.8279 -2.2866,-4.238 0.76878,-1.7841 2.50343,-5.2434 1.34042,-2.8188 1.7938,-3.7847 z m 2.21761,5.3124 -0.32526,1.8924 -0.92646,3.144 -0.92647,2.326 -1.02503,3.0258 -0.54208,2.9765 -0.51251,3.1645 1.85293,-1.8831 0.0789,-0.966 0.20698,-1.6755 0.4928,-2.3655 1.07431,-4.2282 0.49281,-3.1341 z m -13.26623,8.624 0.74907,1.2517 -0.1577,2.9174 -0.11828,0.088 z m 1.26157,2.0993 0.43367,0.7195 -0.3351,0.7885 -0.24641,0.1775 z"
-               id="path4566-6-6" />
-            <flowRoot
-               xml:space="preserve"
-               id="flowRoot4976-7"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-               transform="matrix(1.2981272,0,0,1.2981272,-334.66991,39.125397)"><flowRegion
-                 id="flowRegion4978-2"><rect
-                   id="rect4980-7"
-                   width="284.66568"
-                   height="34.231934"
-                   x="463.03217"
-                   y="871.11304" /></flowRegion><flowPara
-                 id="flowPara4982-5"
-                 style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:18.48817253px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">About</flowPara></flowRoot>          </g>
-        </g>
-      </g>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer9"
-       inkscape:label="r_content"
-       style="display:inline">
-      <flowRoot
-         xml:space="preserve"
-         id="flowRoot2987-2"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="matrix(0.80809717,0,0,0.90225882,461.95563,597.70454)"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
-           id="flowRegion2989-5"><rect
-             id="rect2991-2"
-             width="700.59735"
-             height="87.85096"
-             x="8.0922441"
-             y="54.76157"
-             ry="0" /></flowRegion><flowPara
-           id="flowPara2993-2"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Where is GRASS <flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Light';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan4207">GIS</flowSpan> used </flowPara><flowPara
-           style="font-size:10px"
-           id="flowPara3168"><flowSpan
-             id="flowSpan7158"
-             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">GRASS</flowSpan><flowSpan
-             id="flowSpan7160"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start"> GIS</flowSpan><flowSpan
-             id="flowSpan7154"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"> is used in scientific applications, commercial settings and by public authorities all over the world. The software has shown strong potential for solving geospatial problems in numerous situations world-wide.</flowSpan></flowPara></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot2987-0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="matrix(0.80809717,0,0,0.90225882,429.58395,490.52483)"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
-           id="flowRegion2989-0"><rect
-             id="rect2991-5"
-             width="700.3476"
-             height="106.88567"
-             x="48.401169"
-             y="56.338501"
-             ry="0" /></flowRegion><flowPara
-           id="flowPara2993-9"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">A long term endeavor</flowPara><flowPara
-           id="flowPara3015-2"
-           style="font-size:10px"><flowSpan
-             id="flowSpan7031"
-             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">GRASS </flowSpan><flowSpan
-             id="flowSpan7033"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;letter-spacing:0px;writing-mode:lr-tb;text-anchor:start">GIS</flowSpan><flowSpan
-             id="flowSpan7025"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"> was born more than 30 years ago... and the latest commit is probably just few hours old!  Many people have  contributed to improve the software. Its strength and success rely on an active development team and the feedback of a wide contributors community. Both combine their efforts to make <flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6017">GRASS</flowSpan><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6015"> GIS</flowSpan> easier, more useful and powerful to everybody.</flowSpan></flowPara></flowRoot>      <flowRoot
-         transform="matrix(0.80809717,0,0,0.90225882,286.54049,2.7689172)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3350"
-         xml:space="preserve"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
-           id="flowRegion3352"><rect
-             ry="0"
-             y="47.866554"
-             x="75.202003"
-             height="160"
-             width="457"
-             id="rect3354" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
-           id="flowPara3356">A free and open source philosophy</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3368">The Free and Open Source philosophy lets the user see the source code and structure of the program, which offers great transparency. Users can extend the program for their own needs. Immediate source code peer review increases the quality. With the help of the extension manager, new modules can be created without <flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6506">GRASS</flowSpan><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6508"> GIS </flowSpan>package source code. </flowPara></flowRoot>      <flowRoot
-         transform="translate(4.5112157,-9.6367662)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3479-4"
-         xml:space="preserve"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
-           id="flowRegion3481-6"><rect
-             ry="0"
-             y="56.338501"
-             x="48.401169"
-             height="113.37925"
-             width="265.98526"
-             id="rect3483-0" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
-           id="flowPara3527">Where can I find more information ?</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3529">- <flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6522">GRASS</flowSpan><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6518"> GIS</flowSpan> wiki:</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3531">https://grasswiki.osgeo.org/wiki</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3533">- <flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6526">GRASS</flowSpan><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6524"> GIS</flowSpan> mailing lists: </flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara7779">https://grass.osgeo.org/support</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3537">- Project website:</flowPara></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot3539"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="translate(713.48063,-9.6367662)"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
-           id="flowRegion3541"><rect
-             id="rect3543"
-             width="272.76389"
-             height="113.37925"
-             x="48.401169"
-             y="56.338501"
-             ry="0" /></flowRegion><flowPara
-           id="flowPara3555"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">An OSGeo project</flowPara><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3619"><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6512">GRASS</flowSpan><flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6510"> GIS</flowSpan> is a founding project of the Open Source Geospatial Foundation which has the aim to create high quality open source geospatial software.</flowPara><flowPara
-           id="flowPara3593"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">For further information visit the OSGeo homepage:</flowPara></flowRoot>      <flowRoot
-         transform="translate(298.72814,137)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot7587"
-         xml:space="preserve"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
-           id="flowRegion7589"><rect
-             ry="0"
-             y="56.338501"
-             x="48.401169"
-             height="44.430027"
-             width="369"
-             id="rect7591" /></flowRegion><flowPara
-           id="flowPara7595"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">License</flowPara><flowPara
-           id="flowPara7627"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">GNU General Public License (Free Software Foundation)</flowPara></flowRoot>      <flowRoot
-         transform="matrix(0.80809717,0,0,0.90225882,-7.5540012,498.1676)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         id="flowRoot3350-4"
-         xml:space="preserve"
-         inkscape:export-filename="recto.png"
-         inkscape:export-xdpi="300"
-         inkscape:export-ydpi="300"><flowRegion
-           id="flowRegion3352-3"><rect
-             ry="0"
-             y="47.866554"
-             x="75.202003"
-             height="205.06569"
-             width="473.47058"
-             id="rect3354-7"
-             style="font-size:15.22460365px" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
-           id="flowPara3356-9">A mature mapping suite</flowPara><flowPara
-           style="font-size:15.22460365px"
-           id="flowPara3368-5"><flowSpan
-             id="flowSpan6988"
-             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start">GRASS</flowSpan><flowSpan
-             id="flowSpan6983"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"> GIS <flowSpan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="flowSpan6984">(Geographic Resources Analysis Support System) is a free and open source software for performing spatial analysis. It consists of more than 400 modules for processing vector (2D/3D), raster, voxel and temporal data (4D). Many interfaces to other programs in related domains like geostatistics, databases, map web services and even other GIS software exist. It is the oldest and largest free and open source GIS. It can serve as a desktop GIS as well as the backbone of a complete GIS infrastructure.</flowSpan></flowSpan></flowPara></flowRoot>    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer10"
-       inkscape:label="logos"
-       style="display:inline">
-      <g
-         id="g6881"
-         transform="translate(-6.6462877,0)">
+         id="logo_grass"
+         transform="translate((-6.6462877,0)">
         <flowRoot
            inkscape:export-ydpi="300"
            inkscape:export-xdpi="300"
            inkscape:export-filename="recto.png"
            xml:space="preserve"
-           id="flowRoot3901-8"
+           id="url_grass"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
            transform="translate(57.683855,164.35439)"><flowRegion
              id="flowRegion3903-7"><rect
@@ -1139,7 +830,7 @@
            inkscape:export-xdpi="300"
            inkscape:export-filename="recto.png"
            transform="matrix(0.81887677,0,0,0.81887677,74.934327,-208.69695)"
-           id="g6073"
+           id="g201"
            style="display:inline;enable-background:new">
           <path
              id="path4566"
@@ -1171,7 +862,7 @@
              inkscape:export-ydpi="600"
              inkscape:export-xdpi="600"
              transform="matrix(0.88454173,0,0,0.88454173,-209.97959,22.086839)"
-             id="g4549"
+             id="text_logo_grass"
              style="display:inline">
             <flowRoot
                inkscape:export-ydpi="600"
@@ -1209,14 +900,14 @@
         </g>
       </g>
       <g
-         id="g6791"
+         id="logo_osgeo"
          transform="translate(12.824386,0)">
         <flowRoot
            inkscape:export-ydpi="300"
            inkscape:export-xdpi="300"
            inkscape:export-filename="recto.png"
            xml:space="preserve"
-           id="flowRoot3901"
+           id="url_osgeo"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
            transform="translate(763.83465,165.67649)"><flowRegion
              id="flowRegion3903"><rect
@@ -1233,8 +924,7 @@
            inkscape:export-xdpi="300"
            inkscape:export-filename="recto.png"
            transform="matrix(0.28124707,0,0,0.28124707,781.86389,62.77752)"
-           inkscape:label="Calque 1"
-           id="layer1-1"
+           id="g223"
            style="display:inline;enable-background:new">
           <g
              id="g21"
@@ -1508,6 +1198,208 @@
           </g>
         </g>
       </g>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="r_content"
+       inkscape:label="r_content"
+       style="display:inline"
+       sodipodi:insensitive="true">
+      <flowRoot
+         transform="translate(4.5112157,-9.6367662)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
+         id="more_info"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3481-6"><rect
+             ry="0"
+             y="56.338501"
+             x="48.401169"
+             height="113.37925"
+             width="265.98526"
+             id="rect3483-0" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
+           id="flowPara3527">Where can I find more information?</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
+           id="flowPara3529">- <use
+   xlink:href="#grassgis"
+   id="use4419" /> Wiki:</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
+           id="flowPara3531">https://grasswiki.osgeo.org/wiki</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
+           id="flowPara3533">- <use
+   xlink:href="#grassgis"
+   id="use4423" />mailing lists:  </flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
+           id="flowPara7779">https://grass.osgeo.org/support</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
+           id="flowPara3537">- Project website:</flowPara></flowRoot>      <flowRoot
+         transform="matrix(0.80809717,0,0,0.90225882,286.54049,2.7689172)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
+         id="opensource_proj"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3352"><rect
+             ry="0"
+             y="47.866554"
+             x="75.202003"
+             height="160"
+             width="457"
+             id="rect3354" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
+           id="flowPara3356">A free and open source philosophy</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
+           id="flowPara3368">The Free and Open Source philosophy lets the user see the source code and structure of the program, which offers great transparency. Users can extend the program for their own needs. Immediate source code peer review increases the quality. With the help of the extension manager, new modules can be created without <use
+   xlink:href="#grassgis"
+   id="use252" /> package source code.  <flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.2246027px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="flowSpan4535">.</flowSpan></flowPara></flowRoot>      <flowRoot
+         transform="translate(298.72814,137)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
+         id="license"
+         xml:space="preserve"><flowRegion
+           id="flowRegion7589"><rect
+             ry="0"
+             y="56.338501"
+             x="48.401169"
+             height="44.430027"
+             width="369"
+             id="rect7591" /></flowRegion><flowPara
+           id="flowPara7595"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Licence</flowPara><flowPara
+           id="flowPara7627"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">GNU General Public License (Free Software Foundation)</flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="osgeo_proj"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
+         transform="translate(713.48063,-9.6367662)"><flowRegion
+           id="flowRegion3541"><rect
+             id="rect3543"
+             width="272.76389"
+             height="113.37925"
+             x="48.401169"
+             y="56.338501"
+             ry="0" /></flowRegion><flowPara
+           id="flowPara3555"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">An OSGeo project</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
+           id="flowPara3619"><use
+   xlink:href="#grassgis"
+   id="use359" /> is a founding project of the Open Source Geospatial Foundation which has the aim to create high quality open source geospatial software.
+For further information visit the OSGeo homepage:</flowPara></flowRoot>      <flowRoot
+         transform="matrix(0.80809717,0,0,0.90225882,-7.5540012,498.1676)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
+         id="mature_sol"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3352-3"><rect
+             ry="0"
+             y="47.866554"
+             x="75.202003"
+             height="205.06569"
+             width="473.47058"
+             id="rect3354-7"
+             style="font-size:15.22460365px" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
+           id="flowPara3356-9">A mature mapping suite</flowPara><flowPara
+           style="font-size:15.22460365px"
+           id="flowPara3368-5"><flowSpan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+             id="flowSpan6984"><use
+   xlink:href="#grassgis"
+   id="use373" /> is a free and open source software for performing spatial analysis. It consists of more than 400 modules for processing vector (2D/3D), raster, voxel and temporal data (4D). Many interfaces to other programs in related domains like geostatistics, databases, map web services and even other GIS software exist. It is the oldest and largest free and open source GIS. It can serve as a desktop GIS as well as the backbone of a complete GIS infrastructure.</flowSpan></flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="long_term"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
+         transform="matrix(0.80809717,0,0,0.90225882,429.58395,490.52483)"><flowRegion
+           id="flowRegion2989-0"><rect
+             id="rect2991-5"
+             width="700.3476"
+             height="106.88567"
+             x="48.401169"
+             y="56.338501"
+             ry="0" /></flowRegion><flowPara
+           id="flowPara2993-9"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">A long term endeavor</flowPara><flowPara
+           id="flowPara3015-2"
+           style="font-size:10px"><flowSpan
+             id="flowSpan7025"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"><use
+   xlink:href="#grassgis"
+   id="use243" />  was born more than 30 years ago... and the latest commit is probably just few hours old!  Many people have  contributed to improve the software. Its strength and success rely on an active development team and the feedback of a wide contributors community. Both combine their efforts to make <use
+   xlink:href="#grassgis"
+   id="use245" /> easier, more useful and powerful to everybody.</flowSpan></flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="where_use_grass"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
+         transform="matrix(0.80809717,0,0,0.90225882,461.95563,597.70454)"><flowRegion
+           id="flowRegion2989-5"><rect
+             id="rect2991-2"
+             width="700.59735"
+             height="87.85096"
+             x="8.0922441"
+             y="54.76157"
+             ry="0" /></flowRegion><flowPara
+           id="flowPara2993-2"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Where is <use
+   xlink:href="#grassgis"
+   id="use231" /> used? </flowPara><flowPara
+           style="font-size:10px"
+           id="flowPara3168"><flowSpan
+             id="flowSpan7158"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start"><use
+   xlink:href="#grassgis"
+   id="use235" /> is used in scientific applications, commercial settings and by public authorities all over the world. The software has shown strong potential for solving geospatial problems in numerous situations world-wide.</flowSpan></flowPara></flowRoot>    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="r_sections"
+       inkscape:label="r_sections"
+       style="display:inline"
+       sodipodi:insensitive="true">
+      <g
+         id="r_1">
+        <use
+           xlink:href="#brins"
+           id="logo_r1"
+           x="10mm"
+           y="20mm"
+           width="100%"
+           height="100%" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot342"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.55879784px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           transform="translate(0,0)"><flowRegion
+             id="flowRegion344"><rect
+               id="rect346"
+               width="300"
+               height="44"
+               x="15mm"
+               y="5mm" /></flowRegion><flowPara
+             id="flowPara348"
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">À propos</flowPara></flowRoot>      </g>
+      <g
+         id="r_2">
+        <use
+           xlink:href="#brins"
+           id="logo_r2"
+           x="10mm"
+           y="159.5mm"
+           width="100%"
+           height="100%"
+           transform="translate(0,0)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot352"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.55879784px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           transform="translate(0,0)"><flowRegion
+             id="flowRegion354"><rect
+               id="rect356"
+               width="300"
+               height="44"
+               x="15mm"
+               y="143.5mm" /></flowRegion><flowPara
+             id="flowPara358"
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">What is <use
+   xlink:href="#grassgis"
+   id="use360" />?</flowPara></flowRoot>      </g>
     </g>
   </g>
 </svg>

@@ -42,8 +42,8 @@ How to turn the .svg source file to a .pdf output document [*N?X users]
 [- if you did not follow the previous recommendations, and edited the source file from within Inkscape, please make sure /both/ "recto" and "verso" layers are visible ]
 
 - open a terminal in the right directory then convert each layer to pdf [you need to have inkscape package installed]
-	inkscape grass_flyer.svg -A grassflyerr.pdf -i layer6 -j
-	inkscape grass_flyer.svg -A grassflyerv.pdf -i layer7 -j
+	inkscape grass_flyer.svg -A grassflyerr.pdf -i recto -j
+	inkscape grass_flyer.svg -A grassflyerv.pdf -i verso -j
 
 - gather these files in a single one [you need to have texlive-extra-utils package installed, perhaps some other tools do the job, don't know]
 	pdfjam grassflyerr.pdf grassflyerv.pdf --papersize '{29.7cm,21cm}'
