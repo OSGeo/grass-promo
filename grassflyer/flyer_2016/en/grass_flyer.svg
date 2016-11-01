@@ -400,7 +400,7 @@
            id="flowPara3407">- VTK, POVray</flowPara><flowPara
            id="flowPara3397"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- Web services</flowPara></flowRoot>      <flowRoot
-         transform="translate(713.82663,296.33065)"
+         transform="translate(703.82663,296.33065)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
          id="interop"
          xml:space="preserve"
@@ -412,7 +412,7 @@
              y="56.338501"
              x="48.401169"
              height="125.67731"
-             width="265.33124"
+             width="275.33124"
              id="rect3419"
              style="font-size:13px;text-align:start;text-anchor:start" /></flowRegion><flowPara
            id="flowPara3423"
@@ -430,10 +430,10 @@
          xml:space="preserve"
          id="platforms"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
-         transform="translate(492.96665,264.30245)"><flowRegion
+         transform="translate(482.96665,264.30245)"><flowRegion
            id="flowRegion7541"><rect
              id="rect7543"
-             width="265.96823"
+             width="275.35724"
              height="83.053665"
              x="269.23517"
              y="6.9745884"

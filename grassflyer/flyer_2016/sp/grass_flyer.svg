@@ -118,7 +118,7 @@
             <dc:title>The GRASS GISS development team</dc:title>
           </cc:Agent>
         </dc:contributor>
-        <dc:language>it</dc:language>
+        <dc:language>es</dc:language>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -155,10 +155,10 @@
                  id="rect3552-7-7-7"
                  style="fill:#4c4c4c;fill-opacity:1" /></flowRegion><flowPara
                id="flowPara3588-7-1-1"
-               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1">. La GUI offre molti potenti strumenti grafici. <flowSpan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1">La wxGUI ofrece gran cantidad de poderosas herramientas gráficas. <flowSpan
    style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1"
-   id="flowSpan4201">Map Swipe</flowSpan> permette di comparare facilmente mappe raster.</flowPara></flowRoot>          <image
-             sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/mapswipe.png"
+   id="flowSpan4201">Map Swipe</flowSpan> permite comparar mapas raster fácilmente.</flowPara></flowRoot>          <image
+             sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/sp/../images/mapswipe.png"
              xlink:href="../images/mapswipe.png"
              width="240"
              height="180"
@@ -186,10 +186,10 @@
                y="12.585855"
                ry="0" /></flowRegion><flowPara
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
-             id="flowPara3588-7-1">Combina, visualizza e anima dati 3D grazie allo strumento di visualizzazione <flowSpan
+             id="flowPara3588-7-1">Puede combinar, visualizar y animar sus rasters 3D y vectores gracias a <flowSpan
    style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
-   id="flowSpan4203">nviz</flowSpan>.</flowPara></flowRoot>        <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/nviz.png"
+   id="flowSpan4203">nviz</flowSpan>, la herramienta de visualización.</flowPara></flowRoot>        <image
+           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/sp/../images/nviz.png"
            xlink:href="../images/nviz.png"
            y="328.19818"
            x="2007.079"
@@ -216,10 +216,10 @@
                id="rect3552-7-7-6"
                style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#4d4d4d;fill-opacity:1" /></flowRegion><flowPara
              id="flowPara3588-7-1-2"
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Grâce au <flowSpan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Using the <flowSpan
    id="flowSpan4220"
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Modeleur graphique</flowSpan>, une chaîne de processus peut être combinée en une seule action, à travers une interface intuitive.</flowPara></flowRoot>        <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/gmodeler.png"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Modelador Gráfico</flowSpan>, una cadena de procesos pueden combinarse en un único proceso a través de una interfaz amigable.</flowPara></flowRoot>        <image
+           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/sp/../images/gmodeler.png"
            xlink:href="../images/gmodeler.png"
            y="566.94891"
            x="1511.1951"
@@ -233,7 +233,7 @@
          id="illustr_bigdata"
          transform="translate(-1578.4909,184.84381)">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/largedataset.png"
+           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/sp/../images/largedataset.png"
            xlink:href="../images/largedataset.png"
            width="397.52524"
            height="177.03552"
@@ -255,7 +255,7 @@
                y="12.585855"
                ry="0" /></flowRegion><flowPara
              style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4c4c4c;fill-opacity:1"
-             id="flowPara3588-7">Visualizzazione e gestione facile dei più complessi datasets: grosse geometrie collegate a complessi DBMSs sono supportate.</flowPara></flowRoot>      </g>
+             id="flowPara3588-7">Visualice y administre sus sets de datos más complejos : soporte para enormes geometrías asociadas a DBMS.</flowPara></flowRoot>      </g>
     </g>
     <g
        inkscape:groupmode="layer"
@@ -280,15 +280,15 @@
              id="rect3438"
              style="font-size:13px" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start"
-           id="flowPara9683">Design</flowPara><flowPara
+           id="flowPara9683">Diseño</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3488">- Comandi modulari</flowPara><flowPara
+           id="flowPara3488">- Comandos modulares</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3490">- Consiste in più di 450 moduli</flowPara><flowPara
+           id="flowPara3490">- Consta de más de 450 módulos</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara4875">- Repository di addons per i moduli degli utenti</flowPara><flowPara
+           id="flowPara4875">- Repositorio de Add-ons para módulos provistos por los usuarios</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3546">- Documentazione con esempi per ogni modulo</flowPara></flowRoot>      <flowRoot
+           id="flowPara3546">- Documentación y ejemplos para cada módulo</flowPara></flowRoot>      <flowRoot
          transform="translate(9.6207153,486.69942)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
          id="gis_formats"
@@ -304,10 +304,9 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3599"><use
    xlink:href="#grassgis"
-   id="use44" />
- supporta molti formati di file GIS utilizzando la libreria GDAL/OGR.</flowPara><flowPara
+   id="use44" />  soporta casi todos los formatos de archivos GIS más comunes a través de la librería GDAL/OGR.</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara6224">Inoltre supporta anche Open GIS Consortium’s Simple Features.</flowPara><flowPara
+           id="flowPara6224">Además, soporta las &quot;Simple Features&quot; del OpenGeospatialConsortium.</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3601" /><flowPara
            id="flowPara3560"
@@ -325,7 +324,7 @@
              ry="0"
              style="font-size:13px" /></flowRegion><flowPara
            id="flowPara3118"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Formati vettoriali</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Formatos Vectoriales</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3163">ASCII, ARC/INFO ungenerate, ARC/INFO E00, ArcView SHAPE, BIL, DLG (U.S.), DXF, DXF3D, GMT, GPS-ASCII USGS-DEM, IDRISI, MOSS, MapInfo, MIF, PostGIS, TIGER, VRML, etc.</flowPara></flowRoot>      <flowRoot
          transform="translate(10.040715,619.00107)"
@@ -341,7 +340,7 @@
              id="rect3173"
              style="font-size:13px" /></flowRegion><flowPara
            id="flowPara3177"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Formati raster</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Formatos Raster</flowPara><flowPara
            id="flowPara3213"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">ASCII, ARC/GRID, E00, GIF, GMT, TIF, PNG, Vis5D, SURFER (.grd), etc.</flowPara></flowRoot>      <flowRoot
          transform="translate(313.85221,527.08865)"
@@ -357,9 +356,9 @@
              id="rect3235"
              style="font-size:13px" /></flowRegion><flowPara
            id="flowPara3239"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Formati di immagini</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Formatos de Imágenes</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3279">CEOS (SAR, SRTM, LANDSAT7 etc.), ERDAS LAN / IMG, HDF, LANDSAT TM/MSS, immagini NHAP,</flowPara><flowPara
+           id="flowPara3279">CEOS (SAR, SRTM, LANDSAT7 etc.), ERDAS LAN / IMG, HDF, LANDSAT TM/MSS, fotos aéreas NHAP,</flowPara><flowPara
            id="flowPara3273"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">SAR, SPOT, MODIS, etc.</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
@@ -375,7 +374,7 @@
              ry="0"
              style="font-size:13px" /></flowRegion><flowPara
            id="flowPara3297"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Database supportati</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Soporte para Bases de Datos</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3351">SQLite, PostgreSQL / PostGIS, MySQL, ODBC, DBF</flowPara></flowRoot>      <flowRoot
          transform="translate(255.34764,-8.6992662)"
@@ -391,15 +390,15 @@
              id="rect3359"
              style="font-size:13px" /></flowRegion><flowPara
            id="flowPara3363"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Output</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Salidas</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3401">- Moduli di mappatura (animazioni, cartografia...)</flowPara><flowPara
+           id="flowPara3401">- Módulos de mapeo (animación, cartografía...)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3405">- NVIZ per la visualizzazione di dati 2.5D e 3D (creazione di animazione e voli)</flowPara><flowPara
+           id="flowPara3405">- NVIZ para la visualización de datos 2.5D y 3D (creación de animaciones y vuelos sobre el terreno)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3407">- VTK, POVray</flowPara><flowPara
            id="flowPara3397"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- Servizi Web</flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- Web services</flowPara></flowRoot>      <flowRoot
          transform="translate(703.82663,296.33065)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
          id="interop"
@@ -416,16 +415,15 @@
              id="rect3419"
              style="font-size:13px;text-align:start;text-anchor:start" /></flowRegion><flowPara
            id="flowPara3423"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Interoperabilità con altri software GIS </flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Interoperabilidad con otros software </flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
-           id="flowPara3461">- QGIS (general purpose GIS)</flowPara><flowPara
+           id="flowPara3461">- QGIS (GIS de propósito general)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
-           id="flowPara3465">- R (language and environment for statistics)</flowPara><flowPara
+           id="flowPara3465">- R (lenguaje y entorno estadístico)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
-           id="flowPara3469">
-- Gstat (geostatistica)</flowPara><flowPara
+           id="flowPara3469">- Gstat (geoestadística)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
-           id="flowPara3471">- UMN MapServer (webmapping)</flowPara><flowPara
+           id="flowPara3471">- UMN MapServer (mapeo web)</flowPara><flowPara
            id="flowPara3457"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start">- ZOO-Project, PyWPS (WPS)</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
@@ -441,13 +439,13 @@
              ry="0"
              style="font-size:13px;text-align:start;text-anchor:start" /></flowRegion><flowPara
            id="flowPara7547"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Piattaforme supportate</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Soporte en distintas plataformas</flowPara><flowPara
            style="font-size:13px;text-align:start;text-anchor:start"
            id="flowPara7579"><use
              xlink:href="#grassgis"
              id="use106" /><flowSpan
              id="flowSpan5772"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"> GRASS GIS gira su quasi tutte le piattforme. Supporta GNU/Linux, Posix compliant Unix Systems, MS Windows e MacOS X.</flowSpan></flowPara></flowRoot>      <flowRoot
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"> corre en casi todas las plataformas:  GNU/Linux, Sistemas UNIX compatibles con Posix, MS Windows y MacOS X.</flowSpan></flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="data_handling"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
@@ -461,23 +459,23 @@
              ry="0"
              style="font-size:13px" /></flowRegion><flowPara
            id="flowPara9822"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Gestione dei dati</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Data management capabilities</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9885">- Analisi di dati Raster / Vector / Voxel</flowPara><flowPara
+           id="flowPara9885">- Procesamiento de datos Raster / Vector / Voxel</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9887">- 2D / 3D Raster / Vector modeling</flowPara><flowPara
+           id="flowPara9887">- Modelado de datos Raster y Vectoriales 2D / 3D</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9889">- Manipolazione di immagini</flowPara><flowPara
+           id="flowPara9889">- Manipulación de imágenes</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9891">- Vettoriali topologici</flowPara><flowPara
+           id="flowPara9891">- Topología vectorial</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara4885">- Analisi di reti</flowPara><flowPara
+           id="flowPara4885">- Análisis de redes</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9893">- Geostatistica (Interfaccia a R)</flowPara><flowPara
+           id="flowPara9893">- Geoestadística (Interfaz con R)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9895">- Dataset temporali</flowPara><flowPara
+           id="flowPara9895">- Set de datos temporales</flowPara><flowPara
            id="flowPara9848"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- interfaccia web services OGC</flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- Interfaz OGC web services</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="prog_languages"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
@@ -493,15 +491,15 @@
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold'"
            id="flowPara9922" /><flowPara
            id="flowPara9932"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Linguaggi di programmazione</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">Lenguajes de Programación</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara9967">- ANSI C</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara9969">- interfaccia <use
+           id="flowPara9969">- <use
    xlink:href="#grassgis"
-   id="use128" />-SWIG</flowPara><flowPara
+   id="use128" />- Interfaz SWIG </flowPara><flowPara
            id="flowPara9956"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- Python: API, libreria di scripting e GUI</flowPara></flowRoot>    </g>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">- Python API, scripting library and GUI</flowPara></flowRoot>    </g>
     <g
        inkscape:groupmode="layer"
        id="v_sections"
@@ -529,7 +527,7 @@
                x="15mm"
                y="5mm" /></flowRegion><flowPara
              id="flowPara4982-5"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Scheda tecnica</flowPara></flowRoot>      </g>
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Datos Técnicos</flowPara></flowRoot>      </g>
       <g
          id="v_2">
         <use
@@ -552,7 +550,7 @@
                x="15mm"
                y="143.5mm" /></flowRegion><flowPara
              id="flowPara146"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Formati di file supportati</flowPara></flowRoot>      </g>
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Formatos de archivos soportados</flowPara></flowRoot>      </g>
     </g>
   </g>
   <g
@@ -574,7 +572,7 @@
          transform="translate(0,-308.26772)"
          style="display:inline">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/grass_world.png"
+           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/sp/../images/grass_world.png"
            xlink:href="../images/grass_world.png"
            width="1052.3622"
            height="248.03149"
@@ -682,7 +680,7 @@
                sodipodi:role="line"
                id="tspan3489"
                x="1032.5798"
-               y="453.41135">Offrir à tous les technologies géospatiales les plus avancées</tspan></text>
+               y="453.41135">Brindando tecnologías geoespaciales avanzadas al mundo</tspan></text>
         </g>
       </g>
       <g
@@ -793,7 +791,7 @@
                      sodipodi:role="line"
                      id="tspan4658-7"
                      x="1032.5798"
-                     y="453.41138">Offrir à tous les technologies géospatiales les plus avancées</tspan></text>
+                     y="453.41138">Brindando tecnologías geoespaciales avanzadas al mundo</tspan></text>
               </g>
             </g>
           </g>
@@ -1219,21 +1217,21 @@
              width="265.98526"
              id="rect3483-0" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
-           id="flowPara3527">Dove trovare informazioni?</flowPara><flowPara
+           id="flowPara3527">¿Dónde encontrar más información?</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3529">- Wiki <use
+           id="flowPara3529">- <use
    xlink:href="#grassgis"
-   id="use4419" /> :</flowPara><flowPara
+   id="use4419" /> wiki:</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3531">https://grasswiki.osgeo.org/wiki</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3533">- <use
    xlink:href="#grassgis"
-   id="use4423" />mailing lists:  </flowPara><flowPara
+   id="use4423" /> Listas de mails:  </flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara7779">https://grass.osgeo.org/support</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3537">- Sito web:</flowPara></flowRoot>      <flowRoot
+           id="flowPara3537">- Sitio web del proyecto:</flowPara></flowRoot>      <flowRoot
          transform="matrix(0.80809717,0,0,0.90225882,286.54049,2.7689172)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
          id="opensource_proj"
@@ -1246,11 +1244,11 @@
              width="457"
              id="rect3354" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
-           id="flowPara3356">Una filosofia libera e open source</flowPara><flowPara
+           id="flowPara3356">Una filosofía libre y de código abierto</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
-           id="flowPara3368">La filosofia libera e Open Source permette agli utenti di vedere il codice sorgente e la struttura del programma, questo offre una grande trasparenza. Gli utenti possono facilmente estendere il programma per le loro necessità. Una immediata revisione del codice aumentera la qualità. Con il supporto del gestore degli addons, nuovi moduli possono essere creati senza modificare il codice sorgente principale di  <use
+           id="flowPara3368">La filosofía Libre y de Código Abierto permite al usuario acceder al código fuente y la estructura del programa, lo que ofrece gran transparencia. Los usuarios pueden extender las capacidades del programa en función de sus necesidades. La revisión inmediata del código fuente por pares incrementa su calidad. Con la ayuda del administrador de extensiones, se pueden crear nuevos módulos sin <use
    xlink:href="#grassgis"
-   id="use252" /><flowSpan
+   id="use252" /> modificar el código fuente<flowSpan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.2246027px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="flowSpan4535">.</flowSpan></flowPara></flowRoot>      <flowRoot
          transform="translate(298.72814,137)"
@@ -1265,7 +1263,7 @@
              width="369"
              id="rect7591" /></flowRegion><flowPara
            id="flowPara7595"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Licenza</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Licencia</flowPara><flowPara
            id="flowPara7627"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'">GNU General Public License (Free Software Foundation)</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
@@ -1280,11 +1278,11 @@
              y="56.338501"
              ry="0" /></flowRegion><flowPara
            id="flowPara3555"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Un progetto di OSGeo</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Un proyecto OSGeo </flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"
            id="flowPara3619"><use
    xlink:href="#grassgis"
-   id="use359" /> è un progetto fondatore della Open Source Geospatial Foundation (OSGeo) la quale missione è di creare  e supportare software geospaziale libero e open source di alta qualità. Per maggiori informazioni visitare il sito di OSGeo:</flowPara></flowRoot>      <flowRoot
+   id="use359" /> Es un de los proyectos fundadores de la Open Source Geospatial Foundation, cuya misión es la creación de software geoespacial de código abierto de alta calidad. Para mayor información, visitar el sitio web de OSGeo:</flowPara></flowRoot>      <flowRoot
          transform="matrix(0.80809717,0,0,0.90225882,-7.5540012,498.1676)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
          id="mature_sol"
@@ -1298,13 +1296,13 @@
              id="rect3354-7"
              style="font-size:15.22460365px" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00"
-           id="flowPara3356-9">A mature mapping suite</flowPara><flowPara
+           id="flowPara3356-9">Una suite de mapeo madura</flowPara><flowPara
            style="font-size:15.22460365px"
            id="flowPara3368-5"><flowSpan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
              id="flowSpan6984"><use
    xlink:href="#grassgis"
-   id="use373" /> è un software libero e open source per effettuare analisi spaziali. È composto da più di 450 moduli per processare vettoriali (2D/3D), raster, voxel dati temporali (4D). Esistono molte interfacce ad altri programmi correlati in campi come la geostatistica, i database, i servizi di mappe web e molti altri esistenti software GIS. È il più vecchio e esteso codice sorgente GIS libero e open source. Può essere usato come un GIS desktop così come il backbone di una completa infrastruttura GIS.</flowSpan></flowPara></flowRoot>      <flowRoot
+   id="use373" /> es un software libre y de código abierto para realizar análisis espaciales. Consiste de más de 400 módulos para el procesamiento de vectores (2D/3D), rasters, voxels y datos temporales (4D). Existen interfaces a otros programas en dominios reacionados como la geoestadística, las bases de datos, los servicios de mapeo web e incluso otros GIS. Es el más antiguo y más importante GIS libre y de código abierto. Puede usarse como GIS de escritorio y como columna vertebral de una infraestructura GIS.</flowSpan></flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="long_term"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
@@ -1317,15 +1315,15 @@
              y="56.338501"
              ry="0" /></flowRegion><flowPara
            id="flowPara2993-9"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">A long term endeavor</flowPara><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Un esfuerzo a largo plazo</flowPara><flowPara
            id="flowPara3015-2"
            style="font-size:10px"><flowSpan
              id="flowSpan7025"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans'"><use
    xlink:href="#grassgis"
-   id="use243" />  è nato più di 30 anni fa... e l’ultima modifica è di qualche ora fa! Molte persone hanno contributo a migliorare il software. La sua forza e successo si basano su un attivo team di sviluppo e il feedback di una vasta comunità di contributori. Entrambi combinano il loro sforzo per rendere <use
+   id="use243" />  nació hace más de 30 años... y quizá la última contribución tenga sólo unas horas!  Muchas personas han contribuido a mejorar el software. Su fortaleza y éxito yacen en un activo equipo de desarrolladores y una amplia comunidad de usuarios que conjugan sus esfuerzos para que <use
    xlink:href="#grassgis"
-   id="use245" /> più facile, più utile e potente per chiunque.</flowSpan></flowPara></flowRoot>      <flowRoot
+   id="use245" /> sea más fácil de usar, más útil y poderoso para todos.</flowSpan></flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="where_use_grass"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:125%;font-family:Fontin;-inkscape-font-specification:Fontin;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;enable-background:new"
@@ -1338,15 +1336,15 @@
              y="54.76157"
              ry="0" /></flowRegion><flowPara
            id="flowPara2993-2"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">Dov’è usato <use
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:16.39572716px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00">¿Dónde se usa <use
    xlink:href="#grassgis"
-   id="use231" /> ? </flowPara><flowPara
+   id="use231" />? </flowPara><flowPara
            style="font-size:10px"
            id="flowPara3168"><flowSpan
              id="flowSpan7158"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.22460365px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Medium';text-align:start;writing-mode:lr-tb;text-anchor:start"><use
    xlink:href="#grassgis"
-   id="use235" /> è usato in applicazioni scientifiche e commerciali inoltre dalle pubbliche amministrazioni di tutto il mondo. Il software ha mostrato una forte attitudine a risolvere problemi geospaziali in numerose situazioni in tutto il mondo.</flowSpan></flowPara></flowRoot>    </g>
+   id="use235" /> se usa en aplicaciones científicas, emprendimientos comerciales y por autoridades públicas en todo el mundo. El software ha demostrado un gran potencial para resolver problemas geoespaciales en diversas situaciones y en diversas áreas.</flowSpan></flowPara></flowRoot>    </g>
     <g
        inkscape:groupmode="layer"
        id="r_sections"
@@ -1397,9 +1395,9 @@
                x="15mm"
                y="143.5mm" /></flowRegion><flowPara
              id="flowPara358"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Cos’è  <use
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">¿Qué es <use
    xlink:href="#grassgis"
-   id="use345" /> ?</flowPara></flowRoot>      </g>
+   id="use360" />?</flowPara></flowRoot>      </g>
     </g>
   </g>
 </svg>
