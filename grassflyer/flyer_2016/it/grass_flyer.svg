@@ -189,7 +189,7 @@
              id="flowPara3588-7-1">Combina, visualizza e anima dati 3D grazie allo strumento di visualizzazione <flowSpan
    style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
    id="flowSpan4203">nviz</flowSpan>.</flowPara></flowRoot>        <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/nviz.png"
+           sodipodi:absref="../images/nviz.png"
            xlink:href="../images/nviz.png"
            y="328.19818"
            x="2007.079"
@@ -216,9 +216,9 @@
                id="rect3552-7-7-6"
                style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#4d4d4d;fill-opacity:1" /></flowRegion><flowPara
              id="flowPara3588-7-1-2"
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Grâce au <flowSpan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Utilizzando il <flowSpan
    id="flowSpan4220"
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Modeleur graphique</flowSpan>, une chaîne de processus peut être combinée en une seule action, à travers une interface intuitive.</flowPara></flowRoot>        <image
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1">Modeler grafico</flowSpan>, una serie di processi possono essere combinati in uno unico attraverso una interfaccia intuitiva.</flowPara></flowRoot>        <image
            sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/gmodeler.png"
            xlink:href="../images/gmodeler.png"
            y="566.94891"
@@ -233,7 +233,7 @@
          id="illustr_bigdata"
          transform="translate(-1578.4909,184.84381)">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/largedataset.png"
+           sodipodi:absref="../images/largedataset.png"
            xlink:href="../images/largedataset.png"
            width="397.52524"
            height="177.03552"
@@ -420,7 +420,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
            id="flowPara3461">- QGIS (general purpose GIS)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
-           id="flowPara3465">- R (language and environment for statistics)</flowPara><flowPara
+           id="flowPara3465">- R (linguaggio e ambiente di statistica)</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;text-anchor:start"
            id="flowPara3469">
 - Gstat (geostatistica)</flowPara><flowPara
@@ -574,7 +574,7 @@
          transform="translate(0,-308.26772)"
          style="display:inline">
         <image
-           sodipodi:absref="/home/vincent/Bureau/flyer/flyer_2016/it/../images/grass_world.png"
+           sodipodi:absref="../images/grass_world.png"
            xlink:href="../images/grass_world.png"
            width="1052.3622"
            height="248.03149"
@@ -682,7 +682,7 @@
                sodipodi:role="line"
                id="tspan3489"
                x="1032.5798"
-               y="453.41135">Offrir à tous les technologies géospatiales les plus avancées</tspan></text>
+               y="453.41135">Offre a tutti le tecnologie geospaziali più avanzate</tspan></text>
         </g>
       </g>
       <g
@@ -793,7 +793,7 @@
                      sodipodi:role="line"
                      id="tspan4658-7"
                      x="1032.5798"
-                     y="453.41138">Offrir à tous les technologies géospatiales les plus avancées</tspan></text>
+                     y="453.41138">Offre e tutti le tecnologie geospaziali più avanzate</tspan></text>
               </g>
             </g>
           </g>
@@ -1374,7 +1374,7 @@
                x="15mm"
                y="5mm" /></flowRegion><flowPara
              id="flowPara348"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">À propos</flowPara></flowRoot>      </g>
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">A riguardo</flowPara></flowRoot>      </g>
       <g
          id="r_2">
         <use
@@ -1399,7 +1399,7 @@
              id="flowPara358"
              style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008f00;fill-opacity:1">Cos’è  <use
    xlink:href="#grassgis"
-   id="use345" /> ?</flowPara></flowRoot>      </g>
+   id="use360" />?</flowPara></flowRoot>      </g>
     </g>
   </g>
 </svg>
