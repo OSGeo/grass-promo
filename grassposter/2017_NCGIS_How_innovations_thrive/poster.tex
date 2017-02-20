@@ -2,7 +2,7 @@
 % Authors: See authors below and see also acknowledgement for authors of some images or research
 
 \documentclass[25pt, margin=0mm, innermargin=15mm, blockverticalspace=15mm, colspace=15mm, subcolspace=8mm]{tikzposter}
-\geometry{paperwidth=96in,paperheight=48in}
+\geometry{paperwidth=82in,paperheight=41in}
 
 % to stretch boxes over whole paper with custor paper size
 \makeatletter
@@ -172,6 +172,7 @@ General GRASS GIS highlights:
  \item The GRASS GIS development team takes care of interface and operating system related changes
        in the code provided by scientists and contributors.
  \item Cost estimated by Black Duck Open Hub is over \$30,000,000.
+ % https://www.openhub.net/p/grass_gis/estimated_cost
  \item The free, libre and open source license used in GRASS GIS
        not only allows users to reduce GIS software costs to minimum,
        but also enables organizations to deploy cloud-based solutions without any license restrictions.
@@ -266,6 +267,10 @@ Routing Decision Planning system as a WPS (Raghavan et al., 2014 \cite{raghavan2
 The module \gmodule{r.sim.water} together with
 the module \gmodule{r.sim.sediment} for erosion-deposition modeling
 implements a path sampling algorithm which is robust and easy to parallelize.
+A unique least cost path algorithm which doesn't need any depression filling
+was implemented in \gmodule{r.watershed} module in 1989
+and it was updated for massive data sets in 2011.
+% TODO: refs
 The \gmodule{r.sim.water} module was also utilized by Petrasova et al., 2014 \cite{Petrasova2014} and is now part of
 \emph{Tangible Landscape}, a tangible GIS system, which also incorporated \gmodule{r.damflood},
 a dam break inundation simulation \cite{cannata2012two}.
@@ -322,14 +327,28 @@ implementing MMC.
 % v.delaunay v.voronoi New option to create Voronoi diagrams for areas.
 
 \centering
-\begin{minipage}{0.7\linewidth}
+\begin{minipage}{0.48\linewidth}
 \centering
-\includegraphics[width=0.5\textwidth]{elevation_lidar}
-\\
+\includegraphics[width=0.7\textwidth]{elevation_lidar}
+\end{minipage}
+~
+\begin{minipage}{0.48\linewidth}
+\centering
+\includegraphics[width=\textwidth]{lidar_profile}
+\end{minipage}
+
+\bigskip
+
+\begin{minipage}{0.48\linewidth}
+\centering
 Digital elevation model interpolated from LiDAR point clouds
 using \gmodule{v.surf.rst}. Data are showing tillage in an agricultural field near Raleigh (North Carolina, USA)
 \end{minipage}
-
+~
+\begin{minipage}{0.48\linewidth}
+\centering
+Profile (vertical slice) of a small portion of a point cloud showing tree structure as captured by the returns
+\end{minipage}
 
 }
 
@@ -394,37 +413,32 @@ and same superpixels colored according to a mean NDVI value per pixel (right).
 \block{\blocktitlewrap{Topology, Cleaning, Overlays, Attributes}}{
 Besides basic vector analysis tools such as \gmodule{v.buffer}
 and \gmodule{v.overlay},
-% TODO: v.overlay: The processing speed has been substantially improved
+which has processing speed substantially improved in GRASS GIS 7.0,
+suite of functionality for topology checking and cleaning is available
+through \gmodule{v.build} and \gmodule{v.clean} modules.
+The vector cleaning tools are particularly advantageous considering the use of non-topological exchange formats.
+\gmodule{v.clean} module was introduced in 2002 and several different contributors
+extended its functionality with last large set of improvements included in GRASS GIS 7.0.
+For that release all topological cleaning tools have been optimized
+with regard to processing speed, robustness, and system requirements.
 
-cleaning (also v.build error
-% + clustering + neighorhood + vector algebra
-
-v.feature.algebra (formerly v.mapcalc) replaced by Python for GRASS GIS C libraries (PyGRASS)
+% + vector algebra
+An experimental module \gamodule{v.feature.algebra} (formerly \gmodulenolink{v.mapcalc}) from 2002
+% actually, the original by Radim Blazek (Jun 11, 2002) seems to be more similar to the current v.mapcalc
+% it was using Vect_overlay_str_to_operator Vect_overlay
+% it was replaced by code by Christoph Simon in Aug 7, 2002
+was replaced by Python for GRASS GIS C libraries (PyGRASS) in GRASS GIS 7.0.
+However, new \gamodule{v.mapcalc} module is available with richer syntax and functionality.
 
 Attribute processing and queries in GRASS GIS can take an advantage of latest developments
 in database management systems (DBMSs) as several DBMSs are supported most notably SQLite and PostgreSQL.
-
-Non-topological vector
-data are automatically converted to a topological representation upon import. Further more, various cleaning tools exist
-to remove non-trivial topological errors.
+A PostGIS database can be connected including it geometry and topology.
+In parallel to that native support the OGC Simple Features is available.
 
 The GRASS GIS 7 releases come with faster vector processing backend
 and more efficient internal vector format;
 both disk and memory requirements were reduced.
 The new spatial index performs queries faster (more than 10 times for large vectors compared to GRASS GIS 6).
-
-All topological cleaning tools have been optimized with regard to processing speed, robustness, and system
-requirements.
-
-Considering the wide spread usage of Esri Shapefile, a non-topological format for vector data exchange, it is particularly
-advantageous that GRASS GIS 7 offers advanced cleaning tools.
-
-postgis incl topo
-GRASS GIS 7 supports various data sources in read and write access. Beside native file-based raster and vector format
-GRASS allows to specify external data sources through GDAL/OGR library. GRASS GIS 7 also natively supports
-PostGIS database including its topological extension.
-
-In parallel to that native support the OGC Simple Features was added.
 
 \centering
 \begin{minipage}{0.9\linewidth}
@@ -441,8 +455,9 @@ automatically topologically corrected vector (right)
 \end{minipage}
 
 % v.in.ascii input= output=imported format=standard
-% v.build -e map=imported error=errors
+% v.build -e map=imported error=build_errors
 % v.clean -c input=imported output=clean error=cleaning_errors tool=snap,rmdangle,rmbridge,chbridge,bpol,prune threshold=5
+% d.vect map=build_errors color=255:33:36 fill_color=none width=5 icon=basic/point size=30
 % d.vect map=cleaning_errors color=255:33:36 fill_color=none width=5 icon=basic/point size=30
 % d.vect map=imported color=56:16:108 fill_color=205:64:113 width=5
 
@@ -457,7 +472,15 @@ automatically topologically corrected vector (right)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Vector Network Analysis}}{
-All vector network analysis tools provide now fine control over node costs.
+In 2003 Radim Blazek introduced shortest path analysis (\gmodule{v.net.path}),
+traveling salesman (\gmodule{v.net.salesman}),
+and several other modules for vector network analysis (staring with \gmodule{v.net}).
+Over the years, the number of available algorithms increased to over 15 modules
+including for example, centrality measures and connected components added in 2009 by Daniel Bundala.
+In 2014 Stepan Turek implemented turns support into all relevant vector network modules.
+Also since GRASS GIS 7.0 all vector network analysis tools provide fine control over node costs.
+
+\bigskip
 
 \centering
 \begin{minipage}{0.5\linewidth}
