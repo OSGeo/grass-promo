@@ -23,3 +23,7 @@ clean:
 distclean:
 	make clean
 	rm -f $(FILE).pdf
+
+rasterized:
+	gs -sDEVICE=png16m -r400 -o poster.png poster.pdf
+	convert poster.png -rotate 90 poster_rasterized.pdf

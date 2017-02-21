@@ -61,11 +61,9 @@ How innovations thrive in GRASS GIS
 \begin{flushright}
 \includegraphics[height=\instlogoheight]{ncstate}
 ~
-\includegraphics[height=\instlogoheight]{iwmi}
-~
 \includegraphics[height=\instlogoheight]{ctu_prague}
 ~
-\includegraphics[height=\instlogoheight]{ti}
+\includegraphics[height=\instlogoheight]{dwd}
 ~
 \includegraphics[height=\instlogoheight]{eurac}
 ~
@@ -87,24 +85,23 @@ How innovations thrive in GRASS GIS
 
 \author{
 V\'{a}clav Petr\'{a}\v{s}\inst{1},
-Yann Chemin\inst{2},
-Martin Landa\inst{3},
-Thomas Leppelt\inst{4},
-S\"{o}ren Gebbert\inst{4},
-Pietro Zambelli\inst{5},
-Markus Neteler\inst{6},
-Luca Delucchi\inst{7}, and
-Margherita Di Leo\inst{8}
+Yann Chemin,
+Martin Landa\inst{2},
+Thomas Leppelt\inst{3},
+Pietro Zambelli\inst{4},
+Luca Delucchi\inst{5},
+Margherita Di Leo\inst{6}
+S\"{o}ren Gebbert,
+Markus Neteler\inst{7},
 }
 \institute{
 \instlist{1}NCSU, USA;
-\instlist{2}IWMI, Sri Lanka;
-\instlist{3}FCE CTU in Prague, Czech Republic;
-\instlist{4}TICSA, Germany;
-\instlist{5}EURAC, Italy;
-\instlist{6}mundialis GmbH \& Co. KG, Germany;
-\instlist{7}CRI, FEM, Italy;
-\instlist{8}EC-JRC, Italy
+\instlist{2}FCE CTU in Prague, Czech Republic;
+\instlist{3}Deutscher Wetterdienst, Germany;
+\instlist{4}EURAC, Italy;
+\instlist{5}CRI, FEM, Italy;
+\instlist{6}EC-JRC, Italy
+\instlist{7}mundialis GmbH \& Co. KG, Germany;
 }
 
 \hypersetup
@@ -165,12 +162,10 @@ Margherita Di Leo\inst{8}
 \begin{itemize}
  \item Algorithms and models included in GRASS GIS remain available long term \citep{chemin2015grass}.
  \item Analytical tools are not limited to one domain but spread across many fields.
- \item New tools can be build based on functionality or code of the existing ones
+ \item New tools can be built based on functionality or code of the existing ones
        regardless of the particular domain of problems they belong to.
  \item Both the functionality and the code are evaluated
-       by the user and developer community in different fields of application beyond
-       the field of expertise of the original authors
-       and different scales of magnitude of data.
+       by the community of users and developers in different fields and scales.
 % continuous automated tests (Petras, 2014 \cite{Petras2014}),
 \end{itemize}
 
@@ -205,7 +200,7 @@ early on in the lidar era in the \gmodule{v.lidar.edgedetection} group of module
 % v.lidar.edgedetection Detects the object's edges from a LIDAR data set.
 % v.lidar.growing Building contour determination and Region Growing algorithm for determining the building inside
 The module \gmodule{v.surf.rst} for spatial interpolation was developed approximately 20 years
-ago, but since then it has been improved several times \cite{tracvsurfrst}
+ago, but since then it has been improved several times \citep{tracvsurfrst}
 including recent parallelization which will be included in GRASS GIS 7.4.
 Currently the module is used for both digital terrain model interpolation and interpolations in general.
 
@@ -218,7 +213,7 @@ implementing variety of clustering methods including
 DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
 and OPTICS (Ordering Points to Identify the Clustering Structure).
 The \gmodule{v.outlier} module serves as a base for a user contributed module \gamodule{v.lidar.mcc}
-implementing MMC.
+implementing Multiscale Curvature Classification (MCC).
 % TODO: ref
 
 % v.delaunay v.voronoi New option to create Voronoi diagrams for areas.
@@ -238,13 +233,14 @@ implementing MMC.
 
 \begin{minipage}{0.48\linewidth}
 \centering
-Digital elevation model interpolated from LiDAR point clouds
+Digital elevation model interpolated from lidar point clouds
 using \gmodule{v.surf.rst}. Data are showing tillage in an agricultural field near Raleigh (North Carolina, USA)
 \end{minipage}
 ~
 \begin{minipage}{0.48\linewidth}
 \centering
 Profile (vertical slice) of a small portion of a point cloud showing tree structure as captured by the returns
+(\gamodule{v.profile.points})
 \end{minipage}
 
 }
@@ -264,7 +260,7 @@ Profile (vertical slice) of a small portion of a point cloud showing tree struct
 \listhspace
 \begin{minipage}{\listtextwidth}
 We acknowledge all members of the GRASS GIS community both users and developers.
-Specifically we
+We would like to thank Markus Metz, Anna Petrasova, Stepan Turek, and Radim Blazek.
 \end{minipage}
 
 \bigskip
@@ -276,7 +272,7 @@ Specifically we
 \begin{minipage}{\listtextwidth}
 Open Source Geospatial Foundation (OSGeo)
 supports the collaborative development of open source geospatial software.
-GRASS GIS is a OSGeo project.
+GRASS GIS is a OSGeo project and
 OSGeo provides infrastructure for project
 websites, mailing lists and source code management.
 \end{minipage}
@@ -346,9 +342,9 @@ Google provides financial support to students and organizations participating in
 \block{\blocktitlewrap{Water, Floods and Erosion}}{
 
 GRASS GIS entails several modules that constitute the result of active research on natural hazards.
-The \gmodule{r.sim.water} simulation model \citep{Mitas1998b}.
+The \gmodule{r.sim.water} simulation model \citep{Mitas1998b}
 for overland flow with spatially variable rainfall excess conditions was integrated into the Emergency
-Routing Decision Planning system as a WPS (Raghavan et al., 2014 \cite{raghavan2014deploying}).
+Routing Decision Planning system as a WPS \citep{raghavan2014deploying}.
 The module \gmodule{r.sim.water} together with
 the module \gmodule{r.sim.sediment} for erosion-deposition modeling
 implements a path sampling algorithm which is robust and easy to parallelize.
@@ -358,7 +354,7 @@ and it was updated for massive data sets in 2011.
 % TODO: refs
 The \gmodule{r.sim.water} module was also utilized by \cite{Petrasova2014} and is now part of
 \emph{Tangible Landscape}, a tangible GIS system, which also incorporated \gmodule{r.damflood},
-a dam break inundation simulation \citep{cannata2012two}.
+a dam break inundation simulation by \cite{cannata2012two}.
 
 \bigskip
 
@@ -403,7 +399,7 @@ according to \cite{mumford1989optimal} and \cite{march1997variational}
 which can be used to reduce noise in the original image.
 
 This supplemented \gmodule{r.clump} available from 1980s
-which groups pixes with same categories (or integer values).
+which groups pixels with the same categories (or integer values).
 The latest version of \gmodule{r.clump} coming in GRASS GIS 7.4
 supports multiple image bands (or any rasters maps) as input.
 Clumping of cells based on threshold value and clumping
@@ -432,8 +428,8 @@ and performs parallelized hierarchical segmentation.
 \end{minipage}
 \vspace{2mm}
 \begin{center}
-Superpixels (back outlines) on pseudo-color image of central Wake county, NC, USA (left)
-and same superpixels colored according to a mean NDVI value per pixel (right).
+Superpixels (black outlines) on pseudo-color image of central Wake county, NC, USA (left)
+and the same superpixels colored according to the mean NDVI value per pixel (right).
 \end{center}
 
 \vspace*{1cm}
@@ -455,14 +451,14 @@ which provides users both with SLIC and SLIC0 methods.
 \block{\blocktitlewrap{Topology, Cleaning, Overlays, Attributes}}{
 Besides basic vector analysis tools such as \gmodule{v.buffer}
 and \gmodule{v.overlay},
-which has processing speed substantially improved in GRASS GIS 7.0,
 suite of functionality for topology checking and cleaning is available
 through \gmodule{v.build} and \gmodule{v.clean} modules.
 The vector cleaning tools are particularly advantageous considering the use of non-topological exchange formats.
-\gmodule{v.clean} module was introduced in 2002 and several different contributors
+The \gmodule{v.clean} module was introduced in 2002 and several different contributors
 extended its functionality with last large set of improvements included in GRASS GIS 7.0.
 For that release all topological cleaning tools have been optimized
 with regard to processing speed, robustness, and system requirements.
+The processing speed of the \gmodule{v.clean} module was substantially improved as well.
 
 \vspace*{1cm}
 
@@ -512,7 +508,7 @@ The new spatial index performs queries faster (more than 10 times for large vect
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Spatio-Temporal Data Analysis}}{
-The time dimension was introduced in GRASS GIS version 7 for vector maps, rasters, and 3D rasters
+The time dimension was introduced in GRASS GIS 7.0 for vector maps, rasters, and 3D rasters
 which transformed GRASS GIS into a fully-featured temporal GIS \citep{Gebbert20141, gebbert2015grass}.
 Time series of map layers are managed in space time datasets, a new data type in GRASS GIS,
 and are still accessible also as individual map layers.
@@ -562,7 +558,7 @@ In 2003 Radim Blazek introduced shortest path analysis (\gmodule{v.net.path}),
 traveling salesman (\gmodule{v.net.salesman}),
 and several other modules for vector network analysis (staring with \gmodule{v.net}).
 Over the years, the number of available algorithms increased to over 15 modules
-including for example, centrality measures and connected components added in 2009 by Daniel Bundala.
+including, for example, centrality measures and connected components added in 2009 by Daniel Bundala.
 In 2014 Stepan Turek implemented turns support into all relevant vector network modules.
 Also since GRASS GIS 7.0 all vector network analysis tools provide fine control over node costs.
 % combination with r.cost/r.walk workflows \citep{Petrasova2014}
@@ -601,7 +597,7 @@ high level tool for calculating landscape diversity.
 
 \vspace*{1ex}
 
-Landuse classes and derived landscape diversity according to Shannon index in near Charlotte (NC, USA)
+Landuse classes and derived landscape diversity according to Shannon index near Charlotte, NC, USA
 % r.diversity input=development_2006 prefix=diversity alpha=0.5 size=65
 % r.li.shannon input="development_2006" config="conf_diversity_65.0" output="diversity_shannon_size_65.0"
 }
