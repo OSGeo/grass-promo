@@ -45,9 +45,9 @@ How innovations thrive in GRASS GIS
 }
 
 \newlength{\grasslogoheight}
-\setlength{\grasslogoheight}{0.08\textheight}
+\setlength{\grasslogoheight}{0.09\textheight}
 \newlength{\instlogoheight}
-\setlength{\instlogoheight}{0.35\grasslogoheight}
+\setlength{\instlogoheight}{0.33\grasslogoheight}
 
 \titlegraphic{
 \begin{minipage}{0.3\linewidth}
@@ -56,7 +56,7 @@ How innovations thrive in GRASS GIS
 \includegraphics[height=\grasslogoheight]{osgeo_project}
 \end{minipage}
 \hfill
-\begin{minipage}{0.15\linewidth}
+\begin{minipage}{0.20\linewidth}
 \setlength{\baselineskip}{120pt}
 \begin{flushright}
 \includegraphics[height=\instlogoheight]{ncstate}
@@ -65,13 +65,15 @@ How innovations thrive in GRASS GIS
 ~
 \includegraphics[height=\instlogoheight]{dwd}
 ~
-\includegraphics[height=\instlogoheight]{eurac}
-~
 \includegraphics[height=\instlogoheight]{mundialis}
 ~
 \includegraphics[height=\instlogoheight]{fem_cri}
 ~
+\includegraphics[height=\instlogoheight]{iwmi}
+~
 \includegraphics[height=\instlogoheight]{ec_jrc}
+~
+\includegraphics[height=\instlogoheight]{eurac}
 \end{flushright}
 \end{minipage}
 \vspace{-\grasslogoheight}
@@ -85,23 +87,26 @@ How innovations thrive in GRASS GIS
 
 \author{
 V\'{a}clav Petr\'{a}\v{s}\inst{1},
-Yann Chemin,
-Martin Landa\inst{2},
-Thomas Leppelt\inst{3},
-Pietro Zambelli\inst{4},
-Luca Delucchi\inst{5},
-Margherita Di Leo\inst{6},
+Yann Chemin\inst{2},
+Martin Landa\inst{3},
+Thomas Leppelt\inst{4},
+Pietro Zambelli\inst{5},
+Luca Delucchi\inst{6},
+Margherita Di Leo\inst{7},
 S\"{o}ren Gebbert,
-Markus Neteler\inst{7}
+and
+Markus Neteler\inst{8}
 }
 \institute{
-\instlist{1}NCSU, USA;
-\instlist{2}FCE CTU in Prague, Czech Republic;
-\instlist{3}Deutscher Wetterdienst, Germany;
-\instlist{4}EURAC, Italy;
-\instlist{5}CRI, FEM, Italy;
-\instlist{6}EC-JRC, Italy;
-\instlist{7}mundialis GmbH \& Co. KG, Germany
+\large
+\instlist{1}North Carolina State University, USA (wenzeslaus@gmail.com, vpetras@ncsu.edu);
+\instlist{2}IWMI, Sri Lanka;
+\instlist{3}FCE CTU in Prague, Czech Republic;
+\instlist{4}DWD, Germany;\\
+\instlist{5}EURAC Research, Institute for Renewable Energy, Italy;
+\instlist{6}Fondazione Edmund Mach, Research and Innovation Centre, Italy;
+\instlist{7}European Commission, JRC, Italy;
+\instlist{8}mundialis GmbH \& Co. KG, Germany;
 }
 
 \hypersetup
@@ -284,7 +289,7 @@ websites, mailing lists and source code management.
 \end{minipage}
 \listhspace
 \begin{minipage}{\listtextwidth}
-Initial development of \gmodule{i.segement} module as well as several other developments
+Initial development of \gmodule{i.segment} module as well as several other developments
 were done as a part of the Google Summer of Code project.
 Google provides financial support to students and organizations participating in the Google Summer of Code project.
 \end{minipage}
@@ -495,7 +500,7 @@ However, new \gamodule{v.mapcalc} module is available with richer syntax and fun
 
 Attribute processing and queries in GRASS GIS can take an advantage of latest developments
 in database management systems (DBMSs) as several DBMSs are supported most notably SQLite and PostgreSQL.
-A PostGIS database can be connected including it geometry and topology.
+A PostGIS database can be connected including its geometry and topology.
 In parallel to that native support the OGC Simple Features is available.
 
 The GRASS GIS 7 releases come with faster vector processing backend
