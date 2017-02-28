@@ -17,8 +17,9 @@
 #
 # Earthquake data is downloaded from the USGS
 #  http://neic.usgs.gov/neis/gis/bulletin.asc (defunct)
-#  new1:  http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt
-#  new2:  http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week
+#  new1:  http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt (defunct)
+#  new2:  http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week (defunct)
+#  new3:  https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv
 #
 
 if  [ -z "$GISBASE" ] ; then
@@ -49,32 +50,40 @@ cd "$TMPDIR"
 
 ### download and import
 
-wget -nv -O "eqs7day-M2.5.csv" \
-   "http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M2.5.txt" 2>&1
+wget -nv -O "eqs7day-M2.5.raw" \
+   "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv" 2>&1
 
 if [ $? -ne 0 ] ; then
    echo "Failed to download data from the USGS." >&2
    exit 1
 fi
 
+# just the basics
+cut -d',' -f1-6 eqs7day-M2.5.raw > eqs7day-M2.5.csv
+rm eqs7day-M2.5.raw
+
 #convert commas+quoting to pipe delims:
 csv_dequote.pl eqs7day-M2.5.csv
 
 INPUT="$TMPDIR/eqs7day-M2.5.psv"
+mv "$INPUT" "$INPUT.in"
 
 # add a '#' at the start of the first line and remove spurious whitespace
-sed -i -e '0,/^/s//#/' \
-       -e 's+| \([0-9]\)|+|\1|+' "$INPUT"
+sed -e '0,/^/s//#/' -e 's/^Date/#Date/' \
+    -e 's+| \([0-9]\)|+|\1|+' \
+    "$INPUT.in" > "$INPUT"
 
-# eqs7day-M2.5.txt format:
-#Src,EqId,Version,Datetime,Lat,Lon,Magnitude,Depth,NST,Region
- 
-COL_DEF="data_source varchar(4), eq_id varchar(10), version varchar(3),
-   eq_time varchar(50), latitude double precision, longitude double precision, \
-   magnitude double precision, depth double precision, num_stations_obs integer,
-   region varchar(255)"
+rm "$INPUT.in"
 
-cut -f5,6 -d'|' "$INPUT" | awk -F'|' '{print $2 "\t" $1}' | \
+# eqs7day-M2.5.csv format:
+#DateTime,Latitude,Longitude,Depth,Magnitude,MagType,NbStations,Gap,Distance,RMS,Source,EventID,Version
+#https://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php
+
+COL_DEF="eq_time varchar(50), latitude double precision, longitude double precision, \
+   depth double precision, magnitude double precision, magn_type varchar(7)"
+
+
+cut -f2,3 -d'|' "$INPUT" | awk -F'|' '{print $2 "\t" $1}' | \
    m.proj -ig fs='|' | cut -f1,2 -d'|' | \
    awk '{if (NR!=1) {print} else {print "easting|northing"}}' \
    > "$INPUT.wintri.coord"
@@ -93,7 +102,7 @@ if [ "$DBDRIVER" != 'sqlite' ] ; then
 fi
 
 v.in.ascii in="$INPUT.wintri" out=recent_earthquakes skip=1 \
-    fs='|' x=11 y=12 z=8 column="$COL_DEF" --overwrite
+    fs='|' x=7 y=8 z=4 column="$COL_DEF" --overwrite
 
 
 ### unlog & scale magnitude
@@ -123,7 +132,7 @@ db.execute input="${PROJ_SHORT_NAME}_$$.sql"
 
 # get the timestamp
 #YMD=20`tail -n 1 "$INPUT"  | cut -f1 -d,`
-YMD=`head -n 2 "$INPUT" | tail -n 1 | cut -f4 -d'|' | awk '{print $2,$3,$4}'`
+YMD=`head -n 3 "$INPUT" | tail -n 1 | cut -f1 -d'T' | tr '-' '/'`
 if [ `echo "$YMD" | wc -c` -lt 11 ] ; then
     echo "Bad timestamp ($YMD). Using system date instead." >&2
     YMD=`date +%Y/%m/%d`
@@ -221,3 +230,4 @@ rm -f "$INPUT"*
 
 # all done.
 exit 0
+
