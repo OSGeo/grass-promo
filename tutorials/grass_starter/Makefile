@@ -11,7 +11,7 @@
 #  make ascii     - extracts ASCII from original ${LATEX} files (into ascii/ subdirectory)
 #  make changelog - creates ChangeLog
 
-FILE=main_document
+FILE=FR_main_document
 LATEX=pdflatex
 
 all:
