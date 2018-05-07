@@ -24,7 +24,7 @@ XMLNAME="$OUTFILE.tmp_$$"
 
 
 URL="http://wfs.geonet.org.nz/geonet/ows?"
-REQUEST="service=WFS&version=1.1.0&request=GetFeature&typeName=geonet:quake_search_v1&outputFormat=text/xml;subtype=gml/3.2"
+REQUEST="service=WFS&version=1.0.0&request=GetFeature&typeName=geonet:quake_search_v1&outputFormat=text/xml;subtype=gml/3.2"
 
 START_DATE=`date --utc --date="last week" +%F`
 #START_DATE=`date --utc --date="2 weeks ago" +%F`
