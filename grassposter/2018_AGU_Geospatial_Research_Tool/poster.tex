@@ -1,0 +1,506 @@
+% License: CC BY-SA
+% Authors: See the authors below and see also acknowledgement for authors of some images or research
+
+\documentclass[25pt, margin=0mm, innermargin=25mm, blockverticalspace=25mm, colspace=25mm, subcolspace=8mm]{tikzposter}
+\geometry{paperwidth=63in,paperheight=42in}
+
+% to stretch boxes over whole paper with custor paper size
+\makeatletter
+\setlength{\TP@visibletextwidth}{\textwidth-2\TP@innermargin}
+\setlength{\TP@visibletextheight}{\textheight-2\TP@innermargin}
+\makeatother
+
+% Fira Sans, GRASS GIS branding sans serif font
+\usepackage{FiraSans}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+% EB Garamond, GRASS GIS branding serif font
+% note that EB Garamond does not have bold
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage{ebgaramond-maths}
+
+% might be needed for both font packages
+\usepackage[T1]{fontenc}
+
+% uncomment for all sans serif
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage[hidelinks]{hyperref}
+
+% For bibliography styling
+%% TODO: all names should be abbreviated
+\usepackage{natbib}
+
+\definecolor{textcolor}{HTML}{000000}
+
+\definecolor{titleTextColor}{HTML}{000000}
+\definecolorpalette{grassColorPalette} {
+  \definecolor{colorOne}{HTML}{419041}
+  % \definecolor{colorTwo}{HTML}{cccccc}
+  \definecolor{colorTwo}{HTML}{dddddd}
+  \definecolor{colorThree}{HTML}{F1B52D}
+  % \definecolor{colorThree}{HTML}{EFA126}
+}
+
+\usetheme{Default}
+\usetitlestyle{Empty}
+\usecolorstyle[colorPalette=grassColorPalette]{Britain}
+\colorlet{backgroundcolor}{white}
+
+\title{
+\Huge
+\textcolor{titleTextColor}{
+\textsf{
+% \textbf{
+\fontsize{130}{100}\selectfont
+\textbf{GRASS}\,{\firalight GIS}: A General-purpose Geospatial Research Tool
+% }
+}
+}
+}
+
+\newlength{\grasslogoheight}
+\setlength{\grasslogoheight}{0.09\textheight}
+\newlength{\instlogoheight}
+\setlength{\instlogoheight}{0.33\grasslogoheight}
+
+% \setlength{\blocktitleheight}{0.02\textheight}
+
+% style for institute numbers
+\newcommand{\inst}[1]{\hspace{2pt}$^{\mbox{\normalsize#1}}$\hspace{-7pt}}
+\newcommand{\instlist}[1]{\hspace{1pt}$^{\mbox{\normalsize#1}}$\hspace{2pt}}
+
+\author{
+Helena Mitasova\inst{1},
+Vaclav Petras\inst{1}\,*\hspace{-7pt},
+Anna Petrasova\inst{1},
+\&
+Markus Neteler\inst{2}
+\\
+% AGU allows to specify a scientific team, but it does not seem to fit
+% with our case 100%; simply using formatting which is in the AGU program
+% (but adding note)
+Scientific Team: GRASS GIS Development Team**
+}
+\institute{
+\large
+\instlist{1}Center for Geospatial Analytics, North Carolina State University, USA;
+\instlist{2}mundialis GmbH \& Co. KG, Germany;
+*Corresponding author: wenzeslaus@gmail.com, vpetras@ncsu.edu;
+% using Black Duck Open Hub to ``guestimate'' that
+**Over 10 other members of the core team and numerous other contributors
+\\[1.7cm]
+\includegraphics[height=3cm]{ncstate}%
+\hspace{1cm}%
+\includegraphics[height=3cm]{cga}%
+\hspace{3cm}%
+\includegraphics[height=3.4cm]{mundialis}%
+}
+
+\hypersetup
+{
+    pdfauthor={H. Mitasova, V. Petras, A. Petrasova, M. Neteler},
+    pdfsubject={AGU Fall Meeting 2018 Poster},
+    pdftitle={GRASS GIS: A General-purpose Geospatial Research Tool},
+    pdfkeywords={GIS, algorithms, methods, preservation, science, reproducibility}
+}
+
+% \usetemplate{1}
+% \setinstituteshift{1}
+
+% \setblocktitleheight{2}
+% \setblockspacing{1}
+
+\graphicspath{{images/}{logos/}}
+
+\newcommand{\blocktitlewrap}[1]{\textnormal{\textsf{\textsc{\huge#1}}}}
+% it is not possible (?) to change block title in the class, using wrapper
+% the command introduced using:
+%   sed -i 's/\\block{\([^}]*\)}/\\block{\\blocktitlewrap{\1}}/g' main.tex
+
+% bullet point style
+\renewcommand{\labelitemi}{\textcolor{gray}{$\bullet$}\hspace{0.5ex}}
+
+% GRASS module
+\newcommand{\gmodule}[1]{\href{http://grass.osgeo.org/grass72/manuals/#1.html}{\emph{#1}}}
+\newcommand{\gamodule}[1]{\href{http://grass.osgeo.org/grass72/manuals/addons/#1.html}{\emph{#1}}}
+\newcommand{\gmodulenolink}[1]{\emph{#1}}
+
+\begin{document}
+
+\node[above left,opacity=0.99,inner sep=0pt,outer sep=4cm] at (bottomleft -| topright)%
+  {\includegraphics[width=0.3\paperwidth]{grass}};
+
+\maketitle[width=0.92\textwidth]
+
+% \maketitle
+% \addlogo[north west]{(2,-1)}{9cm}{images/Grass_GIS}
+%Please insert your institution logo here
+% \addlogo[north east]{(-2,-2.5)}{4cm}{images/logo_FEM_CRI}
+% \addlogo[north east]{(-2,-5.5)}{4cm}{images/NC_State_Seal}
+% \addlogo[north east]{(-8,-2.5)}{4cm}{images/Logo_cvut}
+% \addlogo[north east]{(-8,-6.5)}{4cm}{images/IWMI_logo}
+% \addlogo[north east]{(-2,-10.5)}{4cm}{images/logo_ec-jrc}
+
+\begin{columns}
+
+% Abstract
+%
+% GRASS GIS (grass.osgeo.org) is an open source software for geospatial analysis,
+% remote sensing, general geoprocessing and visualization. It is a
+% community-driven project with over 35 years of continuous software development
+% based on scientific expertise from many geospatial fields. It is characterized
+% by long-term releases, stable APIs, and emphasis on science. GRASS GIS
+% distribution strives to provide single integrated environment for 2D and 3D
+% raster analysis, image processing, vector data analysis, and spatio-temporal
+% data processing. It supports large raster files (billions of cells), vector
+% topology, coupling with databases, and 64 bit memory. New code based on recent
+% research is typically contributed to GRASS GIS Addons repository. Mature, widely
+% used code is then moved to the main code base to maximize integration and
+% availability. Whether it is addons or the main code base, code is usually
+% maintained by the community and preserved in long term even in cases when the
+% original author no longer supports the code. To support the needs of scientists,
+% the documentation includes not only links to the source code, its history, and
+% its authors, but also links to research papers that describe the algorithms
+% implemented in the modules.
+%
+% Code is not only maintained but also extended and improved. For example,
+% watershed and stream extraction using least cost path approach was implemented
+% in 1989 and extended for massive datasets in 2011. Similarly, vector topology
+% cleaning was introduced in 2002, updated over time and substantially improved in
+% 2016. Another example is a solar energy module available since 1993 and
+% parallelized in 2017. The current stable version of GRASS GIS 7.4 provides new
+% features for geosciences such as temporal framework with temporal algebra for
+% large time-series processing, fusion of elevation models from various sensors,
+% 3D flows, landform detection, image segmentation, simplified batch processing,
+% and integrated Python editor among others. GRASS GIS runs in various
+% environments including Linux, Mac, Windows, Docker, Raspberry Pi, and on HPC
+% clusters. The modules are written in Python, C, or C++. Besides command line
+% interface, GRASS GIS provides a graphical user interface, a Python API, and a C
+% API. Interfaces with other languages such as R and Ruby are supplied by
+% collaborating communities.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\column{0.25}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Overview}}{
+
+\Large
+
+
+\begin{itemize}
+% Basic Topics
+ \item Community-driven project
+ \item 35 years of continuous software development
+ \item long-term releases, stable APIs, and emphasis on science
+ \item single integrated environment for 2D and 3D raster analysis, image processing, vector data analysis, and spatio-temporal data processing
+\end{itemize}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Functionality}}{
+
+\Large
+
+GRASS GIS
+distribution strives to provide single integrated environment for 2D and 3D
+raster analysis, image processing, vector data analysis, and spatio-temporal
+data processing. It supports large raster files (billions of cells), vector
+topology, coupling with databases, and 64 bit memory.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Code Life Cycle}}{
+
+\Large
+
+New code based on recent
+research is typically contributed to GRASS GIS Addons repository. Mature, widely
+used code is then moved to the main code base to maximize integration and
+availability. Whether it is addons or the main code base, code is usually
+maintained by the community and preserved in long term even in cases when the
+original author no longer supports the code. To support the needs of scientists,
+the documentation includes not only links to the source code, its history, and
+its authors, but also links to research papers that describe the algorithms
+implemented in the modules.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Example: Spatio-Temporal Data Analysis}}{
+The time dimension was introduced in GRASS GIS 7.0 for vector maps, rasters, and 3D rasters
+which transformed GRASS GIS into a fully-featured temporal GIS \citep{Gebbert20141, gebbert2015grass}.
+Time series of map layers are managed in space time datasets, a new data type in GRASS GIS,
+and are still accessible also as individual map layers.
+Based on the GRASS GIS Temporal Framework Python application programming interface (API),
+more than 50 modules were implemented to manage, analyze, process
+and visualize space time datasets.
+More than 100,000 map layers can be now handled efficiently in GRASS GIS.
+%
+Example usages of this functionality include
+analysis of the
+European Climate Assessment \& Dataset ECA\&D \citep{Haylock2008_climate_series}
+and temperate climate zone in the European Union identification \citep{Gebbert20141}.
+
+The new temporal modules (staring with \gmodulenolink{t.})
+work beside well established \gmodule{r.series} module
+and specialized modules such as \gamodule{r.hants} implemented according to \cite{roerink2000reconstructing}
+or \gamodule{r.seasons}.
+Latest addition includes raster and vector temporal algebra
+which can be used for tasks such as computing hydrothermal coefficient for a time series of climate data
+using the actual mathematical formula \citep{leppelt2015grass}.
+
+\vspace*{1.5cm}
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=.7\linewidth]{images/temporal_precip_temp}
+\\
+Creating a synchronized animation of monthly total precipitation and mean temperature for NC, USA
+\end{minipage}
+
+\vspace*{1cm}
+
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\column{0.25}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Example: Water, Floods and Erosion}}{
+
+GRASS GIS entails several modules that constitute the result of active research on natural hazards.
+The \gmodule{r.sim.water} simulation model \citep{Mitas1998b}
+for overland flow with spatially variable rainfall excess conditions was integrated into the Emergency
+Routing Decision Planning system as a WPS \citep{raghavan2014deploying}.
+The module \gmodule{r.sim.water} together with
+the module \gmodule{r.sim.sediment} for erosion-deposition modeling
+implements a path sampling algorithm which is robust and easy to parallelize.
+A unique least cost path algorithm which doesn't need any depression filling
+was implemented in \gmodule{r.watershed} module in 1989
+and it was updated for massive data sets in 2011.
+% TODO: refs
+The \gmodule{r.sim.water} module was also utilized by \cite{Petrasova2014} and is now part of
+\emph{Tangible Landscape}, a tangible GIS system, which also incorporated \gmodule{r.damflood},
+a dam break inundation simulation by \cite{cannata2012two}.
+
+\bigskip
+
+\vspace*{1cm}
+
+\centering
+
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=0.7\textwidth]{rsimwater_architects}
+\end{minipage}
+~
+\begin{minipage}{0.49\linewidth}
+\includegraphics[width=\textwidth]{damflood_tangible}
+\end{minipage}
+
+\bigskip
+
+\begin{minipage}{0.49\linewidth}
+\centering
+Overland flow simulated by \gmodule{r.sim.water} used for landscape
+architecture design in Tangible Landscape environment
+(Historical master plan for Lake Raleigh, NC, USA)
+\end{minipage}
+~
+\begin{minipage}{0.49\linewidth}
+Dam breach on Lake Raleigh (NC, USA) in Tangible Landscape environment simulated using \gamodule{r.damflood} module
+\end{minipage}
+
+
+% \vspace*{1.4cm}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Example: Vector Network Analysis}}{
+In 2003 Radim Blazek introduced shortest path analysis (\gmodule{v.net.path}),
+traveling salesman (\gmodule{v.net.salesman}),
+and several other modules for vector network analysis (staring with \gmodule{v.net}).
+Over the years, the number of available algorithms increased to over 15 modules
+including, for example, centrality measures and connected components added in 2009 by Daniel Bundala.
+In 2014 Stepan Turek implemented turns support into all relevant vector network modules.
+Also since GRASS GIS 7.0 all vector network analysis tools provide fine control over node costs.
+% combination with r.cost/r.walk workflows \citep{Petrasova2014}
+
+\bigskip
+
+\centering
+\begin{minipage}{0.9\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{network_trips}
+A series of trips to collect samples across North Carolina, USA
+for water quality measurements
+as part of the Polyfluorinated Alkyl Substance Testing (PFAST) project.
+Trips are distinguished by color and were computed using multiple
+iterations of traveling salesman (\gmodule{v.net.salesman}).
+\end{center}
+\end{minipage}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\column{0.25}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Example: Image Segmentations}}{
+\gamodule{r.smooth.seg} (formerly \gmodulenolink{r.seg})
+was created by Alfonso Vitti \citep{vitti2008free, vitti2012mumford}
+and implemented a piece-wise smooth approximation of the original image
+according to \cite{mumford1989optimal} and \cite{march1997variational}
+which can be used to reduce noise in the original image.
+
+This supplemented \gmodule{r.clump} available from 1980s
+which groups pixels with the same categories (or integer values).
+The latest version of \gmodule{r.clump} coming in GRASS GIS 7.4
+supports multiple image bands (or any rasters maps) as input.
+Clumping of cells based on threshold value and clumping
+of double precision floating point input is supported as well in the new version.
+
+Eric Momsen implemented initial version of region-growing image segmentation in 2012
+and Markus Metz then extended and optimized the code resulting in
+the inclusion of the \gmodule{i.segment} module into GRASS GIS 7.0
+and final replacement of old multi-resolution classification module of the same name
+which was available in 1992 \citep{zhuang1992image}.
+Another module called \gamodule{i.segment.hierarchical} by Pietro Zambelli is based on \gmodule{i.segment}
+and performs parallelized hierarchical segmentation.
+
+\vspace*{0.7cm}
+
+\begin{minipage}{0.5\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{superpixels_slic_pseudo}
+\end{center}
+\end{minipage}
+~
+\begin{minipage}{0.5\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{superpixels_slic_colored}
+\end{center}
+\end{minipage}
+\vspace{2mm}
+\begin{center}
+Superpixels (black outlines) on pseudo-color image of central Wake county, NC, USA (left)
+and the same superpixels colored according to the mean NDVI value per pixel (right).
+\end{center}
+
+\vspace*{1cm}
+
+In 2016 GRASS GIS implementation of SLIC Superpixels segmentation \citep{achanta2010epfl, achanta2012slic}
+was requested by the community
+and Rashad Kanavath and Markus Metz implemented \gmodule{i.superpixels.slic}
+which provides users both with SLIC and SLIC0 methods.
+
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{References}}{
+
+\vspace{-0.2cm}
+\scriptsize
+
+% \newcommand{\blocksectiontitle}[1]{\subsubsection*{\textcolor{gray}{\textsf{#1}}}}
+\newcommand{\blocksectiontitle}[1]{\textbf{#1}}
+
+%\blocksectiontitle{References}
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliographystyle{apalike}
+\bibliography{poster}
+\endgroup
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\column{0.25}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Example: Lidar Data Processing}}{
+
+Filtering of ground and non-ground points was included into GRASS GIS
+early on in the lidar era in the \gmodule{v.lidar.edgedetection} group of modules.
+% TODO: ref
+% v.lidar.correction Corrects the v.lidar.growing output. It is the last of the three algorithms for LIDAR .
+% v.lidar.edgedetection Detects the object's edges from a LIDAR data set.
+% v.lidar.growing Building contour determination and Region Growing algorithm for determining the building inside
+The module \gmodule{v.surf.rst} for spatial interpolation was developed approximately 20 years
+ago, but since then it has been improved several times \citep{tracvsurfrst}
+including recent parallelization which will be included in GRASS GIS 7.4.
+Currently the module is used for both digital terrain model interpolation and interpolations in general.
+
+The module \gmodule{r.in.lidar} statistically analyzes massive point clouds.
+% TODO: base_raster, ref
+For advanced general point analysis GRASS GIS
+\gmodule{v.outlier} implemented originally specifically for lidar data
+and recently also \gmodule{v.cluster}
+implementing variety of clustering methods including
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+and OPTICS (Ordering Points to Identify the Clustering Structure).
+The \gmodule{v.outlier} module serves as a base for a user contributed module \gamodule{v.lidar.mcc}
+implementing Multiscale Curvature Classification (MCC).
+% TODO: ref
+
+% v.delaunay v.voronoi New option to create Voronoi diagrams for areas.
+
+\centering
+\begin{minipage}{0.48\linewidth}
+\centering
+\includegraphics[width=0.7\textwidth]{elevation_lidar}
+\end{minipage}
+~
+\begin{minipage}{0.48\linewidth}
+\centering
+\includegraphics[width=\textwidth]{lidar_profile}
+\end{minipage}
+
+\bigskip
+
+\begin{minipage}{0.48\linewidth}
+\centering
+Digital elevation model interpolated from lidar point clouds
+using \gmodule{v.surf.rst}. Data are showing tillage in an agricultural field near Raleigh (North Carolina, USA)
+\end{minipage}
+~
+\begin{minipage}{0.48\linewidth}
+\centering
+Profile (vertical slice) of a small portion of a point cloud showing tree structure as captured by the returns
+(\gamodule{v.profile.points})
+\end{minipage}
+
+}
+
+
+
+\end{columns}
+
+\node[above left,opacity=0.5,inner sep=0pt,outer sep=4cm] at (bottomleft -| topright)%
+  {\includegraphics[width=0.3\paperwidth]{grass}};
+
+\end{document}
