@@ -23,8 +23,9 @@
 \usepackage[T1]{fontenc}
 
 % uncomment for all sans serif
-% \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\sfdefault}
 
+\usepackage{setspace}
 
 \usepackage[utf8]{inputenc}
 \usepackage{wrapfig}
@@ -149,18 +150,20 @@ Helena Mitasova\inst{1}
 % the command introduced using:
 %   sed -i 's/\\block{\([^}]*\)}/\\block{\\blocktitlewrap{\1}}/g' main.tex
 
+\newcommand{\CustomBlockFontSize}{\Large}
+
 % bullet point style
 \renewcommand{\labelitemi}{\textcolor{gray}{$\bullet$}\hspace{0.5ex}}
 
 % GRASS module
-\newcommand{\gmodule}[1]{\href{http://grass.osgeo.org/grass72/manuals/#1.html}{\emph{#1}}}
-\newcommand{\gamodule}[1]{\href{http://grass.osgeo.org/grass72/manuals/addons/#1.html}{\emph{#1}}}
+\newcommand{\gmodule}[1]{\href{http://grass.osgeo.org/grass74/manuals/#1.html}{\emph{#1}}}
+\newcommand{\gamodule}[1]{\href{http://grass.osgeo.org/grass74/manuals/addons/#1.html}{\emph{#1}}}
 \newcommand{\gmodulenolink}[1]{\emph{#1}}
 
 \begin{document}
 
-\node[above left,opacity=0.99,inner sep=0pt,outer sep=4cm] at (bottomleft -| topright)%
-  {\includegraphics[width=0.3\paperwidth]{grass}};
+\node[above left,opacity=0.99,inner sep=0pt,outer sep=6cm] at (bottomleft -| topright)%
+  {\includegraphics[width=0.2\paperwidth]{grass}};
 
 \maketitle[width=0.92\textwidth]
 
@@ -175,6 +178,27 @@ Helena Mitasova\inst{1}
 
 \begin{columns}
 
+% Session
+%
+% IN43C: FAIR Data Is Not Enough: Communicating Data Quality and Making Analytical Code FAIR Posters
+%
+% Regardless of the scientific discipline, a fundamental characteristic of
+% science is the exploration of truth, which implies transparency of methods of
+% analysis and interpretation as well as understanding imperfections in data to
+% arrive at sound conclusions. Fundamental to such understanding is conveying
+% accurate and rich information about the observations, analytical source code,
+% outputs, and scientific findings.
+%
+% Source code used in data analysis, like the data themselves, needs to be
+% Findable, Accessible, Interoperable and Reusable (FAIR): it also needs to be
+% properly versioned, curated and archived to ensure research outcomes can be
+% validated.
+%
+% This session seeks to explore community best practices, challenges, cost,
+% benefits, and recommendations for how conveying uncertainty information can be
+% made more consistent across multiple Earth science domains and how to manage,
+% cite, discover, and share software source code.
+%
 % Abstract
 %
 % GRASS GIS (grass.osgeo.org) is a community-driven geospatial software project
@@ -215,38 +239,52 @@ Helena Mitasova\inst{1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{GRASS GIS Overview}}{
 
-\Large
+\CustomBlockFontSize
 
 \begin{itemize}
 % Basic Topics
- \item Community-driven project
+ \item Mature OSGeo Foundation project
+ \item Community-driven, user-focused development
  \item 35 years of continuous software development
- \item long-term releases, stable APIs, and emphasis on science
- \item single integrated environment for 2D and 3D raster analysis, image processing, vector data analysis, and spatio-temporal data processing
+ \item Long-term releases, stable APIs, and emphasis on science
+ \item Single integrated environment for 2D and 3D raster analysis, image processing, vector data analysis, and spatio-temporal data processing
 \end{itemize}
+
+\includegraphics[width=\linewidth]{hexagons_python_editor}
 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Current Approaches}}{
 
-\Large
+\CustomBlockFontSize
 
-Authors of scientific publications, when using and citing
-GRASS GIS, so far opted for citing either the entire software package, citing
-the most recent review publication associated with GRASS GIS, or citing a
-publication associated with a specific module.
+When using GRASS GIS for scientific publication, authors:
 
-\vspace*{1.5cm}
+\begin{itemize}
+ \item cite the entire GRASS GIS software package,
+ \item cite a review publication associated with GRASS GIS,
+ \item cite a book about GRASS GIS, or
+ \item cite a publication associated with a specific module.
+\end{itemize}
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{GRASS GIS Documentation}}{
+
+\CustomBlockFontSize
+
+% \vspace*{1.5cm}
 
 \begin{minipage}{\linewidth}
 \centering
 \includegraphics[width=.7\linewidth]{module_references}
 \\
-Creating a synchronized animation of monthly total precipitation and mean temperature for NC, USA
+% References section contains papers the code is based on, papers published with the code, and papers using the code.
+Papers relevant to the code and method in any way
 \end{minipage}
-
-\vspace*{1cm}
 
 \vspace*{1.5cm}
 
@@ -254,27 +292,13 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 \centering
 \includegraphics[width=.7\linewidth]{module_author}
 \\
-Creating a synchronized animation of monthly total precipitation and mean temperature for NC, USA
+Authors of code and documentation
 \end{minipage}
 
-\vspace*{1cm}
+% \vspace*{1cm}
 
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Motivation}}{
-
-\Large
-
-GRASS GIS provides over 500 modules, each with a unique functionality and
-purpose, many with associated scientific publications. In addition to these core
-modules in the GRASS GIS distribution there is a growing number of additional
-add-on modules are being developed, often as part of research work. Until now,
-no automated, software-enabled citation mechanism to cite individual GRASS GIS
-modules, or functions in general was provided due to the lack of a reference
-citation standard for GRASS GIS modules defined within the GRASS GIS community.
-
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -282,26 +306,40 @@ citation standard for GRASS GIS modules defined within the GRASS GIS community.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \column{0.25}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{GRASS GIS Documentation}}{
+\block{\blocktitlewrap{The Challenge}}{
 
-\Large
+\CustomBlockFontSize
 
+\begin{itemize}
+ \item Over 500 core modules and over 300 additional modules
+ \item each with a unique functionality and
+purpose
+ \item many with associated scientific publications.
+ \item Until now,
+no automated, software-enabled citation mechanism to cite individual GRASS GIS
+modules, or functions in general was provided due to the lack of a reference
+citation standard for GRASS GIS modules defined within the GRASS GIS community.
+ \item no way to cite unless there is a publication
+ \item not clear how to identify this publication
+ \item publication may not include all current code authors
+\end{itemize}
 
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{GRASS GIS Metadata for Modules}}{
-
-\Large
-
-
-}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \block{\blocktitlewrap{GRASS GIS Metadata for Modules}}{
+%
+% \CustomBlockFontSize
+%
+%
+% }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{\textnormal{\textsf{\textit{g.citation}}} Module}}{
 
-\Large
+\CustomBlockFontSize
 
 \vspace*{1.5cm}
 
@@ -309,7 +347,7 @@ citation standard for GRASS GIS modules defined within the GRASS GIS community.
 \centering
 \includegraphics[width=.7\linewidth]{screenshot_bibtex_chicago}
 \\
-Creating a synchronized animation of monthly total precipitation and mean temperature for NC, USA
+...g.citation GUI...
 \end{minipage}
 
 \vspace*{1cm}
@@ -319,7 +357,7 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Citation File Format (CFF)}}{
 
-\Large
+\CustomBlockFontSize
 
 \begin{itemize}
  \item YAML (YAML Ain’t Markup Language) text file
@@ -333,7 +371,7 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 \centering
 \includegraphics[width=.7\linewidth]{code/cff}
 \\
-Creating a synchronized animation of monthly total precipitation and mean temperature for NC, USA
+...CFF example...
 \end{minipage}
 
 \vspace*{1cm}
@@ -343,7 +381,7 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Citation Style Language (CSL)}}{
 
-\Large
+\CustomBlockFontSize
 
 \begin{itemize}
  \item style language for citations
@@ -360,9 +398,68 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 \column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{\textnormal{\textsf{\textit{g.citation}}} Example Workflow}}{
+
+\CustomBlockFontSize
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=.7\linewidth]{screenshot_bibtex_chicago}
+\\
+1. Module is used to create XY
+\end{minipage}
+
+\vspace*{2ex}
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=.7\linewidth]{screenshot_bibtex_chicago}
+\\
+2a. X Citation is created using g.citation
+\end{minipage}
+
+\vspace*{2ex}
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=.7\linewidth]{screenshot_bibtex_chicago}
+\\
+2b. BibTeX Citation is created using g.citation
+\end{minipage}
+
+\vspace*{2ex}
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=.7\linewidth]{screenshot_bibtex_chicago}
+\\
+3a. X Citation included in document
+\end{minipage}
+
+\vspace*{2ex}
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=.7\linewidth]{screenshot_bibtex_chicago}
+\\
+3b. BibTeX citation is pasted to Zotero
+\end{minipage}
+
+\vspace*{2ex}
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=.7\linewidth]{screenshot_bibtex_chicago}
+\\
+3c. BibTeX citation is pasted to Overleaf
+\end{minipage}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Discussion and Future Work}}{
 
-\Large
+\CustomBlockFontSize
 
 
 }
@@ -372,7 +469,6 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 \block{\blocktitlewrap{References}}{
 
 \vspace{-0.2cm}
-\scriptsize
 
 % \newcommand{\blocksectiontitle}[1]{\subsubsection*{\textcolor{gray}{\textsf{#1}}}}
 \newcommand{\blocksectiontitle}[1]{\textbf{#1}}
@@ -381,7 +477,9 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 \begingroup
 \renewcommand{\section}[2]{}%
 \bibliographystyle{apalike}
-% \bibliography{poster}
+\setstretch{0.5}
+\scriptsize
+\bibliography{poster}
 \endgroup
 
 }
@@ -394,22 +492,32 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Availability}}{
+\block{\blocktitlewrap{GRASS GIS as a Scientific Code Repository}}{
 
-\Large
+\CustomBlockFontSize
 
 \begin{itemize}
- \item
- \item
- \item
- \item
+ \item Innovations are preserved \citep{chemin2015grass}
+ \item Code is further developed \citep{petras_how_2017}
+ \item Tools used by other scientists \citep{petras2018grass} [AGU 2018]
+\end{itemize}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Availability}}{
+
+\CustomBlockFontSize
+
+\begin{itemize}
+ \item \href{https://grass.osgeo.org}{grass.osgeo.org}
+ \item g.citation part of GRASS GIS Addons repository
+ \item Code under GNU GPL >=v2 (SPDX: GPL-2.0-or-later)
+ \item Poster under CC Attribution-ShareAlike 4.0 International
 \end{itemize}
 
 }
 
 \end{columns}
-
-\node[above left,opacity=0.5,inner sep=0pt,outer sep=4cm] at (bottomleft -| topright)%
-  {\includegraphics[width=0.3\paperwidth]{grass}};
 
 \end{document}
