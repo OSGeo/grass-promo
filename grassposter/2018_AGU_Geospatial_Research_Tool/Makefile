@@ -15,6 +15,7 @@ pdf:
 	# second compilation gets through (this is an workaround)
 	-pdflatex -interaction=nonstopmode $(FILE).tex
 	pdflatex -interaction=nonstopmode $(FILE).tex
+	bibtex $(FILE)
 
 clean:
 	rm -f *~ *.aux *.log *.out *.toc *.bbl *.blg *-blx.bib *.ps *.pyg
