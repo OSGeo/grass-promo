@@ -25,6 +25,7 @@
 % uncomment for all sans serif
 % \renewcommand{\familydefault}{\sfdefault}
 
+\usepackage{setspace}
 
 \usepackage[utf8]{inputenc}
 \usepackage{wrapfig}
@@ -133,7 +134,7 @@ Scientific Team: GRASS GIS Development Team**
 
 \begin{document}
 
-\node[above left,opacity=0.99,inner sep=0pt,outer sep=4cm] at (bottomleft -| topright)%
+\node[above left,opacity=0.99,inner sep=0pt,outer sep=6cm] at (bottomleft -| topright)%
   {\includegraphics[width=0.2\paperwidth]{grass}};
 
 \maketitle[width=0.92\textwidth]
@@ -192,134 +193,53 @@ Scientific Team: GRASS GIS Development Team**
 \column{0.25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Overview and Functionality}}{
+\block{\blocktitlewrap{Why GRASS GIS as a Tool?}}{
 
-\LARGE
+\CustomBlockFontSize
+
+Multiple researchers for over three decades
+contributed code,
+published associated papers,
+implemented other's papers
+and improved and built on each others work.
+
+\includegraphics[width=\linewidth]{grass_team}
 
 \begin{itemize}
 % Basic Topics
  \item Community-driven project
- \item 35 years of continuous software development
- \item long-term releases, stable APIs, and emphasis on science
- \item single integrated environment for 2D and 3D raster analysis, image processing, vector data analysis, and spatio-temporal data processing
+ \item Long-term releases, stable APIs and emphasis on science
+ \item Single integrated environment for 2D and 3D raster analysis, image processing, vector data analysis and spatio-temporal data processing
 % GRASS GIS
 % distribution strives to provide single integrated environment for 2D and 3D
-% raster analysis, image processing, vector data analysis, and spatio-temporal
+% raster analysis, image processing, vector data analysis and spatio-temporal
 % data processing. It supports large raster files (billions of cells), vector
-% topology, coupling with databases, and 64 bit memory.
-%  \item To support the needs of scientists, the documentation includes not only links to the source code, its history, and
+% topology, coupling with databases and 64 bit memory.
+%  \item To support the needs of scientists, the documentation includes not only links to the source code, its history and
 % its authors, but also links to research papers that describe the algorithms
 % implemented in the modules.
 \end{itemize}
 
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Code Life Cycle}}{
+\block{\blocktitlewrap{Why GRASS GIS as a Platform?}}{
 
 \CustomBlockFontSize
 
+Contributed code is maintained and extended by community
+and prevails even in cases when the original author cannot support its users.
+
 \begin{itemize}
- \item New code based on recent research is typically contributed to GRASS GIS Addons repository.
- \item Mature, widely used code is then moved to the main code base to maximize integration and availability.
+ \item New code typically contributed to Addons repository.
+ \item Mature code is moved to the main code base.
  \item Both main code base and Addons maintained by the community.
- \item Code preserved in long term even in cases when the original author no longer supports the code.
 \end{itemize}
 
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Example: Spatio-Temporal Data Analysis}}{
 
-\CustomBlockFontSize
-
-\begin{itemize}
- \item The time dimension was introduced in version 7.0 \citep{Gebbert20141, gebbert2015grass}
- \item Time series accessed as space time datasets and as individual vectors or rasters.
- \item More than 50 modules available to manage, analyze, process, and visualize space time datasets.
- \item More than 100,000 map layers can be now handled efficiently in GRASS GIS.
- \item Used for analysis of the European Climate Assessment \& Dataset ECA\&D \citep{Haylock2008_climate_series}
-       and temperate climate zone identification \citep{Gebbert20141}.
- \item New temporal modules (e.g. \gmodule{t.rast.aggregate}) work beside well established \gmodule{r.series} module
-       and specialized modules such as \gamodule{r.hants} implemented according to \cite{roerink2000reconstructing} or \gamodule{r.seasons}.
- \item Raster and vector temporal algebra can be used for tasks
-       such as computing hydrothermal coefficient for a time series of climate data using the actual mathematical formula
-       \citep{leppelt2015grass}.
-\end{itemize}
-
-\vspace*{1.5cm}
-
-\begin{minipage}{\linewidth}
-\centering
-\includegraphics[width=.7\linewidth]{images/temporal_precip_temp}
-\\
-Creating a synchronized animation of monthly total precipitation and mean temperature for NC, USA
-\end{minipage}
-
-\vspace*{1cm}
-
-}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\column{0.25}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Example: Water, Floods and Erosion}}{
-
-\CustomBlockFontSize
-
-\begin{itemize}
- \item The \gmodule{r.sim.water} simulation model \citep{Mitas1998b}
-for overland flow with spatially variable rainfall excess conditions was integrated into the Emergency
-Routing Decision Planning system as a WPS \citep{raghavan2014deploying}.
-% TODO: paralelized
-\item A unique least cost path algorithm which doesn't need any depression filling
-was implemented in \gmodule{r.watershed} module in 1989
-and it was updated for massive data sets in 2011.
-% TODO: refs
-\item The \gmodule{r.sim.water} module was also utilized by \cite{Petrasova2014} and is now part of
-\emph{Tangible Landscape}, a tangible GIS system, which also incorporated \gmodule{r.damflood},
-a dam break inundation simulation by \cite{cannata2012two}.
-\end{itemize}
-
-\bigskip
-
-\vspace*{1cm}
-
-\centering
-
-\begin{minipage}{0.485\linewidth}
-\centering
-\includegraphics[width=0.7\textwidth]{rsimwater_architects}
-\end{minipage}
-~
-\begin{minipage}{0.485\linewidth}
-\includegraphics[width=\textwidth]{damflood_tangible}
-\end{minipage}
-
-\bigskip
-
-\begin{minipage}{0.485\linewidth}
-\centering
-Overland flow simulated by \gmodule{r.sim.water} used for landscape
-architecture design in Tangible Landscape environment
-(Historical master plan for Lake Raleigh, NC, USA)
-\end{minipage}
-~
-\begin{minipage}{0.49\linewidth}
-Dam breach on Lake Raleigh (NC, USA) in Tangible Landscape environment simulated using \gamodule{r.damflood} module
-\end{minipage}
-
-
-% \vspace*{1.4cm}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Example: Vector Network Analysis}}{
@@ -351,6 +271,69 @@ iterations of traveling salesman (\gmodule{v.net.salesman}).
 
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\column{0.25}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Example: Spatio-Temporal Data Analysis}}{
+
+\CustomBlockFontSize
+
+\begin{itemize}
+ \item The time dimension was introduced in version 7.0 \citep{Gebbert20141, gebbert2015grass}
+ \item Time series accessed as space time datasets and as individual vectors or rasters.
+ \item More than 50 modules available to manage, analyze, process and visualize space time datasets.
+ \item More than 100,000 map layers can be now handled efficiently in GRASS GIS.
+ \item Used for analysis of the European Climate Assessment \& Dataset ECA\&D \citep{Haylock2008_climate_series}
+       and temperate climate zone identification \citep{Gebbert20141}.
+ \item New temporal modules (e.g. \gmodule{t.rast.aggregate}) work beside well established \gmodule{r.series} module
+       and specialized modules such as \gamodule{r.hants} implemented according to \cite{roerink2000reconstructing} or \gamodule{r.seasons}.
+ \item Raster and vector temporal algebra can be used for tasks
+       such as computing hydrothermal coefficient for a time series of climate data using the actual mathematical formula
+       \citep{leppelt2015grass}.
+\end{itemize}
+
+\vspace*{1.5cm}
+
+\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=.7\linewidth]{images/temporal_precip_temp}
+\\
+Creating a synchronized animation of monthly total precipitation and mean temperature for NC, USA
+\end{minipage}
+
+\vspace*{1cm}
+
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{References}}{
+
+\vspace{-0.2cm}
+
+\scriptsize
+\setstretch{0.5}
+
+% \newcommand{\blocksectiontitle}[1]{\subsubsection*{\textcolor{gray}{\textsf{#1}}}}
+\newcommand{\blocksectiontitle}[1]{\textbf{#1}}
+
+%\blocksectiontitle{References}
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliographystyle{apalike}
+\bibliography{poster}
+\endgroup
+
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -363,14 +346,14 @@ iterations of traveling salesman (\gmodule{v.net.salesman}).
 \CustomBlockFontSize
 
 \begin{itemize}
- \item \gamodule{r.smooth.seg} was created by Alfonso Vitti \citep{vitti2008free, vitti2012mumford} and implemented a piece-wise smooth approximation of the original image which can be used to reduce noise in the original image.
 % according to \cite{mumford1989optimal} and \cite{march1997variational}
- \item \gmodule{r.clump} for grouping pixels with the same integer values available since 1980s.
-       The latest version of \gmodule{r.clump} supports multiple image bands and clumping of floating point values.
- \item Eric Momsen implemented region-growing image segmentation in 2012.
-       Markus Metz then extended and optimized the code resulting in the inclusion of the \gmodule{i.segment} module into version 7.0.
-       This replaced a multi-resolution classification module of the same name from 1992 \citep{zhuang1992image}.
- \item \gamodule{i.segment.hierarchical} by Pietro Zambelli is based on \gmodule{i.segment} and performs parallelized hierarchical segmentation.
+ \item \gmodule{r.clump} for grouping pixels with the same integer values available since '80s.
+       Now \gmodule{r.clump} handles multiple image bands and floating point values.
+ \item \gamodule{r.smooth.seg} for noise reduction \citep{vitti2008free, vitti2012mumford}
+ \item Region-growing image segmentation originally from Eric Momsen (2012)
+       was improved by Markus Metz and included as \gmodule{i.segment} into version 7.0.
+%        This replaced a multi-resolution classification module of the same name from 1992 \citep{zhuang1992image}.
+ \item \gamodule{i.segment.hierarchical} by Pietro Zambelli based on \gmodule{i.segment} performs parallelized hierarchical segmentation.
  \item Rashad Kanavath and Markus Metz implemented SLIC Superpixels segmentation \citep{achanta2010epfl, achanta2012slic} in 2016 as \gmodule{i.superpixels.slic}.
 \end{itemize}
 
@@ -396,23 +379,46 @@ Superpixels (black outlines) with pseudo-color and NDVI images, central Wake cou
 
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{References}}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{\blocktitlewrap{Example: Water, Floods and Erosion}}{
 
-\vspace{-0.2cm}
+\CustomBlockFontSize
 
-\scriptsize
+\begin{itemize}
+ \item \gmodule{r.sim.water} module \citep{Mitas1998b}
+       for simulating overland flow integrated into the Emergency Routing Decision Planning \citep{raghavan2014deploying}.
+% TODO: paralelized
+ \item \gmodule{r.watershed} for least cost path water accumulation from 1989
+       and updated for massive data sets in 2011.
+% TODO: refs
+ \item \cite{Petrasova2014} utilized in \emph{Tangible Landscape}, a tangible GIS system,
+       \gmodule{r.damflood}, a dam break inundation simulation by \cite{cannata2012two}.
+\end{itemize}
 
-% \newcommand{\blocksectiontitle}[1]{\subsubsection*{\textcolor{gray}{\textsf{#1}}}}
-\newcommand{\blocksectiontitle}[1]{\textbf{#1}}
+% \bigskip
 
-%\blocksectiontitle{References}
-\begingroup
-\renewcommand{\section}[2]{}%
-\bibliographystyle{apalike}
-\bibliography{poster}
-\endgroup
+% \vspace*{0.5cm}
 
+\centering
+
+\begin{minipage}{0.485\linewidth}
+\centering
+\includegraphics[width=0.7\textwidth]{rsimwater_architects}
+\end{minipage}
+~
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\textwidth]{damflood_tangible}
+\end{minipage}
+\vspace{2mm}
+\begin{center}
+Overland flow simulated used for landscape
+architecture design in Tangible Landscape environment (left)
+and a dam breach on Lake Raleigh, NC, USA (right)
+\end{center}
+
+
+% \vspace*{1.4cm}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -427,50 +433,42 @@ Superpixels (black outlines) with pseudo-color and NDVI images, central Wake cou
 \CustomBlockFontSize
 
 \begin{itemize}
- \item Filtering of ground and non-ground points was included
-early on in the lidar era in the \gmodule{v.lidar.edgedetection} group of modules.
+ \item Filtering of ground points was included
+       in the \gmodule{v.lidar.edgedetection} group of modules.
 % TODO: ref
+% TODO: year
 % v.lidar.correction Corrects the v.lidar.growing output. It is the last of the three algorithms for LIDAR .
 % v.lidar.edgedetection Detects the object's edges from a LIDAR data set.
 % v.lidar.growing Building contour determination and Region Growing algorithm for determining the building inside
- \item The module \gmodule{v.surf.rst} for spatial interpolation was developed approximately 20 years
-ago, but since then it has been improved several times \citep{tracvsurfrst}
-including recent parallelization which will be included in GRASS GIS 7.4.
-% TODO: ref for paralelized
- \item The module \gmodule{r.in.lidar} statistically analyzes massive point clouds.
-% TODO: base_raster, ref
- \item The \gmodule{v.outlier} module serves as a base for a module \gamodule{v.lidar.mcc} implementing Multiscale Curvature Classification.
+ \item \gmodule{v.outlier} module serves as a base for a module \gamodule{v.lidar.mcc} implementing Multiscale Curvature Classification.
 % TODO: ref
+ \item \gmodule{v.surf.rst} (spatial interpolation) for developed in '90s;
+       improved several times and parallelized for version 7.4.
+% \citep{tracvsurfrst}
+% TODO: different ref
+% TODO: ref for paralelized
+ \item Improved \gmodule{r.in.lidar} statistically analyzes large point clouds.
+% TODO: base_raster, ref
+
 \end{itemize}
 
-% v.delaunay v.voronoi New option to create Voronoi diagrams for areas.
-
 \centering
-\begin{minipage}{0.48\linewidth}
+\begin{minipage}{0.4\linewidth}
 \centering
 \includegraphics[width=0.7\textwidth]{elevation_lidar}
 \end{minipage}
 ~
-\begin{minipage}{0.48\linewidth}
+\begin{minipage}{0.55\linewidth}
 \centering
 \includegraphics[width=\textwidth]{lidar_profile}
 \end{minipage}
-
-\bigskip
-
-\begin{minipage}{0.48\linewidth}
-\centering
+\vspace{2mm}
+\begin{center}
 Digital elevation model interpolated from lidar data shows tillage in an field in Raleigh, NC, USA
-\end{minipage}
-~
-\begin{minipage}{0.48\linewidth}
-\centering
-Vertical slice of a point cloud created with \gamodule{v.profile.points} shows tree structure in lidar data
-\end{minipage}
+and a point cloud transect created with \gamodule{v.profile.points} shows tree structure
+\end{center}
 
 }
-
-
 
 \end{columns}
 
