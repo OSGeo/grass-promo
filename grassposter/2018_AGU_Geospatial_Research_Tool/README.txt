@@ -7,8 +7,8 @@ In addition, some styles are needed.
 
 Fedora:
 
-    dnf install texlive texlive-a0poster texlive-wrapfig \
-        texlive-standalone texlive-tikzposter texlive-xstring
+    dnf install texlive texlive-a0poster texlive-wrapfig texlive-fira \
+        texlive-newtx texlive-ebgaramond-maths texlive-standalone texlive-tikzposter texlive-xstring
 
 Debian/Ubuntu:
 
