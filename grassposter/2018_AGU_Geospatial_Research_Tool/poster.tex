@@ -23,7 +23,7 @@
 \usepackage[T1]{fontenc}
 
 % uncomment for all sans serif
-% \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\sfdefault}
 
 \usepackage{setspace}
 
@@ -79,7 +79,7 @@ Helena Mitasova\inst{1},
 Vaclav Petras\inst{1}\,*\hspace{-7pt},
 Anna Petrasova\inst{1},
 \&
-Markus Neteler\inst{2}
+Markus Neteler\hspace{0.05em}\inst{2}
 \\
 % AGU allows to specify a scientific team, but it does not seem to fit
 % with our case 100%; simply using formatting which is in the AGU program
@@ -92,7 +92,7 @@ Scientific Team: GRASS GIS Development Team**
 \instlist{2}mundialis GmbH \& Co. KG, Germany;
 *Corresponding author: wenzeslaus@gmail.com, vpetras@ncsu.edu;
 % using Black Duck Open Hub to ``guestimate'' that
-**Includes over 10 other members of the core team and numerous other contributors
+**Includes over 10 other members of the core team and numerous other contributors.
 \\[1.7cm]
 \includegraphics[height=3cm]{ncstate}%
 \hspace{1cm}%
@@ -122,7 +122,7 @@ Scientific Team: GRASS GIS Development Team**
 % the command introduced using:
 %   sed -i 's/\\block{\([^}]*\)}/\\block{\\blocktitlewrap{\1}}/g' main.tex
 
-\newcommand{\CustomBlockFontSize}{\LARGE}
+\newcommand{\CustomBlockFontSize}{\Large}
 
 % bullet point style
 \renewcommand{\labelitemi}{\textcolor{gray}{$\bullet$}\hspace{0.5ex}}
@@ -200,8 +200,8 @@ Scientific Team: GRASS GIS Development Team**
 
 Multiple researchers for over three decades
 contributed code,
-published associated papers,
-implemented other's papers
+wrote associated papers,
+implemented already published methods,
 and improved and built on each others work.
 
 \includegraphics[width=\linewidth]{grass_team}
@@ -209,8 +209,8 @@ and improved and built on each others work.
 \begin{itemize}
 % Basic Topics
  \item Community-driven project
- \item Long-term releases, stable APIs and emphasis on science
- \item Single environment for vector data analysis, 2D and 3D raster analysis, image processing and spatio-temporal data
+ \item Long-term releases, stable APIs, and emphasis on science
+ \item Single environment for vector data analysis, 2D and 3D raster analysis, image processing, and spatio-temporal data
 % GRASS GIS
 % distribution strives to provide single integrated environment for 2D and 3D
 % raster analysis, image processing, vector data analysis and spatio-temporal
@@ -230,12 +230,12 @@ and improved and built on each others work.
 \CustomBlockFontSize
 
 Contributed code is maintained and extended by community
-and prevails even in cases when the original author cannot support its users.
+and prevails even in cases when the original author cannot maintain the code anymore.
 
 \begin{itemize}
  \item New code typically contributed to Addons repository.
  \item Mature code is moved to the main code base.
- \item Organization into modules makes contributions easy.
+ \item Structuring code into modules makes contributing easy.
  %  \item Both main code base and Addons maintained by the community.
 \end{itemize}
 
@@ -262,7 +262,7 @@ and prevails even in cases when the original author cannot support its users.
 \begin{minipage}{0.9\linewidth}
 \begin{center}
 \includegraphics[width=\textwidth]{network_trips}
-Trips to collect samples across North Carolina, USA
+Trips to collect samples across North Carolina, USA,
 as part of a water pollution testing project (PFAST).
 % Polyfluorinated Alkyl Substance Testing
 % Trips are distinguished by color and were computed using multiple
@@ -285,16 +285,16 @@ as part of a water pollution testing project (PFAST).
 \CustomBlockFontSize
 
 \begin{itemize}
- \item The time dimension was introduced in version 7.0 \citep{Gebbert20141, gebbert2015grass}
+ \item The time dimension was introduced in version 7.0 \citep{Gebbert20141, gebbert2015grass}.
  \item Time series accessed as space time datasets and as individual vectors or rasters.
- \item More than 50 modules available to manage, analyze, process and visualize space time datasets.
+ \item More than 50 modules available to manage, analyze, process, and visualize space time datasets.
  \item More than 100,000 map layers can be now handled efficiently in GRASS GIS.
  \item Used for analysis of the European Climate Assessment \& Dataset ECA\&D \citep{Haylock2008_climate_series}
        and temperate climate zone identification \citep{Gebbert20141}.
- \item New temporal modules (e.g. \gmodule{t.rast.aggregate}) work beside well established \gmodule{r.series} module
+ \item New temporal modules (e.g. \gmodule{t.rast.aggregate}) work alongside well established \gmodule{r.series} module
        and specialized modules such as \gamodule{r.hants} implemented according to \cite{roerink2000reconstructing} or \gamodule{r.seasons}.
  \item Raster and vector temporal algebra can be used for tasks
-       such as computing hydrothermal coefficient for a time series of climate data using the actual mathematical formula
+       such as computing hydrothermal coefficient for a time series of climate data using a mathematical formula
        \citep{leppelt2015grass}.
 \end{itemize}
 
@@ -318,9 +318,6 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 
 \vspace{-0.2cm}
 
-\scriptsize
-\setstretch{0.5}
-
 % \newcommand{\blocksectiontitle}[1]{\subsubsection*{\textcolor{gray}{\textsf{#1}}}}
 \newcommand{\blocksectiontitle}[1]{\textbf{#1}}
 
@@ -328,6 +325,8 @@ Creating a synchronized animation of monthly total precipitation and mean temper
 \begingroup
 \renewcommand{\section}[2]{}%
 \bibliographystyle{apalike}
+\setstretch{0.5}
+\scriptsize
 \bibliography{poster}
 \endgroup
 
@@ -382,7 +381,7 @@ Superpixels (black outlines) with pseudo-color and NDVI images, central Wake cou
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\block{\blocktitlewrap{Example: Water, Floods and Erosion}}{
+\block{\blocktitlewrap{Example: Water, Floods, and Erosion}}{
 
 \CustomBlockFontSize
 
@@ -434,16 +433,16 @@ and a dam breach on Lake Raleigh, NC, USA (right)
 \CustomBlockFontSize
 
 \begin{itemize}
- \item Filtering of ground points was included
+ \item Filtering of ground and non-ground points was included
        in the \gmodule{v.lidar.edgedetection} group of modules.
 % TODO: ref
 % TODO: year
 % v.lidar.correction Corrects the v.lidar.growing output. It is the last of the three algorithms for LIDAR .
 % v.lidar.edgedetection Detects the object's edges from a LIDAR data set.
 % v.lidar.growing Building contour determination and Region Growing algorithm for determining the building inside
- \item \gmodule{v.outlier} module serves as a base for a module \gamodule{v.lidar.mcc} implementing Multiscale Curvature Classification.
+ \item \gmodule{v.outlier} module serves as a base for \gamodule{v.lidar.mcc} implementing Multiscale Curvature Classification.
 % TODO: ref
- \item \gmodule{v.surf.rst} (spatial interpolation) for developed in '90s;
+ \item \gmodule{v.surf.rst} for spatial interpolation developed in '90s;
        improved several times and parallelized for version 7.4.
 % \citep{tracvsurfrst}
 % TODO: different ref
@@ -465,8 +464,8 @@ and a dam breach on Lake Raleigh, NC, USA (right)
 \end{minipage}
 \vspace{2mm}
 \begin{center}
-Digital elevation model interpolated from lidar data shows tillage in an field in Raleigh, NC, USA
-and a point cloud transect created with \gamodule{v.profile.points} shows tree structure
+DEM interpolated from lidar data shows tillage of a field in Raleigh, NC, USA (left)
+and a point cloud transect created with \gamodule{v.profile.points} shows tree structure (right)
 \end{center}
 
 }
