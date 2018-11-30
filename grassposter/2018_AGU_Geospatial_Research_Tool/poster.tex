@@ -192,6 +192,7 @@ Scientific Team: GRASS GIS Development Team**
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \column{0.25}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Why GRASS GIS as a Tool?}}{
 
@@ -209,7 +210,7 @@ and improved and built on each others work.
 % Basic Topics
  \item Community-driven project
  \item Long-term releases, stable APIs and emphasis on science
- \item Single integrated environment for 2D and 3D raster analysis, image processing, vector data analysis and spatio-temporal data processing
+ \item Single environment for vector data analysis, 2D and 3D raster analysis, image processing and spatio-temporal data
 % GRASS GIS
 % distribution strives to provide single integrated environment for 2D and 3D
 % raster analysis, image processing, vector data analysis and spatio-temporal
@@ -220,8 +221,8 @@ and improved and built on each others work.
 % implemented in the modules.
 \end{itemize}
 
-
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \block{\blocktitlewrap{Why GRASS GIS as a Platform?}}{
@@ -234,7 +235,8 @@ and prevails even in cases when the original author cannot support its users.
 \begin{itemize}
  \item New code typically contributed to Addons repository.
  \item Mature code is moved to the main code base.
- \item Both main code base and Addons maintained by the community.
+ \item Organization into modules makes contributions easy.
+ %  \item Both main code base and Addons maintained by the community.
 \end{itemize}
 
 }
@@ -247,10 +249,9 @@ and prevails even in cases when the original author cannot support its users.
 \CustomBlockFontSize
 
 \begin{itemize}
- \item Radim Blazek introduced several modules for vector network analysis in 2003
-       including shortest path analysis (\gmodule{v.net.path}) and traveling salesman (\gmodule{v.net.salesman}).
- \item The number of available modules increased to almost 20.
- \item Stepan Turek implemented turns support into all relevant vector network modules in 2014.
+ \item Several modules for vector network analysis by Radim Blazek available since 2003 (e.g. \gmodule{v.net.salesman}).
+ \item The number of modules increased to almost 20.
+ \item Turn support added by Stepan Turek in 2014.
 %  \item Since version 7.0 fine control over node costs available.
 % combination with r.cost/r.walk workflows \citep{Petrasova2014}
 \end{itemize}
@@ -261,11 +262,11 @@ and prevails even in cases when the original author cannot support its users.
 \begin{minipage}{0.9\linewidth}
 \begin{center}
 \includegraphics[width=\textwidth]{network_trips}
-A series of trips to collect samples across North Carolina, USA
-for water quality measurements
-as part of the Polyfluorinated Alkyl Substance Testing (PFAST) project.
-Trips are distinguished by color and were computed using multiple
-iterations of traveling salesman (\gmodule{v.net.salesman}).
+Trips to collect samples across North Carolina, USA
+as part of a water pollution testing project (PFAST).
+% Polyfluorinated Alkyl Substance Testing
+% Trips are distinguished by color and were computed using multiple
+% iterations of traveling salesman (\gmodule{v.net.salesman}).
 \end{center}
 \end{minipage}
 
@@ -297,16 +298,16 @@ iterations of traveling salesman (\gmodule{v.net.salesman}).
        \citep{leppelt2015grass}.
 \end{itemize}
 
-\vspace*{1.5cm}
+\vspace*{.5ex}
 
 \begin{minipage}{\linewidth}
 \centering
-\includegraphics[width=.7\linewidth]{images/temporal_precip_temp}
+\includegraphics[width=\linewidth]{images/temporal_precip_temp}
 \\
 Creating a synchronized animation of monthly total precipitation and mean temperature for NC, USA
 \end{minipage}
 
-\vspace*{1cm}
+% \vspace*{1cm}
 
 }
 
@@ -386,14 +387,14 @@ Superpixels (black outlines) with pseudo-color and NDVI images, central Wake cou
 \CustomBlockFontSize
 
 \begin{itemize}
- \item \gmodule{r.sim.water} module \citep{Mitas1998b}
-       for simulating overland flow integrated into the Emergency Routing Decision Planning \citep{raghavan2014deploying}.
+ \item \gmodule{r.sim.water} \citep{Mitas1998b}
+       overland flow simulation used for emergency routing \citep{raghavan2014deploying}.
 % TODO: paralelized
- \item \gmodule{r.watershed} for least cost path water accumulation from 1989
-       and updated for massive data sets in 2011.
+ \item Least cost flow \gmodule{r.watershed} from '89
+       updated for massive data in '11.
 % TODO: refs
- \item \cite{Petrasova2014} utilized in \emph{Tangible Landscape}, a tangible GIS system,
-       \gmodule{r.damflood}, a dam break inundation simulation by \cite{cannata2012two}.
+ \item \cite{Petrasova2014} used in \emph{Tangible Landscape}
+       dam break inundation \gmodule{r.damflood} \cite{cannata2012two}.
 \end{itemize}
 
 % \bigskip
@@ -402,18 +403,18 @@ Superpixels (black outlines) with pseudo-color and NDVI images, central Wake cou
 
 \centering
 
-\begin{minipage}{0.485\linewidth}
+\begin{minipage}{0.47\linewidth}
 \centering
 \includegraphics[width=0.7\textwidth]{rsimwater_architects}
 \end{minipage}
 ~
-\begin{minipage}{0.485\linewidth}
+\begin{minipage}{0.5\linewidth}
 \includegraphics[width=\textwidth]{damflood_tangible}
 \end{minipage}
-\vspace{2mm}
+\vspace{0.1ex}
 \begin{center}
-Overland flow simulated used for landscape
-architecture design in Tangible Landscape environment (left)
+Flow used for landscape
+architecture design (left)
 and a dam breach on Lake Raleigh, NC, USA (right)
 \end{center}
 
