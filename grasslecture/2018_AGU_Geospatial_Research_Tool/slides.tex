@@ -153,12 +153,12 @@ NS52A: A Tour of Open-Source Software Packages for the Geosciences II
 %\pdforstring{}{}
 
 \newcommand{\inst}[1]{\hspace{2pt}$^{\mbox{\normalsize#1}}$\hspace{-7pt}}
-\newcommand{\instlist}[1]{\hspace{1pt}$^{\mbox{#1}}$\hspace{2pt}}
+\newcommand{\instlist}[1]{\hspace{1pt}$^{\mbox{#1}}$\hspace{0pt}}
 
 \author[Vaclav Petras]{
 Helena Mitasova\inst{1},
-Vaclav Petras\inst{1}\,*\hspace{-7pt},
-Anna Petrasova\inst{1},
+Vaclav Petras\inst{1}\,*\hspace{-0.2ex},
+Anna Petrasova\inst{1}
 \&
 Markus Neteler\hspace{0.05em}\inst{2}
 \\
@@ -235,40 +235,40 @@ Scientific Team: GRASS GIS Development Team**
 \begin{frame}{GRASS GIS}
 
 \begin{columns}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.74\textwidth}
 
 \begin{itemize}
   \item all in one
   \begin{itemize}
-   \item hydrology modeling, image segmentation, point clustering, \ldots
+   \item hydrology, remote sensing, network analysis, \ldots
   \end{itemize}
   \item driven by needs of users
   \begin{itemize}
-   \item Community-driven project direct access to development process
+   \item community has a direct access to the development process
   \end{itemize}
   \item from small laptops to supercomputers
   \begin{itemize}
-   \item Raspberry Pi, Windows, Mac, GNU/Linux, FreeBSD, IBM~AIX
+   \item Raspberry Pi, Windows, macOS, GNU/Linux, FreeBSD, AIX, \ldots
   \end{itemize}
   \item learn now, use forever
   \begin{itemize}
-    \item over 35 years of development and interface refinement
+    \item 35 years of development, many old scripts still running, \ldots
   \end{itemize}
 \end{itemize}
-
+\includegraphics[width=\textwidth]{grass_team}
 \end{column}
-\begin{column}{0.3\textwidth}
+\begin{column}{0.25\textwidth}
 
 \begin{center}
   \includegraphics[width=\textwidth]{logos/grass_gis}
 \end{center}
 
-\vspace*{-1ex}
+\vspace*{-2.5ex}
 
 \textcolor{gray}{
-\footnotesize
-latest release 7.4.3
 \scriptsize
+latest release 7.4.3
+\tiny
 (Nov 26, 2018)
 }
 
@@ -277,32 +277,36 @@ latest release 7.4.3
 
 \end{frame}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Novel methods are included}
+\begin{frame}{Novel methods are published through GRASS GIS}
 
 \begin{columns}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.5\textwidth}
 
 \begin{itemize}
-  \item r.sim.water (Mitas and Mitasova, 1998) overland flow simulation
-  \item Least cost flow r.watershed from ’89
+  \item temporal framework (Gebbert \& Pebesma 2014)
+  \item spatio-temporal algebra (Gebbert \& Leppelt 2015)
+  \item landform detection with geomorphons (Jasiewicz \& Stepinski 2013)
 \end{itemize}
 
+\bigskip
+\footnoterule
+\tiny
+
+Gebbert, S. and Leppelt, T. (2015). GRASS GIS: The first Open Source Temporal GIS. In EGU General Assembly Conference Abstracts, volume 17, page 7296.
+
+Gebbert, S. and Pebesma, E. (2014). A temporal GIS for field based environmental modeling. Environmental Modelling \& Software, 53:1–12.
+
+Jasiewicz, J. and Stepinski, T. (2013). Geomorphons - a pattern recognition approach to classification and mapping of landforms, Geomorphology, vol. 182, 147-156. DOI~10.1016/j.geomorph.2012.11.005
+
 \end{column}
-\begin{column}{0.3\textwidth}
-
-\begin{center}
-  \includegraphics[width=\textwidth]{logos/grass_gis}
-\end{center}
-
-\vspace*{-1ex}
+\begin{column}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{geomorphon_3d}
 
 \textcolor{gray}{
 \footnotesize
-latest release 7.4.3
-\scriptsize
-(Nov 26, 2018)
+Landforms detected by \gmodule{r.geomorphon}
 }
 
 \end{column}
@@ -312,30 +316,38 @@ latest release 7.4.3
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Innovations are preserved}
+\begin{frame}{Research software is preserved over time}
 
 \begin{columns}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.5\textwidth}
 
 \begin{itemize}
-  \item r.sim.water (Mitas and Mitasova, 1998) overland flow simulation
-  \item Least cost flow r.watershed from ’89
+  \item water flow simulation (Mitasova et al. 2004)
+  \item least cost path watershed and flow tracing (Ehlschlaeger 1989)
+  \item wildfire spread model (Xu 1994)
+% It has
+% been extensively tested and recently adapted to European fuel types (Rodriguez-Aseretto et al., 2013 [23]; de
+% Rigo et al., 2013 [5]; Di Leo et al., 2013 [6]).
 \end{itemize}
 
+\bigskip
+\footnoterule
+\tiny
+
+Mitasova, H., Thaxton, C., Hofierka, J., McLaughlin, R., Moore, A., Mitas L. (2004). Path sampling method for modeling overland water flow, sediment transport and short term terrain evolution in Open Source GIS. In: C.T. Miller, M.W. Farthing, V.G. Gray, G.F. Pinder eds., Proceedings of the XVth International Conference on Computational Methods in Water Resources (CMWR XV), June 13-17 2004, Chapel Hill, NC, USA, Elsevier, pp. 1479-1490.
+
+Ehlschlaeger C. (1989). Using the $A^T$ Search Algorithm to Develop Hydrologic Models from Digital Elevation Data, Proceedings of International Geographic Information Systems (IGIS) Symposium '89, pp 275-281 (Baltimore, MD, 18-19 March 1989).
+
+Xu, J. (1994). Simulating the spread of wildfires using a geographic information system and remote sensing. PhD thesis, Rutgers University, New Brunswick, New Jersey.
+
 \end{column}
-\begin{column}{0.3\textwidth}
-
-\begin{center}
-  \includegraphics[width=\textwidth]{logos/grass_gis}
-\end{center}
-
-\vspace*{-1ex}
+\begin{column}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{fire_spread}
 
 \textcolor{gray}{
 \footnotesize
-latest release 7.4.3
-\scriptsize
-(Nov 26, 2018)
+Wildfire spread simulated by \gmodule{r.ros} and \gmodule{r.spread}
 }
 
 \end{column}
@@ -345,30 +357,38 @@ latest release 7.4.3
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Code is further developed}
+\begin{frame}{Published tools are used by other scientists}
 
 \begin{columns}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.5\textwidth}
 
 \begin{itemize}
-  \item v.outlier module serves as a base for v.lidar.mcc implementing Multiscale Curvature Classification.
-  \item v.surf.rst for spatial interpolation developed in ’90s; improved several times and parallelized for version 7.4.
+  \item water flow simulation (Mitasova et al. 2004) used for emergency routing (Raghavan et al. 2014)
+  \item wildfire spread model (Xu 1994) used
+        for fires in Europe (Rodriguez-Aseretto et al. 2013)
+%         and for travel of Vikings
 \end{itemize}
 
+\bigskip
+\footnoterule
+\tiny
+
+Mitasova, H., Thaxton, C., Hofierka, J., McLaughlin, R., Moore, A., Mitas L. (2004). Path sampling method for modeling overland water flow, sediment transport and short term terrain evolution in Open Source GIS. In: C.T. Miller, M.W. Farthing, V.G. Gray, G.F. Pinder eds., Proceedings of the XVth International Conference on Computational Methods in Water Resources (CMWR XV), June 13-17 2004, Chapel Hill, NC, USA, Elsevier, pp. 1479-1490.
+
+Raghavan, V., Choosumrong, S., Yoshida, D., and Vinayaraj, P. (2014). Deploying Dynamic Routing Service for Emergency Scenarios using pgRouting, GRASS and ZOO. In In Proceedings of FOSS4G Europe, Jacobs University, Bremen, Germany.
+
+D. Rodriguez-Aseretto, D. de Rigo, M. Di Leo, A. Cortés, and J. San-Miguel-Ayanz (2013). A data-driven model for large wildfire behaviour prediction in Europe. Procedia Computer Science, 18:1861–1870.
+
 \end{column}
-\begin{column}{0.3\textwidth}
-
-\begin{center}
-  \includegraphics[width=\textwidth]{logos/grass_gis}
-\end{center}
-
-\vspace*{-1ex}
+\begin{column}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{rsimwater_architects}
 
 \textcolor{gray}{
 \footnotesize
-latest release 7.4.3
-\scriptsize
-(Nov 26, 2018)
+Overland water flow simulated by \gmodule{r.sim.water}
+\\
+in \emph{Tangible Landscape} environment
 }
 
 \end{column}
@@ -376,31 +396,37 @@ latest release 7.4.3
 
 \end{frame}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Tools used by other scientists}
+\begin{frame}{Code is further developed by other contributors}
 
 \begin{columns}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.5\textwidth}
 
 \begin{itemize}
-  \item v.outlier module serves as a base for v.lidar.mcc implementing Multiscale Curvature Classification.
-  \item v.surf.rst for spatial interpolation developed in ’90s; improved several times and parallelized for version 7.4.
+  \item least cost path flow tracing (Ehlschlaeger 1989) extended by Markus Metz
+  \item interpolation using splines (Mitasova \& Mitas 1993) was parallelized (Hofierka et al. 2017)
 \end{itemize}
 
+
+\bigskip
+\footnoterule
+\tiny
+
+Ehlschlaeger C. (1989). Using the $A^T$ Search Algorithm to Develop Hydrologic Models from Digital Elevation Data, Proceedings of International Geographic Information Systems (IGIS) Symposium '89, pp 275-281 (Baltimore, MD, 18-19 March 1989).
+
+Mitasova, H. and Mitas, L. (1993) Interpolation by Regularized Spline with Tension: I. Theory and Implementation, Mathematical Geology, 25, 641-655.
+
+Hofierka, J., Lacko, M., and Zubal, S. (2017). Parallelization of interpolation, solar radiation and water flow simulation modules in GRASS GIS using OpenMP. Computers \& Geosciences, 107, 20-27.
+
 \end{column}
-\begin{column}{0.3\textwidth}
-
-\begin{center}
-  \includegraphics[width=\textwidth]{logos/grass_gis}
-\end{center}
-
-\vspace*{-1ex}
+\begin{column}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{elevation_lidar}
 
 \textcolor{gray}{
 \footnotesize
-latest release 7.4.3
-\scriptsize
-(Nov 26, 2018)
+Digital elevation model interpolated by \gmodule{v.surf.rst}
 }
 
 \end{column}
@@ -408,31 +434,36 @@ latest release 7.4.3
 
 \end{frame}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Published algorithms are implemented}
+\begin{frame}{Algorithms published elsewhere are available}
 
 \begin{columns}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.5\textwidth}
 
 \begin{itemize}
-  \item v.outlier module serves as a base for v.lidar.mcc implementing Multiscale Curvature Classification.
-  \item v.surf.rst for spatial interpolation developed in ’90s; improved several times and parallelized for version 7.4.
+  \item Multiscale Curvature Classification (Evans \& Hudak 2007) implemented by Stefan Blumentrath
+  % this is also an example of reuse of code inside GRASS
+  \item SLIC Superpixels segmentation (Achanta et al. 2012) implemented by Rashad Kanavath and Markus Metz
 \end{itemize}
 
+\bigskip
+\footnoterule
+\tiny
+
+Evans, J. S. and Hudak, A. T. (2007) A Multiscale Curvature Algorithm for Classifying Discrete Return LiDAR in Forested Environments. IEEE Transactions on Geoscience and Remote Sensing 45(4): 1029 - 1038
+
+Achanta, R., Shaji, A., Smith, K., Lucchi, A., Fua, P., and Süsstrunk, S. (2012). SLIC superpixels compared to state-of-the-art superpixel methods. IEEE transactions on pattern analysis and machine intelligence, 34(11):2274–2282.
+
 \end{column}
-\begin{column}{0.3\textwidth}
 
-\begin{center}
-  \includegraphics[width=\textwidth]{logos/grass_gis}
-\end{center}
-
-\vspace*{-1ex}
+\begin{column}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{i_superpixels_slic_ndvi}
 
 \textcolor{gray}{
 \footnotesize
-latest release 7.4.3
-\scriptsize
-(Nov 26, 2018)
+Superpixels by \gmodule{i.superpixels.slic} and NDVI by \gmodule{i.vi}
 }
 
 \end{column}
@@ -442,7 +473,7 @@ latest release 7.4.3
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Publishing code}
+\begin{frame}{Publishing code through GRASS GIS}
 
 \begin{block}{}
  \begin{itemize}
@@ -482,7 +513,7 @@ Get GRASS GIS at\\
 
 {
 \footnotesize
-Source files for poster and slides available at\\
+Source files for posters and slides available at\\
 \href{https://trac.osgeo.org/grass/browser/grass-promo/}%
   {\texttt{trac.osgeo.org/grass/browser/grass-promo}}
 }
@@ -499,206 +530,6 @@ Source files for poster and slides available at\\
 \backupbegin
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Providing algorithms to the community}
-
-\begin{itemize}
-  \item new landform recognition approach -- geomorphons
-\end{itemize}
-
-\begin{columns}
-\begin{column}{0.4\textwidth}
-
-\begin{itemize}
-  % Adam Mickiewicz University and University of Cincinnati
-  \item by Jasiewicz and Stepinski
-    {\tiny from AMU, Poland and University of Cincinnati, USA}
-  \item not just a paper
-    {\tiny Geomorphology, 2013}
-  \item not just a code
-    \\{\tiny at some webpage}
-  \item \amodule{r.geomorphon}
-    \\{\tiny module in GRASS GIS addons repository}
-\end{itemize}
-
-\end{column}
-\begin{column}{0.58\textwidth}
-
-\begin{center}
-%   \includegraphics[width=\textwidth]{vis/geomorphon_3d}
-\end{center}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{GRASS GIS}
-
-\begin{columns}
-\begin{column}{0.6\textwidth}
-
-\begin{itemize}
-  \item all in one
-  \begin{itemize}
-   \item hydrology modeling, image segmentation, point clustering, \ldots
-  \end{itemize}
-  \item driven by needs of users
-  \begin{itemize}
-   \item direct access to development process
-  \end{itemize}
-  \item from small laptops to supercomputers
-  \begin{itemize}
-   \item Raspberry Pi, Windows, Mac, GNU/Linux, FreeBSD, IBM~AIX
-  \end{itemize}
-  \item learn now, use forever
-  \begin{itemize}
-    \item over 30 years of development and interface refinement
-  \end{itemize}
-  \item used by
-  \begin{itemize}
-    \item US Oak Ridge National Laboratory, Edmund Mach Foundation, JRC, \ldots
-  \end{itemize}
-\end{itemize}
-
-\end{column}
-\begin{column}{0.3\textwidth}
-
-\begin{center}
-  \includegraphics[width=\textwidth]{logos/grass_gis}
-\end{center}
-
-\textcolor{gray}{
-\footnotesize
-latest release 7.0.4 \\May~1,~2016
-}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{GUI}
-
-\begin{center}
-%   \includegraphics[width=0.9\textwidth]{grass/r_in_lidar_gui}
-\end{center}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Python and command line interfaces}
-
-\definecolor{mod}{RGB}{7,96,143}
-\definecolor{opt}{RGB}{239,84,18}
-\definecolor{flg}{RGB}{239,84,18}
-\definecolor{txt}{RGB}{45,146,45}
-\definecolor{bash}{RGB}{200,200,200}
-\definecolor{import}{RGB}{200,200,200}
-
-\Large
-
-Command Line:
-
-\LARGE
-
-\begin{alltt}
-\textcolor{mod}{r.in.lidar} \textcolor{opt}{input}=\textcolor{txt}{points.las} \textcolor{bash}{\char`\\}
-\\%
-\newlength{\shindent}
-\settowidth{\shindent}{r.in.lidar~}
-\rule{\shindent}{0pt}%
-\textcolor{opt}{output}=\textcolor{txt}{elevation} -\textcolor{flg}{e}
-\end{alltt}
-
-\Large
-
-Python:
-
-% \char`_ is to get same underscore as in \verb
-
-\LARGE
-
-\begin{alltt}
-\textcolor{import}{from grass.script import run\char`_command}
-\\
-run\char`_command('\textcolor{mod}{r.in.lidar}',
-%
-\newlength{\pyindent}%
-\settowidth{\pyindent}{run\_command(}%
-\\%
-\rule{\pyindent}{0pt}\,%
-\textcolor{opt}{input}="\textcolor{txt}{points.las}",
-\\%
-\rule{\pyindent}{0pt}\,%
-\textcolor{opt}{output}="\textcolor{txt}{elevation}",
-\\%
-\rule{\pyindent}{0pt}\,%
-flags='\textcolor{flg}{e}')
-\end{alltt}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Graphical Modeler}
-
-\begin{center}
-%   \includegraphics[width=0.9\textwidth]{grass/modeler}
-\end{center}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Using other open source projects}
-
-\begin{columns}
-\begin{column}{0.5\textwidth}
-
-\begin{block}{\module{r.in.kinect}}
- \begin{itemize}
-  \item scans using Kinect
-  \item OpenKinect libfreenect2
-  \item Point Cloud Library (PCL)
-  \item GRASS GIS libraries
- \end{itemize}
-\end{block}
-
-% inner columns
-\begin{columns}
-\begin{column}{0.6\textwidth}
-\small
-
-used in Tangible~Landscape
-
-\end{column}
-\begin{column}{0.2\textwidth}
-
-% \includegraphics[width=\textwidth]{logos/tangible_landscape}
-
-\end{column}
-\end{columns}
-% end of inner columns
-
-\end{column}
-\begin{column}{0.45\textwidth}
-
-\begin{center}
-%   \includegraphics[width=\textwidth]{tangible/face}
-\end{center}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Acknowledgements}
 
 \footnotesize
@@ -706,7 +537,7 @@ used in Tangible~Landscape
 \begin{columns}
 \begin{column}{0.6\textwidth}
 
-\begin{block}{Software}
+\begin{block}{Software \& community}
 The GRASS GIS Development Team, contributors, users, ...
 \end{block}
 
@@ -720,7 +551,11 @@ Nantahala NF, NC: Forest Leaf Structure, Terrain and Hydrophysiology.
 % NCALM funding provided by NSF's Division of Earth Sciences, Instrumentation and Facilities Program.
 % EAR-1043051.
 Obtained from \href{http://www.opentopography.org/}{OpenTopography}.
-\url{http://dx.doi.org/10.5069/G9HT2M76}
+\url{https://doi.org/10.5069/G9HT2M76}
+
+Dataset for North Carolina State University GIS595-005/603; MEA592-004/601: UAS Mapping for 3D Modeling
+
+North Carolina Sample Dataset for GRASS GIS
 \end{block}
 
 \begin{block}{Presentation software}
