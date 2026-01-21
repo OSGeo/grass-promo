@@ -74,3 +74,8 @@ Source code:
 
 - Legacy GRASS source code for versions 3.2, 4.x, 5.x & 6.x: <https://github.com/OSGeo/grass-legacy>
 - Current GRASS 8.x+ source code (and former 7.x): <https://github.com/OSGeo/grass>
+
+Further screenshots:
+
+- <https://github.com/OSGeo/grass-website/tree/master/static/images/gallery/gui/>
+- <https://github.com/OSGeo/grass-website/tree/master/static/images/gallery/gui/archive/>
