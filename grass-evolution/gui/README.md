@@ -62,6 +62,14 @@ GRASS GIS 6.3:
 <a href="grass63_wxgui_display_manager.png">
   <img src="grass63_wxgui_display_manager.png" alt="grass63_wxgui_display_manager" width="689" height="614" />
 </a>
+<p>
+
+GRASS GIS 8.4:
+<p>
+<a href="grass8_single_window_startupGUI.jpg">
+  <img src="grass8_single_window_startupGUI.jpg" alt="grass8_single_window_startupGUI" width="556" height="284" />
+</a>
+<p>
 
 ### Sources
 
